@@ -7,6 +7,7 @@
 #include <string>
 
 using namespace std;
+namespace fs = std::experimental::filesystem;
 
 
 string getOpenFileName(const string &title, const string &filter, const string &initialDir)

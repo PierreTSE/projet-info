@@ -1,8 +1,6 @@
-#include "system_target.hpp"
-
 #ifdef LINUX
 
-#include "FileDialogBox.hpp"
+#include "FileDialog.hpp"
 
 
 namespace fs = std::experimental::filesystem;
