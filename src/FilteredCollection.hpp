@@ -1,4 +1,4 @@
-#ifndef FILTERED_COLLECTION_HPP
+﻿#ifndef FILTERED_COLLECTION_HPP
 #define FILTERED_COLLECTION_HPP
 
 #include <vector>

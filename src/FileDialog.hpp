@@ -1,4 +1,4 @@
-#ifndef FILEDIALOG_H
+﻿#ifndef FILEDIALOG_H
 #define FILEDIALOG_H
 
 #include "system_target.hpp"

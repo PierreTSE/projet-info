@@ -1,4 +1,4 @@
-#include "FileDialog.hpp"
+﻿#include "FileDialog.hpp"
 
 #ifdef WINDOWS
 

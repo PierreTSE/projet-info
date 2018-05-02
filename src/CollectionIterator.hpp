@@ -1,4 +1,4 @@
-#ifndef COLLECTION_ITERATOR_HPP
+﻿#ifndef COLLECTION_ITERATOR_HPP
 #define COLLECTION_ITERATOR_HPP
 
 #include <type_traits>
@@ -40,10 +40,9 @@ public:
 	CollectionIterator(CollectionIterator<T, false>&& itr) noexcept : itr_{ itr.itr_ } { itr.itr_ = nullptr; }
 	CollectionIterator& operator=(CollectionIterator<T, false>&& rhs) { itr_ = rhs.itr_; rhs.itr_ = nullptr; return *this; }
 
-
 	//Can be compared for equivalence using the equality/inequality operators
 	bool operator==(const CollectionIterator<T, true>& rhs) const { return itr_ == rhs.itr_; }
-	bool operator!=(const CollectionIterator<T, true>& rhs) const { return !(itr_ == rhs.itr_); }
+	bool operator!=(const CollectionIterator<T, true>& rhs) const { return itr_ != rhs.itr_; }
 
 	//Can be dereferenced as an rvalue
 	reference operator*() { return *itr_; }

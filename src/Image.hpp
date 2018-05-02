@@ -1,6 +1,13 @@
-#ifndef IMAGE_HPP
+﻿#ifndef IMAGE_HPP
 #define IMAGE_HPP
 
-class Image;
+#include "TagList.hpp"
+#include <string>
+
+class Image
+{
+private:
+	Tag tag_;
+};
 
 #endif // !IMAGE_HPP

@@ -1,4 +1,4 @@
-#ifndef COLLECTION_HPP
+﻿#ifndef COLLECTION_HPP
 #define COLLECTION_HPP
 
 #include "CollectionIterator.hpp"

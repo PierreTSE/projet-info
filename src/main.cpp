@@ -1,4 +1,4 @@
-#include "CollectionIterator.hpp"
+﻿#include "CollectionIterator.hpp"
 #include "FileDialog.hpp"
 #include "FilteredCollection.hpp"
 #include <iostream>
@@ -11,7 +11,7 @@ bool isPair(const int& i)
 	return (i % 2 == 0);
 }
 
-
+//c'est bon les accents Thomas ? --> éàèùç
 
 
 int main()
