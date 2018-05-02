@@ -4,16 +4,31 @@
 #include <type_traits>
 #include <iterator>
 
-template <typename T>
+template <typename T, bool is_const = false>
 class IteratorBase
 {
 public:
-	IteratorBase() = default;
-	virtual ~IteratorBase() = default;
-	virtual void operator++() = 0;
-	virtual T& operator*() const = 0;
+	IteratorBase() = default;//default constructor
+	virtual IteratorBase(const IteratorBase<T, false>&) = default;//copy constructor
+	virtual explicit IteratorBase(IteratorBase<T, false>*) = default;
+	virtual IteratorBase(IteratorBase<T, false>&&) noexcept = default;//move constructor
+	virtual ~IteratorBase = default;//destructor
+
+	virtual void operator=(const IteratorBase<T, false>&) = 0;//copy assignment
+	virtual void operator=(IteratorBase<T, false>&&) = 0;//move assignment
+
+	bool operator==(const IteratorBase<T, true>& rhs) const { return typeid(*this) == typeid(rhs) && equal(rhs); }//== comparator
+	bool operator!=(const IteratorBase<T, true>& rhs) { return typeid(*this) != typeid(rhs) && !(equal(rhs)); }//!= comparator
+
+	virtual T& operator*() = 0;//dereference operator
+	virtual const T& operator*() const = 0;//const dereference operator
+	virtual T* operator->() = 0;//arrow operator
+	virtual const T* operator->() const = 0;//const arrow operator
+
+	virtual void operator++() = 0;//pre-increment operator
+	virtual void operator++(int) = 0;//post-increment operator
+
 	virtual IteratorBase* clone() const = 0;
-	bool operator==(const IteratorBase& rhs) const { return typeid(*this) == typeid(rhs) && equal(rhs); }
 protected:
 	virtual bool equal(const IteratorBase& rhs) const = 0;
 };
