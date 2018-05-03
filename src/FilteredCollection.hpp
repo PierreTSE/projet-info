@@ -1,14 +1,14 @@
 ﻿#ifndef FILTERED_COLLECTION_HPP
 #define FILTERED_COLLECTION_HPP
 
+#include "Collection.hpp"
 #include <vector>
 #include <functional>
 
-using Collection = std::vector<int>;
-
+template<typename T>
 class FilteredCollection
 {
-	Collection& collec_;
+	Collection<T>& collec_;
 	using filtre_t = std::function<bool(const Collection::value_type&)>;
 	filtre_t filtre_;
 

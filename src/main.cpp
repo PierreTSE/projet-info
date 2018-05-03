@@ -1,6 +1,7 @@
 ﻿#include "CollectionIterator.hpp"
 #include "FileDialog.hpp"
 #include "FilteredCollection.hpp"
+#include "Collection.hpp"
 #include <iostream>
 #include <experimental/filesystem>
 
@@ -16,7 +17,7 @@ bool isPair(const int& i)
 
 int main()
 {
-	
+	Collection<int> c;
 
 
 	//using iterator = CollectionIterator<int>;
