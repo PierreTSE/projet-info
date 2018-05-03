@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -49,6 +56,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('globals_func.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -69,10 +90,10 @@ $(function() {
 : <a class="el" href="_file_dialog_8hpp.html#a9fbbe1b6f277e71376b51951e9eee619">FileDialog.hpp</a>
 </li>
 <li>getOpenFileName()
-: <a class="el" href="_file_dialog_8hpp.html#abeb1ef963232bf68ba0ed53e67aa857f">FileDialog.hpp</a>
+: <a class="el" href="_file_dialog_8hpp.html#aff1c082fbf12dfb78f3668367291cfa0">FileDialog.hpp</a>
 </li>
 <li>getSaveFileName()
-: <a class="el" href="_file_dialog_8hpp.html#a2d4b00891d6ba241a03c1d4f99423d17">FileDialog.hpp</a>
+: <a class="el" href="_file_dialog_8hpp.html#ad8785c85930dceac9ba4610e852cf0c1">FileDialog.hpp</a>
 </li>
 <li>isPair()
 : <a class="el" href="main_8cpp.html#a7e2279174c7277e845bae3e68568d1b4">main.cpp</a>
@@ -82,11 +103,14 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

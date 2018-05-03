@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -48,6 +55,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_file_dialog_8hpp.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,25 +84,20 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier FileDialog.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="system__target_8hpp_source.html">system_target.hpp</a>&quot;</code><br />
-<code>#include &lt;experimental/filesystem&gt;</code><br />
+<div class="textblock"><code>#include &lt;experimental/filesystem&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de FileDialog.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_file_dialog_8hpp__incl.svg" width="406" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_file_dialog_8hpp__incl.svg" width="251" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
@@ -90,14 +107,19 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 </div>
 <p><a href="_file_dialog_8hpp_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfile__filter.html">file_filter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:abeb1ef963232bf68ba0ed53e67aa857f"><td class="memItemLeft" align="right" valign="top">std::experimental::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_dialog_8hpp.html#abeb1ef963232bf68ba0ed53e67aa857f">getOpenFileName</a> (const std::string &amp;title=&quot;Open a file&quot;, const std::string &amp;filter=&quot;All files (*.*)&quot;, const std::experimental::filesystem::path &amp;initialDir=&quot;&quot;)</td></tr>
-<tr class="memdesc:abeb1ef963232bf68ba0ed53e67aa857f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouvre une boîte de dialogue qui demande un fichier à ouvrir.  <a href="#abeb1ef963232bf68ba0ed53e67aa857f">Plus de détails...</a><br /></td></tr>
-<tr class="separator:abeb1ef963232bf68ba0ed53e67aa857f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4b00891d6ba241a03c1d4f99423d17"><td class="memItemLeft" align="right" valign="top">std::experimental::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_dialog_8hpp.html#a2d4b00891d6ba241a03c1d4f99423d17">getSaveFileName</a> (const std::string &amp;title=&quot;Save file as&quot;, const std::string &amp;filter=&quot;All files (*.*)&quot;, const std::string &amp;initialDir=&quot;&quot;)</td></tr>
-<tr class="memdesc:a2d4b00891d6ba241a03c1d4f99423d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier.  <a href="#a2d4b00891d6ba241a03c1d4f99423d17">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a2d4b00891d6ba241a03c1d4f99423d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1c082fbf12dfb78f3668367291cfa0"><td class="memItemLeft" align="right" valign="top">std::experimental::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_dialog_8hpp.html#aff1c082fbf12dfb78f3668367291cfa0">getOpenFileName</a> (const std::string &amp;title=&quot;Open a file&quot;, const <a class="el" href="structfile__filter.html">file_filter</a> &amp;filter={&quot;All files&quot;, &quot;*&quot;}, const std::experimental::filesystem::path &amp;initialDir=&quot;&quot;)</td></tr>
+<tr class="memdesc:aff1c082fbf12dfb78f3668367291cfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouvre une boîte de dialogue qui demande un fichier à ouvrir.  <a href="#aff1c082fbf12dfb78f3668367291cfa0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aff1c082fbf12dfb78f3668367291cfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8785c85930dceac9ba4610e852cf0c1"><td class="memItemLeft" align="right" valign="top">std::experimental::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_dialog_8hpp.html#ad8785c85930dceac9ba4610e852cf0c1">getSaveFileName</a> (const std::string &amp;title=&quot;Save file as&quot;, const <a class="el" href="structfile__filter.html">file_filter</a> &amp;filter={&quot;All files&quot;, &quot;*&quot;}, const std::string &amp;initialDir=&quot;&quot;)</td></tr>
+<tr class="memdesc:ad8785c85930dceac9ba4610e852cf0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier.  <a href="#ad8785c85930dceac9ba4610e852cf0c1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad8785c85930dceac9ba4610e852cf0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fbbe1b6f277e71376b51951e9eee619"><td class="memItemLeft" align="right" valign="top">std::experimental::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_dialog_8hpp.html#a9fbbe1b6f277e71376b51951e9eee619">browseFolder</a> (const std::string &amp;title=&quot;Select a directory&quot;, const std::string &amp;initialDir=&quot;&quot;)</td></tr>
 <tr class="memdesc:a9fbbe1b6f277e71376b51951e9eee619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ouvre une boîte de dialogue qui demande un répertoire à ouvrir.  <a href="#a9fbbe1b6f277e71376b51951e9eee619">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a9fbbe1b6f277e71376b51951e9eee619"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,8 +163,8 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="abeb1ef963232bf68ba0ed53e67aa857f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeb1ef963232bf68ba0ed53e67aa857f">&#9670;&nbsp;</a></span>getOpenFileName()</h2>
+<a id="aff1c082fbf12dfb78f3668367291cfa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1c082fbf12dfb78f3668367291cfa0">&#9670;&nbsp;</a></span>getOpenFileName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,8 +178,8 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>&quot;All&#160;files&#160;(*.*)&quot;</code>, </td>
+          <td class="paramtype">const <a class="el" href="structfile__filter.html">file_filter</a> &amp;&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>{&quot;All&#160;files&quot;,&#160;&quot;*&quot;}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -184,10 +206,17 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>chemin vers le fichier sélectionné </dd></dl>
 
+<p class="reference">Référencé par <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_file_dialog_8hpp_aff1c082fbf12dfb78f3668367291cfa0_icgraph.svg" width="236" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
-<a id="a2d4b00891d6ba241a03c1d4f99423d17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d4b00891d6ba241a03c1d4f99423d17">&#9670;&nbsp;</a></span>getSaveFileName()</h2>
+<a id="ad8785c85930dceac9ba4610e852cf0c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8785c85930dceac9ba4610e852cf0c1">&#9670;&nbsp;</a></span>getSaveFileName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,8 +230,8 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>&quot;All&#160;files&#160;(*.*)&quot;</code>, </td>
+          <td class="paramtype">const <a class="el" href="structfile__filter.html">file_filter</a> &amp;&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>{&quot;All&#160;files&quot;,&#160;&quot;*&quot;}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -228,21 +257,19 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>chemin de sauvegarde du fichier </dd></dl>
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_file_dialog_8hpp_a2d4b00891d6ba241a03c1d4f99423d17_icgraph.svg" width="236" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_file_dialog_8hpp.html">FileDialog.hpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

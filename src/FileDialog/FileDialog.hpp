@@ -4,6 +4,7 @@
 #include <experimental/filesystem>
 #include <string>
 
+
 struct file_filter
 {
 	std::string title, pattern;

@@ -9,13 +9,13 @@ template<typename img_t>
 class Image
 {
 	public:
-		Image(std::experimental::filesystem::path p, std::unique_ptr<img_t> imgPtr = nullptr, TagList t = {}) 
-			: path_{ p }, img_{ std::move(imgPtr) }, taglist_{ t } {} //constructeur complet
+		explicit Image(const std::experimental::filesystem::path& p, std::unique_ptr<img_t> imgPtr = nullptr, const TagList& t = {}) 
+			: img_{ std::move(imgPtr) }, path_{ p }, taglist_{ t } {} //constructeur complet
 
 		//getters
 		std::experimental::filesystem::path getPath() { return path_; }
 		TagList getTagList() { return taglist_; }
-		img_t* getImgPtr() { return img_; }
+		img_t* getImgPtr() { return img_.get(); }
 
 		//setters
 		void setPath(std::experimental::filesystem::path p) { path_ = p; }

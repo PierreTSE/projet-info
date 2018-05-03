@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['setimgptr',['setImgPtr',['../class_image.html#aa21c33b7da565d5b4576c5e56ba08cac',1,'Image']]],
-  ['setpath',['setPath',['../class_image.html#ad7a712265f2243a3292e763b964110b8',1,'Image']]],
-  ['settaglist',['setTagList',['../class_image.html#a33cfdb0bb6a86aa10fa1f9bf62dbb236',1,'Image']]],
-  ['shrink_5fto_5ffit',['shrink_to_fit',['../class_collection_pool.html#a99d7be7a85d94c4288683b900af1e087',1,'CollectionPool']]],
-  ['size',['size',['../class_collection_pool.html#aa5b3ebca322cda930b17a0cfab3f91f2',1,'CollectionPool']]],
-  ['size_5ftype',['size_type',['../class_collection.html#a3f8b024f587aa20be530866da30948c4',1,'Collection::size_type()'],['../class_collection_iterator.html#a1302f39e9a4763886e48a045e53c00cf',1,'CollectionIterator::size_type()'],['../class_collection_pool.html#a3fe4d4cbb79a3cb138cdb3f07c401b00',1,'CollectionPool::size_type()'],['../class_filtered_collection.html#ab527ec70d0bf74af7018c0ca42a6ec8a',1,'FilteredCollection::size_type()']]],
-  ['system_5ftarget_2ehpp',['system_target.hpp',['../system__target_8hpp.html',1,'']]]
+  ['reference',['reference',['../class_collection.html#abbc291771b11c48cd2f297a0d9fe0449',1,'Collection::reference()'],['../class_collection_iterator.html#aac15417aa7a67fdfb86b8bad1b4d5ddf',1,'CollectionIterator::reference()'],['../class_collection_pool.html#a12dd127db0342d4b694d857f6c77ad90',1,'CollectionPool::reference()'],['../class_filtered_collection.html#afc4e47695287b6bac73899ab5bcfdf6e',1,'FilteredCollection::reference()']]],
+  ['reserve',['reserve',['../class_collection_pool.html#a06334969f57ca768241af598f03e8de1',1,'CollectionPool']]],
+  ['reverse_5fiterator',['reverse_iterator',['../class_collection.html#ac3805407b2dc537e71db7af070b8d8a6',1,'Collection::reverse_iterator()'],['../class_collection_pool.html#a02f041d9c0562d656eaa05a9859780af',1,'CollectionPool::reverse_iterator()'],['../class_filtered_collection.html#a5b0a5b053f47e55eee9d746d8160664b',1,'FilteredCollection::reverse_iterator()']]]
 ];
