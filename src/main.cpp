@@ -22,6 +22,8 @@ int main()
 	for (auto e : collectionPool)
 		std::cout << e << " ";
 
+	FilteredCollection<int> filteredcollection(collectionPool,isPair);
+
 	//using iterator = CollectionIterator<int>;
 
 	//using type = std::iterator_traits<iterator>::value_type;

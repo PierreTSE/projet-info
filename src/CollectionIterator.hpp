@@ -5,17 +5,14 @@
 #include <iterator>
 #include <memory>
 
-using const_iterator = const iterator;
-
-template <typename T, bool is_const = false>
+template <typename T>
 class IteratorBase
 {
 	public:
 		IteratorBase() = default; //default constructor
-		IteratorBase(const IteratorBase<T, false>&) {}; //copy constructor
 		virtual ~IteratorBase() = default; //destructor
 	
-		bool operator==(const IteratorBase<T, true>& rhs) const { return typeid(*this) == typeid(rhs) && equal(rhs); } //== comparator
+		bool operator==(const IteratorBase& rhs) const { return typeid(*this) == typeid(rhs) && equal(rhs); } //== comparator
 	
 		virtual T& operator*() = 0; //dereference operator
 		virtual const T& operator*() const = 0; //const dereference operator
@@ -27,41 +24,40 @@ class IteratorBase
 	
 		virtual IteratorBase* clone() const = 0;
 	protected:
-		virtual bool equal(const IteratorBase<T,true>& rhs) const = 0;
+		virtual bool equal(const IteratorBase& rhs) const = 0;
 };
 
-template<typename T, bool is_const = false>
+template<typename T>
 class CollectionIterator
-{
-	friend class CollectionIterator<T,true>;
-	friend class CollectionIterator<T,false>;
-	friend class IteratorBase<T,is_const>;
+{	
+	friend class IteratorBase<T>;
 
 	public:
-		using iterator_category = std::forward_iterator_tag;
+		using iterator_category = std::bidirectional_iterator_tag;
 		using value_type = T;
 		using const_pointer = const T*;
-		using pointer = std::conditional_t<is_const, const_pointer, T*>;
+		using pointer = T* ;
 		using const_reference = const T&;
-		using reference = std::conditional_t<is_const, const_reference, T&>;
+		using reference = T&;
 		using difference_type = std::ptrdiff_t;
+		using size_type = size_t;
 	
 		CollectionIterator() = default; //default constructor, using unique_ptr default constructor
-		CollectionIterator(const CollectionIterator<T, false>& itr) : itr_( itr.itr_->clone() ) {} //copy constructor
-		CollectionIterator(CollectionIterator<T, false>&& itr) noexcept : itr_( std::move(itr.itr_) ) {} //move constructor
+		CollectionIterator(const CollectionIterator& itr) : itr_{ itr.itr_->clone() } {} //copy constructor
+		CollectionIterator(CollectionIterator&& itr) noexcept : itr_{ std::move(itr.itr_) } {} //move constructor
 		//destructed via unique_ptr destructor
 
-		explicit CollectionIterator(IteratorBase<T, is_const>* ptr) : itr_{ ptr } {} //actual constructor
+		explicit CollectionIterator(IteratorBase<T>* ptr) : itr_{ ptr } {} //actual constructor
 	
 		//Copy assigment
-		CollectionIterator& operator=(const CollectionIterator<T, false>& rhs) { itr_.reset(rhs.itr_->clone()); return *this; }
+		CollectionIterator& operator=(const CollectionIterator& rhs) { itr_.reset(rhs.itr_->clone()); return *this; }
 	
 		//Move assignment
-		CollectionIterator& operator=(CollectionIterator<T, false>&& rhs) { itr_ = std::move(rhs.itr_); return *this; }
+		CollectionIterator& operator=(CollectionIterator&& rhs) { itr_ = std::move(rhs.itr_); return *this; }
 	
 		//Can be compared for equivalence using the equality/inequality operators
-		bool operator==(const CollectionIterator<T, true>& rhs) const { return *itr_ == *rhs.itr_; }
-		bool operator!=(const CollectionIterator<T, true>& rhs) const { return !(*itr_ == *rhs.itr_); }
+		bool operator==(const CollectionIterator& rhs) const { return *itr_ == *rhs.itr_; }
+		bool operator!=(const CollectionIterator& rhs) const { return !(*itr_ == *rhs.itr_); }
 	
 		//Can be dereferenced as an rvalue
 		reference operator*() { return **itr_; }
@@ -82,7 +78,7 @@ class CollectionIterator
 
 	
 	private:	
-		std::unique_ptr<IteratorBase<T,is_const>> itr_;
+		std::unique_ptr<IteratorBase<T>> itr_;
 };
 
 #endif // !COLLECTION_ITERATOR_HPP

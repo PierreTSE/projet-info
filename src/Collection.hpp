@@ -14,10 +14,10 @@ class Collection
 		using const_reference = const T&;
 		using pointer = T*;
 		using const_pointer = const T*;
-		using iterator = CollectionIterator<T, false>;
-		using const_iterator = CollectionIterator<T, true>;
+		using iterator = CollectionIterator<T>;
+		//using const_iterator = CollectionIterator<T>;
 		using reverse_iterator = std::reverse_iterator<iterator>;
-		using const_reverse_iterator = std::reverse_iterator<const_iterator>;
+		//using const_reverse_iterator = std::reverse_iterator<const_iterator>;
 		using difference_type = std::ptrdiff_t;
 		using size_type = size_t;
 	

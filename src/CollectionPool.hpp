@@ -6,7 +6,7 @@
 #include <vector>
 #include <iterator>
 
-template<typename T, bool is_const = false>
+template<typename T>
 class PoolIterator;
 
 template<typename T>
@@ -20,9 +20,9 @@ class CollectionPool : public Collection<T>
 		using pointer = typename Collection<T>::pointer;
 		using const_pointer = typename Collection<T>::const_pointer;
 		using iterator = typename Collection<T>::iterator;
-		using const_iterator = typename Collection<T>::const_iterator;
+		//using const_iterator = typename Collection<T>::const_iterator;
 		using reverse_iterator = typename Collection<T>::reverse_iterator;
-		using const_reverse_iterator = typename Collection<T>::const_reverse_iterator;
+		//using const_reverse_iterator = typename Collection<T>::const_reverse_iterator;
 		using difference_type = typename Collection<T>::difference_type;
 		using size_type = typename Collection<T>::size_type;
 		
@@ -81,14 +81,11 @@ class CollectionPool : public Collection<T>
         std::vector<value_type> pool_;
 };
 
-template<typename T, bool is_const>
-class PoolIterator : public IteratorBase<T,is_const>
+template<typename T>
+class PoolIterator : public IteratorBase<T>
 {
-	friend class PoolIterator<T,false>;
-	friend class PoolIterator<T,true>;
-
 public: 
-	explicit PoolIterator(T* ptr) : ptr_{ptr} {}
+	PoolIterator(T* ptr) : ptr_{ptr} {}
 
 	T& operator*() override //dereference operator
 	{
@@ -114,13 +111,13 @@ public:
 	{
 		--ptr_;
 	}
-	IteratorBase<T,is_const>* clone() const override
+	IteratorBase<T>* clone() const override
 	{
-		return new PoolIterator<T,is_const>(ptr_);
+		return new PoolIterator(ptr_);
 	}
-	bool equal(const IteratorBase<T, true>& rhs) const override
+	bool equal(const IteratorBase<T>& rhs) const override
 	{
-		return ptr_ == dynamic_cast<const PoolIterator<T, true>&>(rhs).ptr_;
+		return ptr_ == dynamic_cast<const PoolIterator&>(rhs).ptr_;
 	}
 private:
 	T* ptr_;
