@@ -55,8 +55,6 @@ class CollectionPool : public Collection<T>
         iterator erase(const_iterator pos);
         iterator erase(iterator first, iterator last);
         iterator erase(const_iterator first, const_iterator last);
-        void push_back(const T& value);
-        void push_back(T&& value);
         template <class... Args>
         void emplace_back(Args&&... args);
         template <class... Args>
@@ -67,6 +65,18 @@ class CollectionPool : public Collection<T>
         void resize(size_type count, const value_type& value);
         */
 
+		//Modifiers
+		void push_back(const T& value) 
+		{
+			pool_.push_back(value);
+		}
+		void push_back(T&& value)
+		{
+			pool_.push_back(std::move(value));
+		}
+
+
+		//Iterators
 		iterator begin() override
 		{
 			return iterator(new PoolIterator<value_type>(std::addressof(*pool_.begin())));
@@ -76,7 +86,7 @@ class CollectionPool : public Collection<T>
 		{
 			return iterator(new PoolIterator<value_type>(std::addressof(*pool_.end())));
 		}
-    
+
     private:
         std::vector<value_type> pool_;
 };
