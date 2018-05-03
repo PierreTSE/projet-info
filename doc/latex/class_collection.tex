@@ -1,0 +1,178 @@
+\hypertarget{class_collection}{}\section{Référence du modèle de la classe Collection$<$ T $>$}
+\label{class_collection}\index{Collection$<$ T $>$@{Collection$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Collection.\+hpp$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Collection$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_collection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Collection$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_collection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{class_collection_a30ecb2b5696f341f4b751019679c41e0}{value\+\_\+type} = T
+\item 
+using \hyperlink{class_collection_ac7974b0b552f0a94065aadc48ae53397}{allocator\+\_\+type} = std\+::allocator$<$ T $>$
+\item 
+using \hyperlink{class_collection_abbc291771b11c48cd2f297a0d9fe0449}{reference} = T \&
+\item 
+using \hyperlink{class_collection_abb8c0f6de5e322aa531837aab7358b89}{const\+\_\+reference} = const T \&
+\item 
+using \hyperlink{class_collection_a9a5b5d9b389c113364d527900c745efb}{pointer} = T $\ast$
+\item 
+using \hyperlink{class_collection_a79ea96d1fa145e340e907547d0053b81}{const\+\_\+pointer} = const T $\ast$
+\item 
+using \hyperlink{class_collection_a317dca4fdf1eb2e47643bb60c620f802}{iterator} = \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$
+\item 
+using \hyperlink{class_collection_ac3805407b2dc537e71db7af070b8d8a6}{reverse\+\_\+iterator} = std\+::reverse\+\_\+iterator$<$ \hyperlink{class_collection_a317dca4fdf1eb2e47643bb60c620f802}{iterator} $>$
+\item 
+using \hyperlink{class_collection_a60b36ef7aba0a88dff0e98fc2adb98a8}{difference\+\_\+type} = std\+::ptrdiff\+\_\+t
+\item 
+using \hyperlink{class_collection_a3f8b024f587aa20be530866da30948c4}{size\+\_\+type} = size\+\_\+t
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_collection_af6be61fb9648c2ac1ef7c8456b49a441}{Collection} ()=default
+\item 
+virtual \hyperlink{class_collection_ae9e3ec131717723e10152cb7ec3b0379}{$\sim$\+Collection} ()=default
+\item 
+virtual \hyperlink{class_collection_a317dca4fdf1eb2e47643bb60c620f802}{iterator} \hyperlink{class_collection_a4abc73f8e31a499a22b25d42b7a4fe8c}{begin} ()=0
+\item 
+virtual \hyperlink{class_collection_a317dca4fdf1eb2e47643bb60c620f802}{iterator} \hyperlink{class_collection_ab5b98f651d0f49cde1be067c69c52e89}{end} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des définitions de type membres}
+\mbox{\Hypertarget{class_collection_ac7974b0b552f0a94065aadc48ae53397}\label{class_collection_ac7974b0b552f0a94065aadc48ae53397}} 
+\index{Collection@{Collection}!allocator\+\_\+type@{allocator\+\_\+type}}
+\index{allocator\+\_\+type@{allocator\+\_\+type}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{allocator\+\_\+type}{allocator\_type}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_ac7974b0b552f0a94065aadc48ae53397}{allocator\+\_\+type} =  std\+::allocator$<$T$>$}
+
+\mbox{\Hypertarget{class_collection_a79ea96d1fa145e340e907547d0053b81}\label{class_collection_a79ea96d1fa145e340e907547d0053b81}} 
+\index{Collection@{Collection}!const\+\_\+pointer@{const\+\_\+pointer}}
+\index{const\+\_\+pointer@{const\+\_\+pointer}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{const\+\_\+pointer}{const\_pointer}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_a79ea96d1fa145e340e907547d0053b81}{const\+\_\+pointer} =  const T$\ast$}
+
+\mbox{\Hypertarget{class_collection_abb8c0f6de5e322aa531837aab7358b89}\label{class_collection_abb8c0f6de5e322aa531837aab7358b89}} 
+\index{Collection@{Collection}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{const\+\_\+reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_abb8c0f6de5e322aa531837aab7358b89}{const\+\_\+reference} =  const T\&}
+
+\mbox{\Hypertarget{class_collection_a60b36ef7aba0a88dff0e98fc2adb98a8}\label{class_collection_a60b36ef7aba0a88dff0e98fc2adb98a8}} 
+\index{Collection@{Collection}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{difference\+\_\+type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_a60b36ef7aba0a88dff0e98fc2adb98a8}{difference\+\_\+type} =  std\+::ptrdiff\+\_\+t}
+
+\mbox{\Hypertarget{class_collection_a317dca4fdf1eb2e47643bb60c620f802}\label{class_collection_a317dca4fdf1eb2e47643bb60c620f802}} 
+\index{Collection@{Collection}!iterator@{iterator}}
+\index{iterator@{iterator}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_a317dca4fdf1eb2e47643bb60c620f802}{iterator} =  \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$T$>$}
+
+\mbox{\Hypertarget{class_collection_a9a5b5d9b389c113364d527900c745efb}\label{class_collection_a9a5b5d9b389c113364d527900c745efb}} 
+\index{Collection@{Collection}!pointer@{pointer}}
+\index{pointer@{pointer}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_a9a5b5d9b389c113364d527900c745efb}{pointer} =  T$\ast$}
+
+\mbox{\Hypertarget{class_collection_abbc291771b11c48cd2f297a0d9fe0449}\label{class_collection_abbc291771b11c48cd2f297a0d9fe0449}} 
+\index{Collection@{Collection}!reference@{reference}}
+\index{reference@{reference}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_abbc291771b11c48cd2f297a0d9fe0449}{reference} =  T\&}
+
+\mbox{\Hypertarget{class_collection_ac3805407b2dc537e71db7af070b8d8a6}\label{class_collection_ac3805407b2dc537e71db7af070b8d8a6}} 
+\index{Collection@{Collection}!reverse\+\_\+iterator@{reverse\+\_\+iterator}}
+\index{reverse\+\_\+iterator@{reverse\+\_\+iterator}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{reverse\+\_\+iterator}{reverse\_iterator}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_ac3805407b2dc537e71db7af070b8d8a6}{reverse\+\_\+iterator} =  std\+::reverse\+\_\+iterator$<$\hyperlink{class_collection_a317dca4fdf1eb2e47643bb60c620f802}{iterator}$>$}
+
+\mbox{\Hypertarget{class_collection_a3f8b024f587aa20be530866da30948c4}\label{class_collection_a3f8b024f587aa20be530866da30948c4}} 
+\index{Collection@{Collection}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{size\+\_\+type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_a3f8b024f587aa20be530866da30948c4}{size\+\_\+type} =  size\+\_\+t}
+
+\mbox{\Hypertarget{class_collection_a30ecb2b5696f341f4b751019679c41e0}\label{class_collection_a30ecb2b5696f341f4b751019679c41e0}} 
+\index{Collection@{Collection}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{value\+\_\+type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection_a30ecb2b5696f341f4b751019679c41e0}{value\+\_\+type} =  T}
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_collection_af6be61fb9648c2ac1ef7c8456b49a441}\label{class_collection_af6be61fb9648c2ac1ef7c8456b49a441}} 
+\index{Collection@{Collection}!Collection@{Collection}}
+\index{Collection@{Collection}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{Collection()}{Collection()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection}{Collection}$<$ T $>$\+::\hyperlink{class_collection}{Collection} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_collection_ae9e3ec131717723e10152cb7ec3b0379}\label{class_collection_ae9e3ec131717723e10152cb7ec3b0379}} 
+\index{Collection@{Collection}!````~Collection@{$\sim$\+Collection}}
+\index{````~Collection@{$\sim$\+Collection}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{$\sim$\+Collection()}{~Collection()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual \hyperlink{class_collection}{Collection}$<$ T $>$\+::$\sim$\hyperlink{class_collection}{Collection} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_collection_a4abc73f8e31a499a22b25d42b7a4fe8c}\label{class_collection_a4abc73f8e31a499a22b25d42b7a4fe8c}} 
+\index{Collection@{Collection}!begin@{begin}}
+\index{begin@{begin}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual \hyperlink{class_collection_a317dca4fdf1eb2e47643bb60c620f802}{iterator} \hyperlink{class_collection}{Collection}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_collection_pool_ae13d478a26554da9211db064285c7b0b}{Collection\+Pool$<$ T $>$}, et \hyperlink{class_filtered_collection_a114f2b1557201e523a264d549926ab0a}{Filtered\+Collection$<$ T $>$}.
+
+\mbox{\Hypertarget{class_collection_ab5b98f651d0f49cde1be067c69c52e89}\label{class_collection_ab5b98f651d0f49cde1be067c69c52e89}} 
+\index{Collection@{Collection}!end@{end}}
+\index{end@{end}!Collection@{Collection}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual \hyperlink{class_collection_a317dca4fdf1eb2e47643bb60c620f802}{iterator} \hyperlink{class_collection}{Collection}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_collection_pool_a870a85422595d6533688704ebe43b520}{Collection\+Pool$<$ T $>$}, et \hyperlink{class_filtered_collection_ae310c937df5035ef07f7d4de65fca18b}{Filtered\+Collection$<$ T $>$}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_collection_8hpp}{Collection.\+hpp}\end{DoxyCompactItemize}

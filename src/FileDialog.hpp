@@ -1,10 +1,14 @@
 ﻿#ifndef FILEDIALOG_H
 #define FILEDIALOG_H
 
-#include "system_target.hpp"
 #include <experimental/filesystem>
 #include <string>
 
+
+struct file_filter
+{
+	std::string name, pattern;
+};
 
 /**
  * @brief Ouvre une boîte de dialogue qui demande un fichier à ouvrir
@@ -14,7 +18,7 @@
  * @return chemin vers le fichier sélectionné
  */
 std::experimental::filesystem::path getOpenFileName(const std::string& title = "Open a file",
-                                                    const std::string& filter = "All files (*.*)",
+                                                    const file_filter& filter = {"All files", "*"},
                                                     const std::experimental::filesystem::path& initialDir = "");
 
 //TODO PG à éditer avec path

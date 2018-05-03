@@ -1,0 +1,228 @@
+\hypertarget{class_iterator_base}{}\section{Référence du modèle de la classe Iterator\+Base$<$ T $>$}
+\label{class_iterator_base}\index{Iterator\+Base$<$ T $>$@{Iterator\+Base$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Collection\+Iterator.\+hpp$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Iterator\+Base$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_iterator_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Iterator\+Base$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_iterator_base__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_iterator_base_a6d1810e7a0a84574bb61d78bb99d96bb}{Iterator\+Base} ()=default
+\item 
+virtual \hyperlink{class_iterator_base_a9b0e1d44c1fb3e68171746b045676526}{$\sim$\+Iterator\+Base} ()=default
+\item 
+bool \hyperlink{class_iterator_base_a7475728422cb73f91d1c4cb4c3d07499}{operator==} (const \hyperlink{class_iterator_base}{Iterator\+Base} \&rhs) const
+\item 
+virtual T \& \hyperlink{class_iterator_base_a532583e58bce168648bdbdedb3a7d5ab}{operator$\ast$} ()=0
+\item 
+virtual const T \& \hyperlink{class_iterator_base_abc219468b68f2b5471494d04d00f6ec7}{operator$\ast$} () const =0
+\item 
+virtual T $\ast$ \hyperlink{class_iterator_base_aad2254f7877e4647f699ceb455e893ff}{operator-\/$>$} ()=0
+\item 
+virtual const T $\ast$ \hyperlink{class_iterator_base_a49d96fd63062ca0d7fd813517ad69f03}{operator-\/$>$} () const =0
+\item 
+virtual void \hyperlink{class_iterator_base_a816f35e9020716d212124a34f1c033fb}{operator++} ()=0
+\item 
+virtual void \hyperlink{class_iterator_base_aa9bf0f75a8bb7e4d416a9b88ccacd9c7}{operator-\/-\/} ()=0
+\item 
+virtual \hyperlink{class_iterator_base}{Iterator\+Base} $\ast$ \hyperlink{class_iterator_base_a541fdf8cc48f31c8ddfdc3f319a37100}{clone} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_iterator_base_a08430515a17384d098eb62ecce1b64c6}{equal} (const \hyperlink{class_iterator_base}{Iterator\+Base} \&rhs) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_iterator_base_a6d1810e7a0a84574bb61d78bb99d96bb}\label{class_iterator_base_a6d1810e7a0a84574bb61d78bb99d96bb}} 
+\index{Iterator\+Base@{Iterator\+Base}!Iterator\+Base@{Iterator\+Base}}
+\index{Iterator\+Base@{Iterator\+Base}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{Iterator\+Base()}{IteratorBase()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::\hyperlink{class_iterator_base}{Iterator\+Base} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_iterator_base_a9b0e1d44c1fb3e68171746b045676526}\label{class_iterator_base_a9b0e1d44c1fb3e68171746b045676526}} 
+\index{Iterator\+Base@{Iterator\+Base}!````~Iterator\+Base@{$\sim$\+Iterator\+Base}}
+\index{````~Iterator\+Base@{$\sim$\+Iterator\+Base}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{$\sim$\+Iterator\+Base()}{~IteratorBase()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::$\sim$\hyperlink{class_iterator_base}{Iterator\+Base} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_iterator_base_a541fdf8cc48f31c8ddfdc3f319a37100}\label{class_iterator_base_a541fdf8cc48f31c8ddfdc3f319a37100}} 
+\index{Iterator\+Base@{Iterator\+Base}!clone@{clone}}
+\index{clone@{clone}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual \hyperlink{class_iterator_base}{Iterator\+Base}$\ast$ \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_filtered_iterator_a79d512a43aa4d31caf26908e93130b9d}{Filtered\+Iterator$<$ T $>$}, et \hyperlink{class_pool_iterator_ae39cdb4bbb84e88cf0d9009e7bdae586}{Pool\+Iterator$<$ T $>$}.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_iterator_base_a541fdf8cc48f31c8ddfdc3f319a37100_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_iterator_base_a08430515a17384d098eb62ecce1b64c6}\label{class_iterator_base_a08430515a17384d098eb62ecce1b64c6}} 
+\index{Iterator\+Base@{Iterator\+Base}!equal@{equal}}
+\index{equal@{equal}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual bool \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::equal (\begin{DoxyParamCaption}\item[{const \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_filtered_iterator_a7118ec2bba2bf138ca771a394a8d72c8}{Filtered\+Iterator$<$ T $>$}, et \hyperlink{class_pool_iterator_adbbef39e72972414b1bbb6d6bb885bb1}{Pool\+Iterator$<$ T $>$}.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_iterator_base_a08430515a17384d098eb62ecce1b64c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_iterator_base_a532583e58bce168648bdbdedb3a7d5ab}\label{class_iterator_base_a532583e58bce168648bdbdedb3a7d5ab}} 
+\index{Iterator\+Base@{Iterator\+Base}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual T\& \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_pool_iterator_a3acdd751b297473d78eedb7422c7a66c}{Pool\+Iterator$<$ T $>$}, et \hyperlink{class_filtered_iterator_ac891b168cd653612ddc7ed7cb4380196}{Filtered\+Iterator$<$ T $>$}.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_iterator_base_a532583e58bce168648bdbdedb3a7d5ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_iterator_base_abc219468b68f2b5471494d04d00f6ec7}\label{class_iterator_base_abc219468b68f2b5471494d04d00f6ec7}} 
+\index{Iterator\+Base@{Iterator\+Base}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual const T\& \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_pool_iterator_ab8a7e0669bfd1cd4335ca726bba77127}{Pool\+Iterator$<$ T $>$}, et \hyperlink{class_filtered_iterator_aab76ce411b72c85c3e6a9007a6c9fd98}{Filtered\+Iterator$<$ T $>$}.
+
+\mbox{\Hypertarget{class_iterator_base_a816f35e9020716d212124a34f1c033fb}\label{class_iterator_base_a816f35e9020716d212124a34f1c033fb}} 
+\index{Iterator\+Base@{Iterator\+Base}!operator++@{operator++}}
+\index{operator++@{operator++}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual void \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_filtered_iterator_ae31347c47637172be3d19dc3be30f5cc}{Filtered\+Iterator$<$ T $>$}, et \hyperlink{class_pool_iterator_a0da86ab88d60973aee45e6a51a929138}{Pool\+Iterator$<$ T $>$}.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_iterator_base_a816f35e9020716d212124a34f1c033fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_iterator_base_aa9bf0f75a8bb7e4d416a9b88ccacd9c7}\label{class_iterator_base_aa9bf0f75a8bb7e4d416a9b88ccacd9c7}} 
+\index{Iterator\+Base@{Iterator\+Base}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual void \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_filtered_iterator_a860a37fdf31e87a96b80cb295e6d34c2}{Filtered\+Iterator$<$ T $>$}, et \hyperlink{class_pool_iterator_aa1f588a47b0c11d6e064e34b129337ae}{Pool\+Iterator$<$ T $>$}.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_iterator_base_aa9bf0f75a8bb7e4d416a9b88ccacd9c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_iterator_base_aad2254f7877e4647f699ceb455e893ff}\label{class_iterator_base_aad2254f7877e4647f699ceb455e893ff}} 
+\index{Iterator\+Base@{Iterator\+Base}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual T$\ast$ \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_pool_iterator_ae2893041831d8c29f222af7fe184fe09}{Pool\+Iterator$<$ T $>$}, et \hyperlink{class_filtered_iterator_a413726d7cc9a951d0a30eaee6cf36de1}{Filtered\+Iterator$<$ T $>$}.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_iterator_base_aad2254f7877e4647f699ceb455e893ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_iterator_base_a49d96fd63062ca0d7fd813517ad69f03}\label{class_iterator_base_a49d96fd63062ca0d7fd813517ad69f03}} 
+\index{Iterator\+Base@{Iterator\+Base}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual const T$\ast$ \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \hyperlink{class_pool_iterator_a228d6ee24cd015a7312fa9f76244994c}{Pool\+Iterator$<$ T $>$}, et \hyperlink{class_filtered_iterator_a75ea4ec86c45f496c1515e8e9832cd0f}{Filtered\+Iterator$<$ T $>$}.
+
+\mbox{\Hypertarget{class_iterator_base_a7475728422cb73f91d1c4cb4c3d07499}\label{class_iterator_base_a7475728422cb73f91d1c4cb4c3d07499}} 
+\index{Iterator\+Base@{Iterator\+Base}!operator==@{operator==}}
+\index{operator==@{operator==}!Iterator\+Base@{Iterator\+Base}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_iterator_base_a7475728422cb73f91d1c4cb4c3d07499_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_collection_iterator_8hpp}{Collection\+Iterator.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,266 @@
+\hypertarget{class_collection_iterator}{}\section{Référence du modèle de la classe Collection\+Iterator$<$ T $>$}
+\label{class_collection_iterator}\index{Collection\+Iterator$<$ T $>$@{Collection\+Iterator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Collection\+Iterator.\+hpp$>$}
+
+
+
+Graphe de collaboration de Collection\+Iterator$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_collection_iterator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{class_collection_iterator_a0f4af23418960a0fe3889b5381d6a79c}{iterator\+\_\+category} = std\+::bidirectional\+\_\+iterator\+\_\+tag
+\item 
+using \hyperlink{class_collection_iterator_a8513f3c29655e48f34f8b6a11b96a71b}{value\+\_\+type} = T
+\item 
+using \hyperlink{class_collection_iterator_a9bff5744ce1cfc8f704fa52557699594}{const\+\_\+pointer} = const T $\ast$
+\item 
+using \hyperlink{class_collection_iterator_aff846a9c86022d66a7eb10e3623a0ba0}{pointer} = T $\ast$
+\item 
+using \hyperlink{class_collection_iterator_ab0f0742da5375882a74038d82de41aca}{const\+\_\+reference} = const T \&
+\item 
+using \hyperlink{class_collection_iterator_aac15417aa7a67fdfb86b8bad1b4d5ddf}{reference} = T \&
+\item 
+using \hyperlink{class_collection_iterator_a4dca8639d1f342073ccf8bcd4d27e3bf}{difference\+\_\+type} = std\+::ptrdiff\+\_\+t
+\item 
+using \hyperlink{class_collection_iterator_a1302f39e9a4763886e48a045e53c00cf}{size\+\_\+type} = size\+\_\+t
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_collection_iterator_ad43d61217203dfc7639ff9cc215cbbb5}{Collection\+Iterator} ()=default
+\item 
+\hyperlink{class_collection_iterator_a9db87c21c0786441895f008bc3508785}{Collection\+Iterator} (const \hyperlink{class_collection_iterator}{Collection\+Iterator} \&itr)
+\item 
+\hyperlink{class_collection_iterator_a0507f147322bb135486239871259fce6}{Collection\+Iterator} (\hyperlink{class_collection_iterator}{Collection\+Iterator} \&\&itr) noexcept
+\item 
+\hyperlink{class_collection_iterator_a538532a008fd442918b5f2f73e9bd2d2}{Collection\+Iterator} (\hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$ $\ast$ptr)
+\item 
+\hyperlink{class_collection_iterator}{Collection\+Iterator} \& \hyperlink{class_collection_iterator_a2a03298e6ea06b1e6344cf4be9e1439e}{operator=} (const \hyperlink{class_collection_iterator}{Collection\+Iterator} \&rhs)
+\item 
+\hyperlink{class_collection_iterator}{Collection\+Iterator} \& \hyperlink{class_collection_iterator_a0833a1abf480292154ba6e9f838b431b}{operator=} (\hyperlink{class_collection_iterator}{Collection\+Iterator} \&\&rhs)
+\item 
+bool \hyperlink{class_collection_iterator_ab0bd97b5ce32b24ea6559370805cf8ee}{operator==} (const \hyperlink{class_collection_iterator}{Collection\+Iterator} \&rhs) const
+\item 
+bool \hyperlink{class_collection_iterator_a97f25f4b7c4f5ad3364c79224d31c666}{operator!=} (const \hyperlink{class_collection_iterator}{Collection\+Iterator} \&rhs) const
+\item 
+\hyperlink{class_collection_iterator_aac15417aa7a67fdfb86b8bad1b4d5ddf}{reference} \hyperlink{class_collection_iterator_a33e98fda7a97c6105562074ca52d9a36}{operator$\ast$} ()
+\item 
+\hyperlink{class_collection_iterator_ab0f0742da5375882a74038d82de41aca}{const\+\_\+reference} \hyperlink{class_collection_iterator_ad8f71e444278158b6f290d723a3639ac}{operator$\ast$} () const
+\item 
+\hyperlink{class_collection_iterator_aff846a9c86022d66a7eb10e3623a0ba0}{pointer} \hyperlink{class_collection_iterator_a633510976e0de7df1a1f2d55ec289237}{operator-\/$>$} ()
+\item 
+\hyperlink{class_collection_iterator_a9bff5744ce1cfc8f704fa52557699594}{const\+\_\+pointer} \hyperlink{class_collection_iterator_a1892f0cf674eaad4c9d02bfcda128eb3}{operator-\/$>$} () const
+\item 
+\hyperlink{class_collection_iterator}{Collection\+Iterator} \& \hyperlink{class_collection_iterator_aa570334105e0d8e3a46866a16bce3548}{operator++} ()
+\item 
+\hyperlink{class_collection_iterator}{Collection\+Iterator} \hyperlink{class_collection_iterator_a8349a131a3a073abc5e09c50f4c56824}{operator++} (int)
+\item 
+\hyperlink{class_collection_iterator}{Collection\+Iterator} \& \hyperlink{class_collection_iterator_aa46a032f274c435cc87ed6ac14742ffa}{operator-\/-\/} ()
+\item 
+\hyperlink{class_collection_iterator}{Collection\+Iterator} \hyperlink{class_collection_iterator_ac7ffeb12a633924c11852e6d12a1e1b6}{operator-\/-\/} (int)
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_collection_iterator_a6076dfcb85a3a7cb903b827fa821fe54}{Iterator\+Base$<$ T $>$}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des définitions de type membres}
+\mbox{\Hypertarget{class_collection_iterator_a9bff5744ce1cfc8f704fa52557699594}\label{class_collection_iterator_a9bff5744ce1cfc8f704fa52557699594}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!const\+\_\+pointer@{const\+\_\+pointer}}
+\index{const\+\_\+pointer@{const\+\_\+pointer}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{const\+\_\+pointer}{const\_pointer}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator_a9bff5744ce1cfc8f704fa52557699594}{const\+\_\+pointer} =  const T$\ast$}
+
+\mbox{\Hypertarget{class_collection_iterator_ab0f0742da5375882a74038d82de41aca}\label{class_collection_iterator_ab0f0742da5375882a74038d82de41aca}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{const\+\_\+reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator_ab0f0742da5375882a74038d82de41aca}{const\+\_\+reference} =  const T\&}
+
+\mbox{\Hypertarget{class_collection_iterator_a4dca8639d1f342073ccf8bcd4d27e3bf}\label{class_collection_iterator_a4dca8639d1f342073ccf8bcd4d27e3bf}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{difference\+\_\+type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator_a4dca8639d1f342073ccf8bcd4d27e3bf}{difference\+\_\+type} =  std\+::ptrdiff\+\_\+t}
+
+\mbox{\Hypertarget{class_collection_iterator_a0f4af23418960a0fe3889b5381d6a79c}\label{class_collection_iterator_a0f4af23418960a0fe3889b5381d6a79c}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!iterator\+\_\+category@{iterator\+\_\+category}}
+\index{iterator\+\_\+category@{iterator\+\_\+category}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{iterator\+\_\+category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator_a0f4af23418960a0fe3889b5381d6a79c}{iterator\+\_\+category} =  std\+::bidirectional\+\_\+iterator\+\_\+tag}
+
+\mbox{\Hypertarget{class_collection_iterator_aff846a9c86022d66a7eb10e3623a0ba0}\label{class_collection_iterator_aff846a9c86022d66a7eb10e3623a0ba0}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator_aff846a9c86022d66a7eb10e3623a0ba0}{pointer} =  T$\ast$}
+
+\mbox{\Hypertarget{class_collection_iterator_aac15417aa7a67fdfb86b8bad1b4d5ddf}\label{class_collection_iterator_aac15417aa7a67fdfb86b8bad1b4d5ddf}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!reference@{reference}}
+\index{reference@{reference}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator_aac15417aa7a67fdfb86b8bad1b4d5ddf}{reference} =  T\&}
+
+\mbox{\Hypertarget{class_collection_iterator_a1302f39e9a4763886e48a045e53c00cf}\label{class_collection_iterator_a1302f39e9a4763886e48a045e53c00cf}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{size\+\_\+type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator_a1302f39e9a4763886e48a045e53c00cf}{size\+\_\+type} =  size\+\_\+t}
+
+\mbox{\Hypertarget{class_collection_iterator_a8513f3c29655e48f34f8b6a11b96a71b}\label{class_collection_iterator_a8513f3c29655e48f34f8b6a11b96a71b}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{value\+\_\+type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+using \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator_a8513f3c29655e48f34f8b6a11b96a71b}{value\+\_\+type} =  T}
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_collection_iterator_ad43d61217203dfc7639ff9cc215cbbb5}\label{class_collection_iterator_ad43d61217203dfc7639ff9cc215cbbb5}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!Collection\+Iterator@{Collection\+Iterator}}
+\index{Collection\+Iterator@{Collection\+Iterator}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{Collection\+Iterator()}{CollectionIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator}{Collection\+Iterator} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a9db87c21c0786441895f008bc3508785}\label{class_collection_iterator_a9db87c21c0786441895f008bc3508785}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!Collection\+Iterator@{Collection\+Iterator}}
+\index{Collection\+Iterator@{Collection\+Iterator}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{Collection\+Iterator()}{CollectionIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator}{Collection\+Iterator} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$ \&}]{itr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a0507f147322bb135486239871259fce6}\label{class_collection_iterator_a0507f147322bb135486239871259fce6}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!Collection\+Iterator@{Collection\+Iterator}}
+\index{Collection\+Iterator@{Collection\+Iterator}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{Collection\+Iterator()}{CollectionIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator}{Collection\+Iterator} (\begin{DoxyParamCaption}\item[{\hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$ \&\&}]{itr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a538532a008fd442918b5f2f73e9bd2d2}\label{class_collection_iterator_a538532a008fd442918b5f2f73e9bd2d2}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!Collection\+Iterator@{Collection\+Iterator}}
+\index{Collection\+Iterator@{Collection\+Iterator}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{Collection\+Iterator()}{CollectionIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::\hyperlink{class_collection_iterator}{Collection\+Iterator} (\begin{DoxyParamCaption}\item[{\hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$ $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_collection_iterator_a97f25f4b7c4f5ad3364c79224d31c666}\label{class_collection_iterator_a97f25f4b7c4f5ad3364c79224d31c666}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a33e98fda7a97c6105562074ca52d9a36}\label{class_collection_iterator_a33e98fda7a97c6105562074ca52d9a36}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator_aac15417aa7a67fdfb86b8bad1b4d5ddf}{reference} \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_ad8f71e444278158b6f290d723a3639ac}\label{class_collection_iterator_ad8f71e444278158b6f290d723a3639ac}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator_ab0f0742da5375882a74038d82de41aca}{const\+\_\+reference} \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_aa570334105e0d8e3a46866a16bce3548}\label{class_collection_iterator_aa570334105e0d8e3a46866a16bce3548}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator}\& \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a8349a131a3a073abc5e09c50f4c56824}\label{class_collection_iterator_a8349a131a3a073abc5e09c50f4c56824}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator} \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_aa46a032f274c435cc87ed6ac14742ffa}\label{class_collection_iterator_aa46a032f274c435cc87ed6ac14742ffa}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator}\& \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_ac7ffeb12a633924c11852e6d12a1e1b6}\label{class_collection_iterator_ac7ffeb12a633924c11852e6d12a1e1b6}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator} \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a633510976e0de7df1a1f2d55ec289237}\label{class_collection_iterator_a633510976e0de7df1a1f2d55ec289237}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator_aff846a9c86022d66a7eb10e3623a0ba0}{pointer} \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a1892f0cf674eaad4c9d02bfcda128eb3}\label{class_collection_iterator_a1892f0cf674eaad4c9d02bfcda128eb3}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator_a9bff5744ce1cfc8f704fa52557699594}{const\+\_\+pointer} \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a2a03298e6ea06b1e6344cf4be9e1439e}\label{class_collection_iterator_a2a03298e6ea06b1e6344cf4be9e1439e}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator}\& \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_a0833a1abf480292154ba6e9f838b431b}\label{class_collection_iterator_a0833a1abf480292154ba6e9f838b431b}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{class_collection_iterator}{Collection\+Iterator}\& \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$ \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_collection_iterator_ab0bd97b5ce32b24ea6559370805cf8ee}\label{class_collection_iterator_ab0bd97b5ce32b24ea6559370805cf8ee}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_collection_iterator}{Collection\+Iterator}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Documentation des fonctions amies et associées}
+\mbox{\Hypertarget{class_collection_iterator_a6076dfcb85a3a7cb903b827fa821fe54}\label{class_collection_iterator_a6076dfcb85a3a7cb903b827fa821fe54}} 
+\index{Collection\+Iterator@{Collection\+Iterator}!Iterator\+Base$<$ T $>$@{Iterator\+Base$<$ T $>$}}
+\index{Iterator\+Base$<$ T $>$@{Iterator\+Base$<$ T $>$}!Collection\+Iterator@{Collection\+Iterator}}
+\subsubsection{\texorpdfstring{Iterator\+Base$<$ T $>$}{IteratorBase< T >}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+friend class \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_collection_iterator_8hpp}{Collection\+Iterator.\+hpp}\end{DoxyCompactItemize}

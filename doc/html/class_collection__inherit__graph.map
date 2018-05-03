@@ -1,0 +1,4 @@
+<map id="Collection&lt; T &gt;" name="Collection&lt; T &gt;">
+<area shape="rect" id="node2" href="$class_collection_pool.html" title="{CollectionPool\&lt; T \&gt;\n||+ CollectionPool()\l+ CollectionPool()\l+ CollectionPool()\l+ empty()\l+ size()\l+ max_size()\l+ reserve()\l+ capacity()\l+ shrink_to_fit()\l+ begin()\l+ end()\l}" alt="" coords="5,175,144,399"/>
+<area shape="rect" id="node3" href="$class_filtered_collection.html" title="{FilteredCollection\&lt; T \&gt;\n||+ FilteredCollection()\l+ begin()\l+ end()\l}" alt="" coords="168,233,323,340"/>
+</map>

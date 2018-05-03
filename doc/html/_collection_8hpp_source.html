@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Image Tagger:  Fichier source de src/Collection.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Image Tagger
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Collection.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_collection_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COLLECTION_HPP</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define COLLECTION_HPP</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_collection_iterator_8hpp.html">CollectionIterator.hpp</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_collection.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_collection.html">Collection</a></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_collection.html#a30ecb2b5696f341f4b751019679c41e0">   11</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#a30ecb2b5696f341f4b751019679c41e0">value_type</a> = T;</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_collection.html#ac7974b0b552f0a94065aadc48ae53397">   12</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#ac7974b0b552f0a94065aadc48ae53397">allocator_type</a> = std::allocator&lt;T&gt;;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_collection.html#abbc291771b11c48cd2f297a0d9fe0449">   13</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#abbc291771b11c48cd2f297a0d9fe0449">reference</a> = T&amp;;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_collection.html#abb8c0f6de5e322aa531837aab7358b89">   14</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#abb8c0f6de5e322aa531837aab7358b89">const_reference</a> = <span class="keyword">const</span> T&amp;;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_collection.html#a9a5b5d9b389c113364d527900c745efb">   15</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#a9a5b5d9b389c113364d527900c745efb">pointer</a> = T*;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_collection.html#a79ea96d1fa145e340e907547d0053b81">   16</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#a79ea96d1fa145e340e907547d0053b81">const_pointer</a> = <span class="keyword">const</span> T*;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_collection.html#a317dca4fdf1eb2e47643bb60c620f802">   17</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection_iterator.html">iterator</a> = <a class="code" href="class_collection_iterator.html">CollectionIterator&lt;T&gt;</a>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//using const_iterator = CollectionIterator&lt;T&gt;;</span></div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_collection.html#ac3805407b2dc537e71db7af070b8d8a6">   19</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#ac3805407b2dc537e71db7af070b8d8a6">reverse_iterator</a> = std::reverse_iterator&lt;iterator&gt;;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//using const_reverse_iterator = std::reverse_iterator&lt;const_iterator&gt;;</span></div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_collection.html#a60b36ef7aba0a88dff0e98fc2adb98a8">   21</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#a60b36ef7aba0a88dff0e98fc2adb98a8">difference_type</a> = std::ptrdiff_t;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_collection.html#a3f8b024f587aa20be530866da30948c4">   22</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="class_collection.html#a3f8b024f587aa20be530866da30948c4">size_type</a> = size_t;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_collection.html#af6be61fb9648c2ac1ef7c8456b49a441">Collection</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_collection.html#ae9e3ec131717723e10152cb7ec3b0379">~Collection</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">/*//Assign</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">        virtual void assign(size_type count, const T&amp; value) = 0;</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">        virtual void assign(iterator first, iterator last) = 0;</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">        virtual void assign(std::initializer_list&lt;T&gt; ilist) = 0;</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    </span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">        //Element access</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">        virtual reference at(size_type pos) = 0;</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">        virtual const_reference at(size_type pos) const = 0;</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">        virtual reference front() = 0;</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">        virtual const_reference front() const = 0;</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">        virtual reference back() = 0;</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">        virtual const_reference back() const = 0;*/</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">//Iterators</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_collection_iterator.html">iterator</a> <a class="code" href="class_collection.html#a4abc73f8e31a499a22b25d42b7a4fe8c">begin</a>() = 0;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">/*virtual const_iterator cbegin() const = 0;</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">        virtual reverse_iterator rbegin() = 0;</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">        virtual const_reverse_iterator rbegin() const = 0;</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        virtual const_reverse_iterator crbegin() const = 0;*/</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_collection_iterator.html">iterator</a> <a class="code" href="class_collection.html#ab5b98f651d0f49cde1be067c69c52e89">end</a>() = 0;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">/*virtual const_iterator cend() const = 0;</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        virtual reverse_iterator rend() = 0;</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">        virtual const_reverse_iterator rend() const = 0;</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">        virtual const_reverse_iterator crend() const = 0;*/</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        </div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif // !COLLECTION_HPP</span></div><div class="ttc" id="class_collection_html"><div class="ttname"><a href="class_collection.html">Collection</a></div><div class="ttdef"><b>Definition:</b> Collection.hpp:8</div></div>
+<div class="ttc" id="class_collection_html_ac7974b0b552f0a94065aadc48ae53397"><div class="ttname"><a href="class_collection.html#ac7974b0b552f0a94065aadc48ae53397">Collection::allocator_type</a></div><div class="ttdeci">std::allocator&lt; T &gt; allocator_type</div><div class="ttdef"><b>Definition:</b> Collection.hpp:12</div></div>
+<div class="ttc" id="class_collection_html_a79ea96d1fa145e340e907547d0053b81"><div class="ttname"><a href="class_collection.html#a79ea96d1fa145e340e907547d0053b81">Collection::const_pointer</a></div><div class="ttdeci">const T * const_pointer</div><div class="ttdef"><b>Definition:</b> Collection.hpp:16</div></div>
+<div class="ttc" id="class_collection_html_abbc291771b11c48cd2f297a0d9fe0449"><div class="ttname"><a href="class_collection.html#abbc291771b11c48cd2f297a0d9fe0449">Collection::reference</a></div><div class="ttdeci">T &amp; reference</div><div class="ttdef"><b>Definition:</b> Collection.hpp:13</div></div>
+<div class="ttc" id="class_collection_html_abb8c0f6de5e322aa531837aab7358b89"><div class="ttname"><a href="class_collection.html#abb8c0f6de5e322aa531837aab7358b89">Collection::const_reference</a></div><div class="ttdeci">const T &amp; const_reference</div><div class="ttdef"><b>Definition:</b> Collection.hpp:14</div></div>
+<div class="ttc" id="class_collection_html_ae9e3ec131717723e10152cb7ec3b0379"><div class="ttname"><a href="class_collection.html#ae9e3ec131717723e10152cb7ec3b0379">Collection::~Collection</a></div><div class="ttdeci">virtual ~Collection()=default</div></div>
+<div class="ttc" id="class_collection_html_a4abc73f8e31a499a22b25d42b7a4fe8c"><div class="ttname"><a href="class_collection.html#a4abc73f8e31a499a22b25d42b7a4fe8c">Collection::begin</a></div><div class="ttdeci">virtual iterator begin()=0</div></div>
+<div class="ttc" id="class_collection_html_a3f8b024f587aa20be530866da30948c4"><div class="ttname"><a href="class_collection.html#a3f8b024f587aa20be530866da30948c4">Collection::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdef"><b>Definition:</b> Collection.hpp:22</div></div>
+<div class="ttc" id="class_collection_html_a30ecb2b5696f341f4b751019679c41e0"><div class="ttname"><a href="class_collection.html#a30ecb2b5696f341f4b751019679c41e0">Collection::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition:</b> Collection.hpp:11</div></div>
+<div class="ttc" id="class_collection_iterator_html"><div class="ttname"><a href="class_collection_iterator.html">CollectionIterator</a></div><div class="ttdef"><b>Definition:</b> CollectionIterator.hpp:31</div></div>
+<div class="ttc" id="class_collection_html_ab5b98f651d0f49cde1be067c69c52e89"><div class="ttname"><a href="class_collection.html#ab5b98f651d0f49cde1be067c69c52e89">Collection::end</a></div><div class="ttdeci">virtual iterator end()=0</div></div>
+<div class="ttc" id="class_collection_html_a9a5b5d9b389c113364d527900c745efb"><div class="ttname"><a href="class_collection.html#a9a5b5d9b389c113364d527900c745efb">Collection::pointer</a></div><div class="ttdeci">T * pointer</div><div class="ttdef"><b>Definition:</b> Collection.hpp:15</div></div>
+<div class="ttc" id="_collection_iterator_8hpp_html"><div class="ttname"><a href="_collection_iterator_8hpp.html">CollectionIterator.hpp</a></div></div>
+<div class="ttc" id="class_collection_html_ac3805407b2dc537e71db7af070b8d8a6"><div class="ttname"><a href="class_collection.html#ac3805407b2dc537e71db7af070b8d8a6">Collection::reverse_iterator</a></div><div class="ttdeci">std::reverse_iterator&lt; iterator &gt; reverse_iterator</div><div class="ttdef"><b>Definition:</b> Collection.hpp:19</div></div>
+<div class="ttc" id="class_collection_html_af6be61fb9648c2ac1ef7c8456b49a441"><div class="ttname"><a href="class_collection.html#af6be61fb9648c2ac1ef7c8456b49a441">Collection::Collection</a></div><div class="ttdeci">Collection()=default</div></div>
+<div class="ttc" id="class_collection_html_a60b36ef7aba0a88dff0e98fc2adb98a8"><div class="ttname"><a href="class_collection.html#a60b36ef7aba0a88dff0e98fc2adb98a8">Collection::difference_type</a></div><div class="ttdeci">std::ptrdiff_t difference_type</div><div class="ttdef"><b>Definition:</b> Collection.hpp:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

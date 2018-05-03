@@ -1,0 +1,152 @@
+\hypertarget{class_pool_iterator}{}\section{Référence du modèle de la classe Pool\+Iterator$<$ T $>$}
+\label{class_pool_iterator}\index{Pool\+Iterator$<$ T $>$@{Pool\+Iterator$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Collection\+Pool.\+hpp$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Pool\+Iterator$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_pool_iterator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Pool\+Iterator$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_pool_iterator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pool_iterator_a5c4bd22679d557a14326b018850874bb}{Pool\+Iterator} (T $\ast$ptr)
+\item 
+T \& \hyperlink{class_pool_iterator_a3acdd751b297473d78eedb7422c7a66c}{operator$\ast$} () override
+\item 
+const T \& \hyperlink{class_pool_iterator_ab8a7e0669bfd1cd4335ca726bba77127}{operator$\ast$} () const override
+\item 
+T $\ast$ \hyperlink{class_pool_iterator_ae2893041831d8c29f222af7fe184fe09}{operator-\/$>$} () override
+\item 
+const T $\ast$ \hyperlink{class_pool_iterator_a228d6ee24cd015a7312fa9f76244994c}{operator-\/$>$} () const override
+\item 
+void \hyperlink{class_pool_iterator_a0da86ab88d60973aee45e6a51a929138}{operator++} () override
+\item 
+void \hyperlink{class_pool_iterator_aa1f588a47b0c11d6e064e34b129337ae}{operator-\/-\/} () override
+\item 
+\hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$ $\ast$ \hyperlink{class_pool_iterator_ae39cdb4bbb84e88cf0d9009e7bdae586}{clone} () const override
+\item 
+bool \hyperlink{class_pool_iterator_adbbef39e72972414b1bbb6d6bb885bb1}{equal} (const \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$ \&rhs) const override
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_pool_iterator_a5c4bd22679d557a14326b018850874bb}\label{class_pool_iterator_a5c4bd22679d557a14326b018850874bb}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!Pool\+Iterator@{Pool\+Iterator}}
+\index{Pool\+Iterator@{Pool\+Iterator}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{Pool\+Iterator()}{PoolIterator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::\hyperlink{class_pool_iterator}{Pool\+Iterator} (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_pool_iterator_ae39cdb4bbb84e88cf0d9009e7bdae586}\label{class_pool_iterator_ae39cdb4bbb84e88cf0d9009e7bdae586}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!clone@{clone}}
+\index{clone@{clone}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_iterator_base}{Iterator\+Base}$<$T$>$$\ast$ \hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \hyperlink{class_iterator_base_a541fdf8cc48f31c8ddfdc3f319a37100}{Iterator\+Base$<$ T $>$}.
+
+\mbox{\Hypertarget{class_pool_iterator_adbbef39e72972414b1bbb6d6bb885bb1}\label{class_pool_iterator_adbbef39e72972414b1bbb6d6bb885bb1}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!equal@{equal}}
+\index{equal@{equal}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::equal (\begin{DoxyParamCaption}\item[{const \hyperlink{class_iterator_base}{Iterator\+Base}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \hyperlink{class_iterator_base_a08430515a17384d098eb62ecce1b64c6}{Iterator\+Base$<$ T $>$}.
+
+\mbox{\Hypertarget{class_pool_iterator_a3acdd751b297473d78eedb7422c7a66c}\label{class_pool_iterator_a3acdd751b297473d78eedb7422c7a66c}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \hyperlink{class_iterator_base_a532583e58bce168648bdbdedb3a7d5ab}{Iterator\+Base$<$ T $>$}.
+
+\mbox{\Hypertarget{class_pool_iterator_ab8a7e0669bfd1cd4335ca726bba77127}\label{class_pool_iterator_ab8a7e0669bfd1cd4335ca726bba77127}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \hyperlink{class_iterator_base_abc219468b68f2b5471494d04d00f6ec7}{Iterator\+Base$<$ T $>$}.
+
+\mbox{\Hypertarget{class_pool_iterator_a0da86ab88d60973aee45e6a51a929138}\label{class_pool_iterator_a0da86ab88d60973aee45e6a51a929138}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \hyperlink{class_iterator_base_a816f35e9020716d212124a34f1c033fb}{Iterator\+Base$<$ T $>$}.
+
+\mbox{\Hypertarget{class_pool_iterator_aa1f588a47b0c11d6e064e34b129337ae}\label{class_pool_iterator_aa1f588a47b0c11d6e064e34b129337ae}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \hyperlink{class_iterator_base_aa9bf0f75a8bb7e4d416a9b88ccacd9c7}{Iterator\+Base$<$ T $>$}.
+
+\mbox{\Hypertarget{class_pool_iterator_ae2893041831d8c29f222af7fe184fe09}\label{class_pool_iterator_ae2893041831d8c29f222af7fe184fe09}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \hyperlink{class_iterator_base_aad2254f7877e4647f699ceb455e893ff}{Iterator\+Base$<$ T $>$}.
+
+\mbox{\Hypertarget{class_pool_iterator_a228d6ee24cd015a7312fa9f76244994c}\label{class_pool_iterator_a228d6ee24cd015a7312fa9f76244994c}} 
+\index{Pool\+Iterator@{Pool\+Iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Pool\+Iterator@{Pool\+Iterator}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T$\ast$ \hyperlink{class_pool_iterator}{Pool\+Iterator}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \hyperlink{class_iterator_base_a49d96fd63062ca0d7fd813517ad69f03}{Iterator\+Base$<$ T $>$}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_collection_pool_8hpp}{Collection\+Pool.\+hpp}\end{DoxyCompactItemize}

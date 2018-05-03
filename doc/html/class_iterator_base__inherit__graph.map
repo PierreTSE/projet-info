@@ -1,0 +1,4 @@
+<map id="IteratorBase&lt; T &gt;" name="IteratorBase&lt; T &gt;">
+<area shape="rect" id="node2" href="$class_filtered_iterator.html" title="{FilteredIterator\&lt; T \&gt;\n||+ FilteredIterator()\l+ operator*()\l+ operator*()\l+ operator&#45;\&gt;()\l+ operator&#45;\&gt;()\l+ operator++()\l+ operator&#45;&#45;()\l+ clone()\l+ equal()\l}" alt="" coords="5,277,144,472"/>
+<area shape="rect" id="node3" href="$class_pool_iterator.html" title="{PoolIterator\&lt; T \&gt;\n||+ PoolIterator()\l+ operator*()\l+ operator*()\l+ operator&#45;\&gt;()\l+ operator&#45;\&gt;()\l+ operator++()\l+ operator&#45;&#45;()\l+ clone()\l+ equal()\l}" alt="" coords="169,277,290,472"/>
+</map>
