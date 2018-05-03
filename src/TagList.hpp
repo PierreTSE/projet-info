@@ -2,17 +2,9 @@
 #define KEYWORD_LIST_HPP
 
 #include <string>
-#include <vector>
+#include <unordered_set>
 
-struct Tag
-{
-	std::wstring str;
-};
-
-class TagList
-{
-private:
-	std::vector<Tag> list_;
-};
+using Tag = std::string;
+using TagList = std::unordered_set<Tag>; //avec le set, chaque Tag est unique
 
 #endif // !KEYWORD_LIST_HPP
