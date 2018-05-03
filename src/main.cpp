@@ -16,13 +16,7 @@ bool isPair(const int& i)
 
 int main()
 {
-	int a = 5;
-	CollectionIterator<int> it1(nullptr);
-	CollectionIterator<int> it2(reinterpret_cast<IteratorBase<int>*>(&a));
-	std::cout << it1.itr_ << " " << it2.itr_ << std::endl;
-	std::swap(it1, it2);
-	std::cout << it1.itr_ << " " << it2.itr_ << std::endl;
-	it1.itr_ = nullptr;
+	
 
 
 	//using iterator = CollectionIterator<int>;
