@@ -1,4 +1,5 @@
 ﻿#include "FileDialog.hpp"
+#include "system_target.hpp"
 
 #ifdef WINDOWS
 
@@ -9,8 +10,9 @@
 using namespace std;
 namespace fs = std::experimental::filesystem;
 
-fs::path getOpenFileName(const string &title, const string &filter, const fs::path &initialDir)
+fs::path getOpenFileName(const string &title, const file_filter &filterIN, const fs::path &initialDir)
 {
+	std::string filter = filterIN.title;
 
 	// Processing of the filter
 	size_t begin_pos = filter.find_first_of('(');
@@ -39,8 +41,9 @@ fs::path getOpenFileName(const string &title, const string &filter, const fs::pa
 	return name_string;
 }
 
-fs::path getSaveFileName(const string &title, const string &filter, const string &initialDir)
+fs::path getSaveFileName(const string &title, const file_filter & filterIN, const std::experimental::filesystem::path & initialDir)
 {
+	std::string filter = filterIN.title;
 
 	// Processing of the filter
 	size_t begin_pos = filter.find_first_of('(');
@@ -58,7 +61,7 @@ fs::path getSaveFileName(const string &title, const string &filter, const string
 	memset(&of, 0, sizeof(of));
 	of.lStructSize = sizeof(of);
 	of.lpstrFile = name;
-	of.lpstrInitialDir = initialDir.c_str();
+	of.lpstrInitialDir = initialDir.u8string().c_str();
 	of.lpstrFilter = &ext_filter[0];
 	of.nMaxFile = MAX_PATH;
 	of.Flags = OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT;
@@ -82,7 +85,7 @@ static int CALLBACK BrowseCallbackProc(HWND hwnd, UINT uMsg, LPARAM lParam, LPAR
 	return 0;
 }
 
-fs::path browseFolder(const string &title, const string &initialDir)
+fs::path browseFolder(const string &title, const std::experimental::filesystem::path& initialDir)
 {
 	TCHAR path[MAX_PATH];
 	TCHAR path_param[MAX_PATH];
@@ -90,7 +93,7 @@ fs::path browseFolder(const string &title, const string &initialDir)
 	if (initialDir == "")
 		GetCurrentDirectory(MAX_PATH, path_param);
 	else
-		lstrcpy(path_param, initialDir.c_str());
+		lstrcpy(path_param, initialDir.u8string().c_str());
 
 	BROWSEINFO bi = { 0 };
 	bi.lpszTitle = title.c_str();

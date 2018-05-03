@@ -18,7 +18,7 @@ bool isPair(const int& i)
 int main()
 {
 	fs::path path;
-	path = getOpenFileName();
+	path = getSaveFileName();
 	Image<int> image(path);
 
 	std::cout << path << std::endl;
