@@ -81,14 +81,14 @@ class CollectionPool : public Collection<T>
         std::vector<value_type> pool_;
 };
 
-template<typename T, bool is_const = false>
+template<typename T, bool is_const>
 class PoolIterator : public IteratorBase<T,is_const>
 {
 	friend class PoolIterator<T,false>;
 	friend class PoolIterator<T,true>;
 
 public: 
-	PoolIterator(T* ptr) : ptr_{ptr} {}
+	explicit PoolIterator(T* ptr) : ptr_{ptr} {}
 
 	T& operator*() override //dereference operator
 	{

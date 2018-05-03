@@ -27,10 +27,10 @@ private:
 	using filtre_t = std::function<bool(const_reference)>;
 
 public:
-	FilteredCollection(Collection& c, const filtre_t& f) : collection_{ c }, filtre_{ f } {};
+	FilteredCollection(Collection<T>& c, const filtre_t& f) : collection_{ c }, filtre_{ f } {};
 
 	reference front() {
-		auto it = collec_.begin();
+		auto it = collection_.begin();
 		while (!filtre_(*it))
 			++it;
 		return *it;

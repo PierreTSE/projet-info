@@ -5,6 +5,8 @@
 #include <iterator>
 #include <memory>
 
+using const_iterator = const iterator;
+
 template <typename T, bool is_const = false>
 class IteratorBase
 {
@@ -45,8 +47,8 @@ class CollectionIterator
 		using difference_type = std::ptrdiff_t;
 	
 		CollectionIterator() = default; //default constructor, using unique_ptr default constructor
-		CollectionIterator(const CollectionIterator<T, false>& itr) : itr_{ itr.itr_->clone() } {} //copy constructor
-		CollectionIterator(CollectionIterator<T, false>&& itr) noexcept : itr_{ std::move(itr.itr_) } {} //move constructor
+		CollectionIterator(const CollectionIterator<T, false>& itr) : itr_( itr.itr_->clone() ) {} //copy constructor
+		CollectionIterator(CollectionIterator<T, false>&& itr) noexcept : itr_( std::move(itr.itr_) ) {} //move constructor
 		//destructed via unique_ptr destructor
 
 		explicit CollectionIterator(IteratorBase<T, is_const>* ptr) : itr_{ ptr } {} //actual constructor
