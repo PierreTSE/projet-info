@@ -36,14 +36,14 @@ CollectionPool<Image<img_t>> getPoolFromDirectory()
 		{
 			if (file.path().extension() == "ppm")
 			{
-				Image<img_t> img(file.path(), nullptr, {})); //TODO gérer le fichier image, ajouter tagList
+				Image<img_t> img(file.path(), nullptr, {}); //TODO gérer le fichier image, ajouter tagList
 				collectionPool.push_back(img);
 			}
 		}
 	}
 	else
 	{
-		throw std::runtime_error;
+		throw std::runtime_error("Pas un répertoire");
 	}
 }
 
@@ -55,7 +55,7 @@ int main()
     if(fs::exists(tagsPath))
         possibleTags = loadTagList(tagsPath);
     
-    CollectionPool<Image<int>> collection;
+    CollectionPool<Image<int>> collection = getPoolFromDirectory<int>();
     
     bool quit = false;
     
