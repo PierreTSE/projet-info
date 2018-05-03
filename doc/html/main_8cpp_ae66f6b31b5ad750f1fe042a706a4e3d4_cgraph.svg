@@ -18,9 +18,9 @@
 <!-- Node3 -->
 <g id="node2" class="node">
 <title>Node3</title>
-<g id="a_node2"><a xlink:href="_file_dialog_8hpp.html#a2d4b00891d6ba241a03c1d4f99423d17" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. ">
+<g id="a_node2"><a xlink:href="_file_dialog_8hpp.html#aff1c082fbf12dfb78f3668367291cfa0" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un fichier à ouvrir. ">
 <polygon fill="#ffffff" stroke="#000000" points="74,-.5 74,-19.5 169,-19.5 169,-.5 74,-.5"/>
-<text text-anchor="middle" x="121.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getSaveFileName</text>
+<text text-anchor="middle" x="121.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getOpenFileName</text>
 </a>
 </g>
 </g>

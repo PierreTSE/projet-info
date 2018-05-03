@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['reference',['reference',['../class_collection.html#abbc291771b11c48cd2f297a0d9fe0449',1,'Collection::reference()'],['../class_collection_iterator.html#aac15417aa7a67fdfb86b8bad1b4d5ddf',1,'CollectionIterator::reference()'],['../class_collection_pool.html#a12dd127db0342d4b694d857f6c77ad90',1,'CollectionPool::reference()'],['../class_filtered_collection.html#afc4e47695287b6bac73899ab5bcfdf6e',1,'FilteredCollection::reference()']]],
-  ['reserve',['reserve',['../class_collection_pool.html#a06334969f57ca768241af598f03e8de1',1,'CollectionPool']]],
-  ['reverse_5fiterator',['reverse_iterator',['../class_collection.html#ac3805407b2dc537e71db7af070b8d8a6',1,'Collection::reverse_iterator()'],['../class_collection_pool.html#a02f041d9c0562d656eaa05a9859780af',1,'CollectionPool::reverse_iterator()'],['../class_filtered_collection.html#a5b0a5b053f47e55eee9d746d8160664b',1,'FilteredCollection::reverse_iterator()']]]
+  ['pattern',['pattern',['../structfile__filter.html#a66658e1ec5a2c6a586d9855f12779a04',1,'file_filter']]],
+  ['pointer',['pointer',['../class_collection.html#a9a5b5d9b389c113364d527900c745efb',1,'Collection::pointer()'],['../class_collection_iterator.html#aff846a9c86022d66a7eb10e3623a0ba0',1,'CollectionIterator::pointer()'],['../class_collection_pool.html#a3bfec6c487a93170866fde4b57a85b21',1,'CollectionPool::pointer()'],['../class_filtered_collection.html#a0c78e02c35e4b712b945a0e5c6b9a14a',1,'FilteredCollection::pointer()']]],
+  ['pooliterator',['PoolIterator',['../class_pool_iterator.html',1,'PoolIterator&lt; T &gt;'],['../class_pool_iterator.html#a5c4bd22679d557a14326b018850874bb',1,'PoolIterator::PoolIterator()']]]
 ];

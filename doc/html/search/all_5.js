@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['file_5ffilter',['file_filter',['../structfile__filter.html',1,'']]],
   ['filedialog_2ehpp',['FileDialog.hpp',['../_file_dialog_8hpp.html',1,'']]],
   ['filedialoglinux_2ecpp',['FileDialogLinux.cpp',['../_file_dialog_linux_8cpp.html',1,'']]],
   ['filedialogwindows_2ecpp',['FileDialogWindows.cpp',['../_file_dialog_windows_8cpp.html',1,'']]],

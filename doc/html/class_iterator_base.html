@@ -9,6 +9,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -48,6 +55,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_iterator_base.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
@@ -195,11 +216,12 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Implémenté dans <a class="el" href="class_filtered_iterator.html#a79d512a43aa4d31caf26908e93130b9d">FilteredIterator&lt; T &gt;</a>, et <a class="el" href="class_pool_iterator.html#ae39cdb4bbb84e88cf0d9009e7bdae586">PoolIterator&lt; T &gt;</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_iterator_base.html#a7475728422cb73f91d1c4cb4c3d07499">IteratorBase&lt; T &gt;::operator==()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a541fdf8cc48f31c8ddfdc3f319a37100_icgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a541fdf8cc48f31c8ddfdc3f319a37100_icgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -231,11 +253,12 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Implémenté dans <a class="el" href="class_filtered_iterator.html#a7118ec2bba2bf138ca771a394a8d72c8">FilteredIterator&lt; T &gt;</a>, et <a class="el" href="class_pool_iterator.html#adbbef39e72972414b1bbb6d6bb885bb1">PoolIterator&lt; T &gt;</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_iterator_base.html#a7475728422cb73f91d1c4cb4c3d07499">IteratorBase&lt; T &gt;::operator==()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a08430515a17384d098eb62ecce1b64c6_icgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a08430515a17384d098eb62ecce1b64c6_icgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -266,11 +289,12 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Implémenté dans <a class="el" href="class_pool_iterator.html#a3acdd751b297473d78eedb7422c7a66c">PoolIterator&lt; T &gt;</a>, et <a class="el" href="class_filtered_iterator.html#ac891b168cd653612ddc7ed7cb4380196">FilteredIterator&lt; T &gt;</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_iterator_base.html#a7475728422cb73f91d1c4cb4c3d07499">IteratorBase&lt; T &gt;::operator==()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a532583e58bce168648bdbdedb3a7d5ab_icgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a532583e58bce168648bdbdedb3a7d5ab_icgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -330,11 +354,12 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Implémenté dans <a class="el" href="class_filtered_iterator.html#ae31347c47637172be3d19dc3be30f5cc">FilteredIterator&lt; T &gt;</a>, et <a class="el" href="class_pool_iterator.html#a0da86ab88d60973aee45e6a51a929138">PoolIterator&lt; T &gt;</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_iterator_base.html#a7475728422cb73f91d1c4cb4c3d07499">IteratorBase&lt; T &gt;::operator==()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a816f35e9020716d212124a34f1c033fb_icgraph.svg" width="387" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a816f35e9020716d212124a34f1c033fb_icgraph.svg" width="387" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -365,11 +390,12 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Implémenté dans <a class="el" href="class_filtered_iterator.html#a860a37fdf31e87a96b80cb295e6d34c2">FilteredIterator&lt; T &gt;</a>, et <a class="el" href="class_pool_iterator.html#aa1f588a47b0c11d6e064e34b129337ae">PoolIterator&lt; T &gt;</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_iterator_base.html#a7475728422cb73f91d1c4cb4c3d07499">IteratorBase&lt; T &gt;::operator==()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_aa9bf0f75a8bb7e4d416a9b88ccacd9c7_icgraph.svg" width="379" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_aa9bf0f75a8bb7e4d416a9b88ccacd9c7_icgraph.svg" width="379" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -400,11 +426,12 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Implémenté dans <a class="el" href="class_pool_iterator.html#ae2893041831d8c29f222af7fe184fe09">PoolIterator&lt; T &gt;</a>, et <a class="el" href="class_filtered_iterator.html#a413726d7cc9a951d0a30eaee6cf36de1">FilteredIterator&lt; T &gt;</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_iterator_base.html#a7475728422cb73f91d1c4cb4c3d07499">IteratorBase&lt; T &gt;::operator==()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_aad2254f7877e4647f699ceb455e893ff_icgraph.svg" width="383" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_aad2254f7877e4647f699ceb455e893ff_icgraph.svg" width="383" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -463,11 +490,12 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="class_iterator_base.html#a541fdf8cc48f31c8ddfdc3f319a37100">IteratorBase&lt; T &gt;::clone()</a>, <a class="el" href="class_iterator_base.html#a08430515a17384d098eb62ecce1b64c6">IteratorBase&lt; T &gt;::equal()</a>, <a class="el" href="class_iterator_base.html#a532583e58bce168648bdbdedb3a7d5ab">IteratorBase&lt; T &gt;::operator*()</a>, <a class="el" href="class_iterator_base.html#a816f35e9020716d212124a34f1c033fb">IteratorBase&lt; T &gt;::operator++()</a>, <a class="el" href="class_iterator_base.html#aa9bf0f75a8bb7e4d416a9b88ccacd9c7">IteratorBase&lt; T &gt;::operator--()</a>, et <a class="el" href="class_iterator_base.html#aad2254f7877e4647f699ceb455e893ff">IteratorBase&lt; T &gt;::operator-&gt;()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a7475728422cb73f91d1c4cb4c3d07499_cgraph.svg" width="387" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_iterator_base_a7475728422cb73f91d1c4cb4c3d07499_cgraph.svg" width="387" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -476,11 +504,15 @@ Voici le graphe d'appel pour cette fonction :</div>
 <li>src/<a class="el" href="_collection_iterator_8hpp_source.html">CollectionIterator.hpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_iterator_base.html">IteratorBase</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,11 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefgimoprstvw~",
+  0: "abcdefgimnoprstvw~",
   1: "cfip",
   2: "cfimstw",
   3: "bcefgimoprs~",
-  4: "acdiprstv",
-  5: "fi"
+  4: "np",
+  5: "acdiprstv",
+  6: "fi"
 };
 
 var indexSectionNames =
@@ -14,8 +15,9 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "typedefs",
-  5: "related"
+  4: "variables",
+  5: "typedefs",
+  6: "related"
 };
 
 var indexSectionLabels =
@@ -24,7 +26,8 @@ var indexSectionLabels =
   1: "Classes",
   2: "Fichiers",
   3: "Fonctions",
-  4: "Définitions de type",
-  5: "Amis"
+  4: "Variables",
+  5: "Définitions de type",
+  6: "Amis"
 };
 
