@@ -31,6 +31,25 @@ int main()
 
 	//FilteredCollection<int> filteredcollection(collectionPool,isPair);
 
+	/*int i = 0;
+	for (auto e : filteredcollection)
+	{
+		++i;
+		if(i > 1000)
+			std::terminate();
+		std::cout << e << " ";
+	}
+	std::cout << std::endl;
+	
+	FilteredCollection<int> fc(filteredcollection, [](const int& a){ return a%3==0;});
+	i = 0;
+	for (auto e : fc)
+	{
+		++i;
+		if(i > 1000)
+			std::terminate();
+		std::cout << e << " ";
+	}*/
 	//using iterator = CollectionIterator<int>;
 
 	//using type = std::iterator_traits<iterator>::value_type;

@@ -69,12 +69,12 @@ class CollectionPool : public Collection<T>
 
 		iterator begin() override
 		{
-			return iterator(new PoolIterator<value_type>(&pool_.front()));
+			return iterator(new PoolIterator<value_type>(std::addressof(*pool_.begin())));
 		}
 
 		iterator end() override
 		{
-			return iterator(new PoolIterator<value_type>(&pool_.back()+1));
+			return iterator(new PoolIterator<value_type>(std::addressof(*pool_.end())));
 		}
     
     private:
@@ -84,42 +84,31 @@ class CollectionPool : public Collection<T>
 template<typename T>
 class PoolIterator : public IteratorBase<T>
 {
-public: 
-	PoolIterator(T* ptr) : ptr_{ptr} {}
-
-	T& operator*() override //dereference operator
-	{
-		return *ptr_;
-	}
-	const T& operator*() const override //const dereference operator
-	{
-		return *ptr_;
-	}
-	T* operator->() override //arrow operator
-	{
-		return ptr_;
-	}
-	const T* operator->() const override //const arrow operator
-	{
-		return ptr_;
-	}
-	void operator++() override //pre-increment operator
-	{
-		++ptr_;
-	}
-	void operator--() override //pre-decrement operator
-	{
-		--ptr_;
-	}
-	IteratorBase<T>* clone() const override
-	{
-		return new PoolIterator(ptr_);
-	}
-	bool equal(const IteratorBase<T>& rhs) const override
-	{
-		return ptr_ == dynamic_cast<const PoolIterator&>(rhs).ptr_;
-	}
-private:
-	T* ptr_;
+    public: 
+        explicit PoolIterator(T* ptr) : ptr_{ptr} {}
+    
+        T& operator*() override //dereference operator
+        { return *ptr_; }
+        const T& operator*() const override //const dereference operator
+        { return *ptr_; }
+    
+        T* operator->() override //arrow operator
+        { return ptr_; }
+        const T* operator->() const override //const arrow operator
+        { return ptr_; }
+        
+        void operator++() override //pre-increment operator
+        { ++ptr_; }
+        void operator--() override //pre-decrement operator
+        { --ptr_; }
+        
+        IteratorBase<T>* clone() const override
+        { return new PoolIterator(ptr_); }
+        
+        bool equal(const IteratorBase<T>& rhs) const override
+        { return ptr_ == dynamic_cast<const PoolIterator&>(rhs).ptr_; }
+    
+    private:
+        T* ptr_;
 };
 #endif // !COLLECTION_POOL_HPP

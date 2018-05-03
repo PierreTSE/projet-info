@@ -61,9 +61,9 @@ class CollectionIterator
 	
 		//Can be dereferenced as an rvalue
 		reference operator*() { return **itr_; }
-		const_reference operator*() const {return **const_cast<const IteratorBase<T>*>(itr_); }
+		const_reference operator*() const {return **const_cast<const IteratorBase<T>*>(itr_.get()); }
 		pointer operator->() { return itr_->operator->(); }
-		const_pointer operator->() const { return const_cast<const IteratorBase<T>*>(itr_); }
+		const_pointer operator->() const { return const_cast<const IteratorBase<T>*>(itr_.get())->operator->(); }
 	
 		//Can be incremented
 		CollectionIterator& operator++() { ++(*itr_); return *this; }
