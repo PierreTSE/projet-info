@@ -17,7 +17,6 @@ bool isPair(const int& i)
 
 int main()
 {
-	Collection<int> c;
 
 
 	//using iterator = CollectionIterator<int>;

@@ -10,7 +10,7 @@ using namespace std;
 namespace fs = std::experimental::filesystem;
 
 
-string getOpenFileName(const string &title, const string &filter, const string &initialDir)
+fs::path getOpenFileName(const string &title, const string &filter, const fs::path &initialDir)
 {
 
 	// Processing of the filter
@@ -29,7 +29,7 @@ string getOpenFileName(const string &title, const string &filter, const string &
 	memset(&of, 0, sizeof(of));
 	of.lStructSize = sizeof(of);
 	of.lpstrFile = name;
-	of.lpstrInitialDir = initialDir.c_str();
+	of.lpstrInitialDir = initialDir.u8string.c_str();
 	of.lpstrFilter = &ext_filter[0];
 	of.nMaxFile = MAX_PATH;
 	of.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
@@ -40,8 +40,7 @@ string getOpenFileName(const string &title, const string &filter, const string &
 	return name_string;
 }
 
-
-string getSaveFileName(const string &title, const string &filter, const string &initialDir)
+fs::path getSaveFileName(const string &title, const string &filter, const string &initialDir)
 {
 
 	// Processing of the filter
@@ -84,7 +83,7 @@ static int CALLBACK BrowseCallbackProc(HWND hwnd, UINT uMsg, LPARAM lParam, LPAR
 	return 0;
 }
 
-string browseFolder(const string &title, const string &initialDir)
+fs::path browseFolder(const string &title, const string &initialDir)
 {
 	TCHAR path[MAX_PATH];
 	TCHAR path_param[MAX_PATH];
