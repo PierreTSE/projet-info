@@ -1,9 +1,9 @@
-﻿#include "CollectionIterator.hpp"
-#include "FileDialog.hpp"
-#include "FilteredCollection.hpp"
-#include "Collection.hpp"
-#include "CollectionPool.hpp"
-#include "Image.hpp"
+﻿#include "Collection/CollectionIterator.hpp"
+#include "Collection/FilteredCollection.hpp"
+#include "Collection/Collection.hpp"
+#include "Collection/CollectionPool.hpp"
+#include "FileDialog/FileDialog.hpp"
+#include "Image/Image.hpp"
 #include <iostream>
 #include <experimental/filesystem>
 
