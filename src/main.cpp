@@ -25,7 +25,7 @@ CollectionPool<Image<img_t>> getPoolFromDirectory()
 
 		for (auto& file : fs::directory_iterator(directoryPath))
 		{
-			if (file.path().extension() == "txt")
+			if (file.path().extension() == ".txt")
 			{
 				std::ifstream tagListFile(file.path(), std::ios::in);
 				//TODO gestion de la tagList particulière
@@ -34,12 +34,13 @@ CollectionPool<Image<img_t>> getPoolFromDirectory()
 		}
 		for (auto& file : fs::directory_iterator(directoryPath))
 		{
-			if (file.path().extension() == "ppm")
+			if (file.path().extension() == ".ppm")
 			{
 				Image<img_t> img(file.path(), nullptr, {}); //TODO gérer le fichier image, ajouter tagList
-				collectionPool.push_back(img);
+				collectionPool.push_back(std::move(img));
 			}
 		}
+		return collectionPool;
 	}
 	else
 	{
