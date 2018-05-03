@@ -9,18 +9,18 @@ template<typename img_t>
 class Image
 {
 	public:
-		Image(std::experimental::filesystem::path p, sf::img* imgPtr = nullptr, TagList t = {}) 
-			: path_{ p }, img_{ imgPtr }, taglist_{ t } {} //constructeur complet
+		Image(std::experimental::filesystem::path p, std::unique_ptr<img_t> imgPtr = nullptr, TagList t = {}) 
+			: path_{ p }, img_{ std::move(imgPtr) }, taglist_{ t } {} //constructeur complet
 
 		//getters
 		std::experimental::filesystem::path getPath() { return path_; }
 		TagList getTagList() { return taglist_; }
-		sf::img* getImgPtr() { return img_; }
+		img_t* getImgPtr() { return img_; }
 
 		//setters
 		void setPath(std::experimental::filesystem::path p) { path_ = p; }
 		void setTagList(TagList t) { taglist_ = t; }
-		void setImgPtr(sf::img* imgPtr) { img_ = imgPtr; }
+		void setImgPtr(img_t* imgPtr) { img_ = imgPtr; }
 
 	private:
 		std::unique_ptr<img_t> img_ = nullptr; //TODO l'implémentation va varier (Cimg,SFML...)
