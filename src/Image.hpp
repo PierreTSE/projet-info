@@ -2,12 +2,30 @@
 #define IMAGE_HPP
 
 #include "TagList.hpp"
-#include <string>
+#include <experimental/filesystem>
+#include <memory>
 
+template<typename img_t>
 class Image
 {
-private:
-	Tag tag_;
+	public:
+		Image(std::experimental::filesystem::path p, sf::img* imgPtr = nullptr, TagList t = {}) 
+			: path_{ p }, img_{ imgPtr }, taglist_{ t } {} //constructeur complet
+
+		//getters
+		std::experimental::filesystem::path getPath() { return path_; }
+		TagList getTagList() { return taglist_; }
+		sf::img* getImgPtr() { return img_; }
+
+		//setters
+		void setPath(std::experimental::filesystem::path p) { path_ = p; }
+		void setTagList(TagList t) { taglist_ = t; }
+		void setImgPtr(sf::img* imgPtr) { img_ = imgPtr; }
+
+	private:
+		std::unique_ptr<img_t> img_ = nullptr; //TODO l'implémentation va varier (Cimg,SFML...)
+		std::experimental::filesystem::path path_; //Chemin de l'image
+		TagList taglist_; //Liste des tags associés à l'image
 };
 
 #endif // !IMAGE_HPP
