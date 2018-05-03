@@ -54,10 +54,10 @@ class CollectionPool : public Collection<T>
         iterator erase(iterator pos);
         iterator erase(const_iterator pos);
         iterator erase(iterator first, iterator last);
-        iterator erase(const_iterator first, const_iterator last);
-        void push_back(const T& value);
-        void push_back(T&& value);
-        template <class... Args>
+        iterator erase(const_iterator first, const_iterator last);*/
+        void push_back(const T& value) { pool_.push_back(value); }
+        void push_back(T&& value) { pool_.push_back(std::move(value)); }
+        /*template <class... Args>
         void emplace_back(Args&&... args);
         template <class... Args>
         reference emplace_back(Args&&... args);
