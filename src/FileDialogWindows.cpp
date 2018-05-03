@@ -9,7 +9,6 @@
 using namespace std;
 namespace fs = std::experimental::filesystem;
 
-
 fs::path getOpenFileName(const string &title, const string &filter, const fs::path &initialDir)
 {
 
