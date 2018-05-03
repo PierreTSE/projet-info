@@ -24,7 +24,7 @@ class Collection
 		Collection() = default;
 		virtual ~Collection() = default;
 	
-		//Assign
+		/*//Assign
 		virtual void assign(size_type count, const T& value) = 0;
 		virtual void assign(iterator first, iterator last) = 0;
 		virtual void assign(std::initializer_list<T> ilist) = 0;
@@ -35,7 +35,7 @@ class Collection
 		virtual reference front() = 0;
 		virtual const_reference front() const = 0;
 		virtual reference back() = 0;
-		virtual const_reference back() const = 0;
+		virtual const_reference back() const = 0;*/
 	
 		//Iterators
 		virtual iterator begin() = 0;

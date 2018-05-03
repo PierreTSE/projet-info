@@ -28,7 +28,7 @@ fs::path getOpenFileName(const string &title, const string &filter, const fs::pa
 	memset(&of, 0, sizeof(of));
 	of.lStructSize = sizeof(of);
 	of.lpstrFile = name;
-	of.lpstrInitialDir = initialDir.u8string.c_str();
+	of.lpstrInitialDir = initialDir.u8string().c_str();
 	of.lpstrFilter = &ext_filter[0];
 	of.nMaxFile = MAX_PATH;
 	of.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;

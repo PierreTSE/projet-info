@@ -2,6 +2,7 @@
 #include "FileDialog.hpp"
 #include "FilteredCollection.hpp"
 #include "Collection.hpp"
+#include "CollectionPool.hpp"
 #include <iostream>
 #include <experimental/filesystem>
 
@@ -17,7 +18,9 @@ bool isPair(const int& i)
 
 int main()
 {
-
+	CollectionPool<int> collectionPool = {1,5,1,17,1,1,4,94,89};
+	for (auto e : collectionPool)
+		std::cout << e << " ";
 
 	//using iterator = CollectionIterator<int>;
 
