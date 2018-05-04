@@ -1,6 +1,7 @@
 #include "save.hpp"
 #include "../Collection/FilteredCollection.hpp"
 #include <fstream>
+#include <sstream>
 
 
 namespace fs = std::experimental::filesystem;
