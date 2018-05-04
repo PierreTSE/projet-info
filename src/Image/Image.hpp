@@ -13,8 +13,10 @@ class Image
 			: img_{ std::move(imgPtr) }, path_{ p }, taglist_{ t } {} //constructeur complet
 
 		//getters
-		std::experimental::filesystem::path getPath() { return path_; }
-		TagList getTagList() { return taglist_; }
+        std::experimental::filesystem::path& getPath() { return path_; }
+        const std::experimental::filesystem::path& getPath() const { return path_; }
+        TagList& getTagList() { return taglist_; }
+        const TagList& getTagList() const { return taglist_; }
 		img_t* getImgPtr() { return img_.get(); }
 
 		//setters

@@ -1,4 +1,5 @@
 ﻿#include "ConsolePrototype/config.hpp"
+#include "ConsolePrototype/menu.hpp"
 #include "Collection/CollectionIterator.hpp"
 #include "Collection/FilteredCollection.hpp"
 #include "Collection/Collection.hpp"
@@ -60,9 +61,64 @@ int main()
     
     bool quit = false;
     
+    // Appeler begin depuis un pointeur ou une référence de Collection pointant sur un CollectionPool cause un segfault
+    Collection<Image<int>>* ptr = &collection;
+    ptr->begin();
+    ptr->end();
+    for(auto& img : collection)
+        std::cout << img.getPath() << std::endl;
+    
     while(!quit) {
-        std::cin.get();
-        quit = true;
+        menu();
+        int c = choix(5);
+        switch(c)
+        {
+            case 1: 
+            {
+                std::cout << "Quelle image ?" << std::endl;
+                auto img = choix_image(collection);
+                if(img != collection.end()) {
+                    affTags(img->getTagList());
+                }
+            }
+            break;
+                
+            case 2:
+            {
+                std::cout << "Quelle image ?" << std::endl;
+                auto img = choix_image(collection);
+                if(img != collection.end()) {
+                    std::cout << "Quel Tag ?" << std::endl;
+                    auto tag = choix_tag(possibleTags);
+                    if(!tag.empty()) {
+                        img->getTagList().insert(tag);
+                    }
+                }
+            }
+            break;
+            
+            case 3:
+            {
+                std::cout << "Quel Tag ?" << std::endl;
+                auto tag = choix_tag(possibleTags);
+                auto filtre = FilteredCollection<Image<int>>(collection, [&tag](const Image<int>& img){ return img.getTagList().find(tag) != img.getTagList().end(); });
+                listImg(filtre);
+            }
+            break;
+            
+            case 4:
+            {
+                Tag tag;
+                std::cout << "Saississez un tag" << std::endl;
+                std::getline(std::cin, tag);
+                possibleTags.insert(tag);
+            }
+            break;
+                
+            case 5:
+                quit = true;
+                break;
+        }
     }
     
     saveTagList(tagsPath, possibleTags);
