@@ -79,12 +79,12 @@ class CollectionPool : public Collection<T>
 		//Iterators
 		iterator begin() override
 		{
-			return iterator(new PoolIterator<value_type>(std::addressof(*pool_.begin())));
+			return iterator(new PoolIterator<value_type>(pool_.data()));
 		}
 
 		iterator end() override
 		{
-			return iterator(new PoolIterator<value_type>(std::addressof(*pool_.end())));
+			return iterator(new PoolIterator<value_type>(pool_.data()+pool_.size()));
 		}
 
     private:
