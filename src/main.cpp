@@ -52,6 +52,8 @@ CollectionPool<Image<img_t>> getPoolFromDirectory()
 
 int main()
 {
+	auto wd = fs::current_path();
+
     TagList possibleTags;
     fs::path tagsPath = "tags.txt";
     if(fs::exists(tagsPath))
@@ -130,6 +132,7 @@ int main()
         }
     }
     
+	fs::current_path(wd);
     saveTagList(tagsPath, possibleTags);
     
     return 0;
