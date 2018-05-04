@@ -1,9 +1,12 @@
 <map id="src/main.cpp" name="src/main.cpp">
-<area shape="rect" id="node2" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="5,229,152,256"/>
-<area shape="rect" id="node6" href="$_file_dialog_8hpp.html" title="FileDialog.hpp" alt="" coords="666,80,771,107"/>
-<area shape="rect" id="node9" href="$_filtered_collection_8hpp.html" title="FilteredCollection.hpp" alt="" coords="335,80,483,107"/>
-<area shape="rect" id="node10" href="$_collection_8hpp.html" title="Collection.hpp" alt="" coords="106,155,211,181"/>
-<area shape="rect" id="node13" href="$_collection_pool_8hpp.html" title="CollectionPool.hpp" alt="" coords="180,80,311,107"/>
-<area shape="rect" id="node14" href="$_image_8hpp.html" title="Image.hpp" alt="" coords="508,80,591,107"/>
-<area shape="rect" id="node15" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="524,155,615,181"/>
+<area shape="rect" id="node2" href="$config_8hpp.html" title="ConsolePrototype/config.hpp" alt="" coords="248,155,439,181"/>
+<area shape="rect" id="node7" href="$menu_8hpp.html" title="ConsolePrototype/menu.hpp" alt="" coords="690,80,877,107"/>
+<area shape="rect" id="node8" href="$_collection_8hpp.html" title="../Collection/Collection.hpp" alt="" coords="815,155,994,181"/>
+<area shape="rect" id="node9" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="777,229,923,256"/>
+<area shape="rect" id="node13" href="$_image_8hpp.html" title="../Image/Image.hpp" alt="" coords="515,155,649,181"/>
+<area shape="rect" id="node14" href="$_filtered_collection_8hpp.html" title="Collection/FilteredCollection.hpp" alt="" coords="951,80,1162,107"/>
+<area shape="rect" id="node17" href="$_collection_pool_8hpp.html" title="Collection/CollectionPool.hpp" alt="" coords="1187,80,1380,107"/>
+<area shape="rect" id="node18" href="$_file_dialog_8hpp.html" title="FileDialog/FileDialog.hpp" alt="" coords="5,155,172,181"/>
+<area shape="rect" id="node19" href="$save_8hpp.html" title="ConsolePrototype/save.hpp" alt="" coords="381,80,564,107"/>
+<area shape="rect" id="node3" href="$_tag_list_8hpp.html" title="../Image/TagList.hpp" alt="" coords="413,229,556,256"/>
 </map>

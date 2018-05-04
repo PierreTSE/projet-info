@@ -1,6 +1,10 @@
-<map id="src/CollectionIterator.hpp" name="src/CollectionIterator.hpp">
-<area shape="rect" id="node2" href="$_collection_8hpp.html" title="src/Collection.hpp" alt="" coords="133,80,260,107"/>
-<area shape="rect" id="node3" href="$_collection_pool_8hpp.html" title="src/CollectionPool.hpp" alt="" coords="5,155,159,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="209,229,307,256"/>
-<area shape="rect" id="node5" href="$_filtered_collection_8hpp.html" title="src/FilteredCollection.hpp" alt="" coords="234,155,405,181"/>
+<map id="src/Collection/CollectionIterator.hpp" name="src/Collection/CollectionIterator.hpp">
+<area shape="rect" id="node2" href="$_collection_8hpp.html" title="src/Collection/Collection.hpp" alt="" coords="255,95,445,121"/>
+<area shape="rect" id="node3" href="$_collection_pool_8hpp.html" title="src/Collection/Collection\lPool.hpp" alt="" coords="32,169,196,211"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="357,266,455,293"/>
+<area shape="rect" id="node5" href="$_filtered_collection_8hpp.html" title="src/Collection/FilteredCollection.hpp" alt="" coords="443,177,675,203"/>
+<area shape="rect" id="node7" href="$menu_8hpp.html" title="src/ConsolePrototype\l/menu.hpp" alt="" coords="220,169,368,211"/>
+<area shape="rect" id="node9" href="$save_8hpp.html" title="src/ConsolePrototype\l/save.hpp" alt="" coords="700,169,848,211"/>
+<area shape="rect" id="node6" href="$save_8cpp.html" title="src/ConsolePrototype\l/save.cpp" alt="" coords="592,259,740,300"/>
+<area shape="rect" id="node8" href="$menu_8cpp.html" title="src/ConsolePrototype\l/menu.cpp" alt="" coords="185,259,333,300"/>
 </map>

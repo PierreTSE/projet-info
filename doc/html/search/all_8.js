@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['max_5fsize',['max_size',['../class_collection_pool.html#a333a1edf4c98229f47b698463baf0324',1,'CollectionPool']]]
+  ['listimg',['listImg',['../menu_8cpp.html#a678c21c572ee928dc71b7699f94327a1',1,'listImg(Collection&lt; Image&lt; int &gt;&gt; &amp;collec):&#160;menu.cpp'],['../menu_8hpp.html#a678c21c572ee928dc71b7699f94327a1',1,'listImg(Collection&lt; Image&lt; int &gt;&gt; &amp;collec):&#160;menu.cpp']]],
+  ['loadtaglist',['loadTagList',['../config_8cpp.html#ac4088916e2b96189b38f3d1b73db20ab',1,'loadTagList(const std::experimental::filesystem::path &amp;loadFile):&#160;config.cpp'],['../config_8hpp.html#ac4088916e2b96189b38f3d1b73db20ab',1,'loadTagList(const std::experimental::filesystem::path &amp;loadFile):&#160;config.cpp']]]
 ];

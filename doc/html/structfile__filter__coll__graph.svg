@@ -35,7 +35,7 @@
 <path fill="none" stroke="#404040" d="M26.5,-116.3258C26.5,-102.3834 26.5,-85.3727 26.5,-70.0815"/>
 <polygon fill="none" stroke="#404040" points="26.5001,-69.7463 22.5,-63.7464 26.5,-57.7463 30.5,-63.7463 26.5001,-69.7463"/>
 <text text-anchor="middle" x="46.5" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> +pattern</text>
-<text text-anchor="middle" x="46.5" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+name</text>
+<text text-anchor="middle" x="46.5" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+title</text>
 </g>
 </g>
 </svg>
