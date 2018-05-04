@@ -63,7 +63,7 @@ int main()
     
     while(!quit) {
         menu();
-        int c = choix(5);
+        int c = choix(6);
         switch(c)
         {
             case 1: 
