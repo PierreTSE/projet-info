@@ -1,3 +1,3 @@
 <map id="PoolIterator&lt; T &gt;" name="PoolIterator&lt; T &gt;">
-<area shape="rect" id="node2" href="$class_iterator_base.html" title="{IteratorBase\&lt; T \&gt;\n||+ IteratorBase()\l+ ~IteratorBase()\l+ operator==()\l+ operator*()\l+ operator*()\l+ operator&#45;\&gt;()\l+ operator&#45;\&gt;()\l+ operator++()\l+ operator&#45;&#45;()\l+ clone()\l# equal()\l}" alt="" coords="5,5,131,229"/>
+<area shape="rect" id="node2" href="$class_iterator_base.html" title="Classe abstraite qui gère un itérateur personnalisé " alt="" coords="5,5,131,229"/>
 </map>

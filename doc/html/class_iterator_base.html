@@ -94,6 +94,9 @@ $(document).ready(function(){initNavTree('class_iterator_base.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Classe abstraite qui gère un itérateur personnalisé  
+ <a href="class_iterator_base.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_collection_iterator_8hpp_source.html">CollectionIterator.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de IteratorBase&lt; T &gt;:</div>
@@ -134,7 +137,19 @@ Fonctions membres protégées</h2></td></tr>
 <tr class="memitem:a08430515a17384d098eb62ecce1b64c6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_iterator_base.html#a08430515a17384d098eb62ecce1b64c6">equal</a> (const <a class="el" href="class_iterator_base.html">IteratorBase</a> &amp;rhs) const =0</td></tr>
 <tr class="separator:a08430515a17384d098eb62ecce1b64c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class IteratorBase&lt; T &gt;</h3>
+
+<p>Classe abstraite qui gère un itérateur personnalisé </p>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type de l'objet référencé par l'itérateur</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette classe est la véritable classe mère dont les itérateurs personnalisés héritent. Elle est implémentée comme une classe abstraite quelconque. Avec la classe <code><a class="el" href="class_collection_iterator.html" title="Wrapper autour d&#39;un IteratorBase permettant le polymorphisme. ">CollectionIterator</a></code> , elle permet d'utiliser un itérateur abstrait, en utilisant la sémantique des itérateurs standards. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a6d1810e7a0a84574bb61d78bb99d96bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d1810e7a0a84574bb61d78bb99d96bb">&#9670;&nbsp;</a></span>IteratorBase()</h2>
 
