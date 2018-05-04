@@ -55,7 +55,8 @@ void affTags(const TagList& tagList)
     auto it = tagList.begin();
     if(it != tagList.end())
         std::cout << *it;
-    for(++it ;it != tagList.end(); ++it)
+    for(;it != tagList.end(); ++it)
+        if(it != tagList.begin())
         std::cout << ", " << *it;
     std::cout << '}' << std::endl;
 }
