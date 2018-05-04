@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pattern',['pattern',['../structfile__filter.html#a66658e1ec5a2c6a586d9855f12779a04',1,'file_filter']]]
+  ['title',['title',['../structfile__filter.html#a5bb33083d08fd4d3f991598d02b8af4d',1,'file_filter']]]
 ];

@@ -1,5 +1,9 @@
-<map id="src/Collection.hpp" name="src/Collection.hpp">
-<area shape="rect" id="node2" href="$_collection_pool_8hpp.html" title="src/CollectionPool.hpp" alt="" coords="5,80,159,107"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="148,155,245,181"/>
-<area shape="rect" id="node4" href="$_filtered_collection_8hpp.html" title="src/FilteredCollection.hpp" alt="" coords="234,80,405,107"/>
+<map id="src/Collection/Collection.hpp" name="src/Collection/Collection.hpp">
+<area shape="rect" id="node2" href="$_collection_pool_8hpp.html" title="src/Collection/Collection\lPool.hpp" alt="" coords="5,80,169,121"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="271,177,368,203"/>
+<area shape="rect" id="node4" href="$_filtered_collection_8hpp.html" title="src/Collection/FilteredCollection.hpp" alt="" coords="418,87,650,114"/>
+<area shape="rect" id="node6" href="$menu_8hpp.html" title="src/ConsolePrototype\l/menu.hpp" alt="" coords="675,80,823,121"/>
+<area shape="rect" id="node8" href="$save_8hpp.html" title="src/ConsolePrototype\l/save.hpp" alt="" coords="245,80,393,121"/>
+<area shape="rect" id="node5" href="$save_8cpp.html" title="src/ConsolePrototype\l/save.cpp" alt="" coords="427,169,575,211"/>
+<area shape="rect" id="node7" href="$menu_8cpp.html" title="src/ConsolePrototype\l/menu.cpp" alt="" coords="675,169,823,211"/>
 </map>

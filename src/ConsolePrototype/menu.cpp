@@ -5,11 +5,12 @@
 void menu()
 {
     std::cout << "Que faire ?" << std::endl 
-              << "1) Afficher les tags d'une image" << std::endl 
+              << "1) Afficher les tags d'une image" << std::endl
               << "2) Ajouter un tag à une image" << std::endl
-              << "3) Rechercher par tag" << std::endl 
-              << "4) Ajouter un tag à la liste" << std::endl
-              << "5) Quitter" << std::endl;
+              << "3) Enlever un tag d'une image" << std::endl
+              << "4) Rechercher par tag" << std::endl 
+              << "5) Ajouter un tag à la liste" << std::endl
+              << "6) Quitter" << std::endl;
 }
 
 int choix(int max)

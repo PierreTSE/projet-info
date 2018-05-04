@@ -75,7 +75,7 @@ int main()
                 }
             }
             break;
-                
+
             case 2:
             {
                 std::cout << "Quelle image ?" << std::endl;
@@ -89,8 +89,22 @@ int main()
                 }
             }
             break;
-            
+
             case 3:
+            {
+                std::cout << "Quelle image ?" << std::endl;
+                auto img = choix_image(collection);
+                if(img != collection.end()) {
+                    std::cout << "Quel Tag ?" << std::endl;
+                    auto tag = choix_tag(img->getTagList());
+                    if(!tag.empty()) {
+                        img->getTagList().erase(tag);
+                    }
+                }
+            }
+            break;
+            
+            case 4:
             {
                 std::cout << "Quel Tag ?" << std::endl;
                 auto tag = choix_tag(possibleTags);
@@ -99,7 +113,7 @@ int main()
             }
             break;
             
-            case 4:
+            case 5:
             {
                 Tag tag;
                 std::cout << "Saississez un tag" << std::endl;
@@ -108,7 +122,7 @@ int main()
             }
             break;
                 
-            case 5:
+            case 6:
                 quit = true;
                 auto savePath = getSaveFileName();
                 saveCollec(savePath, collection);

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['capacity',['capacity',['../class_collection_pool.html#a72521883b8761babd44d76a4283d6978',1,'CollectionPool']]],
-  ['clone',['clone',['../class_iterator_base.html#a541fdf8cc48f31c8ddfdc3f319a37100',1,'IteratorBase::clone()'],['../class_pool_iterator.html#ae39cdb4bbb84e88cf0d9009e7bdae586',1,'PoolIterator::clone()'],['../class_filtered_iterator.html#a79d512a43aa4d31caf26908e93130b9d',1,'FilteredIterator::clone()']]],
-  ['collection',['Collection',['../class_collection.html#af6be61fb9648c2ac1ef7c8456b49a441',1,'Collection']]],
-  ['collectioniterator',['CollectionIterator',['../class_collection_iterator.html#ad43d61217203dfc7639ff9cc215cbbb5',1,'CollectionIterator::CollectionIterator()=default'],['../class_collection_iterator.html#a9db87c21c0786441895f008bc3508785',1,'CollectionIterator::CollectionIterator(const CollectionIterator &amp;itr)'],['../class_collection_iterator.html#a0507f147322bb135486239871259fce6',1,'CollectionIterator::CollectionIterator(CollectionIterator &amp;&amp;itr) noexcept'],['../class_collection_iterator.html#a538532a008fd442918b5f2f73e9bd2d2',1,'CollectionIterator::CollectionIterator(IteratorBase&lt; T &gt; *ptr)']]],
-  ['collectionpool',['CollectionPool',['../class_collection_pool.html#a6e58d0618310fcb2d5114a41c346c1f8',1,'CollectionPool::CollectionPool()=default'],['../class_collection_pool.html#a65f8fd9c44e03d841391dd50fe953d4a',1,'CollectionPool::CollectionPool(size_type n, const value_type &amp;v=value_type{})'],['../class_collection_pool.html#a20a624365d44f3b3ae562022d363235b',1,'CollectionPool::CollectionPool(std::initializer_list&lt; value_type &gt; list)']]]
+  ['begin',['begin',['../class_collection.html#a4abc73f8e31a499a22b25d42b7a4fe8c',1,'Collection::begin()'],['../class_collection_pool.html#ae13d478a26554da9211db064285c7b0b',1,'CollectionPool::begin()'],['../class_filtered_collection.html#a114f2b1557201e523a264d549926ab0a',1,'FilteredCollection::begin()']]],
+  ['browsefolder',['browseFolder',['../_file_dialog_8hpp.html#a79d86cc4131e945502a7bf000eca7537',1,'FileDialog.hpp']]]
 ];

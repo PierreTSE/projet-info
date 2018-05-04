@@ -18,6 +18,8 @@ var class_collection_pool =
     [ "empty", "class_collection_pool.html#ad73cd0612ec1fd21962f4d423b45b3f6", null ],
     [ "end", "class_collection_pool.html#a870a85422595d6533688704ebe43b520", null ],
     [ "max_size", "class_collection_pool.html#a333a1edf4c98229f47b698463baf0324", null ],
+    [ "push_back", "class_collection_pool.html#a67fc04c58d9da40ef52e4e58aa386557", null ],
+    [ "push_back", "class_collection_pool.html#a06e32750ecb51f814bc42be0026b7a6c", null ],
     [ "reserve", "class_collection_pool.html#a06334969f57ca768241af598f03e8de1", null ],
     [ "shrink_to_fit", "class_collection_pool.html#a99d7be7a85d94c4288683b900af1e087", null ],
     [ "size", "class_collection_pool.html#aa5b3ebca322cda930b17a0cfab3f91f2", null ]
