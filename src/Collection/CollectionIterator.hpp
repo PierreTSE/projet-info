@@ -5,6 +5,17 @@
 #include <iterator>
 #include <memory>
 
+
+/**
+ * @class IteratorBase
+ * @brief Classe abstraite qui gère un itérateur personnalisé
+ * @tparam T Type de l'objet référencé par l'itérateur
+ * 
+ * Cette classe est la véritable classe mère dont les itérateurs personnalisés héritent.
+ * Elle est implémentée comme une classe abstraite quelconque.
+ * Avec la classe @c CollectionIterator , elle permet d'utiliser un itérateur abstrait,
+ * en utilisant la sémantique des itérateurs standards.
+ */
 template <typename T>
 class IteratorBase
 {
@@ -22,11 +33,26 @@ class IteratorBase
 		virtual void operator++() = 0; //pre-increment operator
 		virtual void operator--() = 0; //pre-decrement operator
 	
+		/**
+		*/
 		virtual IteratorBase* clone() const = 0;
 	protected:
 		virtual bool equal(const IteratorBase& rhs) const = 0;
 };
 
+/**
+ * @class CollectionIterator
+ * @brief Wrapper autour d'un @c IteratorBase permettant le polymorphisme
+ * @tparam T Type de l'objet référencé par l'itérateur
+ *
+ * Cette classe contient un pointeur vers un @c IteratorBase (qui sera hérité) afin de 
+ * permettre un comportement polymorphique à cet itérateur. 
+ * L'itérateur utilise la sémantique d'un itérateur standard 
+ * (principalement l'utilisation fréquente de copie de l'itérateur, explicitement ou en passage par valeur,
+ * ce qui est incompatible avec le polymorphisme usuel qui utilise des références ou des pointeurs).
+ * Cette classe est implémentée comme un BidirectionalIterator et redéfinit donc tous les alias et méthodes
+ * qui la rendent conforme à ce concept.
+ */
 template<typename T>
 class CollectionIterator
 {	
