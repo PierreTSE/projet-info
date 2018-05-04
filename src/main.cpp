@@ -6,6 +6,7 @@
 #include "Collection/CollectionPool.hpp"
 #include "FileDialog/FileDialog.hpp"
 #include "Image/Image.hpp"
+#include "ConsolePrototype/save.hpp"
 #include <iostream>
 #include <experimental/filesystem>
 #include <fstream>
@@ -26,21 +27,20 @@ CollectionPool<Image<img_t>> getPoolFromDirectory()
 
 		for (auto& file : fs::directory_iterator(directoryPath))
 		{
-			if (file.path().extension() == ".txt")
-			{
-				std::ifstream tagListFile(file.path(), std::ios::in);
-				//TODO gestion de la tagList particulière
-				break;
-			}
-		}
-		for (auto& file : fs::directory_iterator(directoryPath))
-		{
 			if (file.path().extension() == ".ppm")
 			{
 				Image<img_t> img(file.path(), nullptr, {}); //TODO gérer le fichier image, ajouter tagList
 				collectionPool.push_back(std::move(img));
 			}
 		}
+        for (auto& file : fs::directory_iterator(directoryPath))
+        {
+            if (file.path().extension() == ".txt")
+            {
+                updateCollec(file.path(), collectionPool);
+                break;
+            }
+        }
 		return collectionPool;
 	}
 	else
@@ -60,13 +60,6 @@ int main()
     CollectionPool<Image<int>> collection = getPoolFromDirectory<int>();
     
     bool quit = false;
-    
-    // Appeler begin depuis un pointeur ou une référence de Collection pointant sur un CollectionPool cause un segfault
-    Collection<Image<int>>* ptr = &collection;
-    ptr->begin();
-    ptr->end();
-    for(auto& img : collection)
-        std::cout << img.getPath() << std::endl;
     
     while(!quit) {
         menu();
@@ -110,13 +103,15 @@ int main()
             {
                 Tag tag;
                 std::cout << "Saississez un tag" << std::endl;
-                std::getline(std::cin, tag);
+                std::cin >> tag;
                 possibleTags.insert(tag);
             }
             break;
                 
             case 5:
                 quit = true;
+                auto savePath = getSaveFileName();
+                saveCollec(savePath, collection);
                 break;
         }
     }

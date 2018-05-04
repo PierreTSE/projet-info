@@ -44,7 +44,7 @@ Collection<Image<int>>::iterator choix_image(Collection<Image<int>>& collec)
     else
     {
         auto first = collec.begin();
-        std::advance(first, i);
+        std::advance(first, choix(i)-1);
         return first;
     }
 }
@@ -77,7 +77,7 @@ Tag choix_tag(const TagList& tagList)
     else
     {
         auto first = tagList.begin();
-        std::advance(first, i);
+        std::advance(first, choix(i)-1);
         return *first;
     }
 }
