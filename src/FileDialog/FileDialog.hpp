@@ -21,8 +21,6 @@ std::experimental::filesystem::path getOpenFileName(const std::string& title = "
                                                     const file_filter& filter = { "All files", "*" },
                                                     const std::experimental::filesystem::path& initialDir = "");
 
-//TODO PG à éditer avec path
-
 /**
 * @brief Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier
 * @param title Titre de la boîte de dialogue
@@ -40,7 +38,7 @@ std::experimental::filesystem::path getSaveFileName(const std::string& title = "
 * @param initialDir Chemin du dossier dans lequel se trouvera la boîte de dialogue à l'ouverture
 * @return chemin vers le répertoire sélectionné
 */
-std::experimental::filesystem::path browseFolder(const std::string &title = "Select a directory",
+std::experimental::filesystem::path browseFolder(const std::string &title = "Choisissez un répertoire",
 												 const std::experimental::filesystem::path& initialDir = "");
 
 

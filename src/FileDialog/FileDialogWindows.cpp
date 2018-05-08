@@ -12,7 +12,7 @@ namespace fs = std::experimental::filesystem;
 
 fs::path getOpenFileName(const string &title, const file_filter &filterIN, const fs::path &initialDir)
 {
-	std::string filter = filterIN.title;
+	std::string filter = filterIN.pattern;
 
 	// Processing of the filter
 	size_t begin_pos = filter.find_first_of('(');
@@ -43,7 +43,7 @@ fs::path getOpenFileName(const string &title, const file_filter &filterIN, const
 
 fs::path getSaveFileName(const string &title, const file_filter & filterIN, const std::experimental::filesystem::path & initialDir)
 {
-	std::string filter = filterIN.title;
+	std::string filter = filterIN.pattern;
 
 	// Processing of the filter
 	size_t begin_pos = filter.find_first_of('(');
@@ -121,5 +121,4 @@ fs::path browseFolder(const string &title, const std::experimental::filesystem::
 
 	return "";
 }
-
 #endif // WINDOWS

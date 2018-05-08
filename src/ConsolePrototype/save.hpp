@@ -6,7 +6,7 @@
 #include <experimental/filesystem>
 
 
-void saveCollec(const std::experimental::filesystem::path& savePath, Collection<Image<int>>& collec);
-void updateCollec(const std::experimental::filesystem::path& loadPath, Collection<Image<int>>& collec);
+void saveCollec(const std::experimental::filesystem::path& savePath, Collection<Image>& collec);
+void updateCollec(const std::experimental::filesystem::path& loadPath, Collection<Image>& collec);
 
 #endif //SAVE_HPP
