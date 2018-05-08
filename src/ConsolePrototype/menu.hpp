@@ -6,9 +6,9 @@
 
 void menu();
 int choix(int max);
-Collection<Image<int>>::iterator choix_image(Collection<Image<int>>& collec);
+Collection<Image>::iterator choix_image(Collection<Image>& collec);
 void affTags(const TagList& tagList);
 Tag choix_tag(const TagList& tagList);
-void listImg(Collection<Image<int>>& collec);
+void listImg(Collection<Image>& collec);
 
 #endif //MENU_HPP

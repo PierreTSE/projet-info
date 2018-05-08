@@ -13,14 +13,15 @@
 #include <exception>
 
 namespace fs = std::experimental::filesystem;
+using namespace cimg_library;
+using namespace std;
+using img = cimg_library::CImg<unsigned char>;
 
 
-template <typename img_t>
-CollectionPool<Image<img_t>> getPoolFromDirectory()
+CollectionPool<Image> getPoolFromDirectory(fs::path directoryPath)
 {
-	CollectionPool<Image<img_t>> collectionPool;
+	CollectionPool<Image> collectionPool;
 
-	fs::path directoryPath = browseFolder();
 	if (fs::is_directory(directoryPath))
 	{
 		TagList taglist;
@@ -29,7 +30,7 @@ CollectionPool<Image<img_t>> getPoolFromDirectory()
 		{
 			if (file.path().extension() == ".ppm")
 			{
-				Image<img_t> img(file.path(), nullptr, {}); //TODO gérer le fichier image, ajouter tagList
+				Image img(file.path(), nullptr, {}); //TODO gérer le fichier image, ajouter tagList
 				collectionPool.push_back(std::move(img));
 			}
 		}
@@ -45,13 +46,13 @@ CollectionPool<Image<img_t>> getPoolFromDirectory()
 	}
 	else
 	{
-		throw std::runtime_error("Pas un répertoire");
+		throw std::runtime_error("Pas de répertoire sélectionné");
 	}
 }
 
-
 int main()
 {
+	//working directory
 	auto wd = fs::current_path();
 
     TagList possibleTags;
@@ -59,16 +60,24 @@ int main()
     if(fs::exists(tagsPath))
         possibleTags = loadTagList(tagsPath);
     
-    CollectionPool<Image<int>> collection = getPoolFromDirectory<int>();
+    CollectionPool<Image> collection = getPoolFromDirectory(browseFolder());
     
     bool quit = false;
     
     while(!quit) {
-        menu();
-        int c = choix(6);
-        switch(c)
+        //menu();
+        //int c = choix(6);
+		int c = cimg::dialog("Menu principal", "Choisissez l'action à effectuer."
+											 , "Voir tag d'une image"
+											 , "Tagger une image"
+											 , "Détagger une image"
+											 , "Rechercher par tag"
+											 , "Ajouter à la liste"
+											 , 0
+											 , CImg<>());
+		switch(c)
         {
-            case 1: 
+            case 0: 
             {
                 std::cout << "Quelle image ?" << std::endl;
                 auto img = choix_image(collection);
@@ -78,7 +87,7 @@ int main()
             }
             break;
 
-            case 2:
+            case 1:
             {
                 std::cout << "Quelle image ?" << std::endl;
                 auto img = choix_image(collection);
@@ -92,7 +101,7 @@ int main()
             }
             break;
 
-            case 3:
+            case 2:
             {
                 std::cout << "Quelle image ?" << std::endl;
                 auto img = choix_image(collection);
@@ -106,16 +115,16 @@ int main()
             }
             break;
             
-            case 4:
+            case 3:
             {
                 std::cout << "Quel Tag ?" << std::endl;
                 auto tag = choix_tag(possibleTags);
-                auto filtre = FilteredCollection<Image<int>>(collection, [&tag](const Image<int>& img){ return img.getTagList().find(tag) != img.getTagList().end(); });
+                auto filtre = FilteredCollection<Image>(collection, [&tag](const Image& img){ return img.getTagList().find(tag) != img.getTagList().end(); });
                 listImg(filtre);
             }
             break;
             
-            case 5:
+            case 4:
             {
                 Tag tag;
                 std::cout << "Saississez un tag" << std::endl;
@@ -124,7 +133,7 @@ int main()
             }
             break;
                 
-            case 6:
+            case -1:
                 quit = true;
                 auto savePath = getSaveFileName();
                 saveCollec(savePath, collection);

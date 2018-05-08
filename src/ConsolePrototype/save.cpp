@@ -6,7 +6,7 @@
 
 namespace fs = std::experimental::filesystem;
 
-void saveCollec(const std::experimental::filesystem::path& savePath, Collection<Image<int>>& collec)
+void saveCollec(const std::experimental::filesystem::path& savePath, Collection<Image>& collec)
 {
     std::ofstream out(savePath);
     if(!out)
@@ -21,7 +21,7 @@ void saveCollec(const std::experimental::filesystem::path& savePath, Collection<
     }
 }
 
-void updateCollec(const std::experimental::filesystem::path& loadPath, Collection<Image<int>>& collec)
+void updateCollec(const std::experimental::filesystem::path& loadPath, Collection<Image>& collec)
 {
     std::ifstream in(loadPath);
     if(!in)
@@ -41,7 +41,7 @@ void updateCollec(const std::experimental::filesystem::path& loadPath, Collectio
                 savedList.insert(tag);
             if(!savedList.empty()) {
                 fs::path path = filename;
-                FilteredCollection<Image<int>> imagesWithRigthPath(collec, [&path](const Image<int>& img){ return img.getPath() == path;});
+                FilteredCollection<Image> imagesWithRigthPath(collec, [&path](const Image& img){ return img.getPath() == path;});
                 for(auto& img : imagesWithRigthPath)
                     for(auto& savedTag : savedList)
                         img.getTagList().insert(savedTag);

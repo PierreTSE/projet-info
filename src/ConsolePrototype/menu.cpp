@@ -29,7 +29,7 @@ int choix(int max)
     return c;
 }
 
-Collection<Image<int>>::iterator choix_image(Collection<Image<int>>& collec)
+Collection<Image>::iterator choix_image(Collection<Image>& collec)
 {
     size_t i = 0;
     for(auto& img : collec)
@@ -84,7 +84,7 @@ Tag choix_tag(const TagList& tagList)
     }
 }
 
-void listImg(Collection<Image<int>>& collec)
+void listImg(Collection<Image>& collec)
 {
     for(auto& img : collec)
         std::cout << img.getPath().u8string() << std::endl;
