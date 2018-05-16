@@ -1,16 +1,18 @@
-﻿#include "ConsolePrototype/config.hpp"
-#include "ConsolePrototype/menu.hpp"
+﻿#include "Collection/Collection.hpp"
 #include "Collection/CollectionIterator.hpp"
-#include "Collection/FilteredCollection.hpp"
-#include "Collection/Collection.hpp"
 #include "Collection/CollectionPool.hpp"
+#include "Collection/FilteredCollection.hpp"
+#include "ConsolePrototype/config.hpp"
+#include "ConsolePrototype/menu.hpp"
+#include "ConsolePrototype/save.hpp"
 #include "FileDialog/FileDialog.hpp"
 #include "Image/Image.hpp"
-#include "ConsolePrototype/save.hpp"
-#include <iostream>
+#include "Parser.hpp"
+#include "system_target.hpp"
+#include <exception>
 #include <experimental/filesystem>
 #include <fstream>
-#include <exception>
+#include <iostream>
 
 namespace fs = std::experimental::filesystem;
 using namespace cimg_library;
@@ -52,8 +54,19 @@ CollectionPool<Image> getPoolFromDirectory(fs::path directoryPath)
 
 int main()
 {
+	//tests
+#ifdef WINDOWS
+
+
+	fs::path wd = fs::current_path();
+	std::locale l;
+	std::locale loc(l, new std::codecvt_utf8<wchar_t>);
+#endif // WINDOWS
+
+	std::vector<std::pair<std::string, std::vector<std::string>>> vect_test = unparse(wd/="save.txt", loc);
+
 	//working directory
-	auto wd = fs::current_path();
+	//auto wd = fs::current_path();
 
     TagList possibleTags;
     fs::path tagsPath = "tags.txt";
