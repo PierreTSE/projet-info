@@ -64,12 +64,52 @@ std::vector<std::pair<std::string, std::vector<std::string>>> unparse(std::fstre
 	return vect_out;
 }
 
-std::vector<std::pair<std::string, std::vector<std::string>>> unparse(const std::experimental::filesystem::path& path, std::locale locale)
+std::vector<std::pair<std::string, std::vector<std::string>>> unparse(const std::experimental::filesystem::path& loadPath, std::locale locale)
 {
 	std::fstream fs;
-	fs.open(path.c_str());
+	fs.open(loadPath.c_str());
 	if (!fs.is_open())
-		throw std::runtime_error("Not found : " + path.string());
+		throw std::runtime_error("Not found : " + loadPath.string());
 	else
 		return unparse(fs,locale);
+}
+
+
+std::vector<std::pair<std::string, std::vector<std::string>>> parse_collection(Collection<Image>& collection)
+{
+	std::vector<std::pair<std::string, std::vector<std::string>>> vect_out;
+	for (auto& img : collection)
+	{
+		std::string first = img.getPath().u8string() + "::";
+		std::vector<std::string> second;
+		for (auto& tag : img.getTagList())
+		{
+			second.push_back(tag + ",");
+		}
+		second.back().replace(second.back().end() - 1, second.back().end(), ";");
+
+		vect_out.emplace_back(first, second);
+	}
+	return vect_out;
+}
+
+std::vector<std::pair<std::experimental::filesystem::path, std::vector<std::experimental::filesystem::path>>> parse_collection_using_path(Collection<Image>& collection)
+{
+	std::vector<std::pair<std::experimental::filesystem::path, std::vector<std::experimental::filesystem::path>>> vect_out;
+	for (auto& img : collection)
+	{
+		std::experimental::filesystem::path first = img.getPath() += "::";
+		std::vector<std::experimental::filesystem::path> second;
+		for (auto& tag : img.getTagList())
+		{
+			if (!second.empty()) 
+				second.back() +=  ",";
+			second.push_back(tag);
+		}
+		if (!second.empty())
+			second.back() += ";";
+
+		vect_out.emplace_back(first, second);
+	}
+	return vect_out;
 }

@@ -54,19 +54,20 @@ CollectionPool<Image> getPoolFromDirectory(fs::path directoryPath)
 
 int main()
 {
+	//working directory
+	auto wd = fs::current_path();
+
+
 	//tests
 #ifdef WINDOWS
 
 
-	fs::path wd = fs::current_path();
 	std::locale l;
 	std::locale loc(l, new std::codecvt_utf8<wchar_t>);
 #endif // WINDOWS
 
 	std::vector<std::pair<std::string, std::vector<std::string>>> vect_test = unparse(wd/="save.txt", loc);
-
-	//working directory
-	//auto wd = fs::current_path();
+	//le premier élément (string) de la paire correspond au chemin, le deuxième élément de la paire est la liste des tags (strings)
 
     TagList possibleTags;
     fs::path tagsPath = "tags.txt";
