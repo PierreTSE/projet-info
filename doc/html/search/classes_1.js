@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['file_5ffilter',['file_filter',['../structfile__filter.html',1,'']]],
-  ['filteredcollection',['FilteredCollection',['../class_filtered_collection.html',1,'']]],
-  ['filterediterator',['FilteredIterator',['../class_filtered_iterator.html',1,'']]]
+  ['cimg',['CImg',['../structcimg__library__suffixed_1_1_c_img.html',1,'cimg_library_suffixed']]],
+  ['cimg_3c_20boolt_20_3e',['CImg&lt; boolT &gt;',['../structcimg__library__suffixed_1_1_c_img.html',1,'cimg_library_suffixed']]],
+  ['cimg_3c_20chart_20_3e',['CImg&lt; charT &gt;',['../structcimg__library__suffixed_1_1_c_img.html',1,'cimg_library_suffixed']]],
+  ['cimg_3c_20doublet_20_3e',['CImg&lt; doubleT &gt;',['../structcimg__library__suffixed_1_1_c_img.html',1,'cimg_library_suffixed']]],
+  ['cimg_3c_20floatt_20_3e',['CImg&lt; floatT &gt;',['../structcimg__library__suffixed_1_1_c_img.html',1,'cimg_library_suffixed']]],
+  ['cimg_3c_20intt_20_3e',['CImg&lt; intT &gt;',['../structcimg__library__suffixed_1_1_c_img.html',1,'cimg_library_suffixed']]],
+  ['cimg_3c_20uintt_20_3e',['CImg&lt; uintT &gt;',['../structcimg__library__suffixed_1_1_c_img.html',1,'cimg_library_suffixed']]],
+  ['cimg_3c_20ulongt_20_3e',['CImg&lt; ulongT &gt;',['../structcimg__library__suffixed_1_1_c_img.html',1,'cimg_library_suffixed']]],
+  ['cimgabortexception',['CImgAbortException',['../structcimg__library__suffixed_1_1_c_img_abort_exception.html',1,'cimg_library_suffixed']]],
+  ['cimgargumentexception',['CImgArgumentException',['../structcimg__library__suffixed_1_1_c_img_argument_exception.html',1,'cimg_library_suffixed']]],
+  ['cimgdisplay',['CImgDisplay',['../structcimg__library__suffixed_1_1_c_img_display.html',1,'cimg_library_suffixed']]],
+  ['cimgdisplayexception',['CImgDisplayException',['../structcimg__library__suffixed_1_1_c_img_display_exception.html',1,'cimg_library_suffixed']]],
+  ['cimgexception',['CImgException',['../structcimg__library__suffixed_1_1_c_img_exception.html',1,'cimg_library_suffixed']]],
+  ['cimginstanceexception',['CImgInstanceException',['../structcimg__library__suffixed_1_1_c_img_instance_exception.html',1,'cimg_library_suffixed']]],
+  ['cimgioexception',['CImgIOException',['../structcimg__library__suffixed_1_1_c_img_i_o_exception.html',1,'cimg_library_suffixed']]],
+  ['cimglist',['CImgList',['../structcimg__library__suffixed_1_1_c_img_list.html',1,'cimg_library_suffixed']]],
+  ['cimglist_3c_20boolt_20_3e',['CImgList&lt; boolT &gt;',['../structcimg__library__suffixed_1_1_c_img_list.html',1,'cimg_library_suffixed']]],
+  ['cimglist_3c_20chart_20_3e',['CImgList&lt; charT &gt;',['../structcimg__library__suffixed_1_1_c_img_list.html',1,'cimg_library_suffixed']]],
+  ['cimglist_3c_20doublet_20_3e',['CImgList&lt; doubleT &gt;',['../structcimg__library__suffixed_1_1_c_img_list.html',1,'cimg_library_suffixed']]],
+  ['cimglist_3c_20ulongt_20_3e',['CImgList&lt; ulongT &gt;',['../structcimg__library__suffixed_1_1_c_img_list.html',1,'cimg_library_suffixed']]],
+  ['cimgwarningexception',['CImgWarningException',['../structcimg__library__suffixed_1_1_c_img_warning_exception.html',1,'cimg_library_suffixed']]],
+  ['collection',['Collection',['../class_collection.html',1,'']]],
+  ['collectioniterator',['CollectionIterator',['../class_collection_iterator.html',1,'']]],
+  ['collectionpool',['CollectionPool',['../class_collection_pool.html',1,'']]]
 ];

@@ -65,6 +65,10 @@ int main()
 	std::locale l;
 	std::locale loc(l, new std::codecvt_utf8<wchar_t>);
 #endif // WINDOWS
+#ifdef LINUX
+	std::locale loc;
+#endif
+	
 
 	std::vector<std::pair<std::string, std::vector<std::string>>> vect_test = unparse(wd/="save.txt", loc);
 	//le premier élément (string) de la paire correspond au chemin, le deuxième élément de la paire est la liste des tags (strings)

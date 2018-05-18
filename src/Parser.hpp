@@ -1,9 +1,9 @@
 ﻿#ifndef PARSER_HPP
 #define PARSER_HPP
 
-#include "Image\Image.hpp"
-#include "Collection\Collection.hpp"
-#include <experimental\filesystem>
+#include "Image/Image.hpp"
+#include "Collection/Collection.hpp"
+#include <experimental/filesystem>
 #include <fstream>
 #include <locale>
 #include <string>

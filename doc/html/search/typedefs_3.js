@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['iterator',['iterator',['../class_collection.html#a317dca4fdf1eb2e47643bb60c620f802',1,'Collection::iterator()'],['../class_collection_pool.html#a7beafeb93ccc043bcde933faab05718f',1,'CollectionPool::iterator()'],['../class_filtered_collection.html#a65730aaf0a2a5307a924b44672718c74',1,'FilteredCollection::iterator()']]],
-  ['iterator_5fcategory',['iterator_category',['../class_collection_iterator.html#a0f4af23418960a0fe3889b5381d6a79c',1,'CollectionIterator']]]
+  ['difference_5ftype',['difference_type',['../class_collection.html#a60b36ef7aba0a88dff0e98fc2adb98a8',1,'Collection::difference_type()'],['../class_collection_iterator.html#a4dca8639d1f342073ccf8bcd4d27e3bf',1,'CollectionIterator::difference_type()'],['../class_collection_pool.html#a5e8db21ac58139c891fee4ae87295744',1,'CollectionPool::difference_type()'],['../class_filtered_collection.html#a98c17401762621a928d2b9926d3b71d6',1,'FilteredCollection::difference_type()']]],
+  ['doublet',['doubleT',['../structcimg__library__suffixed_1_1_c_img.html#aa29e255f9578a69500205c5064113006',1,'cimg_library_suffixed::CImg::doubleT()'],['../structcimg__library__suffixed_1_1_c_img_list.html#a307bd3b95847502b40d0aca77ec5783f',1,'cimg_library_suffixed::CImgList::doubleT()']]]
 ];
