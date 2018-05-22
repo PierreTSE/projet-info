@@ -9,46 +9,68 @@
 #include "Image/Image.hpp"
 #include "Parser.hpp"
 #include "system_target.hpp"
+#include <chrono>
 #include <exception>
 #include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
+#include <thread>
 
 namespace fs = std::experimental::filesystem;
 using namespace cimg_library;
 using namespace std;
 using img = cimg_library::CImg<unsigned char>;
 
-
+/** @fn getPoolFromDirectory
+/*  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
+/*  @param directoryPath Chemin du répertoire de sauvegarde à charger
+/*  @return @c CollectionPool d'images chargée par les données contenues dans le répertoire en paramètre
+/*
+/*  Cette fonction charge dans chaque image de la @c CollectionPool de retour les attributs :
+/*  path_ et tagList_ à partir du fichier de sauvegarde d'extension .txt
+/*  qui doit être inclus dans le répertoire en paramètre où se situent les images à charger.
+**/
 CollectionPool<Image> getPoolFromDirectory(fs::path directoryPath)
 {
-	CollectionPool<Image> collectionPool;
+	CollectionPool<Image> collectionPool; //collection retournée
 
 	if (fs::is_directory(directoryPath))
 	{
-		TagList taglist;
+		fs::path savePath; // Chemin de la sauvegarde d'extension .txt
 
+		/*
+		/ Chargement de toutes les images (d'extension .ppm)
+		*/
 		for (auto& file : fs::directory_iterator(directoryPath))
 		{
+			//Images d'extension .ppm
 			if (file.path().extension() == ".ppm")
 			{
-				Image img(file.path(), nullptr, {}); //TODO gérer le fichier image, ajouter tagList
+				Image img(file.path(), std::unique_ptr<img>(new img(file.path().u8string().c_str())), {});
 				collectionPool.push_back(std::move(img));
 			}
+			/* Recherche d'un fichier texte contenant la sauvegarde (chemins et tags de chaque image du dossier).
+			   Ce fichier doit être unique (aka la collection doit être vide). */
+			else if (file.path().extension() == ".txt")
+			{
+				if (savePath.empty())
+					savePath = file.path();
+				else
+					throw std::runtime_error("Several save files have been found during loading.");
+			}
 		}
-        for (auto& file : fs::directory_iterator(directoryPath))
-        {
-            if (file.path().extension() == ".txt")
-            {
-                updateCollec(file.path(), collectionPool);
-                break;
-            }
-        }
+
+		// Chaque image est associée à ses Tags depuis le ficher de sauvegarde grâce à son attribut path.
+		if(!savePath.empty())
+			updateCollec(savePath, collectionPool); //TODO PG à rendre plus propre
+		else
+			throw std::runtime_error("Not any save file have been found during loading.");
+
 		return collectionPool;
 	}
 	else
 	{
-		throw std::runtime_error("Pas de répertoire sélectionné");
+		throw std::runtime_error("No directory selected.");
 	}
 }
 
@@ -57,24 +79,113 @@ int main()
 	//working directory
 	auto wd = fs::current_path();
 
+	// tests parse
 
-	//tests
-#ifdef WINDOWS
+	std::ifstream saveStream(wd / "save.txt");
+
+	//string str;
+	//char c;
+	//while (!saveStream.eof())
+	//{
+	//	c = saveStream.get();
+	//	str += c;
+	//}
+
+	//std::string str;
+	//std::getline(saveStream, str, ';');
+	//std::cout << str << std::endl;
+	//std::getline(saveStream, str, ';');
+	//std::cout << str << std::endl;
+	//std::getline(saveStream, str, ';');
+	//std::cout << str << std::endl;
 
 
-	std::locale l;
-	std::locale loc(l, new std::codecvt_utf8<wchar_t>);
-#endif // WINDOWS
+	Image i1, i2, i3, i4;
 
-	std::vector<std::pair<std::string, std::vector<std::string>>> vect_test = unparse(wd/="save.txt", loc);
-	//le premier élément (string) de la paire correspond au chemin, le deuxième élément de la paire est la liste des tags (strings)
+	saveStream >> i1 >> i2 >> i3 >> i4;
+
+	return 0;
+	//!tests parse
 
     TagList possibleTags;
     fs::path tagsPath = "tags.txt";
     if(fs::exists(tagsPath))
         possibleTags = loadTagList(tagsPath);
     
-    CollectionPool<Image> collection = getPoolFromDirectory(browseFolder());
+    //CollectionPool<Image> collection = getPoolFromDirectory(browseFolder());
+	CollectionPool<Image> collection = getPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)");
+
+	//test affichage simpliste
+
+	CImgList<unsigned char> list;
+	for (auto& img : collection)
+		list.push_back(*img.getImgPtr());
+
+	const unsigned int window_height = 1080U;
+	const unsigned int window_width = 1920U;
+
+
+	// img est une CImg<unsigned char>
+	img windowImg(1920U, 1080U, 1U, 3U);
+	windowImg.draw_image(10U, 10U, list[0]); //list est un vector de img
+	windowImg.draw_image(500U, 500U, list[1]);
+
+	CImgDisplay my_main_disp(windowImg.width(), windowImg.height(), "titre 1");
+
+	while(!my_main_disp.is_closed())
+		my_main_disp.display(windowImg);
+
+	return 0;
+
+	//! test affichage simpliste
+
+	//TODO POURQUOI les images sont plus grandes ??
+
+	//test affichage une ligne automatique
+
+	size_t N = 0; //numberOfImagesInLine
+	size_t current_width = 0;
+	auto it = list.begin();
+	while (current_width + it->width() < window_width)
+	{
+		current_width += it->width();
+		++it;
+		++N;
+	}
+
+	CImgDisplay main_disp(window_width,window_height,"titre super bien");
+
+
+	size_t i = 0;
+	while (!main_disp.is_closed())
+	{
+		std::this_thread::sleep_for(1000ms);
+		
+
+
+		img temp_img(1920U, 1080U,1U,3U);
+		size_t X = 0U;
+		for (size_t i = 0; i < N; i++)
+		{
+			temp_img.draw_image(X,0U,1U,list[i]);
+			X += list[i].width();
+		}
+
+		//main_disp.resize(temp_img.width());
+		main_disp.display(temp_img);
+
+		//main_disp.resize(list[i].width(),list[i].height());
+		//main_disp.display(list[i]);
+		//++i;
+
+	}
+
+
+	
+	
+
+	return 0;
+	
     
     bool quit = false;
     
