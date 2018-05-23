@@ -1,5 +1,4 @@
 #include "../Collection/FilteredCollection.hpp"
-#include "../Parser.hpp"
 #include "save.hpp"
 #include <fstream>
 #include <sstream>
