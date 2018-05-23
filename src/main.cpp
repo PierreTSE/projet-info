@@ -21,6 +21,8 @@ using namespace cimg_library;
 using namespace std;
 using img = cimg_library::CImg<unsigned char>;
 
+//TOOD cela ressemble plus à getPoolFromSave à changer, faut faire les deux
+
 /** @fn getPoolFromDirectory
 /*  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
 /*  @param directoryPath Chemin du répertoire de sauvegarde à charger
@@ -30,7 +32,7 @@ using img = cimg_library::CImg<unsigned char>;
 /*  path_ et tagList_ à partir du fichier de sauvegarde d'extension .txt
 /*  qui doit être inclus dans le répertoire en paramètre où se situent les images à charger.
 **/
-CollectionPool<Image> getPoolFromDirectory(fs::path directoryPath)
+CollectionPool<Image> getPoolFromDirectory(const fs::path& directoryPath)
 {
 	CollectionPool<Image> collectionPool; //collection retournée
 
@@ -43,15 +45,17 @@ CollectionPool<Image> getPoolFromDirectory(fs::path directoryPath)
 		*/
 		for (auto& file : fs::directory_iterator(directoryPath))
 		{
-			//Images d'extension .ppm
-			if (file.path().extension() == ".ppm")
-			{
-				Image img(file.path(), std::unique_ptr<img>(new img(file.path().u8string().c_str())), {});
-				collectionPool.push_back(std::move(img));
-			}
+			////Images d'extension .ppm
+			//if (file.path().extension() == ".ppm")
+			//{
+			//	Image img(file.path(), std::unique_ptr<img>(new img(file.path().u8string().c_str())), {});
+			//	collectionPool.push_back(std::move(img));
+			//}
+
+
 			/* Recherche d'un fichier texte contenant la sauvegarde (chemins et tags de chaque image du dossier).
 			   Ce fichier doit être unique (aka la collection doit être vide). */
-			else if (file.path().extension() == ".txt")
+			if (file.path().extension() == ".txt")
 			{
 				if (savePath.empty())
 					savePath = file.path();
@@ -61,8 +65,19 @@ CollectionPool<Image> getPoolFromDirectory(fs::path directoryPath)
 		}
 
 		// Chaque image est associée à ses Tags depuis le ficher de sauvegarde grâce à son attribut path.
-		if(!savePath.empty())
-			updateCollec(savePath, collectionPool); //TODO PG à rendre plus propre
+		if (!savePath.empty())
+		{
+			std::ifstream in(savePath);
+			if (!in)
+				throw std::runtime_error("Peut pas lire");
+
+			Image image;
+			while (in >> image)
+			{
+				image.loadImage();
+				collectionPool.push_back(std::move(image));
+			}
+		}
 		else
 			throw std::runtime_error("Not any save file have been found during loading.");
 
@@ -78,6 +93,17 @@ int main()
 {
 	//working directory
 	auto wd = fs::current_path();
+
+	TagList possibleTags;
+	fs::path tagsPath = "tags.txt";
+	if (fs::exists(tagsPath))
+		possibleTags = loadTagList(tagsPath);
+
+	//CollectionPool<Image> collection = getPoolFromDirectory(browseFolder());
+	CollectionPool<Image> collection = getPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)");
+
+
+	/*
 
 	// tests parse
 
@@ -100,20 +126,12 @@ int main()
 	//std::cout << str << std::endl;
 
 
-	Image i1, i2, i3, i4;
+	Image i1, i2, i3, i4, i5;
 
-	saveStream >> i1 >> i2 >> i3 >> i4;
+	saveStream >> i1 >> i2 >> i3 >> i4 >> i5;
 
 	return 0;
 	//!tests parse
-
-    TagList possibleTags;
-    fs::path tagsPath = "tags.txt";
-    if(fs::exists(tagsPath))
-        possibleTags = loadTagList(tagsPath);
-    
-    //CollectionPool<Image> collection = getPoolFromDirectory(browseFolder());
-	CollectionPool<Image> collection = getPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)");
 
 	//test affichage simpliste
 
@@ -178,13 +196,12 @@ int main()
 		//main_disp.display(list[i]);
 		//++i;
 
-	}
-
-
-	
-	
+	}	
 
 	return 0;
+
+	*/
+
 	
     
     bool quit = false;
