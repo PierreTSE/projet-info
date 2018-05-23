@@ -7,7 +7,6 @@
 #include "ConsolePrototype/save.hpp"
 #include "FileDialog/FileDialog.hpp"
 #include "Image/Image.hpp"
-#include "Parser.hpp"
 #include "system_target.hpp"
 #include <chrono>
 #include <exception>
@@ -132,9 +131,9 @@ int main()
 
 	return 0;
 	//!tests parse
-
+	
 	//test affichage simpliste
-
+	*/
 	CImgList<unsigned char> list;
 	for (auto& img : collection)
 		list.push_back(*img.getImgPtr());
@@ -142,18 +141,60 @@ int main()
 	const unsigned int window_height = 1080U;
 	const unsigned int window_width = 1920U;
 
+	
+	//// img est une CImg<unsigned char>
+	//img windowImg(800U, 400U, 1U, 3U);
+	//windowImg.draw_image(10U, 10U, list[0]); //list est un vector de img
+	//img temp_img(list[0]);
+	//temp_img.resize(300U, 300U);
+	//windowImg.draw_image(300U, 10U, temp_img);
 
-	// img est une CImg<unsigned char>
-	img windowImg(1920U, 1080U, 1U, 3U);
-	windowImg.draw_image(10U, 10U, list[0]); //list est un vector de img
-	windowImg.draw_image(500U, 500U, list[1]);
+	//CImgDisplay my_main_disp(windowImg.width(), windowImg.height(), "204*306",true);
 
-	CImgDisplay my_main_disp(windowImg.width(), windowImg.height(), "titre 1");
+	////while(!my_main_disp.is_closed())
+	////	my_main_disp.display(windowImg);
 
-	while(!my_main_disp.is_closed())
-		my_main_disp.display(windowImg);
 
-	return 0;
+	//my_main_disp.resize(204, 306);
+	////HACK rapport (256/204=1.2549,384/306=1.2549)
+
+	//CImgDisplay disp2(256, 384, "256*384");
+
+	//while (1)
+	//{
+	//	my_main_disp.display(list[0]);
+	//	disp2.display(list[0]);
+	//}
+
+	//return 0;
+
+	//while (!my_main_disp.is_closed())
+	//{
+	//	std::this_thread::sleep_for(100ms);
+
+	//	if (my_main_disp.is_resized())
+	//	{
+	//		my_main_disp.resize(false).display(windowImg);
+	//		cout << "resized widht =" << my_main_disp.width() << " height = " << my_main_disp.height() << endl;
+
+	//		
+	//		//windowImg = windowImg_copy;
+	//		//windowImg.resize(my_main_disp);
+	//		//my_main_disp.display(windowImg);
+	//	}
+
+	//	if (my_main_disp.is_keyR())
+	//	{
+	//		my_main_disp.resize(1920,1080);
+	//		my_main_disp.toggle_fullscreen(false).display(windowImg);
+	//	}
+
+
+
+	//}
+
+	//return 0;
+	
 
 	//! test affichage simpliste
 
@@ -161,46 +202,32 @@ int main()
 
 	//test affichage une ligne automatique
 
-	size_t N = 0; //numberOfImagesInLine
-	size_t current_width = 0;
-	auto it = list.begin();
-	while (current_width + it->width() < window_width)
-	{
-		current_width += it->width();
-		++it;
-		++N;
-	}
-
 	CImgDisplay main_disp(window_width,window_height,"titre super bien");
 
+	static const double magick_ratio = 100 * 306 / 384;
 
-	size_t i = 0;
+	img temp_img(0U,0,1,3U);
+	for (size_t i = 0; i < 5; i++)
+	{
+		temp_img.append(list[i].resize(-magick_ratio,-magick_ratio),'x',0.5f);
+	}
+
+	img visu(1920, temp_img.height());
+	//visu.fill('0','128','255','128','0');
+	visu.fill(0);
+	visu.draw_image(151,0,temp_img);
+
 	while (!main_disp.is_closed())
 	{
-		std::this_thread::sleep_for(1000ms);
-		
+		std::this_thread::sleep_for(10ms);		
 
-
-		img temp_img(1920U, 1080U,1U,3U);
-		size_t X = 0U;
-		for (size_t i = 0; i < N; i++)
-		{
-			temp_img.draw_image(X,0U,1U,list[i]);
-			X += list[i].width();
-		}
-
-		//main_disp.resize(temp_img.width());
-		main_disp.display(temp_img);
-
-		//main_disp.resize(list[i].width(),list[i].height());
-		//main_disp.display(list[i]);
-		//++i;
+		main_disp.resize(visu).display(visu);
 
 	}	
 
 	return 0;
 
-	*/
+	
 
 	
     
