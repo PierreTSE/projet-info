@@ -39,11 +39,13 @@ class Collection
 	
 		//Iterators
 		virtual iterator begin() = 0;
+		//virtual const_iterator begin() = 0;
 		/*virtual const_iterator cbegin() const = 0;
 		virtual reverse_iterator rbegin() = 0;
 		virtual const_reverse_iterator rbegin() const = 0;
 		virtual const_reverse_iterator crbegin() const = 0;*/
 		virtual iterator end() = 0;
+		//virtual const_iterator end() = 0;
 		/*virtual const_iterator cend() const = 0;
 		virtual reverse_iterator rend() = 0;
 		virtual const_reverse_iterator rend() const = 0;
