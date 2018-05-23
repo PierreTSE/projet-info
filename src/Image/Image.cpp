@@ -1,5 +1,4 @@
 ﻿#include "Image.hpp"
-#include "../Parser.hpp"
 
 namespace fs = std::experimental::filesystem;
 
@@ -187,7 +186,7 @@ std::istream& operator>>(std::istream& inStream, Image& image)
 			}
 		}
 
-		image.setPath(fs::path(path));
+		image.setPath(fs::u8path(path));
 		image.setTagList(tagList);
 	}
 	catch(std::exception& e)
