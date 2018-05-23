@@ -7,39 +7,37 @@
 
 namespace fs = std::experimental::filesystem;
 
-//void saveCollec(const std::experimental::filesystem::path& savePath, Collection<Image>& collec)
-//{
-//    std::ofstream out(savePath);
-//    if(!out)
-//        throw std::runtime_error("Peut pas sauver");
-//    
-//    for(auto& img : collec)
-//    {
-//        out << img.getPath().u8string() << "::";
-//        for(auto& tag : img.getTagList())
-//            out << tag << ',';
-//        out << std::endl;
-//    }
-//}
-
-//HACK proposition avec utilisation du parseur
-void saveCollec(const std::experimental::filesystem::path& savePath, Collection<Image>& collec)
+void saveCollec(const std::experimental::filesystem::path& savePath,Collection<Image>& collec)
 {
-	std::ofstream out(savePath);
-	if(!out)
-	    throw std::runtime_error("Impossible de sauvegarder");
-
-	auto parsed_vect = parse_collection_using_path(collec);
-	for (auto& parsedItem : parsed_vect)
-	{
-		out << parsedItem.first.u8string();
-		for (auto& tag : parsedItem.second)
-		{
-			out << tag.u8string();
-		}
-		out << std::endl;
+    std::ofstream out(savePath);
+    if(!out)
+        throw std::runtime_error("Impossible de sauvegarder.");
+	//TODO à gérer : quand on ferme sans taper de nom de save
+    
+    for(const auto& img : collec)
+    {
+		out << img << std::endl;
 	}
 }
+
+//HACK proposition avec utilisation du parseur
+//void saveCollec(const std::experimental::filesystem::path& savePath, Collection<Image>& collec)
+//{
+//	std::ofstream out(savePath);
+//	if(!out)
+//	    throw std::runtime_error("Impossible de sauvegarder");
+//
+//	auto parsed_vect = parse_collection_using_path(collec);
+//	for (auto& parsedItem : parsed_vect)
+//	{
+//		out << parsedItem.first.u8string();
+//		for (auto& tag : parsedItem.second)
+//		{
+//			out << tag.u8string();
+//		}
+//		out << std::endl;
+//	}
+//}
 
 
 void updateCollec(const std::experimental::filesystem::path& loadPath, Collection<Image>& collec)
