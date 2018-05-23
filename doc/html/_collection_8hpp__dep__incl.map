@@ -1,9 +1,12 @@
 <map id="src/Collection/Collection.hpp" name="src/Collection/Collection.hpp">
-<area shape="rect" id="node2" href="$_collection_pool_8hpp.html" title="src/Collection/Collection\lPool.hpp" alt="" coords="5,80,169,121"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="271,177,368,203"/>
-<area shape="rect" id="node4" href="$_filtered_collection_8hpp.html" title="src/Collection/FilteredCollection.hpp" alt="" coords="418,87,650,114"/>
-<area shape="rect" id="node6" href="$menu_8hpp.html" title="src/ConsolePrototype\l/menu.hpp" alt="" coords="675,80,823,121"/>
-<area shape="rect" id="node8" href="$save_8hpp.html" title="src/ConsolePrototype\l/save.hpp" alt="" coords="245,80,393,121"/>
-<area shape="rect" id="node5" href="$save_8cpp.html" title="src/ConsolePrototype\l/save.cpp" alt="" coords="427,169,575,211"/>
-<area shape="rect" id="node7" href="$menu_8cpp.html" title="src/ConsolePrototype\l/menu.cpp" alt="" coords="675,169,823,211"/>
+<area shape="rect" id="node2" href="$_collection_pool_8hpp.html" title="src/Collection/Collection\lPool.hpp" alt="" coords="177,80,341,121"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="407,177,504,203"/>
+<area shape="rect" id="node4" href="$_filtered_collection_8hpp.html" title="src/Collection/FilteredCollection.hpp" alt="" coords="417,87,649,114"/>
+<area shape="rect" id="node6" href="$menu_8hpp.html" title="src/ConsolePrototype\l/menu.hpp" alt="" coords="5,80,153,121"/>
+<area shape="rect" id="node8" href="$_parser_8hpp.html" title="src/Parser.hpp" alt="" coords="846,87,953,114"/>
+<area shape="rect" id="node11" href="$save_8hpp.html" title="src/ConsolePrototype\l/save.hpp" alt="" coords="673,80,821,121"/>
+<area shape="rect" id="node5" href="$save_8cpp.html" title="src/ConsolePrototype\l/save.cpp" alt="" coords="673,169,821,211"/>
+<area shape="rect" id="node7" href="$menu_8cpp.html" title="src/ConsolePrototype\l/menu.cpp" alt="" coords="5,169,153,211"/>
+<area shape="rect" id="node9" href="$_image_8cpp.html" title="src/Image/Image.cpp" alt="" coords="977,177,1123,203"/>
+<area shape="rect" id="node10" href="$_parser_8cpp.html" title="src/Parser.cpp" alt="" coords="846,177,953,203"/>
 </map>

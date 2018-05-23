@@ -1,0 +1,17 @@
+<map id="cimg_library_suffixed::exp" name="cimg_library_suffixed::exp">
+<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a591684f81af8ba85885b7de9c0c6ca5f" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::_cimg_math_parser" alt="" coords="228,5,412,61"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a8b40db5a9818c3f961a90840b271de6c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_display\l_object3d" alt="" coords="233,85,407,141"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a4c1d921651a9408da9487f1d4e8c13d0" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::_mp_complex_pow" alt="" coords="228,165,412,221"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#af3c29f70168c4443e3f6f887834819b0" title="Blur image anisotropically, directed by a field of diffusion tensors. " alt="" coords="246,245,394,301"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a318c44c5d1f4f0114355f37ace87a4ae" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::compile" alt="" coords="228,325,412,381"/>
+<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img.html#a1f9c44f6a4577ee414419394aa34d4ac" title="Apply recursive Deriche filter. " alt="" coords="235,406,405,447"/>
+<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1_c_img.html#a3b96b681b3c0e11c067b12789328229a" title="Draw a 1d gaussian function. " alt="" coords="243,472,397,528"/>
+<area shape="rect" id="node9" href="$structcimg__library__suffixed_1_1_c_img.html#a7772f5e71c3c6fa9b9226c8f0c2395db" title="Compute the exponential of each pixel value. " alt="" coords="246,553,394,594"/>
+<area shape="rect" id="node10" href="$structcimg__library__suffixed_1_1_c_img.html#a3a7a9e74dc09f2f79fcd3f605a2a9059" title="Blur image using patch&#45;based space . " alt="" coords="247,619,393,675"/>
+<area shape="rect" id="node11" href="$structcimg__library__suffixed_1_1_c_img.html#a9025e6121a8da36b6213422347de4c12" title="Compute the exponential of each pixel value . " alt="" coords="233,699,407,741"/>
+<area shape="rect" id="node12" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a2d823d18414809075048f82cfc2f4779" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_complex_exp" alt="" coords="228,765,412,821"/>
+<area shape="rect" id="node13" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#aac266d813e6b22db9c5a7465f33fe0f2" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_exp" alt="" coords="228,845,412,901"/>
+<area shape="rect" id="node14" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a660dabe36da3de2426f95518b193a5d2" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_gauss" alt="" coords="228,925,412,981"/>
+<area shape="rect" id="node15" href="$namespacecimg__library__suffixed_1_1cimg.html#a2a18bbfb6a496d8d5a02943be8eaa936" title="Return a random variable following a Poisson distribution of parameter z. " alt="" coords="247,1006,393,1047"/>
+<area shape="rect" id="node16" href="$structcimg__library__suffixed_1_1_c_img.html#a6049c651eefc3a13b8f7d1fc3ff225d7" title="Add random noise to pixel values. " alt="" coords="460,1006,619,1047"/>
+</map>

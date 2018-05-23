@@ -1,0 +1,5 @@
+<map id="cimg_library_suffixed::CImg::_cimg_math_parser::mp_set_Ixyz_v" name="cimg_library_suffixed::CImg::_cimg_math_parser::mp_set_Ixyz_v">
+<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#aa708d2050f866a341896aca528615d2d" title="Return the number of image slices. " alt="" coords="237,5,383,47"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a49834fd555c4a8362100bc628f1b03bb" title="Return the number of image rows. " alt="" coords="237,71,383,112"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#a2d7b769d447c0451a2f43c77e997beff" title="Return the number of image columns. " alt="" coords="237,136,383,177"/>
+</map>

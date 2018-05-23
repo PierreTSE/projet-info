@@ -1,0 +1,6 @@
+<map id="cimg_library_suffixed::cimg::mutex" name="cimg_library_suffixed::cimg::mutex">
+<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a6cc8e26847a1aa649febed03d70182e7" title="cimg_library_suffixed\l::cimg::Mutex_info::lock" alt="" coords="206,5,369,47"/>
+<area shape="rect" id="node3" href="$namespacecimg__library__suffixed_1_1cimg.html#aa0e1bc96ae6e235dc5b67b8b0a466166" title="cimg_library_suffixed\l::cimg::Mutex_attr" alt="" coords="424,93,569,135"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a9bf4ed1e1dfe6f28fa6250cd04f3c900" title="cimg_library_suffixed\l::cimg::Mutex_info::trylock" alt="" coords="199,123,376,164"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#afac3fa5f107ad4795fb867050f616555" title="cimg_library_suffixed\l::cimg::Mutex_info::unlock" alt="" coords="199,188,375,229"/>
+</map>

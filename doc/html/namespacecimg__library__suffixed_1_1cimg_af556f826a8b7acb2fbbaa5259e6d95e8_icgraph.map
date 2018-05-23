@@ -1,0 +1,11 @@
+<map id="cimg_library_suffixed::cimg::hypot" name="cimg_library_suffixed::cimg::hypot">
+<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a8b40db5a9818c3f961a90840b271de6c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_display\l_object3d" alt="" coords="201,5,376,61"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a6dba86c8049ae141ffc9936b2eaf5c5c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_draw\l_object3d" alt="" coords="207,85,370,141"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#ad9b7141242d0b6e861a8014112ddb5b5" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_select" alt="" coords="204,166,373,207"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#af3c29f70168c4443e3f6f887834819b0" title="Blur image anisotropically, directed by a field of diffusion tensors. " alt="" coords="215,232,363,288"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a5f82947b70ae0c01993cb74563fd4daa" title="Compute distance function to 0&#45;valued isophotes, using the Eikonal PDE. " alt="" coords="201,312,377,368"/>
+<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img.html#a87afc1c040d254ef0ed370e37b5f8a77" title="Draw a 2d spline. " alt="" coords="211,392,366,448"/>
+<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1_c_img.html#a6049c651eefc3a13b8f7d1fc3ff225d7" title="Add random noise to pixel values. " alt="" coords="209,473,368,514"/>
+<area shape="rect" id="node9" href="$structcimg__library__suffixed_1_1_c_img.html#a18ba2075fe783f6b185de03695bd625f" title="Return a 3x3 rotation matrix from an { axis + angle } or a quaternion. " alt="" coords="203,539,374,595"/>
+<area shape="rect" id="node10" href="$structcimg__library__suffixed_1_1_c_img.html#a8025573f639ba766ca2270bf10c2d00f" title="Generate a 3d sphere. " alt="" coords="199,619,379,661"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="cimg_library_suffixed::CImg::_cimg_math_parser::mp_rot2d" name="cimg_library_suffixed::CImg::_cimg_math_parser::mp_rot2d">
+<area shape="rect" id="node2" href="$namespacecimg__library__suffixed.html#a758afc88f8b8d378717648ba797aee12" title="cimg_library_suffixed::cos" alt="" coords="237,17,412,43"/>
+<area shape="rect" id="node4" href="$namespacecimg__library__suffixed.html#adadd90e3f405e206a38d01dc80e9be2d" title="cimg_library_suffixed::sin" alt="" coords="239,71,410,98"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a1d6d4be9892469025a791f19848d8638" title="Compute the cosine of each pixel value . " alt="" coords="460,5,605,47"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#ada2a306f3b37f5630573447fc9578124" title="Compute the sine of each pixel value . " alt="" coords="460,71,605,112"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="cimg_library_suffixed::cimg::type&lt; long double &gt;::format" name="cimg_library_suffixed::cimg::type&lt; long double &gt;::format">
+<area shape="rect" id="node2" href="$namespacecimg__library__suffixed_1_1cimg.html#a60c895ccdb84e7ccdd884ff61bab29f0" title="Cut (i.e. clamp) value in specified interval. " alt="" coords="223,5,368,47"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1cimg_1_1type.html#a2e5b828afd6f5e0e82358059642887a7" title="cimg_library_suffixed\l::cimg::type::is_nan" alt="" coords="223,71,368,112"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1cimg_1_1type.html#a4b01a896aa0c86ce9f3162f36fa2ae72" title="cimg_library_suffixed\l::cimg::type::max" alt="" coords="223,136,368,177"/>
+<area shape="rect" id="node5" href="$namespacecimg__library__suffixed_1_1cimg.html#aae5df5731fe5a367cec402071108c11c" title="Return the maximum between three values. " alt="" coords="223,201,368,243"/>
+<area shape="rect" id="node7" href="$namespacecimg__library__suffixed_1_1cimg.html#ad5459593e7f8a4066cb22ad63de8e92d" title="Return the minimum between four values. " alt="" coords="223,267,368,308"/>
+<area shape="rect" id="node8" href="$namespacecimg__library__suffixed.html#a00d0fd9a21d8d5e8a9fa4033593e6acf" title="cimg_library_suffixed\l::sqrt" alt="" coords="223,332,368,373"/>
+<area shape="rect" id="node6" href="$namespacecimg__library__suffixed_1_1cimg.html#a4b4cabc621d732787bca13016ea8026a" title="Return the maximum between four values. " alt="" coords="416,201,561,243"/>
+<area shape="rect" id="node9" href="$structcimg__library__suffixed_1_1_c_img.html#a550cfc014f80c68359d3b55a0d3803b9" title="Compute the square root of each pixel value . " alt="" coords="416,332,561,373"/>
+</map>

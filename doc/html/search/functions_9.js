@@ -1,7 +1,7 @@
 var searchData=
 [
   ['identity_5fmatrix',['identity_matrix',['../structcimg__library__suffixed_1_1_c_img.html#ad4ab0e1fb99408ba7b1430c95542c543',1,'cimg_library_suffixed::CImg::identity_matrix()'],['../structcimg__library__suffixed_1_1_c_img.html#af35af27a446b9145bff53d5cc3ba872c',1,'cimg_library_suffixed::CImg::identity_matrix(const unsigned int N)']]],
-  ['image',['Image',['../class_image.html#a28c9333c57d99129b5350f9df93f22ea',1,'Image']]],
+  ['image',['Image',['../class_image.html#a5502e928122744be1d3b89648298e162',1,'Image::Image()=default'],['../class_image.html#a28c9333c57d99129b5350f9df93f22ea',1,'Image::Image(const std::experimental::filesystem::path &amp;p, std::unique_ptr&lt; cimg_library::CImg&lt; unsigned char &gt;&gt; cimgPtr=nullptr, const TagList &amp;t={})']]],
   ['imagemagick_5fpath',['imagemagick_path',['../namespacecimg__library__suffixed_1_1cimg.html#a96cabeea0a54a10aeee97ead7b672f0f',1,'cimg_library_suffixed::cimg']]],
   ['images',['images',['../structcimg__library__suffixed_1_1_c_img_list.html#a1a45c7e6d307a716e71f0070ced8b195',1,'cimg_library_suffixed::CImgList']]],
   ['index',['index',['../structcimg__library__suffixed_1_1_c_img.html#a4879d87a39d62fb7b6a7de37733d020c',1,'cimg_library_suffixed::CImg']]],

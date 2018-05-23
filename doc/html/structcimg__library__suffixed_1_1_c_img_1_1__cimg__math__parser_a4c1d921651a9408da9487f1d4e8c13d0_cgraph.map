@@ -1,0 +1,11 @@
+<map id="cimg_library_suffixed::CImg::_cimg_math_parser::_mp_complex_pow" name="cimg_library_suffixed::CImg::_cimg_math_parser::_mp_complex_pow">
+<area shape="rect" id="node2" href="$namespacecimg__library__suffixed_1_1cimg.html#a0852e9ad458e82d2c003844cd92bdb8a" title="Return absolute value of a value. " alt="" coords="252,5,397,47"/>
+<area shape="rect" id="node3" href="$namespacecimg__library__suffixed.html#a758afc88f8b8d378717648ba797aee12" title="cimg_library_suffixed::cos" alt="" coords="237,71,412,98"/>
+<area shape="rect" id="node5" href="$namespacecimg__library__suffixed.html#adc3a62a5832fe41a2a16023ba04c8e64" title="cimg_library_suffixed::exp" alt="" coords="237,122,412,149"/>
+<area shape="rect" id="node7" href="$namespacecimg__library__suffixed.html#a65baff382319a3677fd777a976a4f50b" title="cimg_library_suffixed::log" alt="" coords="239,179,410,206"/>
+<area shape="rect" id="node9" href="$namespacecimg__library__suffixed.html#adadd90e3f405e206a38d01dc80e9be2d" title="cimg_library_suffixed::sin" alt="" coords="239,237,410,263"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#a1d6d4be9892469025a791f19848d8638" title="Compute the cosine of each pixel value . " alt="" coords="460,45,605,87"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a9025e6121a8da36b6213422347de4c12" title="Compute the exponential of each pixel value . " alt="" coords="460,111,605,152"/>
+<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1_c_img.html#a560dd5fe13a0b40fcf95e2ea7020381e" title="Compute the logarithm of each pixel value . " alt="" coords="460,176,605,217"/>
+<area shape="rect" id="node10" href="$structcimg__library__suffixed_1_1_c_img.html#ada2a306f3b37f5630573447fc9578124" title="Compute the sine of each pixel value . " alt="" coords="460,241,605,283"/>
+</map>

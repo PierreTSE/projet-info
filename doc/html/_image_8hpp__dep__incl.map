@@ -1,7 +1,10 @@
 <map id="src/Image/Image.hpp" name="src/Image/Image.hpp">
-<area shape="rect" id="node2" href="$menu_8hpp.html" title="src/ConsolePrototype\l/menu.hpp" alt="" coords="40,80,188,121"/>
+<area shape="rect" id="node2" href="$menu_8hpp.html" title="src/ConsolePrototype\l/menu.hpp" alt="" coords="57,80,205,121"/>
 <area shape="rect" id="node4" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="177,177,275,203"/>
-<area shape="rect" id="node5" href="$save_8hpp.html" title="src/ConsolePrototype\l/save.hpp" alt="" coords="264,80,412,121"/>
+<area shape="rect" id="node5" href="$_parser_8hpp.html" title="src/Parser.hpp" alt="" coords="454,87,561,114"/>
+<area shape="rect" id="node7" href="$_image_8cpp.html" title="src/Image/Image.cpp" alt="" coords="603,177,748,203"/>
+<area shape="rect" id="node9" href="$save_8hpp.html" title="src/ConsolePrototype\l/save.hpp" alt="" coords="281,80,429,121"/>
 <area shape="rect" id="node3" href="$menu_8cpp.html" title="src/ConsolePrototype\l/menu.cpp" alt="" coords="5,169,153,211"/>
 <area shape="rect" id="node6" href="$save_8cpp.html" title="src/ConsolePrototype\l/save.cpp" alt="" coords="299,169,447,211"/>
+<area shape="rect" id="node8" href="$_parser_8cpp.html" title="src/Parser.cpp" alt="" coords="471,177,578,203"/>
 </map>

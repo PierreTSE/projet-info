@@ -1,0 +1,8 @@
+<map id="cimg_library_suffixed::CImgDisplay::assign" name="cimg_library_suffixed::CImgDisplay::assign">
+<area shape="rect" id="node2" href="$namespacecimg__library__suffixed_1_1cimg.html#a79aef0cbcf66ceb71c2b74cb66b4deb2" title="Avoid warning messages due to unused parameters. Do nothing actually. " alt="" coords="205,66,351,108"/>
+<area shape="rect" id="node3" href="$namespacecimg__library__suffixed_1_1cimg.html#a9e739e4b4ac058abfba069466617b914" title="cimg_library_suffixed\l::cimg::mutex" alt="" coords="399,66,544,108"/>
+<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#aa0e1bc96ae6e235dc5b67b8b0a466166" title="cimg_library_suffixed\l::cimg::Mutex_attr" alt="" coords="817,69,963,110"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#afac3fa5f107ad4795fb867050f616555" title="cimg_library_suffixed\l::cimg::Mutex_info::unlock" alt="" coords="593,33,769,74"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a6cc8e26847a1aa649febed03d70182e7" title="cimg_library_suffixed\l::cimg::Mutex_info::lock" alt="" coords="599,98,762,140"/>
+<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a9bf4ed1e1dfe6f28fa6250cd04f3c900" title="cimg_library_suffixed\l::cimg::Mutex_info::trylock" alt="" coords="592,164,769,205"/>
+</map>

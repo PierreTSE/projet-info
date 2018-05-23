@@ -1,0 +1,11 @@
+<map id="cimg_library_suffixed::CImg::_cimg_math_parser::mp_list_ixyzc" name="cimg_library_suffixed::CImg::_cimg_math_parser::mp_list_ixyzc">
+<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a62164dd601324ff1c65810d753b5cbdb" title="cimg_library_suffixed\l::CImg::_atXYZC" alt="" coords="246,5,391,47"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a4b9085ffa1570a7a96c7324b2537b6ab" title="cimg_library_suffixed\l::CImg::_linear_atXYZC" alt="" coords="237,71,400,112"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#adf90bc30dc08194ffb4024cbc3378db4" title="Access to a pixel value, using Dirichlet boundary conditions. " alt="" coords="246,136,391,177"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#aa708d2050f866a341896aca528615d2d" title="Return the number of image slices. " alt="" coords="246,201,391,243"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a49834fd555c4a8362100bc628f1b03bb" title="Return the number of image rows. " alt="" coords="246,267,391,308"/>
+<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img.html#ab3d037fa06cf54bec5b01ae1357298ea" title="Return pixel value, using linear interpolation and Dirichlet boundary conditions for all X..." alt="" coords="241,332,396,373"/>
+<area shape="rect" id="node8" href="$namespacecimg__library__suffixed_1_1cimg.html#afcc02428c9b7d9100e1674369d25cc40" title="Return the modulo of a value. " alt="" coords="246,397,391,439"/>
+<area shape="rect" id="node9" href="$structcimg__library__suffixed_1_1_c_img.html#a03cdb8e4b45371862c65c3b5be7b697e" title="Return the number of image channels. " alt="" coords="246,463,391,504"/>
+<area shape="rect" id="node10" href="$structcimg__library__suffixed_1_1_c_img.html#a2d7b769d447c0451a2f43c77e997beff" title="Return the number of image columns. " alt="" coords="246,528,391,569"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="cimg_library_suffixed::CImg::_linear_atXYZ" name="cimg_library_suffixed::CImg::_linear_atXYZ">
+<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#ab19d123867d5a2ed56fe1b016267bfe7" title="Blur image, with the joint bilateral filter. " alt="" coords="237,5,385,61"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a91ec1cd09114c4018a78e4ea0b2df386" title="Estimate displacement field between two images . " alt="" coords="239,85,384,141"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img_1_1__functor4d__streamline3d__directed.html#a5bd756077b8bcad71a8a24c4e0619d70" title="cimg_library_suffixed\l::CImg::_functor4d_streamline3d\l_directed::operator()" alt="" coords="205,165,417,221"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img_1_1__functor4d__streamline3d__oriented.html#a67b32f469586ab13a6f39fba6910f3d8" title="cimg_library_suffixed\l::CImg::_functor4d_streamline3d\l_oriented::operator()" alt="" coords="205,245,417,301"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img_1_1__functor3d__float.html#a46ac056612fddb7feeeecca759b7988f" title="cimg_library_suffixed\l::CImg::_functor3d_float\l::operator()" alt="" coords="230,325,393,381"/>
+</map>

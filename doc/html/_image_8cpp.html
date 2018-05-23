@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Image Tagger: Référence du fichier src/Image/Image.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Image Tagger
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_image_8cpp.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Image.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_image_8hpp_source.html">Image.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_parser_8hpp_source.html">../Parser.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Image.cpp:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="_image_8cpp__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> { <br />
+&#160;&#160;<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2">START</a>, 
+<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8adc6f24fd6915a3f2786a1b7045406924">END</a>, 
+<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8ada126905189f15af6d475cc45f0cb2b2">QUOTE</a>, 
+<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a3e6c37df8365b5b5493470a04b8c30a2">PATH_NAME</a>, 
+<br />
+&#160;&#160;<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a62791d7083fb34365a1183b0f19f4e16">PATH_BACKSLASH</a>, 
+<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8add0139f90f702159f2a1f96573fb5b29">TAG_NAME</a>, 
+<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a832062c2e04a5369310ee549901c66ac">TAG_BACKSLASH</a>, 
+<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a55eebe3c7e08b49cd5969442f4f8c4ce">SEMICOLON</a>, 
+<br />
+&#160;&#160;<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a78c07d981f163e456d6aeaf6fdf5e267">OCTOTHORPE</a>, 
+<a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8aef2863a469df3ea6871d640e3669a2f2">INVALID</a>
+<br />
+ }</td></tr>
+<tr class="separator:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab5811a3704784bbb57375abbbacfe4fd"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_image_8cpp.html#ab5811a3704784bbb57375abbbacfe4fd">operator&gt;&gt;</a> (std::istream &amp;inStream, <a class="el" href="class_image.html">Image</a> &amp;image)</td></tr>
+<tr class="separator:ab5811a3704784bbb57375abbbacfe4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6d264c420ab6eecf731ead84a8eb99"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_image_8cpp.html#a2d6d264c420ab6eecf731ead84a8eb99">operator&lt;&lt;</a> (std::ostream &amp;outStream, const <a class="el" href="class_image.html">Image</a> &amp;image)</td></tr>
+<tr class="separator:a2d6d264c420ab6eecf731ead84a8eb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&nbsp;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2"></a>START&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8adc6f24fd6915a3f2786a1b7045406924"></a>END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8ada126905189f15af6d475cc45f0cb2b2"></a>QUOTE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a3e6c37df8365b5b5493470a04b8c30a2"></a>PATH_NAME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a62791d7083fb34365a1183b0f19f4e16"></a>PATH_BACKSLASH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8add0139f90f702159f2a1f96573fb5b29"></a>TAG_NAME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a832062c2e04a5369310ee549901c66ac"></a>TAG_BACKSLASH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a55eebe3c7e08b49cd5969442f4f8c4ce"></a>SEMICOLON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a78c07d981f163e456d6aeaf6fdf5e267"></a>OCTOTHORPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8aef2863a469df3ea6871d640e3669a2f2"></a>INVALID&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a2d6d264c420ab6eecf731ead84a8eb99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6d264c420ab6eecf731ead84a8eb99">&#9670;&nbsp;</a></span>operator<<()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>outStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_image.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="class_image.html#a2b77063d4c4f0ac499ecd8442f490d1e">Image::getPath()</a>, et <a class="el" href="class_image.html#ab9615cd8d9ea8a1bcc844c3d1d8c0e47">Image::getTagList()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_image_8cpp_a2d6d264c420ab6eecf731ead84a8eb99_cgraph.svg" width="271" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab5811a3704784bbb57375abbbacfe4fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5811a3704784bbb57375abbbacfe4fd">&#9670;&nbsp;</a></span>operator>>()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>inStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_image.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8adc6f24fd6915a3f2786a1b7045406924">END</a>, <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8aef2863a469df3ea6871d640e3669a2f2">INVALID</a>, <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a78c07d981f163e456d6aeaf6fdf5e267">OCTOTHORPE</a>, <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a62791d7083fb34365a1183b0f19f4e16">PATH_BACKSLASH</a>, <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a3e6c37df8365b5b5493470a04b8c30a2">PATH_NAME</a>, <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8ada126905189f15af6d475cc45f0cb2b2">QUOTE</a>, <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a55eebe3c7e08b49cd5969442f4f8c4ce">SEMICOLON</a>, <a class="el" href="class_image.html#aa7e74a9b3f93aa445f5c4b83fe6a98ae">Image::setPath()</a>, <a class="el" href="class_image.html#ac4e0093c25838e5ca2e13e0cce4a7300">Image::setTagList()</a>, <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2">START</a>, <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8a832062c2e04a5369310ee549901c66ac">TAG_BACKSLASH</a>, et <a class="el" href="_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8add0139f90f702159f2a1f96573fb5b29">TAG_NAME</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_image_8cpp_ab5811a3704784bbb57375abbbacfe4fd_cgraph.svg" width="271" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdbdd9841f9a730f284bb666ff3d8cfe.html">Image</a></li><li class="navelem"><a class="el" href="_image_8cpp.html">Image.cpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

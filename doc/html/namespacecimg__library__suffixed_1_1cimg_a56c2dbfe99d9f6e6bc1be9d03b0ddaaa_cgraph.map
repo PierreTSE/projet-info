@@ -1,0 +1,16 @@
+<map id="cimg_library_suffixed::cimg::ftype" name="cimg_library_suffixed::cimg::ftype">
+<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#ac35f14b0a2ad7b9a7921a150c1056fd5" title="cimg_library_suffixed\l::CImg::_load_raw" alt="" coords="207,5,352,47"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a5a062592b78f33dd2813cc59985e61a2" title="Return a pointer to the first pixel value. " alt="" coords="207,71,352,112"/>
+<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#aeafab144366eddd11360f32f468fa4af" title="Set current &#160;exception mode. " alt="" coords="199,136,360,177"/>
+<area shape="rect" id="node15" href="$structcimg__library__suffixed_1_1_c_img.html#acae5385f7b2692787b1c50fa1663e587" title="Split image into a list along specified axis. " alt="" coords="207,201,352,243"/>
+<area shape="rect" id="node5" href="$namespacecimg__library__suffixed_1_1cimg.html#a6c578f866de2be9be7e385d693c758c8" title="cimg_library_suffixed\l::cimg::_exception_mode" alt="" coords="408,107,576,148"/>
+<area shape="rect" id="node6" href="$namespacecimg__library__suffixed_1_1cimg.html#aab8db7528c32a8fd3a3dc471e662782e" title="cimg_library_suffixed\l::cimg::_stderr" alt="" coords="624,48,769,89"/>
+<area shape="rect" id="node8" href="$namespacecimg__library__suffixed_1_1cimg.html#a9e739e4b4ac058abfba069466617b914" title="cimg_library_suffixed\l::cimg::mutex" alt="" coords="1011,136,1156,177"/>
+<area shape="rect" id="node13" href="$namespacecimg__library__suffixed_1_1cimg.html#a01a3b743897290604513ea6d847c9886" title="cimg_library_suffixed\l::cimg::_stdin" alt="" coords="624,231,769,272"/>
+<area shape="rect" id="node14" href="$namespacecimg__library__suffixed_1_1cimg.html#a493220746e5df3466568bd7862825008" title="cimg_library_suffixed\l::cimg::_stdout" alt="" coords="624,165,769,207"/>
+<area shape="rect" id="node7" href="$namespacecimg__library__suffixed_1_1cimg.html#a79aef0cbcf66ceb71c2b74cb66b4deb2" title="Avoid warning messages due to unused parameters. Do nothing actually. " alt="" coords="817,165,963,207"/>
+<area shape="rect" id="node9" href="$namespacecimg__library__suffixed_1_1cimg.html#aa0e1bc96ae6e235dc5b67b8b0a466166" title="cimg_library_suffixed\l::cimg::Mutex_attr" alt="" coords="1429,73,1575,115"/>
+<area shape="rect" id="node10" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#afac3fa5f107ad4795fb867050f616555" title="cimg_library_suffixed\l::cimg::Mutex_info::unlock" alt="" coords="1205,168,1381,209"/>
+<area shape="rect" id="node11" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a6cc8e26847a1aa649febed03d70182e7" title="cimg_library_suffixed\l::cimg::Mutex_info::lock" alt="" coords="1211,233,1374,275"/>
+<area shape="rect" id="node12" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a9bf4ed1e1dfe6f28fa6250cd04f3c900" title="cimg_library_suffixed\l::cimg::Mutex_info::trylock" alt="" coords="1204,103,1381,144"/>
+</map>
