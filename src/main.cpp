@@ -21,7 +21,28 @@ using namespace cimg_library;
 using namespace std;
 using img = cimg_library::CImg<unsigned char>;
 
-//TOOD cela ressemble plus à getPoolFromSave à changer, faut faire les deux
+//TODO cela ressemble plus à getPoolFromSave à changer, faut faire les deux
+    
+CollectionPool<Image> getPoolFromSave(const fs::path& savePath)
+{
+    CollectionPool<Image> collectionPool;
+    
+    if(fs::exists(savePath) and fs::is_regular_file(savePath) and savePath.extension() == ".txt")
+    {
+        std::ifstream in(savePath);
+        if (!in)
+            throw std::runtime_error("Peut pas lire");
+
+        Image image;
+        while (in >> image)
+        {
+            image.loadImage();
+            collectionPool.push_back(std::move(image));
+        }
+    }
+    
+    return collectionPool;
+}
 
 /** @fn getPoolFromDirectory
 /*  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
@@ -32,10 +53,8 @@ using img = cimg_library::CImg<unsigned char>;
 /*  path_ et tagList_ à partir du fichier de sauvegarde d'extension .txt
 /*  qui doit être inclus dans le répertoire en paramètre où se situent les images à charger.
 **/
-CollectionPool<Image> getPoolFromDirectory(const fs::path& directoryPath)
+void getPoolFromDirectory(const fs::path& directoryPath, CollectionPool<Image>& collectionPool)
 {
-	CollectionPool<Image> collectionPool; //collection retournée
-
 	if (fs::is_directory(directoryPath))
 	{
 		fs::path savePath; // Chemin de la sauvegarde d'extension .txt
@@ -46,42 +65,41 @@ CollectionPool<Image> getPoolFromDirectory(const fs::path& directoryPath)
 		for (auto& file : fs::directory_iterator(directoryPath))
 		{
 			////Images d'extension .ppm
-			//if (file.path().extension() == ".ppm")
-			//{
-			//	Image img(file.path(), std::unique_ptr<img>(new img(file.path().u8string().c_str())), {});
-			//	collectionPool.push_back(std::move(img));
-			//}
+			if (file.path().extension() == ".ppm")
+			{
+				Image image(file.path(), std::move(std::unique_ptr<img>(new img(file.path().u8string().c_str()))), {});
+				collectionPool.push_back(std::move(image));
+			}
 
 
 			/* Recherche d'un fichier texte contenant la sauvegarde (chemins et tags de chaque image du dossier).
 			   Ce fichier doit être unique (aka la collection doit être vide). */
-			if (file.path().extension() == ".txt")
-			{
-				if (savePath.empty())
-					savePath = file.path();
-				else
-					throw std::runtime_error("Several save files have been found during loading.");
-			}
+			//if (file.path().extension() == ".txt")
+			//{
+			//	if (savePath.empty())
+			//		savePath = file.path();
+			//	else
+			//		throw std::runtime_error("Several save files have been found during loading.");
+			//}
 		}
 
 		// Chaque image est associée à ses Tags depuis le ficher de sauvegarde grâce à son attribut path.
-		if (!savePath.empty())
-		{
-			std::ifstream in(savePath);
-			if (!in)
-				throw std::runtime_error("Peut pas lire");
+		//if (!savePath.empty())
+		//{
+		//	std::ifstream in(savePath);
+		//	if (!in)
+		//		throw std::runtime_error("Peut pas lire");
+        //
+		//	Image image;
+		//	while (in >> image)
+		//	{
+		//		image.loadImage();
+		//		collectionPool.push_back(std::move(image));
+		//	}
+		//}
+		//else
+		//	throw std::runtime_error("Not any save file have been found during loading.");
 
-			Image image;
-			while (in >> image)
-			{
-				image.loadImage();
-				collectionPool.push_back(std::move(image));
-			}
-		}
-		else
-			throw std::runtime_error("Not any save file have been found during loading.");
-
-		return collectionPool;
 	}
 	else
 	{
@@ -99,8 +117,9 @@ int main()
 	if (fs::exists(tagsPath))
 		possibleTags = loadTagList(tagsPath);
 
-	//CollectionPool<Image> collection = getPoolFromDirectory(browseFolder());
-	CollectionPool<Image> collection = getPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)");
+	auto collection = std::move(getPoolFromSave(getOpenFileName()));
+	getPoolFromDirectory(browseFolder(), collection);
+	//CollectionPool<Image> collection = getPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)");
 
 
 	/*

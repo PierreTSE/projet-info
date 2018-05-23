@@ -22,6 +22,9 @@ endif(DOXYGEN_FOUND)
 
 add_executable(projet-info ${SOURCE_FILES})
 target_link_libraries(projet-info stdc++fs)
+target_link_libraries(projet-info pthread)
+target_link_libraries(projet-info X11)
+target_link_libraries(projet-info m)
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_HOME_DIRECTORY}/bin/${CMAKE_BUILD_TYPE})
 
