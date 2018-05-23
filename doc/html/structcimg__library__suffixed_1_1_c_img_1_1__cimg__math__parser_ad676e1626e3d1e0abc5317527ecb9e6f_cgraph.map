@@ -1,0 +1,14 @@
+<map id="cimg_library_suffixed::CImg::_cimg_math_parser::mp_image_resize" name="cimg_library_suffixed::CImg::_cimg_math_parser::mp_image_resize">
+<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#aa708d2050f866a341896aca528615d2d" title="Return the number of image slices. " alt="" coords="237,5,383,47"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a49834fd555c4a8362100bc628f1b03bb" title="Return the number of image rows. " alt="" coords="237,71,383,112"/>
+<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#afcc02428c9b7d9100e1674369d25cc40" title="Return the modulo of a value. " alt="" coords="237,136,383,177"/>
+<area shape="rect" id="node5" href="$namespacecimg__library__suffixed_1_1cimg.html#a9e739e4b4ac058abfba069466617b914" title="cimg_library_suffixed\l::cimg::mutex" alt="" coords="237,201,383,243"/>
+<area shape="rect" id="node10" href="$structcimg__library__suffixed_1_1_c_img.html#ab5cb3e6f07f2cd894641aa6a26807c1e" title="Return the type of image pixel values as a C string. " alt="" coords="237,267,383,308"/>
+<area shape="rect" id="node11" href="$structcimg__library__suffixed_1_1_c_img.html#adf42a4d63a14a4199e4703743b217075" title="Resize image to new dimensions. " alt="" coords="237,332,383,373"/>
+<area shape="rect" id="node12" href="$structcimg__library__suffixed_1_1_c_img.html#a03cdb8e4b45371862c65c3b5be7b697e" title="Return the number of image channels. " alt="" coords="237,397,383,439"/>
+<area shape="rect" id="node13" href="$structcimg__library__suffixed_1_1_c_img.html#a2d7b769d447c0451a2f43c77e997beff" title="Return the number of image columns. " alt="" coords="237,463,383,504"/>
+<area shape="rect" id="node6" href="$namespacecimg__library__suffixed_1_1cimg.html#aa0e1bc96ae6e235dc5b67b8b0a466166" title="cimg_library_suffixed\l::cimg::Mutex_attr" alt="" coords="656,204,801,245"/>
+<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#afac3fa5f107ad4795fb867050f616555" title="cimg_library_suffixed\l::cimg::Mutex_info::unlock" alt="" coords="431,168,607,209"/>
+<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a6cc8e26847a1aa649febed03d70182e7" title="cimg_library_suffixed\l::cimg::Mutex_info::lock" alt="" coords="438,233,601,275"/>
+<area shape="rect" id="node9" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a9bf4ed1e1dfe6f28fa6250cd04f3c900" title="cimg_library_suffixed\l::cimg::Mutex_info::trylock" alt="" coords="431,299,608,340"/>
+</map>

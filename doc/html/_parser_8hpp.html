@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Image Tagger: Référence du fichier src/Parser.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Image Tagger
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_parser_8hpp.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Parser.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_image_8hpp_source.html">Image/Image.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_collection_8hpp_source.html">Collection/Collection.hpp</a>&quot;</code><br />
+<code>#include &lt;experimental/filesystem&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;locale&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Parser.hpp:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="_parser_8hpp__incl.svg" width="100%" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_parser_8hpp__dep__incl.svg" width="582" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="_parser_8hpp_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ae6e39dbe6b48bef1ecec8a791a4d3458"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_parser_8hpp.html#ae6e39dbe6b48bef1ecec8a791a4d3458">tokenize</a> (const std::string &amp;, const std::string &amp;)</td></tr>
+<tr class="separator:ae6e39dbe6b48bef1ecec8a791a4d3458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533729033043b4d60882e13adf633901"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_parser_8hpp.html#a533729033043b4d60882e13adf633901">separate</a> (const std::string &amp;, const std::string &amp;)</td></tr>
+<tr class="separator:a533729033043b4d60882e13adf633901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab888115ca81a3a58a455b272adc86b5f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, std::vector&lt; std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_parser_8hpp.html#ab888115ca81a3a58a455b272adc86b5f">unparse</a> (const std::fstream &amp;, std::locale)</td></tr>
+<tr class="separator:ab888115ca81a3a58a455b272adc86b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedb7825e5621a36283896e845a380163"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, std::vector&lt; std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_parser_8hpp.html#aedb7825e5621a36283896e845a380163">unparse</a> (const std::experimental::filesystem::path &amp;, std::locale)</td></tr>
+<tr class="separator:aedb7825e5621a36283896e845a380163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933be9ec159579a189529ed233b0eaf7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, std::vector&lt; std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_parser_8hpp.html#a933be9ec159579a189529ed233b0eaf7">parse_collection</a> (<a class="el" href="class_collection.html">Collection</a>&lt; <a class="el" href="class_image.html">Image</a> &gt; &amp;collection)</td></tr>
+<tr class="separator:a933be9ec159579a189529ed233b0eaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ba5ebb20b5550b7c6aca242e36d855"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::experimental::filesystem::path, std::vector&lt; std::experimental::filesystem::path &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_parser_8hpp.html#a79ba5ebb20b5550b7c6aca242e36d855">parse_collection_using_path</a> (<a class="el" href="class_collection.html">Collection</a>&lt; <a class="el" href="class_image.html">Image</a> &gt; &amp;collection)</td></tr>
+<tr class="separator:a79ba5ebb20b5550b7c6aca242e36d855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a933be9ec159579a189529ed233b0eaf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a933be9ec159579a189529ed233b0eaf7">&#9670;&nbsp;</a></span>parse_collection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;std::string, std::vector&lt;std::string&gt; &gt; &gt; parse_collection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collection.html">Collection</a>&lt; <a class="el" href="class_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>collection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79ba5ebb20b5550b7c6aca242e36d855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ba5ebb20b5550b7c6aca242e36d855">&#9670;&nbsp;</a></span>parse_collection_using_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;std::experimental::filesystem::path, std::vector&lt;std::experimental::filesystem::path&gt; &gt; &gt; parse_collection_using_path </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_collection.html">Collection</a>&lt; <a class="el" href="class_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>collection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a533729033043b4d60882e13adf633901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533729033043b4d60882e13adf633901">&#9670;&nbsp;</a></span>separate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; separate </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Référencé par <a class="el" href="_parser_8cpp.html#a2da3ece8f459c8bca8598e5565227ff9">unparse()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_parser_8hpp_a533729033043b4d60882e13adf633901_icgraph.svg" width="315" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae6e39dbe6b48bef1ecec8a791a4d3458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e39dbe6b48bef1ecec8a791a4d3458">&#9670;&nbsp;</a></span>tokenize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;std::string, std::string&gt; tokenize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Référencé par <a class="el" href="_parser_8cpp.html#a2da3ece8f459c8bca8598e5565227ff9">unparse()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_parser_8hpp_ae6e39dbe6b48bef1ecec8a791a4d3458_icgraph.svg" width="314" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab888115ca81a3a58a455b272adc86b5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab888115ca81a3a58a455b272adc86b5f">&#9670;&nbsp;</a></span>unparse() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;std::string, std::vector&lt;std::string&gt; &gt; &gt; unparse </td>
+          <td>(</td>
+          <td class="paramtype">const std::fstream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::locale&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedb7825e5621a36283896e845a380163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb7825e5621a36283896e845a380163">&#9670;&nbsp;</a></span>unparse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;std::string, std::vector&lt;std::string&gt; &gt; &gt; unparse </td>
+          <td>(</td>
+          <td class="paramtype">const std::experimental::filesystem::path &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::locale&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="_parser_8cpp.html#a2da3ece8f459c8bca8598e5565227ff9">unparse()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_parser_8hpp_aedb7825e5621a36283896e845a380163_cgraph.svg" width="315" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_parser_8hpp.html">Parser.hpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

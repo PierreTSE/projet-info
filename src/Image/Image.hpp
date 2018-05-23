@@ -7,6 +7,7 @@
 #include <fstream>
 #include <memory>
 
+
 class Image
 {
 	public:
@@ -23,8 +24,8 @@ class Image
 		const cimg_library::CImg<unsigned char>* getImgPtr() const { return cimg_.get(); }
 
 		//setters
-		void setPath(std::experimental::filesystem::path p) { path_ = p; }
-		void setTagList(TagList t) { taglist_ = t; }
+		void setPath(std::experimental::filesystem::path p) { path_ = std::move(p); }
+		void setTagList(TagList t) { taglist_ = std::move(t); }
 		void setImgPtr(cimg_library::CImg<unsigned char>* cimgPtr) { cimg_ = std::unique_ptr<cimg_library::CImg<unsigned char>>(cimgPtr); }
 
 		//chargement d'une CImg

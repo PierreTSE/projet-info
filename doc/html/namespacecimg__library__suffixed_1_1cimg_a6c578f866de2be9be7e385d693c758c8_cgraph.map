@@ -1,0 +1,12 @@
+<map id="cimg_library_suffixed::cimg::_exception_mode" name="cimg_library_suffixed::cimg::_exception_mode">
+<area shape="rect" id="node2" href="$namespacecimg__library__suffixed_1_1cimg.html#aab8db7528c32a8fd3a3dc471e662782e" title="cimg_library_suffixed\l::cimg::_stderr" alt="" coords="221,95,367,136"/>
+<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#a9e739e4b4ac058abfba069466617b914" title="cimg_library_suffixed\l::cimg::mutex" alt="" coords="624,68,769,109"/>
+<area shape="rect" id="node10" href="$namespacecimg__library__suffixed_1_1cimg.html#a01a3b743897290604513ea6d847c9886" title="cimg_library_suffixed\l::cimg::_stdin" alt="" coords="221,160,367,201"/>
+<area shape="rect" id="node11" href="$namespacecimg__library__suffixed_1_1cimg.html#a493220746e5df3466568bd7862825008" title="cimg_library_suffixed\l::cimg::_stdout" alt="" coords="221,225,367,267"/>
+<area shape="rect" id="node3" href="$namespacecimg__library__suffixed_1_1cimg.html#a79aef0cbcf66ceb71c2b74cb66b4deb2" title="Avoid warning messages due to unused parameters. Do nothing actually. " alt="" coords="423,129,568,171"/>
+<area shape="rect" id="node9" href="$namespacecimg__library__suffixed_1_1cimg.html#aeafab144366eddd11360f32f468fa4af" title="Set current &#160;exception mode. " alt="" coords="415,195,576,236"/>
+<area shape="rect" id="node5" href="$namespacecimg__library__suffixed_1_1cimg.html#aa0e1bc96ae6e235dc5b67b8b0a466166" title="cimg_library_suffixed\l::cimg::Mutex_attr" alt="" coords="1043,5,1188,47"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#afac3fa5f107ad4795fb867050f616555" title="cimg_library_suffixed\l::cimg::Mutex_info::unlock" alt="" coords="818,100,994,141"/>
+<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a6cc8e26847a1aa649febed03d70182e7" title="cimg_library_suffixed\l::cimg::Mutex_info::lock" alt="" coords="825,165,987,207"/>
+<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a9bf4ed1e1dfe6f28fa6250cd04f3c900" title="cimg_library_suffixed\l::cimg::Mutex_info::trylock" alt="" coords="817,35,995,76"/>
+</map>

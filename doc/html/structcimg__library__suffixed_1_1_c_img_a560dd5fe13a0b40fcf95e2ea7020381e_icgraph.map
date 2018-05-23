@@ -1,0 +1,18 @@
+<map id="cimg_library_suffixed::CImg::get_log" name="cimg_library_suffixed::CImg::get_log">
+<area shape="rect" id="node2" href="$namespacecimg__library__suffixed.html#a65baff382319a3677fd777a976a4f50b" title="cimg_library_suffixed::log" alt="" coords="199,297,369,324"/>
+<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a4c1d921651a9408da9487f1d4e8c13d0" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::_mp_complex_pow" alt="" coords="417,5,601,61"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a318c44c5d1f4f0114355f37ace87a4ae" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::compile" alt="" coords="669,35,853,91"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#a4ee4442b26855c03fbfbab878da90c07" title="Draw a quadratic Mandelbrot or Julia 2d fractal. " alt="" coords="432,203,587,259"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a91ec1cd09114c4018a78e4ea0b2df386" title="Estimate displacement field between two images . " alt="" coords="437,283,582,339"/>
+<area shape="rect" id="node7" href="$namespacecimg__library__suffixed_1_1cimg.html#aa12c572ad67f655e27f7b8e3e76dafa5" title="Return a random variable following a gaussian distribution and a standard deviation of 1..." alt="" coords="437,363,582,405"/>
+<area shape="rect" id="node11" href="$structcimg__library__suffixed_1_1_c_img.html#acc2665db5892449362ae3098f65b0377" title="Compute the logarithm of each pixel value. " alt="" coords="437,429,582,470"/>
+<area shape="rect" id="node12" href="$namespacecimg__library__suffixed_1_1cimg.html#a03657cf098d3b588e76bcef4426233bd" title="Return base&#45;2 logarithm of a value. " alt="" coords="437,137,582,178"/>
+<area shape="rect" id="node16" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#ac01a447168773b005f451a63d2317620" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_complex_log" alt="" coords="417,495,601,551"/>
+<area shape="rect" id="node17" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#ae9a43f4c2a66afec7fced513abcf758f" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_log" alt="" coords="417,575,601,631"/>
+<area shape="rect" id="node8" href="$namespacecimg__library__suffixed_1_1cimg.html#a2a18bbfb6a496d8d5a02943be8eaa936" title="Return a random variable following a Poisson distribution of parameter z. " alt="" coords="689,378,834,419"/>
+<area shape="rect" id="node9" href="$structcimg__library__suffixed_1_1_c_img.html#a6049c651eefc3a13b8f7d1fc3ff225d7" title="Add random noise to pixel values. " alt="" coords="921,349,1080,390"/>
+<area shape="rect" id="node10" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a1a6f67dab44ca62b11aec01933907178" title="cimg_library_suffixed\l::CImg::_cimg_math_parser::mp_g" alt="" coords="649,443,873,485"/>
+<area shape="rect" id="node13" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#ade9dece3f3a257859ded3a42c9605ba9" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_log2" alt="" coords="669,115,853,171"/>
+<area shape="rect" id="node14" href="$structcimg__library__suffixed_1_1_c_img.html#a2fbd06361da285cd57797bba6df0b275" title="Compute the base&#45;2 logarithm of each pixel value. " alt="" coords="686,195,837,237"/>
+<area shape="rect" id="node15" href="$structcimg__library__suffixed_1_1_c_img.html#a6f3dafb21c7bac989a884e3f4ce1565f" title="Compute the base&#45;10 logarithm of each pixel value . " alt="" coords="673,261,849,302"/>
+</map>

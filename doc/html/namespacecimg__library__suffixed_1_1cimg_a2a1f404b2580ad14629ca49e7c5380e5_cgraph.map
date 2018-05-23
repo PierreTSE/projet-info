@@ -1,0 +1,7 @@
+<map id="cimg_library_suffixed::cimg::_openmp_mode" name="cimg_library_suffixed::cimg::_openmp_mode">
+<area shape="rect" id="node2" href="$namespacecimg__library__suffixed_1_1cimg.html#a9e739e4b4ac058abfba069466617b914" title="cimg_library_suffixed\l::cimg::mutex" alt="" coords="212,66,357,108"/>
+<area shape="rect" id="node3" href="$namespacecimg__library__suffixed_1_1cimg.html#aa0e1bc96ae6e235dc5b67b8b0a466166" title="cimg_library_suffixed\l::cimg::Mutex_attr" alt="" coords="631,69,776,110"/>
+<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#afac3fa5f107ad4795fb867050f616555" title="cimg_library_suffixed\l::cimg::Mutex_info::unlock" alt="" coords="406,33,582,74"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a6cc8e26847a1aa649febed03d70182e7" title="cimg_library_suffixed\l::cimg::Mutex_info::lock" alt="" coords="413,98,575,140"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html#a9bf4ed1e1dfe6f28fa6250cd04f3c900" title="cimg_library_suffixed\l::cimg::Mutex_info::trylock" alt="" coords="405,164,583,205"/>
+</map>

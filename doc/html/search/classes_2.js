@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['image',['Image',['../class_image.html',1,'']]],
-  ['iteratorbase',['IteratorBase',['../class_iterator_base.html',1,'']]]
+  ['file_5ffilter',['file_filter',['../structfile__filter.html',1,'']]],
+  ['filteredcollection',['FilteredCollection',['../class_filtered_collection.html',1,'']]],
+  ['filterediterator',['FilteredIterator',['../class_filtered_iterator.html',1,'']]]
 ];

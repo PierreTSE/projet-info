@@ -1,0 +1,33 @@
+<map id="cimg_library_suffixed::cimg::wget_path" name="cimg_library_suffixed::cimg::wget_path">
+<area shape="rect" id="node2" href="$namespacecimg__library__suffixed_1_1cimg.html#aac739bf544269324a04504ebe92b93e9" title="Get current local time (single&#45;attribute version). " alt="" coords="199,853,344,895"/>
+<area shape="rect" id="node3" href="$namespacecimg__library__suffixed_1_1cimg.html#a90c05fe6fc049cba75f3a12807e97158" title="Load file from network as a local temporary file. " alt="" coords="199,919,344,960"/>
+<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#a0f3577978081461118330fc3ecd4b9db" title="Create an empty file. " alt="" coords="405,853,551,895"/>
+<area shape="rect" id="node31" href="$structcimg__library__suffixed_1_1_c_img.html#ae8353b28bfbc5c4421c7adfbb98fe32f" title="Load image from a file. " alt="" coords="403,919,553,960"/>
+<area shape="rect" id="node32" href="$structcimg__library__suffixed_1_1_c_img_list.html#a63bd67d8dd2301933df7decb4612916e" title="Load a list from a file. " alt="" coords="392,984,564,1025"/>
+<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#ae9faefb948746c5d646fe5c80f28c4fc" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_bmp" alt="" coords="613,5,808,47"/>
+<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a78929d9b9d2af829f3e3fc576e99b61d" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_dlm" alt="" coords="615,71,806,112"/>
+<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img.html#aa29c8a2179f282535660800f9b9192e0" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_inr" alt="" coords="619,136,802,177"/>
+<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1_c_img.html#aa41e292505817af60a4896ed19302304" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_jpeg" alt="" coords="614,201,807,243"/>
+<area shape="rect" id="node9" href="$structcimg__library__suffixed_1_1_c_img.html#a01931f2bad5c72da454d990ebcf55f94" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save\l_pandore" alt="" coords="629,267,792,323"/>
+<area shape="rect" id="node10" href="$structcimg__library__suffixed_1_1_c_img.html#a65be74d7d22bb71e708b3beb8e9cae49" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_pfm" alt="" coords="615,348,806,389"/>
+<area shape="rect" id="node11" href="$structcimg__library__suffixed_1_1_c_img.html#aab5e304310373159e357250314e99da6" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_png" alt="" coords="615,413,806,455"/>
+<area shape="rect" id="node12" href="$structcimg__library__suffixed_1_1_c_img.html#a4bcf33abcee45165d20d9530f6c85242" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_pnk" alt="" coords="615,479,806,520"/>
+<area shape="rect" id="node13" href="$structcimg__library__suffixed_1_1_c_img.html#a3b62455c9523881fa64a47d8362c3d80" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_pnm" alt="" coords="613,544,808,585"/>
+<area shape="rect" id="node14" href="$structcimg__library__suffixed_1_1_c_img.html#a069feb3e722bb4a1f52ea72c1c86ca97" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_raw" alt="" coords="615,609,806,651"/>
+<area shape="rect" id="node15" href="$structcimg__library__suffixed_1_1_c_img.html#a06c5e27c1dde885a96cfdad05835644e" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_rgb" alt="" coords="617,675,804,716"/>
+<area shape="rect" id="node16" href="$structcimg__library__suffixed_1_1_c_img.html#a974a21a1c7242ff9b08e4590701d920d" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_save_rgba" alt="" coords="613,740,808,781"/>
+<area shape="rect" id="node17" href="$structcimg__library__suffixed_1_1_c_img_list.html#afa25415a30608d507bc22bd6b85b5c1e" title="cimg_library_suffixed\l::CImgList\&lt; charT \&gt;::\l_save_yuv" alt="" coords="637,806,785,862"/>
+<area shape="rect" id="node18" href="$structcimg__library__suffixed_1_1_c_img.html#a09711118d3b31870942e99adbefffed1" title="Save image as an ANALYZE7.5 or NIFTI file. " alt="" coords="633,886,788,942"/>
+<area shape="rect" id="node19" href="$structcimg__library__suffixed_1_1_c_img.html#ad5fb082bca9bcc268e8f77019788ae51" title="Save image as an OpenEXR file. " alt="" coords="621,967,801,1008"/>
+<area shape="rect" id="node20" href="$structcimg__library__suffixed_1_1_c_img.html#a3a8132f303e3295e0219ea4518c6ef20" title="Save volumetric image as a video, using ffmpeg external binary. " alt="" coords="633,1033,788,1089"/>
+<area shape="rect" id="node21" href="$structcimg__library__suffixed_1_1_c_img_list.html#af09a45345581747984f4df0607418f2c" title="Save image sequence, using the external tool &#39;ffmpeg&#39;. " alt="" coords="635,1113,786,1169"/>
+<area shape="rect" id="node22" href="$structcimg__library__suffixed_1_1_c_img.html#a44f125968c20e8c7d833bf7d75c32db6" title="Save image using GraphicsMagick&#39;s external binary. " alt="" coords="624,1193,797,1249"/>
+<area shape="rect" id="node23" href="$structcimg__library__suffixed_1_1_c_img.html#a53983bb4f1ebe2a817b68029b8c04cb1" title="Save image using gzip external binary. " alt="" coords="633,1273,788,1329"/>
+<area shape="rect" id="node24" href="$structcimg__library__suffixed_1_1_c_img.html#afbf8db949f62c8bd3f2f73ba3d9c1420" title="Save image using ImageMagick&#39;s external binary. " alt="" coords="631,1353,790,1409"/>
+<area shape="rect" id="node25" href="$structcimg__library__suffixed_1_1_c_img.html#a6beb63196c9a26f6894e4654f771c1e5" title="Save image, using built&#45;in ImageMagick++ library. " alt="" coords="633,1433,788,1489"/>
+<area shape="rect" id="node26" href="$structcimg__library__suffixed_1_1_c_img.html#a30d02c3d77fc43c8b5845e92268cdab5" title="Save image as a Dicom file. " alt="" coords="633,1513,788,1569"/>
+<area shape="rect" id="node27" href="$structcimg__library__suffixed_1_1_c_img.html#ab3b2aa455cd56ce20a03cb0b68ca68fc" title="Save image as a MINC2 file. " alt="" coords="612,1593,809,1635"/>
+<area shape="rect" id="node28" href="$structcimg__library__suffixed_1_1_c_img.html#a6b77dc615829820ba0675409feaef3d8" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::save_other" alt="" coords="615,1659,806,1700"/>
+<area shape="rect" id="node29" href="$structcimg__library__suffixed_1_1_c_img.html#a87e93148404e8d79b7b5218e58eabf3c" title="Save image as a TIFF file. " alt="" coords="622,1724,799,1765"/>
+<area shape="rect" id="node30" href="$structcimg__library__suffixed_1_1_c_img_list.html#a62700a17bb0af63522c732b9d1a15325" title="Save list as a TIFF file. " alt="" coords="637,1790,785,1846"/>
+</map>

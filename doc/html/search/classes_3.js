@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pooliterator',['PoolIterator',['../class_pool_iterator.html',1,'']]]
+  ['image',['Image',['../class_image.html',1,'']]],
+  ['iteratorbase',['IteratorBase',['../class_iterator_base.html',1,'']]]
 ];
