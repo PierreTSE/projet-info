@@ -20,9 +20,16 @@ using namespace cimg_library;
 using namespace std;
 using img = cimg_library::CImg<unsigned char>;
 
-//TODO cela ressemble plus à getPoolFromSave à changer, faut faire les deux
-    
-CollectionPool<Image> getPoolFromSave(const fs::path& savePath)
+/** @fn createPoolFromSave
+/*  @brief Charge une collection d'images à partir du chemin d'un fichier de sauvegarde
+/*  @param savePath Chemin du fichier de sauvegarde décrivant la collection à charger
+/*  @return @c CollectionPool d'images chargée par les données contenues dans le fichier en paramètre
+/*
+/*  Cette fonction charge dans chaque image de la @c CollectionPool de retour les attributs
+/*  path_ et tagList_ à partir du fichier de sauvegarde d'extension .txt . 
+/*  Le fichier de sauvegarde doit se trouver dans le répertoire où se trouvent les images à charger.
+**/
+CollectionPool<Image> createPoolFromSave(const fs::path& savePath)
 {
     CollectionPool<Image> collectionPool;
     
@@ -30,12 +37,12 @@ CollectionPool<Image> getPoolFromSave(const fs::path& savePath)
     {
         std::ifstream in(savePath);
         if (!in)
-            throw std::runtime_error("Peut pas lire");
+            throw std::runtime_error("Impossible de lire le fichier.");
 
         Image image;
-        while (in >> image)
+        while (in >> image) //charge le path_ et la tagList_ par l'automate de l'opérateur surchargé >>
         {
-            image.loadImage();
+            image.loadImage(); //charge la CImg
             collectionPool.push_back(std::move(image));
         }
     }
@@ -43,6 +50,39 @@ CollectionPool<Image> getPoolFromSave(const fs::path& savePath)
     return collectionPool;
 }
 
+/** @fn createPoolFromDirectory
+/*  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
+/*  @param directoryPath Chemin du fichier de sauvegarde décrivant la collection à charger
+/*  @return @c CollectionPool d'images chargée par les données contenues dans le répertoire en paramètre
+/*
+/*  Appelle la fonction @fn createPoolFromSave sur le fichier texte unique du répertoire en paramètre.
+**/
+CollectionPool<Image> createPoolFromDirectory(const fs::path& directoryPath)
+{
+	CollectionPool<Image> collectionPool;
+
+	fs::path savePath;
+	/* Recherche d'un fichier texte contenant la sauvegarde (chemins et tags de chaque image du dossier).
+	Ce fichier doit être unique (aka la collection doit être vide). */
+	for (auto& file : fs::directory_iterator(directoryPath))
+	{
+		if (file.path().extension() == ".txt")
+		{
+			if (savePath.empty())
+				savePath = file.path();
+			else
+				throw std::runtime_error("Several save files have been found during loading.");
+		}
+	}
+
+	if(savePath.empty())
+		throw std::runtime_error("Not any save file have been found during loading.");
+	else
+		return createPoolFromSave(savePath);
+}
+
+
+//TODO à refondre
 /** @fn getPoolFromDirectory
 /*  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
 /*  @param directoryPath Chemin du répertoire de sauvegarde à charger
@@ -116,7 +156,7 @@ int main()
 	if (fs::exists(tagsPath))
 		possibleTags = loadTagList(tagsPath);
 
-	auto collection = std::move(getPoolFromSave(getOpenFileName()));
+	auto collection = std::move(createPoolFromSave(getOpenFileName()));
 	getPoolFromDirectory(browseFolder(), collection);
 	//CollectionPool<Image> collection = getPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)");
 
@@ -156,10 +196,6 @@ int main()
 	CImgList<unsigned char> list;
 	for (auto& img : collection)
 		list.push_back(*img.getImgPtr());
-
-	const unsigned int window_height = 1080U;
-	const unsigned int window_width = 1920U;
-
 	
 	//// img est une CImg<unsigned char>
 	//img windowImg(800U, 400U, 1U, 3U);
@@ -220,6 +256,9 @@ int main()
 	//TODO POURQUOI les images sont plus grandes ??
 
 	//test affichage une ligne automatique
+
+	const unsigned int window_height = 1080U;
+	const unsigned int window_width = 1920U;
 
 	CImgDisplay main_disp(window_width,window_height,"titre super bien");
 
