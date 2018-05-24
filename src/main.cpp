@@ -1,5 +1,4 @@
-﻿#include "Collection/Collection.hpp"
-#include "Collection/CollectionIterator.hpp"
+﻿#include "Collection/CollectionIterator.hpp"
 #include "Collection/CollectionPool.hpp"
 #include "Collection/FilteredCollection.hpp"
 #include "ConsolePrototype/config.hpp"
@@ -7,9 +6,7 @@
 #include "ConsolePrototype/save.hpp"
 #include "FileDialog/FileDialog.hpp"
 #include "Image/Image.hpp"
-#include "system_target.hpp"
 #include <chrono>
-#include <exception>
 #include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
@@ -33,20 +30,20 @@ CollectionPool<Image> createPoolFromSave(const fs::path& savePath)
 {
     CollectionPool<Image> collectionPool;
     
-    if(fs::exists(savePath) and fs::is_regular_file(savePath) and savePath.extension() == ".txt")
-    {
-        std::ifstream in(savePath);
-        if (!in)
-            throw std::runtime_error("Impossible de lire le fichier.");
+    if(fs::exists(savePath) && fs::is_regular_file(savePath) && savePath.extension() == ".txt")
+	{
+		std::ifstream in(savePath);
+		if (!in)
+			throw std::runtime_error("Impossible de lire le fichier.");
 
-        Image image;
-        while (in >> image) //charge le path_ et la tagList_ par l'automate de l'opérateur surchargé >>
-        {
-            image.loadImage(); //charge la CImg
-            collectionPool.push_back(std::move(image));
-        }
-    }
-    
+		Image image;
+		while (in >> image) //charge le path_ et la tagList_ par l'automate de l'opérateur surchargé >>
+		{
+			image.loadImage(); //charge la CImg
+			collectionPool.push_back(std::move(image));
+		}
+	}
+
     return collectionPool;
 }
 
@@ -84,13 +81,13 @@ CollectionPool<Image> createPoolFromDirectory(const fs::path& directoryPath)
 
 //TODO à refondre
 /** @fn getPoolFromDirectory
-/*  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
-/*  @param directoryPath Chemin du répertoire de sauvegarde à charger
-/*  @return @c CollectionPool d'images chargée par les données contenues dans le répertoire en paramètre
-/*
-/*  Cette fonction charge dans chaque image de la @c CollectionPool de retour les attributs :
-/*  path_ et tagList_ à partir du fichier de sauvegarde d'extension .txt
-/*  qui doit être inclus dans le répertoire en paramètre où se situent les images à charger.
+ *  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
+ *  @param directoryPath Chemin du répertoire de sauvegarde à charger
+ *  @param collectionPool d'images chargée par les données contenues dans le répertoire en paramètre
+ *
+ *  Cette fonction charge dans chaque image de la @c CollectionPool de retour les attributs :
+ *  path_ et tagList_ à partir du fichier de sauvegarde d'extension .txt
+ *  qui doit être inclus dans le répertoire en paramètre où se situent les images à charger.
 **/
 void getPoolFromDirectory(const fs::path& directoryPath, CollectionPool<Image>& collectionPool)
 {
@@ -106,7 +103,7 @@ void getPoolFromDirectory(const fs::path& directoryPath, CollectionPool<Image>& 
 			////Images d'extension .ppm
 			if (file.path().extension() == ".ppm")
 			{
-				Image image(file.path(), std::move(std::unique_ptr<img>(new img(file.path().u8string().c_str()))), {});
+				Image image(file.path(), std::move(std::make_unique<img>(file.path().u8string().c_str())), {});
 				collectionPool.push_back(std::move(image));
 			}
 
@@ -300,70 +297,82 @@ int main()
 											 , "Détagger une image"
 											 , "Rechercher par tag"
 											 , "Ajouter à la liste"
-											 , 0
+											 , nullptr
 											 , CImg<>());
-		switch(c)
+        switch(c)
         {
-            case 0: 
-            {
-                std::cout << "Quelle image ?" << std::endl;
-                auto img = choix_image(collection);
-                if(img != collection.end()) {
-                    affTags(img->getTagList());
+            case 0 :
+                {
+                    std::cout << "Quelle image ?" << std::endl;
+                    auto img = choix_image(collection);
+                    if(img != collection.end())
+                    {
+                        affTags(img->getTagList());
+                    }
                 }
-            }
-            break;
+                break;
 
-            case 1:
-            {
-                std::cout << "Quelle image ?" << std::endl;
-                auto img = choix_image(collection);
-                if(img != collection.end()) {
+            case 1 :
+                {
+                    std::cout << "Quelle image ?" << std::endl;
+                    auto img = choix_image(collection);
+                    if(img != collection.end())
+                    {
+                        std::cout << "Quel Tag ?" << std::endl;
+                        auto tag = choix_tag(possibleTags);
+                        if(!tag.empty())
+                        {
+                            img->getTagList().insert(tag);
+                        }
+                    }
+                }
+                break;
+
+            case 2 :
+                {
+                    std::cout << "Quelle image ?" << std::endl;
+                    auto img = choix_image(collection);
+                    if(img != collection.end())
+                    {
+                        std::cout << "Quel Tag ?" << std::endl;
+                        auto tag = choix_tag(img->getTagList());
+                        if(!tag.empty())
+                        {
+                            img->getTagList().erase(tag);
+                        }
+                    }
+                }
+                break;
+
+            case 3 :
+                {
                     std::cout << "Quel Tag ?" << std::endl;
                     auto tag = choix_tag(possibleTags);
-                    if(!tag.empty()) {
-                        img->getTagList().insert(tag);
-                    }
+                    auto filtre = FilteredCollection<Image>(collection, [&tag](const Image& img)
+                    {
+                        return img.getTagList().find(tag) != img
+                                                             .getTagList().
+                                                             end();
+                    });
+                    listImg(filtre);
                 }
-            }
-            break;
+                break;
 
-            case 2:
-            {
-                std::cout << "Quelle image ?" << std::endl;
-                auto img = choix_image(collection);
-                if(img != collection.end()) {
-                    std::cout << "Quel Tag ?" << std::endl;
-                    auto tag = choix_tag(img->getTagList());
-                    if(!tag.empty()) {
-                        img->getTagList().erase(tag);
-                    }
+            case 4 :
+                {
+                    Tag tag;
+                    std::cout << "Saississez un tag" << std::endl;
+                    std::cin >> tag;
+                    possibleTags.insert(tag);
                 }
-            }
-            break;
-            
-            case 3:
-            {
-                std::cout << "Quel Tag ?" << std::endl;
-                auto tag = choix_tag(possibleTags);
-                auto filtre = FilteredCollection<Image>(collection, [&tag](const Image& img){ return img.getTagList().find(tag) != img.getTagList().end(); });
-                listImg(filtre);
-            }
-            break;
-            
-            case 4:
-            {
-                Tag tag;
-                std::cout << "Saississez un tag" << std::endl;
-                std::cin >> tag;
-                possibleTags.insert(tag);
-            }
-            break;
-                
-            case -1:
+                break;
+
+            case -1 :
                 quit = true;
                 auto savePath = getSaveFileName();
                 saveCollec(savePath, collection);
+                break;
+            default :
                 break;
         }
     }

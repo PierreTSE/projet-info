@@ -2,7 +2,6 @@
 #define FILTERED_COLLECTION_HPP
 
 #include "Collection.hpp"
-#include <vector>
 #include <functional>
 
 template<typename T>
@@ -33,7 +32,8 @@ class FilteredCollection : public Collection<T>
     public:
         FilteredCollection(Collection<T>& c, const filtre_t& f) : collection_{ c }, filtre_{ f } {};
 
-        iterator begin() {
+        iterator begin() override
+        {
             auto first = collection_.begin();
             auto last = collection_.end();
             // Gestion du cas vide
@@ -47,7 +47,7 @@ class FilteredCollection : public Collection<T>
             // sinon on envoie le suivant (qui passe le filtre)
             return ++it;
         }
-        iterator end()
+        iterator end() override
         {
             return iterator(new FilteredIterator<T>(*this, collection_.end()));
         }
@@ -107,7 +107,7 @@ class FilteredIterator : public IteratorBase<T>
             while(itr_ != filter_reference_.collection_.end())
             {
                 ++itr_;
-                if(itr_ == filter_reference_.collection_.end() or filter_reference_.filtre_(*itr_)) 
+                if(itr_ == filter_reference_.collection_.end() || filter_reference_.filtre_(*itr_)) 
                     return;
             }
             valid_ = false;
@@ -134,9 +134,9 @@ class FilteredIterator : public IteratorBase<T>
         bool equal(const IteratorBase<T>& rhs) const override
         {
             auto& rhs_ref = dynamic_cast<const FilteredIterator&>(rhs);
-            if(!valid_ and !rhs_ref.valid_)
+            if(!valid_ && !rhs_ref.valid_)
                 return true;
-            if(!valid_ or !rhs_ref.valid_)
+            if(!valid_ || !rhs_ref.valid_)
                 return false;
             return itr_ == rhs_ref.itr_;
         }

@@ -4,7 +4,6 @@
 #include "Collection.hpp"
 #include "CollectionIterator.hpp"
 #include <vector>
-#include <iterator>
 
 template<typename T>
 class PoolIterator;

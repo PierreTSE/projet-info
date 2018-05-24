@@ -79,7 +79,8 @@ class CollectionIterator
 		CollectionIterator& operator=(const CollectionIterator& rhs) { itr_.reset(rhs.itr_->clone()); return *this; }
 	
 		//Move assignment
-		CollectionIterator& operator=(CollectionIterator&& rhs) { itr_ = std::move(rhs.itr_); return *this; }
+		CollectionIterator& operator=(CollectionIterator&& rhs) noexcept
+		{ itr_ = std::move(rhs.itr_); return *this; }
 	
 		//Can be compared for equivalence using the equality/inequality operators
 		bool operator==(const CollectionIterator& rhs) const { return *itr_ == *rhs.itr_; }

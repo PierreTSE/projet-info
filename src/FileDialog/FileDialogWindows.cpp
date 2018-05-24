@@ -78,7 +78,7 @@ static int CALLBACK BrowseCallbackProc(HWND hwnd, UINT uMsg, LPARAM lParam, LPAR
 
 	if (uMsg == BFFM_INITIALIZED)
 	{
-		string tmp = (const char *)lpData;
+		string tmp = reinterpret_cast<const char *>(lpData);
 		SendMessage(hwnd, BFFM_SETSELECTION, TRUE, lpData);
 	}
 
@@ -95,21 +95,21 @@ fs::path browseFolder(const string &title, const std::experimental::filesystem::
 	else
 		lstrcpy(path_param, initialDir.u8string().c_str());
 
-	BROWSEINFO bi = { 0 };
+	BROWSEINFO bi = { nullptr };
 	bi.lpszTitle = title.c_str();
 	bi.ulFlags = BIF_RETURNONLYFSDIRS | BIF_NEWDIALOGSTYLE;
 	bi.lpfn = BrowseCallbackProc;
-	bi.lParam = (LPARAM)path_param;
+	bi.lParam = reinterpret_cast<LPARAM>(path_param);
 
-	LPITEMIDLIST pidl = SHBrowseForFolder(&bi);
+    const LPITEMIDLIST pidl = SHBrowseForFolder(&bi);
 
-	if (pidl != 0)
+	if (pidl != nullptr)
 	{
 		//get the name of the folder and put it in path
 		SHGetPathFromIDList(pidl, path);
 
 		//free memory used
-		IMalloc * imalloc = 0;
+		IMalloc * imalloc = nullptr;
 		if (SUCCEEDED(SHGetMalloc(&imalloc)))
 		{
 			imalloc->Free(pidl);

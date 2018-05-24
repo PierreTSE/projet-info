@@ -18,7 +18,7 @@ int choix(int max)
     std::cout << "Votre choix: ";
     int c;
     std::cin >> c;
-    while(std::cin.fail() or c == 0 or c > max)
+    while(std::cin.fail() || c == 0 || c > max)
     {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

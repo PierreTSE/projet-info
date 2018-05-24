@@ -2,7 +2,6 @@
 #define WINDOW_HPP
 
 #include "../CImg.h"
-#include <vector>
 
 class Window
 {

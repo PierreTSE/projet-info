@@ -31,7 +31,6 @@ std::istream& operator>>(std::istream& inStream, Image& image)
 	Tag tag;
 
 	try {
-
 		State state = START;
 		while (state != END)
 		{
