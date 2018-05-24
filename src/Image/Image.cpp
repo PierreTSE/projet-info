@@ -1,4 +1,5 @@
 ﻿#include "Image.hpp"
+#include <iostream>
 
 namespace fs = std::experimental::filesystem;
 
@@ -8,6 +9,8 @@ void Image::loadImage()
 	{
 		cimg_.reset(new cimg_library::CImg<unsigned char>(path_.u8string().c_str()));
 	}
+	else
+		throw std::runtime_error("Invalid path attribute when loading an image.");
 }
 
 /* Nomenclature de l'automate pour parser une image :
@@ -152,7 +155,7 @@ std::istream& operator>>(std::istream& inStream, Image& image)
 				{
 					state = END;
 				}
-				else if (c == '\r' || c == '\n' || c == '\v' || c == '\f' || c == '\t' || c == ' ')
+				else if (c == '\v' || c == '\f' || c == '\t' || c == ' ')
 				{
 					//state = SEMICOLON;
 				}
@@ -189,8 +192,10 @@ std::istream& operator>>(std::istream& inStream, Image& image)
 		image.setPath(fs::u8path(path));
 		image.setTagList(tagList);
 	}
-	catch(std::exception& e)
+	catch(std::exception& ex)
 	{
+		//TODO rendre les exceptions loggables
+		std::cerr << ex.what() << std::endl;
 		inStream.clear(std::ios::failbit);
 	}
 
