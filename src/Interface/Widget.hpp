@@ -10,12 +10,12 @@ struct dim_t
 	long long y;
 };
 
-dim_t operator+(const dim_t& a, const dim_t& b)
+inline dim_t operator+(const dim_t& a, const dim_t& b)
 {
 	return dim_t{ a.x + b.x, a.y + b.y };
 }
 
-dim_t operator-(const dim_t& a, const dim_t& b)
+inline dim_t operator-(const dim_t& a, const dim_t& b)
 {
 	return dim_t{ a.x - b.x, a.y - b.y };
 }
@@ -32,7 +32,6 @@ class Widget
 		virtual void actualResize(const dim_t& size) = 0;
 
     private:
-	    //pos_t pos_ = { 0,0 };
 		Widget* parent_ = nullptr;
 		mutable bool needRedraw_ = true;
 		mutable img cachedImg_;
