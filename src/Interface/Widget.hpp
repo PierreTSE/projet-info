@@ -1,14 +1,41 @@
 #ifndef WIDGET_HPP
 #define WIDGET_HPP
 
+#include "../CImg.h"
 #include <utility>
+
+struct dim_t
+{
+	long long x;
+	long long y;
+};
+
+dim_t operator+(const dim_t& a, const dim_t& b)
+{
+	return dim_t{ a.x + b.x, a.y + b.y };
+}
+
+dim_t operator-(const dim_t& a, const dim_t& b)
+{
+	return dim_t{ a.x - b.x, a.y - b.y };
+}
 
 class Widget
 {
-public:
-private:
-	using pos_t = std::pair<int, int>;
-	pos_t pos_ = { 0,0 };
+    public:
+		using img = cimg_library::CImg<unsigned char>;
+		const img& render() const;
+		void resize(const dim_t& size);
+
+    protected:
+		virtual img actualRender() const = 0;
+		virtual void actualResize(const dim_t& size) = 0;
+
+    private:
+	    //pos_t pos_ = { 0,0 };
+		Widget* parent_ = nullptr;
+		mutable bool needRedraw_ = true;
+		mutable img cachedImg_;
 
 };
 
