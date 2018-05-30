@@ -1,6 +1,6 @@
 #include "Widget.hpp"
 
-const Widget::img& Widget::render() // TODO Remettre les const quand les const_iterator sont là
+const Widget::img& Widget::render() const
 {
 	if(needRedraw_)
 	{

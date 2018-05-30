@@ -17,7 +17,7 @@ dim_t ScrollWidget::actualSize() const
     return size_;
 }
 
-Widget::img ScrollWidget::actualRender()
+Widget::img ScrollWidget::actualRender() const
 {
     img render(size_.x, size_.y, 1, 3, 255);
     if(size_.y >= content_->size().y)

@@ -11,7 +11,7 @@ class Widget
 {
     public:
 		using img = cimg_library::CImg<unsigned char>;
-		const img& render(); // TODO Remettre les const quand les const_iterator sont là
+		const img& render() const;
 		void resize(const dim_t& size);
 		dim_t size() const;
 		bool propagateEvent(const Event& event);
@@ -20,7 +20,7 @@ class Widget
 
 
 	protected:
-		virtual img actualRender() = 0; // TODO Remettre les const quand les const_iterator sont là
+		virtual img actualRender() const = 0;
 		virtual void actualResize(const dim_t& size) = 0;
 		virtual dim_t actualSize() const = 0;
 		virtual bool actualPropagateEvent(const Event& event) = 0;

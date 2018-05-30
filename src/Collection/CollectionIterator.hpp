@@ -138,49 +138,49 @@ class ConstCollectionIterator
 {
 	friend class ConstIteratorBase<T>;
 
-public:
-	using iterator_category = std::bidirectional_iterator_tag;
-	using value_type = T;
-	using const_pointer = const T*;
-	using const_reference = const T&;
-	using difference_type = std::ptrdiff_t;
-	using size_type = size_t;
-
-	ConstCollectionIterator() = default; //default constructor, using unique_ptr default constructor
-	ConstCollectionIterator(const ConstCollectionIterator& itr) : itr_{ itr.itr_->clone() } {} //copy constructor
-	ConstCollectionIterator(ConstCollectionIterator&& itr) noexcept : itr_{ std::move(itr.itr_) } {} //move constructor
-	//destructed via unique_ptr destructor
-
-	explicit ConstCollectionIterator(ConstIteratorBase<T>* ptr) : itr_{ ptr } {} //actual constructor
-
-    //Copy assigment
-	ConstCollectionIterator& operator=(const ConstCollectionIterator& rhs) { itr_.reset(rhs.itr_->clone()); return *this; }
-
-	//Move assignment
-	ConstCollectionIterator& operator=(ConstCollectionIterator&& rhs) noexcept
-	{ itr_ = std::move(rhs.itr_); return *this; }
-
-	//Can be compared for equivalence using the equality/inequality operators
-	bool operator==(const ConstCollectionIterator& rhs) const { return *itr_ == *rhs.itr_; }
-	bool operator!=(const ConstCollectionIterator& rhs) const { return !(*itr_ == *rhs.itr_); }
-
-	//Can be dereferenced as an rvalue
-	const_reference operator*() const { return **const_cast<const ConstIteratorBase<T>*>(itr_.get()); }
-	const_pointer operator->() const { return const_cast<const ConstIteratorBase<T>*>(itr_.get())->operator->(); }
-
-	//Can be incremented
-	ConstCollectionIterator& operator++() { ++(*itr_); return *this; }
-	ConstCollectionIterator operator++(int) { ConstCollectionIterator tempItr = *this; ++(*itr_); return tempItr; }
-
-	//Can be decremented
-	ConstCollectionIterator& operator--() { --(*itr_); return *this; }
-	ConstCollectionIterator operator--(int) { ConstCollectionIterator tempItr = *this; --(*itr_); return tempItr; }
-
-	//Lvalues are swappable
-	    //via use of std::swap with move constructor
-
-private:
-	std::unique_ptr<ConstIteratorBase<T>> itr_;
+	public:
+		using iterator_category = std::bidirectional_iterator_tag;
+		using value_type = T;
+		using const_pointer = const T*;
+		using const_reference = const T&;
+		using difference_type = std::ptrdiff_t;
+		using size_type = size_t;
+	
+		ConstCollectionIterator() = default; //default constructor, using unique_ptr default constructor
+		ConstCollectionIterator(const ConstCollectionIterator& itr) : itr_{ itr.itr_->clone() } {} //copy constructor
+		ConstCollectionIterator(ConstCollectionIterator&& itr) noexcept : itr_{ std::move(itr.itr_) } {} //move constructor
+		//destructed via unique_ptr destructor
+	
+		explicit ConstCollectionIterator(ConstIteratorBase<T>* ptr) : itr_{ ptr } {} //actual constructor
+	
+		//Copy assigment
+		ConstCollectionIterator& operator=(const ConstCollectionIterator& rhs) { itr_.reset(rhs.itr_->clone()); return *this; }
+	
+		//Move assignment
+		ConstCollectionIterator& operator=(ConstCollectionIterator&& rhs) noexcept
+		{ itr_ = std::move(rhs.itr_); return *this; }
+	
+		//Can be compared for equivalence using the equality/inequality operators
+		bool operator==(const ConstCollectionIterator& rhs) const { return *itr_ == *rhs.itr_; }
+		bool operator!=(const ConstCollectionIterator& rhs) const { return !(*itr_ == *rhs.itr_); }
+	
+		//Can be dereferenced as an rvalue
+		const_reference operator*() const { return **const_cast<const ConstIteratorBase<T>*>(itr_.get()); }
+		const_pointer operator->() const { return const_cast<const ConstIteratorBase<T>*>(itr_.get())->operator->(); }
+	
+		//Can be incremented
+		ConstCollectionIterator& operator++() { ++(*itr_); return *this; }
+		ConstCollectionIterator operator++(int) { ConstCollectionIterator tempItr = *this; ++(*itr_); return tempItr; }
+	
+		//Can be decremented
+		ConstCollectionIterator& operator--() { --(*itr_); return *this; }
+		ConstCollectionIterator operator--(int) { ConstCollectionIterator tempItr = *this; --(*itr_); return tempItr; }
+	
+		//Lvalues are swappable
+			//via use of std::swap with move constructor
+	
+	private:
+		std::unique_ptr<ConstIteratorBase<T>> itr_;
 };
 
 

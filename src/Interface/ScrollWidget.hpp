@@ -12,7 +12,7 @@ class ScrollWidget : public Widget
     protected:
         void actualResize(const dim_t& size) override;
         dim_t actualSize() const override;
-        img actualRender() override; //TODO remettre const
+        img actualRender() const override;
         bool actualPropagateEvent(const Event& event) override;
 
     private:

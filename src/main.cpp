@@ -22,28 +22,28 @@ using img = cimg_library::CImg<unsigned char>;
 int main()
 {
     // tests des const_iterator
-	CollectionPool<Image> collection2 = std::move(createPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)"));
-	//const auto& ref = collection2;
-	const Collection<Image>& ref = collection2;
-	const Collection<Image>* ptr = &collection2;
-	const FilteredCollection<Image> fcollec(collection2, [](const Image& img) {return img.getImgPtr()->height()>img.getImgPtr()->width(); });
-	int i = 0;
-    for(const auto& img : ref)
-    {
-		cout << "ref" << i << endl; ++i;
-    }
-	i = 0;
-	for (const auto& img : *ptr)
-	{
-		cout << "ptr" << i << endl; ++i;
-	}
-	i = 0;
-	for (const auto& img : fcollec)
-	{
-		cout << "fcollec" << i << endl; ++i;
-	}
+    //CollectionPool<Image> collection2 = std::move(createPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)"));
+    ////const auto& ref = collection2;
+    //const Collection<Image>& ref = collection2;
+    //const Collection<Image>* ptr = &collection2;
+    //const FilteredCollection<Image> fcollec(collection2, [](const Image& img) {return img.getImgPtr()->height()>img.getImgPtr()->width(); });
+    //int i = 0;
+    //for(const auto& img : ref)
+    //{
+		//cout << "ref" << i << endl; ++i;
+    //}
+    //i = 0;
+    //for (const auto& img : *ptr)
+    //{
+		//cout << "ptr" << i << endl; ++i;
+    //}
+    //i = 0;
+    //for (const auto& img : fcollec)
+    //{
+		//cout << "fcollec" << i << endl; ++i;
+    //}
 
-	return 0;
+	
 	//working directory
 	auto wd = fs::current_path();
 
