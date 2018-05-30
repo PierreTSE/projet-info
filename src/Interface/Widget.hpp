@@ -30,6 +30,7 @@ class Widget
     protected:
 		virtual img actualRender() const = 0;
 		virtual void actualResize(const dim_t& size) = 0;
+		void needRedraw() const { needRedraw_ = true; };
 
     private:
 		Widget* parent_ = nullptr;

@@ -10,3 +10,8 @@ const Widget::img& Widget::render() const
 
 	return cachedImg_;
 }
+
+void Widget::resize(const dim_t& size)
+{
+	actualResize(size);
+}
