@@ -6,7 +6,6 @@
 #include <utility>
 
 
-
 class Widget
 {
     public:
@@ -17,7 +16,7 @@ class Widget
 		bool propagateEvent(const Event& event);
 		bool isInside(const dim_t& pos) const;
 		void setParent(Widget* wid) { parent_ = wid; }
-
+		virtual ~Widget() = default;
 
 	protected:
 		virtual img actualRender() const = 0;
@@ -26,6 +25,7 @@ class Widget
 		virtual bool actualPropagateEvent(const Event& event) = 0;
 		virtual bool actualIsInside(const dim_t& pos) const;
         void needRedraw() const { needRedraw_ = true; if(parent_) parent_->needRedraw(); };
+
     private:
 		Widget* parent_ = nullptr;
 		mutable bool needRedraw_ = true;
