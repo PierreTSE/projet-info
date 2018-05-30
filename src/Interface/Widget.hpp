@@ -2,7 +2,6 @@
 #define WIDGET_HPP
 
 #include "../CImg.h"
-#include <utility>
 
 struct dim_t
 {

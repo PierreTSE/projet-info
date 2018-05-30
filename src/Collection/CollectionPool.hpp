@@ -9,33 +9,37 @@ template<typename T>
 class PoolIterator;
 
 template<typename T>
+class ConstPoolIterator;
+
+template<typename T>
 class CollectionPool : public Collection<T>
 {
     public:
-		using value_type = typename Collection<T>::value_type;
-		using allocator_type = typename Collection<T>::allocator_type;
-		using reference = typename Collection<T>::reference;
-		using const_reference = typename Collection<T>::const_reference;
-		using pointer = typename Collection<T>::pointer;
-		using const_pointer = typename Collection<T>::const_pointer;
-		using iterator = typename Collection<T>::iterator;
-		//using const_iterator = typename Collection<T>::const_iterator;
-		using reverse_iterator = typename Collection<T>::reverse_iterator;
-		//using const_reverse_iterator = typename Collection<T>::const_reverse_iterator;
-		using difference_type = typename Collection<T>::difference_type;
-		using size_type = typename Collection<T>::size_type;
-		
-        CollectionPool() = default;
-        explicit CollectionPool(size_type n, const value_type& v = value_type{}) : pool_(n, v) {}
-        CollectionPool(std::initializer_list<value_type> list) : pool_{list} {}
+    using value_type = typename Collection<T>::value_type;
+    using allocator_type = typename Collection<T>::allocator_type;
+    using reference = typename Collection<T>::reference;
+    using const_reference = typename Collection<T>::const_reference;
+    using pointer = typename Collection<T>::pointer;
+    using const_pointer = typename Collection<T>::const_pointer;
+    using iterator = typename Collection<T>::iterator;
+    using const_iterator = typename Collection<T>::const_iterator;
+    //using reverse_iterator = typename Collection<T>::reverse_iterator;
+    //using const_reverse_iterator = typename Collection<T>::const_reverse_iterator;
+    using difference_type = typename Collection<T>::difference_type;
+    using size_type = typename Collection<T>::size_type;
 
-        //Capacity
-        bool empty() const { return pool_.empty(); }
-        size_type size() const { return pool_.size(); }
-        size_type max_size() const { return pool_.max_size(); }
-        void reserve(size_type new_cap) { pool_.reserve(new_cap); }
-        size_type capacity() const { return pool_.capacity(); }
-        void shrink_to_fit() { pool_.shrink_to_fit(); }
+    CollectionPool() = default;
+    explicit CollectionPool(size_type n, const value_type& v = value_type{}) : pool_(n, v) {}
+    CollectionPool(std::initializer_list<value_type> list) : pool_{list} {}
+
+    //Capacity
+    bool empty() const { return pool_.empty(); }
+    size_type size() const { return pool_.size(); }
+    size_type max_size() const { return pool_.max_size(); }
+    void reserve(size_type new_cap) { pool_.reserve(new_cap); }
+    size_type capacity() const { return pool_.capacity(); }
+    void shrink_to_fit() { pool_.shrink_to_fit(); }
+
     /*
         //Modifiers
         void clear() { pool_.clear(); }
@@ -64,60 +68,141 @@ class CollectionPool : public Collection<T>
         void resize(size_type count, const value_type& value);
         */
 
-		//Modifiers
-		void push_back(const T& value) 
-		{
-			pool_.push_back(value);
-		}
-		void push_back(T&& value)
-		{
-			pool_.push_back(std::move(value));
-		}
+    //Modifiers
+    void push_back(const T& value)
+    {
+        pool_.push_back(value);
+    }
+
+    void push_back(T&& value)
+    {
+        pool_.push_back(std::move(value));
+    }
 
 
-		//Iterators
-		iterator begin() override
-		{
-			return iterator(new PoolIterator<value_type>(pool_.data()));
-		}
+    //Iterators
+    iterator begin() override
+    {
+        return iterator(new PoolIterator<value_type>(pool_.data()));
+    }
 
-		iterator end() override
-		{
-			return iterator(new PoolIterator<value_type>(pool_.data()+pool_.size()));
-		}
+    const_iterator begin() const override
+    {
+        return  const_iterator(new ConstPoolIterator<value_type>(pool_.data()));
+    }
+
+	const_iterator cbegin() const override
+	{
+		return  const_iterator(new ConstPoolIterator<value_type>(pool_.data()));
+	}
+
+    iterator end() override
+    {
+        return iterator(new PoolIterator<value_type>(pool_.data() + pool_.size()));
+    }
+
+	const_iterator end() const override
+	{
+		return const_iterator(new ConstPoolIterator<value_type>(pool_.data() + pool_.size()));
+	}
+
+	const_iterator cend() const override
+	{
+		return const_iterator(new ConstPoolIterator<value_type>(pool_.data() + pool_.size()));
+	}
 
     private:
-        std::vector<value_type> pool_;
+    std::vector<value_type> pool_;
 };
 
 template<typename T>
 class PoolIterator : public IteratorBase<T>
 {
-    public: 
-        explicit PoolIterator(T* ptr) : ptr_{ptr} {}
-    
-        T& operator*() override //dereference operator
-        { return *ptr_; }
-        const T& operator*() const override //const dereference operator
-        { return *ptr_; }
-    
-        T* operator->() override //arrow operator
-        { return ptr_; }
-        const T* operator->() const override //const arrow operator
-        { return ptr_; }
-        
-        void operator++() override //pre-increment operator
-        { ++ptr_; }
-        void operator--() override //pre-decrement operator
-        { --ptr_; }
-        
-        IteratorBase<T>* clone() const override
-        { return new PoolIterator(ptr_); }
-        
-        bool equal(const IteratorBase<T>& rhs) const override
-        { return ptr_ == dynamic_cast<const PoolIterator&>(rhs).ptr_; }
-    
+    public:
+    explicit PoolIterator(T* ptr) : ptr_{ptr} {}
+
+    T& operator*() override //dereference operator
+    {
+        return *ptr_;
+    }
+
+    const T& operator*() const override //const dereference operator
+    {
+        return *ptr_;
+    }
+
+    T* operator->() override //arrow operator
+    {
+        return ptr_;
+    }
+
+    const T* operator->() const override //const arrow operator
+    {
+        return ptr_;
+    }
+
+    void operator++() override //pre-increment operator
+    {
+        ++ptr_;
+    }
+
+    void operator--() override //pre-decrement operator
+    {
+        --ptr_;
+    }
+
+    IteratorBase<T>* clone() const override
+    {
+        return new PoolIterator(ptr_);
+    }
+
+    bool equal(const IteratorBase<T>& rhs) const override
+    {
+        return ptr_ == dynamic_cast<const PoolIterator&>(rhs).ptr_;
+    }
+
     private:
-        T* ptr_;
+    T* ptr_;
 };
+
+template<typename T>
+class ConstPoolIterator : public ConstIteratorBase<T>
+{
+    public:
+    explicit ConstPoolIterator(const T* ptr) : ptr_{ptr} {}
+
+    const T& operator*() const override //const dereference operator
+    {
+        return *ptr_;
+    }
+
+    const T* operator->() const override //const arrow operator
+    {
+        return ptr_;
+    }
+
+    void operator++() override //pre-increment operator
+    {
+        ++ptr_;
+    }
+
+    void operator--() override //pre-decrement operator
+    {
+        --ptr_;
+    }
+
+    ConstIteratorBase<T>* clone() const override
+    {
+        return new ConstPoolIterator(ptr_);
+    }
+
+    bool equal(const ConstIteratorBase<T>& rhs) const override
+    {
+        return ptr_ == dynamic_cast<const ConstPoolIterator&>(rhs).ptr_;
+    }
+
+    private:
+    const T* ptr_;
+};
+
 #endif // !COLLECTION_POOL_HPP
