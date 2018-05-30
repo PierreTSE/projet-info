@@ -21,6 +21,7 @@ using img = cimg_library::CImg<unsigned char>;
 
 int main()
 {
+    
     // tests des const_iterator
     //CollectionPool<Image> collection2 = std::move(createPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)"));
     ////const auto& ref = collection2;
