@@ -6,6 +6,8 @@
 #include "ConsolePrototype/save.hpp"
 #include "FileDialog/FileDialog.hpp"
 #include "Image/Image.hpp"
+#include "Interface/ListWidget.hpp"
+#include "Interface/ScrollWidget.hpp"
 #include <chrono>
 #include <experimental/filesystem>
 #include <fstream>
@@ -157,6 +159,7 @@ int main()
 	getPoolFromDirectory(browseFolder(), collection);
 	//CollectionPool<Image> collection = getPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)");
 
+	
 
 	/*
 
@@ -271,12 +274,52 @@ int main()
 	//visu.fill('0','128','255','128','0');
 	visu.fill(0);
 	visu.draw_image(151,0,temp_img);
+	
+	ListWidget listTest(collection, 1000, 500);
+	ScrollWidget scrollTest(listTest, {1000, 500});
+	
+	auto render = scrollTest.render();
+	
+	main_disp.resize(1000, 500);
+    main_disp.display(render);
+	
+	int wheel = main_disp.wheel();
 
 	while (!main_disp.is_closed())
 	{
 		std::this_thread::sleep_for(10ms);		
+		if(main_disp.is_resized()) {
+            main_disp.resize(false);
+            scrollTest.resize({main_disp.width(), main_disp.height()});
+            std::cerr << "resize : " << main_disp.width() << ',' << main_disp.height() << std::endl;
+        }
+        
+        if(wheel != main_disp.wheel())
+        {
+            if(main_disp.is_keyCTRLLEFT() || main_disp.is_keyCTRLRIGHT())
+            {
+                // Zoom event
+                ZoomEvent e{main_disp.wheel() - wheel};
+                wheel = main_disp.wheel();
+                Event ev;
+                ev.first = dim_t{main_disp.mouse_x(), main_disp.mouse_y()};
+                ev.second = e;
+                scrollTest.propagateEvent(ev);
+            }
+            else
+            {
+                // Scroll event
+                ScrollEvent e{main_disp.wheel() - wheel};
+                wheel = main_disp.wheel();
+                Event ev;
+                ev.first = dim_t{main_disp.mouse_x(), main_disp.mouse_y()};
+                ev.second = e;
+                scrollTest.propagateEvent(ev);
+            }
+        }
+        main_disp.display(scrollTest.render());
 
-		main_disp.resize(visu).display(visu);
+		//main_disp.resize(render).display(render);
 
 	}	
 
@@ -368,9 +411,11 @@ int main()
                 break;
 
             case -1 :
-                quit = true;
-                auto savePath = getSaveFileName();
-                saveCollec(savePath, collection);
+				{
+					quit = true;
+					auto savePath = getSaveFileName();
+					saveCollec(savePath, collection);
+				}
                 break;
             default :
                 break;
