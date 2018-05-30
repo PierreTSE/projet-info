@@ -6,7 +6,7 @@
 
 namespace fs = std::experimental::filesystem;
 
-void saveCollec(const std::experimental::filesystem::path& savePath,Collection<Image>& collec)
+void saveCollec(const std::experimental::filesystem::path& savePath, const Collection<Image>& collec)
 {
     std::ofstream out(savePath);
     if(!out)
@@ -39,7 +39,7 @@ void saveCollec(const std::experimental::filesystem::path& savePath,Collection<I
 //}
 
 
-void updateCollec(const std::experimental::filesystem::path& loadPath, Collection<Image>& collec)
+void updateCollec(const std::experimental::filesystem::path& loadPath, const Collection<Image>& collec)
 {
     std::ifstream in(loadPath);
     if(!in)
