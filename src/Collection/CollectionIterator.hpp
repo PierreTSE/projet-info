@@ -142,7 +142,9 @@ class ConstCollectionIterator
 		using iterator_category = std::bidirectional_iterator_tag;
 		using value_type = T;
 		using const_pointer = const T*;
+		using pointer = const_pointer;
 		using const_reference = const T&;
+		using reference = const_reference;
 		using difference_type = std::ptrdiff_t;
 		using size_type = size_t;
 	
