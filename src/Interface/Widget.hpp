@@ -6,6 +6,13 @@
 #include <utility>
 
 
+/**
+ * \class Widget
+ * \brief API permettant la création d'une interface graphique
+ * 
+ * Cette classe représente le concept de Widget, qui constitue la brique élémentaire d'une interface graphique.
+ * TODO doc
+ */
 class Widget
 {
     public:
@@ -24,11 +31,13 @@ class Widget
 		virtual dim_t actualSize() const = 0;
 		virtual bool actualPropagateEvent(const Event& event) = 0;
 		virtual bool actualIsInside(const dim_t& pos) const;
+
         void needRedraw() const { needRedraw_ = true; if(parent_) parent_->needRedraw(); };
 
-    private:
-		Widget* parent_ = nullptr;
+		Widget * parent_ = nullptr;
 		mutable bool needRedraw_ = true;
+
+    private:		
 		mutable img cachedImg_;
 
 };
