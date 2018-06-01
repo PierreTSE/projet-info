@@ -1,8 +1,8 @@
 #include <cmath>
-#include "ListWidget.hpp"
+#include "GridWidget.hpp"
 
 
-void ListWidget::actualResize(const dim_t& size)
+void GridWidget::actualResize(const dim_t& size)
 {
     if(size.x != targetWidth_ || size.y != minHeight_)
     {
@@ -12,7 +12,7 @@ void ListWidget::actualResize(const dim_t& size)
     }
 }
 
-Widget::img ListWidget::actualRender() const
+Widget::img GridWidget::actualRender() const
 { 
     auto collec_size = std::distance(collec_.begin(), collec_.end());
     long long elem_per_row = targetWidth_ / elemSize_.x;
@@ -26,7 +26,7 @@ Widget::img ListWidget::actualRender() const
         for(int j = 0; j < elem_per_row && it != collec_.end(); ++j)
         {
             auto temp = img(*(it->getImgPtr()));
-            temp.resize(elemSize_.x, elemSize_.y, 1, 3, 5);
+            temp.resize(elemSize_.x, elemSize_.y, 1, 3, 2);
             rendered.draw_image(j*elemSize_.x, i*elemSize_.y, 0, 0, temp);
             ++it;
         }
@@ -35,7 +35,7 @@ Widget::img ListWidget::actualRender() const
     return rendered;
 }
 
-dim_t ListWidget::actualSize() const
+dim_t GridWidget::actualSize() const
 {
     auto collec_size = std::distance(collec_.begin(), collec_.end());
     long long elem_per_row = targetWidth_ / elemSize_.x;
@@ -44,7 +44,7 @@ dim_t ListWidget::actualSize() const
     return dim_t{targetWidth_, height};
 }
 
-bool ListWidget::actualPropagateEvent(const Event& event)
+bool GridWidget::actualPropagateEvent(const Event& event)
 {
     if(std::holds_alternative<ZoomEvent>(event.second)) {
         // TODO Faire des tests

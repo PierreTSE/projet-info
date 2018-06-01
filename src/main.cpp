@@ -6,7 +6,7 @@
 #include "ConsolePrototype/save.hpp"
 #include "FileDialog/FileDialog.hpp"
 #include "Image/Image.hpp"
-#include "Interface/ListWidget.hpp"
+#include "Interface/GridWidget.hpp"
 #include "Interface/ScrollWidget.hpp"
 #include "Utilities/Utilities.hpp"
 #include <chrono>
@@ -172,7 +172,7 @@ int main()
 	visu.fill(0);
 	visu.draw_image(151,0,temp_img);
 	
-	ListWidget listTest(collection, 1000, 500);
+	GridWidget listTest(collection, 1000, 500);
 	ScrollWidget scrollTest(listTest, {1000, 500});
 	
 	auto render = scrollTest.render();

@@ -44,14 +44,11 @@ bool ScrollWidget::actualPropagateEvent(const Event& event)
     if(content_->isInside(event.first - dim_t{0, -delta}))
         if(content_->propagateEvent(event))
             return true;
-        if(std::holds_alternative<ScrollEvent>(event.second)) {
-            std::cerr << "scroll :" << std::get<ScrollEvent>(event.second).amount << std::endl;
-
-            delta -= std::get<ScrollEvent>(event.second).amount * 15;
-            delta = std::clamp<int>(delta, 0, content_->size().y-size_.y);
-            needRedraw();
-            return true;
-        }
-        return false;
+    if(std::holds_alternative<ScrollEvent>(event.second)) {
+        delta -= std::get<ScrollEvent>(event.second).amount * 15;
+        delta = std::clamp<int>(delta, 0, content_->size().y-size_.y);
+        needRedraw();
+        return true;
+    }
     return false;
 }
