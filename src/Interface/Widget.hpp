@@ -10,9 +10,9 @@ class WindowWidget;
 
 /**
  * \class Widget
- * \brief API permettant la cr�ation d'une interface graphique
+ * \brief API permettant la création d'une interface graphique
  * 
- * Cette classe repr�sente le concept de Widget, qui constitue la brique �l�mentaire d'une interface graphique.
+ * Cette classe représente le concept de Widget, qui constitue la brique élémentaire d'une interface graphique.
  * TODO doc
  */
 class Widget

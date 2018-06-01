@@ -44,6 +44,11 @@ struct ZoomEvent
     int amount;
 };
 
+struct MoveEvent
+{
+    dim_t lastPos;
+};
+
 using Event = std::pair<dim_t, std::variant<ScrollEvent, ClickEvent, ZoomEvent>>;
 
 

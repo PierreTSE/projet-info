@@ -9,6 +9,8 @@ class WindowWidget : public Widget
     public:
         WindowWidget(Widget& content, dim_t size) : content_{&content}, size_{size} { content.setParent(this); content.resize(size); }
     
+        void manageEvents();
+    
     protected:
         img actualRender() const override;
         void actualResize(const dim_t& size) override;
@@ -20,6 +22,9 @@ class WindowWidget : public Widget
         dim_t size_;
         cimg_library::CimgDisplay window_;
         dim_t textPos_ = {0, 0};
+        dim_t lastMouse_;
+        int lastWheel_;
+        unsigned int lastButton_;
         
 };
 
