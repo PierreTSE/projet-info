@@ -6,11 +6,13 @@
 #include <utility>
 
 
+class WindowWidget;
+
 /**
  * \class Widget
- * \brief API permettant la création d'une interface graphique
+ * \brief API permettant la crï¿½ation d'une interface graphique
  * 
- * Cette classe représente le concept de Widget, qui constitue la brique élémentaire d'une interface graphique.
+ * Cette classe reprï¿½sente le concept de Widget, qui constitue la brique ï¿½lï¿½mentaire d'une interface graphique.
  * TODO doc
  */
 class Widget
@@ -34,10 +36,13 @@ class Widget
 
         void needRedraw() const { needRedraw_ = true; if(parent_) parent_->needRedraw(); };
 
-		Widget * parent_ = nullptr;
-		mutable bool needRedraw_ = true;
+        WindowWidget* getWindow() { return parent_ ? parent_->getWindow() : dynamic_cast<WindowWidget*>(this); }
+        const WindowWidget* getWindow() const { return parent_ ? parent_->getWindow() : dynamic_cast<WindowWidget*>(this); }
+    
+		Widget* parent_ = nullptr;
 
-    private:		
+    private:
+        mutable bool needRedraw_ = true;
 		mutable img cachedImg_;
 
 };

@@ -19,6 +19,16 @@ inline dim_t operator-(const dim_t& a, const dim_t& b)
     return dim_t{ a.x - b.x, a.y - b.y };
 }
 
+inline bool operator==(const dim_t& a, const dim_t& b)
+{
+    return (a.x == b.x && a.y == b.y);
+}
+
+inline bool operator!=(const dim_t& a, const dim_t& b)
+{
+    return !(a == b);
+}
+
 struct ScrollEvent
 {
     int amount;
