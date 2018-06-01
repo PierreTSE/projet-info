@@ -3,7 +3,12 @@
 
 ButtonWidget::img ButtonWidget::actualRender() const
 {
-	return img;
+	img render(size_.x, size_.y, 1, 3, 200);
+	size_t fontHeight = 13;
+	const unsigned char white[] = { 255, 255,255 }, grey[] = { 128,128,128 };
+	render.draw_text(1, size_.y / 2 - fontHeight, static_cast<const char* const>("mon bouton"), white, grey, 100, fontHeight);
+
+	return render;
 }
 
 void ButtonWidget::actualResize(const dim_t & size)
@@ -23,11 +28,11 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 	{
         if(std::get<ClickEvent>(event.second).type == ClickEvent::LEFT)
         {
-			std::cerr << "thomas est left méchant";
+			std::cerr << "thomas est left méchant" << std::endl;
         }
 		if (std::get<ClickEvent>(event.second).type == ClickEvent::RIGHT)
 		{
-			std::cerr << "thomas est right méchant";
+			std::cerr << "thomas est right méchant" << std::endl;
 		}
 		return true;
 	}

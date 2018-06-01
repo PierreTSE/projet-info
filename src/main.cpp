@@ -13,6 +13,7 @@
 #include <experimental/filesystem>
 #include <iostream>
 #include <thread>
+#include "Interface/ButtonWidget.hpp"
 
 namespace fs = std::experimental::filesystem;
 using namespace cimg_library;
@@ -21,30 +22,30 @@ using img = cimg_library::CImg<unsigned char>;
 
 int main()
 {
-    
-    // tests des const_iterator
-    //CollectionPool<Image> collection2 = std::move(createPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)"));
-    ////const auto& ref = collection2;
-    //const Collection<Image>& ref = collection2;
-    //const Collection<Image>* ptr = &collection2;
-    //const FilteredCollection<Image> fcollec(collection2, [](const Image& img) {return img.getImgPtr()->height()>img.getImgPtr()->width(); });
-    //int i = 0;
-    //for(const auto& img : ref)
-    //{
-		//cout << "ref" << i << endl; ++i;
-    //}
-    //i = 0;
-    //for (const auto& img : *ptr)
-    //{
-		//cout << "ptr" << i << endl; ++i;
-    //}
-    //i = 0;
-    //for (const auto& img : fcollec)
-    //{
-		//cout << "fcollec" << i << endl; ++i;
-    //}
 
-	
+	// tests des const_iterator
+	//CollectionPool<Image> collection2 = std::move(createPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)"));
+	////const auto& ref = collection2;
+	//const Collection<Image>& ref = collection2;
+	//const Collection<Image>* ptr = &collection2;
+	//const FilteredCollection<Image> fcollec(collection2, [](const Image& img) {return img.getImgPtr()->height()>img.getImgPtr()->width(); });
+	//int i = 0;
+	//for(const auto& img : ref)
+	//{
+		//cout << "ref" << i << endl; ++i;
+	//}
+	//i = 0;
+	//for (const auto& img : *ptr)
+	//{
+		//cout << "ptr" << i << endl; ++i;
+	//}
+	//i = 0;
+	//for (const auto& img : fcollec)
+	//{
+		//cout << "fcollec" << i << endl; ++i;
+	//}
+
+
 	//working directory
 	auto wd = fs::current_path();
 
@@ -56,7 +57,7 @@ int main()
 	auto collection = std::move(createPoolFromSave(getOpenFileName()));
 	importFromDirectory(browseFolder(), collection);
 
-	
+
 
 	/*
 
@@ -87,13 +88,13 @@ int main()
 
 	return 0;
 	//!tests parse
-	
+
 	//test affichage simpliste
 	*/
 	CImgList<unsigned char> list;
 	for (auto& img : collection)
 		list.push_back(*img.getImgPtr());
-	
+
 	//// img est une CImg<unsigned char>
 	//img windowImg(800U, 400U, 1U, 3U);
 	//windowImg.draw_image(10U, 10U, list[0]); //list est un vector de img
@@ -146,7 +147,7 @@ int main()
 	//}
 
 	//return 0;
-	
+
 
 	//! test affichage simpliste
 
@@ -157,25 +158,26 @@ int main()
 	const unsigned int window_height = 1080U;
 	const unsigned int window_width = 1920U;
 
-	CImgDisplay main_disp(window_width,window_height,"titre super bien");
+	CImgDisplay main_disp(window_width, window_height, "titre super bien");
 
 	static const double magick_ratio = 100 * 306 / 384;
 
-	img temp_img(0U,0,1,3U);
+	img temp_img(0U, 0, 1, 3U);
 	for (size_t i = 0; i < 5; i++)
 	{
-		temp_img.append(list[i].resize(-magick_ratio,-magick_ratio),'x',0.5f);
+		temp_img.append(list[i].resize(-magick_ratio, -magick_ratio), 'x', 0.5f);
 	}
 
 	img visu(1920, temp_img.height());
 	//visu.fill('0','128','255','128','0');
 	visu.fill(0);
-	visu.draw_image(151,0,temp_img);
-	
+	visu.draw_image(151, 0, temp_img);
+
 	GridWidget listTest(collection, 1000, 500);
-	ScrollWidget scrollTest(listTest, {1000, 500});
+	ScrollWidget scrollTest(listTest, { 1000, 500 });
+	ButtonWidget buttonTest(&scrollTest,{200, 200});
 	
-	auto render = scrollTest.render();
+	auto render = buttonTest.render();
 	
 	main_disp.resize(1000, 500);
     main_disp.display(render);
@@ -187,7 +189,7 @@ int main()
 		std::this_thread::sleep_for(10ms);		
 		if(main_disp.is_resized()) {
             main_disp.resize(false);
-            scrollTest.resize({main_disp.width(), main_disp.height()});
+            buttonTest.resize({main_disp.width(), main_disp.height()});
             std::cerr << "resize : " << main_disp.width() << ',' << main_disp.height() << std::endl;
         }
         
@@ -201,7 +203,7 @@ int main()
                 Event ev;
                 ev.first = dim_t{main_disp.mouse_x(), main_disp.mouse_y()};
                 ev.second = e;
-                scrollTest.propagateEvent(ev);
+                buttonTest.propagateEvent(ev);
             }
             else
             {
@@ -211,10 +213,10 @@ int main()
                 Event ev;
                 ev.first = dim_t{main_disp.mouse_x(), main_disp.mouse_y()};
                 ev.second = e;
-                scrollTest.propagateEvent(ev);
+                buttonTest.propagateEvent(ev);
             }
         }
-        main_disp.display(scrollTest.render());
+        main_disp.display(buttonTest.render());
 
 		//main_disp.resize(render).display(render);
 
