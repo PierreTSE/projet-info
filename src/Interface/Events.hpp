@@ -5,8 +5,8 @@
 
 struct dim_t
 {
-    long long x;
-    long long y;
+    long long x = 0;
+    long long y = 0;
 };
 
 inline dim_t operator+(const dim_t& a, const dim_t& b)
@@ -31,17 +31,19 @@ inline bool operator!=(const dim_t& a, const dim_t& b)
 
 struct ScrollEvent
 {
-    int amount;
+    int amount = 0;
 };
 
 struct ClickEvent
 {
-    dim_t pos;
-};
+	dim_t pos = { 0,0 };
+	enum type_t { LEFT, RIGHT };
+	type_t type;
+}
 
 struct ZoomEvent
 {
-    int amount;
+    int amount = 0;
 };
 
 struct MoveEvent
