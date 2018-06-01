@@ -1,6 +1,7 @@
 #include "ButtonWidget.hpp"
 #include <iostream>
 
+
 ButtonWidget::img ButtonWidget::actualRender() const
 {
 	return img;
@@ -23,11 +24,11 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 	{
         if(std::get<ClickEvent>(event.second).type == ClickEvent::LEFT)
         {
-			std::cerr << "thomas est left méchant";
+			std::cerr << "thomas est left mÃ©chant";
         }
 		if (std::get<ClickEvent>(event.second).type == ClickEvent::RIGHT)
 		{
-			std::cerr << "thomas est right méchant";
+			std::cerr << "thomas est right mÃ©chant";
 		}
 		return true;
 	}

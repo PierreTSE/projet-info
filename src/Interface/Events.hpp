@@ -36,10 +36,9 @@ struct ScrollEvent
 
 struct ClickEvent
 {
-	dim_t pos = { 0,0 };
-	enum type_t { LEFT, RIGHT };
+	enum type_t { LEFT, RIGHT, MIDDLE };
 	type_t type;
-}
+};
 
 struct ZoomEvent
 {

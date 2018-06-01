@@ -36,8 +36,8 @@ class Widget
 
         void needRedraw() const { needRedraw_ = true; if(parent_) parent_->needRedraw(); };
 
-        WindowWidget* getWindow() { return parent_ ? parent_->getWindow() : dynamic_cast<WindowWidget*>(this); }
-        const WindowWidget* getWindow() const { return parent_ ? parent_->getWindow() : dynamic_cast<WindowWidget*>(this); }
+        virtual WindowWidget* getWindow() { return parent_ ? parent_->getWindow() : nullptr; }
+        virtual const WindowWidget* getWindow() const { return parent_ ? parent_->getWindow() : nullptr; }
     
 		Widget* parent_ = nullptr;
 

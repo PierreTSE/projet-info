@@ -7,7 +7,7 @@
 class WindowWidget : public Widget
 {
     public:
-        WindowWidget(Widget& content, dim_t size) : content_{&content}, size_{size} { content.setParent(this); content.resize(size); }
+        WindowWidget(Widget& content, dim_t size);
     
         void manageEvents();
     
@@ -16,6 +16,9 @@ class WindowWidget : public Widget
         void actualResize(const dim_t& size) override;
         dim_t actualSize() const override { return size_; }
         bool actualPropagateEvent(const Event& event) override;
+
+        WindowWidget* getWindow() override { return this; }
+        const WindowWidget* getWindow() const override { return this; }
     
     private:
         Widget* content_ = nullptr;
