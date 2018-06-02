@@ -31,7 +31,7 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
         {
 			std::cerr << "thomas est left méchant" << std::endl;
         }
-		else if (std::get<ClickEvent>(event.second).type == ClickEvent::RIGHT)
+        else if (std::get<ClickEvent>(event.second).type == ClickEvent::RIGHT)
 		{
 			std::cerr << "thomas est right méchant" << std::endl;
 		}

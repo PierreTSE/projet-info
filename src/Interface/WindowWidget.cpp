@@ -1,3 +1,5 @@
+#include <iostream>
+#include <bitset>
 #include "WindowWidget.hpp"
 
 
@@ -38,11 +40,11 @@ void WindowWidget::manageEvents()
     dim_t mouse{window_.mouse_x(), window_.mouse_y()};
     if(mouse != lastMouse_)
         propagateEvent(Event{mouse, MoveEvent{lastMouse_}});
-    if(window_.button()&1 != lastButton_&1 && window_.button()&1)
+    if((window_.button()&1) != (lastButton_&1) && (window_.button()&1))
         propagateEvent(Event{mouse, ClickEvent{ClickEvent::LEFT}});
-    if(window_.button()&2 != lastButton_&2 && window_.button()&2)
+    if((window_.button()&2) != (lastButton_&2) && (window_.button()&2))
         propagateEvent(Event{mouse, ClickEvent{ClickEvent::RIGHT}});
-    if(window_.button()&4 != lastButton_&4 && window_.button()&4)
+    if((window_.button()&4) != (lastButton_&4) && (window_.button()&4))
         propagateEvent(Event{mouse, ClickEvent{ClickEvent::MIDDLE}});
     if(window_.wheel() != lastWheel_)
     {
@@ -51,6 +53,7 @@ void WindowWidget::manageEvents()
         else
             propagateEvent(Event{mouse, ScrollEvent{window_.wheel() - lastWheel_}});
     }
+
     
     lastMouse_ = mouse;
     lastButton_ = window_.button();
