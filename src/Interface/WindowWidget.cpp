@@ -9,7 +9,7 @@ WindowWidget::WindowWidget(Widget& content, dim_t size) :
     content.setParent(this);
     content.resize(size);
     lastWheel_ = window_.wheel();
-    lastButton_ = window_.bitton();
+    lastButton_ = window_.button();
     lastMouse_ = dim_t{window_.mouse_x(), window_.mouse_y()};
 }
 
@@ -49,10 +49,16 @@ void WindowWidget::manageEvents()
         if(window_.is_keyCTRLLEFT() || window_.is_keyCTRLRIGHT())
             propagateEvent(Event{mouse, ZoomEvent{window_.wheel() - lastWheel_}});
         else
-            propagateEvent(Event{mouse, ZoomEvent{window_.wheel() - lastWheel_}});
+            propagateEvent(Event{mouse, ScrollEvent{window_.wheel() - lastWheel_}});
     }
     
     lastMouse_ = mouse;
     lastButton_ = window_.button();
     lastWheel_ = window_.wheel();
+    
+    if(window_.is_resized())
+    {
+        window_.resize();
+        resize({window_.window_width(), window_.window_height()});
+    }
 }

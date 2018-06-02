@@ -2,10 +2,9 @@
 #define MENUBARWIDGET_HPP
 
 #include "Widget.hpp"
+#include "ButtonWidget.hpp"
 #include <vector>
 
-
-class ButtonWidget;
 
 class MenuBarWidget :public Widget
 {

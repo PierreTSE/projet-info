@@ -14,6 +14,8 @@
 #include <iostream>
 #include <thread>
 #include "Interface/ButtonWidget.hpp"
+#include "Interface/WindowWidget.hpp"
+
 
 namespace fs = std::experimental::filesystem;
 using namespace cimg_library;
@@ -148,12 +150,28 @@ int main()
 
 	//return 0;
 
+    GridWidget listTest(collection, 1000, 500);
+    ScrollWidget scrollTest(listTest, { 1000, 500 });
+    ButtonWidget buttonTest(&scrollTest,{200, 200});
+    
+    WindowWidget window(buttonTest, { 1000, 5000 });
+    
+    while(window.is_open())
+    {
+        window.manageEvents();
+        window.display();
+        std::this_thread::sleep_for(10ms);
+    }
+    
+    return 0;
 
 	//! test affichage simpliste
 
 	//TODO POURQUOI les images sont plus grandes ??
 
 	//test affichage une ligne automatique
+    
+    
 
 	const unsigned int window_height = 1080U;
 	const unsigned int window_width = 1920U;
@@ -173,9 +191,6 @@ int main()
 	visu.fill(0);
 	visu.draw_image(151, 0, temp_img);
 
-	GridWidget listTest(collection, 1000, 500);
-	ScrollWidget scrollTest(listTest, { 1000, 500 });
-	ButtonWidget buttonTest(&scrollTest,{200, 200});
 	
 	auto render = buttonTest.render();
 	

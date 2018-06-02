@@ -10,6 +10,8 @@ class WindowWidget : public Widget
         WindowWidget(Widget& content, dim_t size);
     
         void manageEvents();
+        bool is_open() const { return !window_.is_closed(); }
+        void display() { window_.display(render()); }
     
     protected:
         img actualRender() const override;
@@ -23,7 +25,7 @@ class WindowWidget : public Widget
     private:
         Widget* content_ = nullptr;
         dim_t size_;
-        cimg_library::CimgDisplay window_;
+        cimg_library::CImgDisplay window_;
         dim_t textPos_ = {0, 0};
         dim_t lastMouse_;
         int lastWheel_;
