@@ -15,22 +15,27 @@ using img = cimg_library::CImg<unsigned char>;
 CollectionPool<Image> createPoolFromSave(const fs::path& savePath)
 {
 	CollectionPool<Image> collectionPool;
-
-	if (fs::exists(savePath) && fs::is_regular_file(savePath) && savePath.extension() == ".txt")
+	if (fs::exists(savePath) && fs::is_regular_file(savePath))
 	{
-		std::ifstream in(savePath);
-		if (!in)
-			throw std::runtime_error("Impossible de lire le fichier.");
-
-		Image image;
-		while (in >> image) //charge le path_ et la tagList_ par l'automate de l'opérateur surchargé >>
+		if (savePath.extension() == ".txt")
 		{
-			image.loadImage(); //charge la CImg
-			collectionPool.push_back(std::move(image));
+			std::ifstream in(savePath);
+			if (!in)
+				throw std::runtime_error("Impossible de lire le fichier.");
+
+			Image image;
+			while (in >> image) //charge le path_ et la tagList_ par l'automate de l'opérateur surchargé >>
+			{
+				image.loadImage(); //charge la CImg
+				collectionPool.push_back(std::move(image));
+			}
 		}
 	}
-
-	return collectionPool;
+	else
+	{
+		throw std::runtime_error("Path in parameter does not refer to a valid save file.");
+	}
+    return collectionPool;
 }
 
 /** @fn createPoolFromDirectory
@@ -43,7 +48,7 @@ CollectionPool<Image> createPoolFromSave(const fs::path& savePath)
 CollectionPool<Image> createPoolFromDirectory(const fs::path& directoryPath)
 {
 	if (!is_directory(directoryPath))
-		throw std::runtime_error("Parameter is not a directory.");
+		throw std::runtime_error("Path in parameter does not refer to a valid directory.");
 
 	CollectionPool<Image> collectionPool;
 

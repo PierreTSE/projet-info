@@ -6,15 +6,16 @@
 #include "ConsolePrototype/save.hpp"
 #include "FileDialog/FileDialog.hpp"
 #include "Image/Image.hpp"
+#include "Interface/ButtonWidget.hpp"
 #include "Interface/GridWidget.hpp"
 #include "Interface/ScrollWidget.hpp"
+#include "Interface/WindowWidget.hpp"
 #include "Utilities/Utilities.hpp"
+#include "system_target.hpp"
 #include <chrono>
 #include <experimental/filesystem>
 #include <iostream>
 #include <thread>
-#include "Interface/ButtonWidget.hpp"
-#include "Interface/WindowWidget.hpp"
 
 
 namespace fs = std::experimental::filesystem;
@@ -24,137 +25,29 @@ using img = cimg_library::CImg<unsigned char>;
 
 int main()
 {
-
-	// tests des const_iterator
-	//CollectionPool<Image> collection2 = std::move(createPoolFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test)"));
-	////const auto& ref = collection2;
-	//const Collection<Image>& ref = collection2;
-	//const Collection<Image>* ptr = &collection2;
-	//const FilteredCollection<Image> fcollec(collection2, [](const Image& img) {return img.getImgPtr()->height()>img.getImgPtr()->width(); });
-	//int i = 0;
-	//for(const auto& img : ref)
-	//{
-		//cout << "ref" << i << endl; ++i;
-	//}
-	//i = 0;
-	//for (const auto& img : *ptr)
-	//{
-		//cout << "ptr" << i << endl; ++i;
-	//}
-	//i = 0;
-	//for (const auto& img : fcollec)
-	//{
-		//cout << "fcollec" << i << endl; ++i;
-	//}
-
-
-	//working directory
-	auto wd = fs::current_path();
+	auto wd = fs::current_path(); //working directory
 
 	TagList possibleTags;
 	fs::path tagsPath = "tags.txt";
+
+#ifdef WINDOWS
+	if (fs::exists(tagsPath))
+		auto possibleTags = loadTagList(tagsPath);
+	auto collection = std::move(createPoolFromSave(R"(D:\_Télécom Saint-Etienne\_Projets\mini projet\Dossier test\00save.txt)"));
+	//importFromDirectory(R"(D:\_Télécom Saint-Etienne\_Projets\\mini projet\Dossier test)", collection);
+#endif
+#ifndef WINDOWS
 	if (fs::exists(tagsPath))
 		possibleTags = loadTagList(tagsPath);
-
 	auto collection = std::move(createPoolFromSave(getOpenFileName()));
-	importFromDirectory(browseFolder(), collection);
-
-
-
-	/*
-
-	// tests parse
-
-	std::ifstream saveStream(wd / "save.txt");
-
-	//string str;
-	//char c;
-	//while (!saveStream.eof())
-	//{
-	//	c = saveStream.get();
-	//	str += c;
-	//}
-
-	//std::string str;
-	//std::getline(saveStream, str, ';');
-	//std::cout << str << std::endl;
-	//std::getline(saveStream, str, ';');
-	//std::cout << str << std::endl;
-	//std::getline(saveStream, str, ';');
-	//std::cout << str << std::endl;
-
-
-	Image i1, i2, i3, i4, i5;
-
-	saveStream >> i1 >> i2 >> i3 >> i4 >> i5;
-
-	return 0;
-	//!tests parse
-
-	//test affichage simpliste
-	*/
-	CImgList<unsigned char> list;
-	for (auto& img : collection)
-		list.push_back(*img.getImgPtr());
-
-	//// img est une CImg<unsigned char>
-	//img windowImg(800U, 400U, 1U, 3U);
-	//windowImg.draw_image(10U, 10U, list[0]); //list est un vector de img
-	//img temp_img(list[0]);
-	//temp_img.resize(300U, 300U);
-	//windowImg.draw_image(300U, 10U, temp_img);
-
-	//CImgDisplay my_main_disp(windowImg.width(), windowImg.height(), "204*306",true);
-
-	////while(!my_main_disp.is_closed())
-	////	my_main_disp.display(windowImg);
-
-
-	//my_main_disp.resize(204, 306);
-	////HACK rapport (256/204=1.2549,384/306=1.2549)
-
-	//CImgDisplay disp2(256, 384, "256*384");
-
-	//while (1)
-	//{
-	//	my_main_disp.display(list[0]);
-	//	disp2.display(list[0]);
-	//}
-
-	//return 0;
-
-	//while (!my_main_disp.is_closed())
-	//{
-	//	std::this_thread::sleep_for(100ms);
-
-	//	if (my_main_disp.is_resized())
-	//	{
-	//		my_main_disp.resize(false).display(windowImg);
-	//		cout << "resized widht =" << my_main_disp.width() << " height = " << my_main_disp.height() << endl;
-
-	//		
-	//		//windowImg = windowImg_copy;
-	//		//windowImg.resize(my_main_disp);
-	//		//my_main_disp.display(windowImg);
-	//	}
-
-	//	if (my_main_disp.is_keyR())
-	//	{
-	//		my_main_disp.resize(1920,1080);
-	//		my_main_disp.toggle_fullscreen(false).display(windowImg);
-	//	}
-
-
-
-	//}
-
-	//return 0;
+	//importFromDirectory(browseFolder(), collection);
+#endif
 
     GridWidget listTest(collection, 1000, 500);
     ScrollWidget scrollTest(listTest, { 1000, 500 });
-    ButtonWidget buttonTest(&scrollTest,{200, 200});
+    ButtonWidget buttonTest(scrollTest, {100, 100}, "clique pour savoir comment est thomas");
     
-    WindowWidget window(buttonTest, { 1000, 5000 });
+    WindowWidget window(buttonTest, { 300, 300 });
     
     while(window.is_open())
     {
@@ -163,86 +56,11 @@ int main()
         std::this_thread::sleep_for(10ms);
     }
     
-    return 0;
+    return 0;  
 
-	//! test affichage simpliste
+    //---------------------------------------------------------------------------------------------------------------
+    //menu console prototype
 
-	//TODO POURQUOI les images sont plus grandes ??
-
-	//test affichage une ligne automatique
-    
-    
-
-	const unsigned int window_height = 1080U;
-	const unsigned int window_width = 1920U;
-
-	CImgDisplay main_disp(window_width, window_height, "titre super bien");
-
-	static const double magick_ratio = 100 * 306 / 384;
-
-	img temp_img(0U, 0, 1, 3U);
-	for (size_t i = 0; i < 5; i++)
-	{
-		temp_img.append(list[i].resize(-magick_ratio, -magick_ratio), 'x', 0.5f);
-	}
-
-	img visu(1920, temp_img.height());
-	//visu.fill('0','128','255','128','0');
-	visu.fill(0);
-	visu.draw_image(151, 0, temp_img);
-
-	
-	auto render = buttonTest.render();
-	
-	main_disp.resize(1000, 500);
-    main_disp.display(render);
-	
-	int wheel = main_disp.wheel();
-
-	while (!main_disp.is_closed())
-	{
-		std::this_thread::sleep_for(10ms);		
-		if(main_disp.is_resized()) {
-            main_disp.resize(false);
-            buttonTest.resize({main_disp.width(), main_disp.height()});
-            std::cerr << "resize : " << main_disp.width() << ',' << main_disp.height() << std::endl;
-        }
-        
-        if(wheel != main_disp.wheel())
-        {
-            if(main_disp.is_keyCTRLLEFT() || main_disp.is_keyCTRLRIGHT())
-            {
-                // Zoom event
-                ZoomEvent e{main_disp.wheel() - wheel};
-                wheel = main_disp.wheel();
-                Event ev;
-                ev.first = dim_t{main_disp.mouse_x(), main_disp.mouse_y()};
-                ev.second = e;
-                buttonTest.propagateEvent(ev);
-            }
-            else
-            {
-                // Scroll event
-                ScrollEvent e{main_disp.wheel() - wheel};
-                wheel = main_disp.wheel();
-                Event ev;
-                ev.first = dim_t{main_disp.mouse_x(), main_disp.mouse_y()};
-                ev.second = e;
-                buttonTest.propagateEvent(ev);
-            }
-        }
-        main_disp.display(buttonTest.render());
-
-		//main_disp.resize(render).display(render);
-
-	}	
-
-	return 0;
-
-	
-
-	
-    
     bool quit = false;
     
     while(!quit) {
