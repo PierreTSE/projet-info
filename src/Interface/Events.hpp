@@ -36,8 +36,8 @@ struct ScrollEvent
 
 struct ClickEvent
 {
-	enum type_t { LEFT, RIGHT, MIDDLE };
-	type_t type;
+	enum mouseButton_t { LEFT, MIDDLE, RIGHT };
+	mouseButton_t type;
 };
 
 struct ZoomEvent
@@ -50,7 +50,14 @@ struct MoveEvent
     dim_t lastPos;
 };
 
-using Event = std::pair<dim_t, std::variant<ScrollEvent, ClickEvent, ZoomEvent, MoveEvent>>;
 
+/**
+ * \brief Contient une union d'événements et la position de la souris quand l'un d'eux se produit
+ */
+struct Event
+{
+	dim_t pos;
+	std::variant<ScrollEvent, ClickEvent, ZoomEvent, MoveEvent> event;
+};
 
 #endif //EVENTS_HPP

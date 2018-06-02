@@ -15,6 +15,9 @@ class ListWidget : public Widget
 	    bool actualPropagateEvent(const Event& event) override;
 	    bool actualIsInside(const dim_t& pos) const override;
 
+    private:
+		dim_t size_;
+
 
 };
 #endif // LISTWIDGET_HPP

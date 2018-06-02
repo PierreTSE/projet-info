@@ -11,12 +11,13 @@ class MenuBarWidget :public Widget
     public:
 		MenuBarWidget() = default;
 
-    private:
+    protected:
         img actualRender() const override;
 		void actualResize(const dim_t& size) override;
 		dim_t actualSize() const override { return size_; }
         bool actualPropagateEvent(const Event& event) override;
 
+    private:
 		dim_t size_;
 		Widget* content_ = nullptr;
 		size_t delta;

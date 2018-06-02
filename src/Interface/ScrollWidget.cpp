@@ -9,7 +9,7 @@ void ScrollWidget::actualResize(const dim_t& size)
     content_->resize(size);
     if(content_->size().y > size.y)
         content_->resize(size - dim_t{scrollBarWidth, 0});
-    needRedraw();
+    callRedraw();
 }
 
 dim_t ScrollWidget::actualSize() const
@@ -41,13 +41,13 @@ Widget::img ScrollWidget::actualRender() const
 
 bool ScrollWidget::actualPropagateEvent(const Event& event)
 {
-    if(content_->isInside(event.first - dim_t{0, -delta}))
+    if(content_->isInside(event.pos - dim_t{0, -delta}))
         if(content_->propagateEvent(event))
             return true;
-    if(std::holds_alternative<ScrollEvent>(event.second)) {
-        delta -= std::get<ScrollEvent>(event.second).amount * 15;
+    if(std::holds_alternative<ScrollEvent>(event.event)) {
+        delta -= std::get<ScrollEvent>(event.event).amount * 15;
         delta = std::clamp<int>(delta, 0, content_->size().y-size_.y);
-        needRedraw();
+        callRedraw();
         return true;
     }
     return false;

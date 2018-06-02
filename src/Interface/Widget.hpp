@@ -34,7 +34,7 @@ class Widget
 		virtual bool actualPropagateEvent(const Event& event) = 0;
 		virtual bool actualIsInside(const dim_t& pos) const;
 
-        void needRedraw() const { needRedraw_ = true; if(parent_) parent_->needRedraw(); };
+        void callRedraw() const { needRedraw_ = true; if(parent_) parent_->callRedraw(); };
 
         virtual WindowWidget* getWindow() { return parent_ ? parent_->getWindow() : nullptr; }
         virtual const WindowWidget* getWindow() const { return parent_ ? parent_->getWindow() : nullptr; }

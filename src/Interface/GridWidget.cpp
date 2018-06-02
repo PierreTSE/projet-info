@@ -8,7 +8,7 @@ void GridWidget::actualResize(const dim_t& size)
     {
         targetWidth_ = size.x;
         minHeight_ = size.y;
-        needRedraw();
+        callRedraw();
     }
 }
 
@@ -46,11 +46,11 @@ dim_t GridWidget::actualSize() const
 
 bool GridWidget::actualPropagateEvent(const Event& event)
 {
-    if(std::holds_alternative<ZoomEvent>(event.second)) {
+    if(std::holds_alternative<ZoomEvent>(event.event)) {
         // TODO Faire des tests
-        int amount = std::get<ZoomEvent>(event.second).amount * 10;
+        int amount = std::get<ZoomEvent>(event.event).amount * 10;
         elemSize_ = elemSize_ + dim_t{amount, amount};
-        needRedraw();
+        callRedraw();
         return true;
     }
     return false;

@@ -1,5 +1,3 @@
-#include <iostream>
-#include <bitset>
 #include "WindowWidget.hpp"
 
 
@@ -25,7 +23,7 @@ void WindowWidget::actualResize(const dim_t& size)
 {
     if(size != size_) {
         size_ = size;
-        needRedraw();
+        callRedraw();
         content_->resize(size);
     }
 }
