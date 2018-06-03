@@ -1,5 +1,5 @@
-#ifndef LISTWIDGET_HPP
-#define LISTWIDGET_HPP
+#ifndef GRIDWIDGET_HPP
+#define GRIDWIDGET_HPP
 
 #include "Widget.hpp"
 #include "../Collection/Collection.hpp"
@@ -25,5 +25,4 @@ class GridWidget : public Widget
         dim_t elemSize_;
 };
 
-
-#endif //LISTWIDGET_HPP
+#endif //GRIDWIDGET_HPP

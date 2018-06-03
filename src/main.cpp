@@ -8,6 +8,7 @@
 #include "Image/Image.hpp"
 #include "Interface/ButtonWidget.hpp"
 #include "Interface/GridWidget.hpp"
+#include "Interface/ListWidget.hpp"
 #include "Interface/ScrollWidget.hpp"
 #include "Interface/WindowWidget.hpp"
 #include "Utilities/Utilities.hpp"
@@ -43,11 +44,24 @@ int main()
 	//importFromDirectory(browseFolder(), collection);
 #endif
 
-    GridWidget listTest(collection, 1000, 500);
-    ScrollWidget scrollTest(listTest, { 1000, 500 });
-    ButtonWidget buttonTest(scrollTest, {100, 100}, "clique pour savoir comment est thomas");
+    GridWidget gridTest(collection, 1000, 500);
+    ScrollWidget scrollTest(gridTest, { 1000, 500 });
+    ButtonWidget buttonTest("clique pour savoir comment est thomas");
+	const vector<string> texts = { "bouton 1","bouton 2", "bouton higfyo"," vfvz \\\"evb  azreb" };
+	ListWidget listTest(texts,true);
     
-    WindowWidget window(buttonTest, { 300, 300 });
+    WindowWidget window(buttonTest, { 800, 800 });
+
+	const img imageTest = listTest.render();
+
+
+	CImgDisplay main_disp(imageTest.width(),imageTest.height(),"prout");
+    while(!main_disp.is_closed())
+    {
+		main_disp.display(imageTest);
+    }
+
+	return 0;
     
     while(window.is_open())
     {

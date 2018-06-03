@@ -3,7 +3,6 @@
 
 #include "../CImg.h"
 #include "Events.hpp"
-#include <utility>
 
 
 class WindowWidget;

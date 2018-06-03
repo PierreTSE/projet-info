@@ -1,15 +1,18 @@
 #include "ButtonWidget.hpp"
 #include <iostream>
 
-ButtonWidget::ButtonWidget(Widget& content, const dim_t& size, const std::string& text) : 
-    content_{ &content },
+ButtonWidget::ButtonWidget(const std::string& text, const dim_t& fontSize, const dim_t& size) :
     size_{ size },
-    text_{text}
+    text_{text},
+    fontSize_{fontSize}
 {
-	if (size.x < 13 * fontSize_)
-		size_.x = 13 * fontSize_ + 1;
-	content_->resize(size_);
-    content_->setParent(this);
+	if (size.y < fontSize_.y)
+		size_.y = fontSize_.y;
+	if (size.x < text.length() * fontSize_.x)
+	{
+		size_.x = text.length() * fontSize_.x + 1;
+		std::cerr << "ButtonWidget construction : adapted width to text lenght :" << text << std::endl;
+	}
 }
 
 ButtonWidget::img ButtonWidget::actualRender() const
@@ -24,11 +27,11 @@ ButtonWidget::img ButtonWidget::actualRender() const
         //TODO couleur de police		
         //render.draw_text(1, size_.y / 2 - fontSize_, static_cast<const char* const>(text_.c_str()), testColor, backblue, 100, fontSize_);
         //HACK pas de hover
-		render.draw_text(1, size_.y / 2 - fontSize_, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_);
+		render.draw_text(1, size_.y - fontSize_.y, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_.x);
     }
 	else
 	{
-		render.draw_text(1, size_.y / 2 - fontSize_, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_);
+		render.draw_text(1, size_.y - fontSize_.y, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_.x);
 	}
 
 	return render;
@@ -37,15 +40,14 @@ ButtonWidget::img ButtonWidget::actualRender() const
 void ButtonWidget::actualResize(const dim_t & size)
 {
 	size_ = size;
-	content_->resize(size);
 	callRedraw();
 }
 
 bool ButtonWidget::actualPropagateEvent(const Event& event)
 {
-	if (content_->isInside(event.pos))
-		if (content_->propagateEvent(event))
-			return true;
+	//if (content_->isInside(event.pos))
+	//	if (content_->propagateEvent(event))
+	//		return true;
 
 	if (std::holds_alternative<ClickEvent>(event.event))
 	{
@@ -57,16 +59,21 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 				std::cerr << "thomas est left méchant" << std::endl;
 				is_clicked = true;
 				callRedraw();
-				content_->propagateEvent(event);
-				return true;
+				if (!execute(ClickEvent::LEFT)) throw std::runtime_error("Button could not left click.");
 			}
-			else if (std::get<ClickEvent>(event.event).type == ClickEvent::RIGHT)
+			else if (std::get<ClickEvent>(event.event).type == ClickEvent::MIDDLE)
 			{
-				std::cerr << "thomas est right méchant" << std::endl;
+				std::cerr << "thomas est middle méchant" << std::endl;
+				is_clicked = true;
+				callRedraw();
+				if (!execute(ClickEvent::MIDDLE)) throw std::runtime_error("Button could not middle click.");
 			}
 			else
 			{
-				std::cerr << "thomas est middle méchant" << std::endl;
+				std::cerr << "thomas est right méchant" << std::endl;
+				is_clicked = true;
+				callRedraw();
+				if (!execute(ClickEvent::RIGHT)) throw std::runtime_error("Button could not right click.");
 			}
 			return true;
 		}
@@ -88,4 +95,10 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 	}
 
 	return false;
+}
+
+bool ButtonWidget::execute(ClickEvent::mouseButton_t)
+{
+    std::cerr << "Button with no function executed." << std::endl;
+	return true;
 }
