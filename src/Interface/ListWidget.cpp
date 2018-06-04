@@ -69,9 +69,9 @@ bool ListWidget::actualPropagateEvent(const Event & event)
 {
     if(isInside(event.pos))
     {
-		int* buttonNumber = nullptr;
-		std::remquo(event.pos.y, fontSize_.y, buttonNumber);
-    	return buttons_[*buttonNumber].propagateEvent(event);
+		int buttonNumber;
+		std::remquo(event.pos.y, fontSize_.y, &buttonNumber);
+    	return buttons_[buttonNumber].propagateEvent(event);
     }
 	return false;
 }

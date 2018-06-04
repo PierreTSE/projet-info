@@ -50,7 +50,7 @@ int main()
 	const vector<string> texts = { "bouton 1","bouton 2", "bouton higfyo"," vfvz \\\"evb  azreb" };
 	ListWidget listTest(texts,true);
     
-    WindowWidget window(buttonTest, { 800, 800 });
+    WindowWidget window(listTest, { 800, 800 });
 
     
     while(window.is_open())
