@@ -25,13 +25,13 @@ ButtonWidget::img ButtonWidget::actualRender() const
     if(is_hovered && !is_clicked)
     {
         //TODO couleur de police		
-        //render.draw_text(1, size_.y / 2 - fontSize_, static_cast<const char* const>(text_.c_str()), testColor, backblue, 100, fontSize_);
+        render.draw_text(0, size_.y/2 - fontSize_.y, static_cast<const char* const>(text_.c_str()), white, backblue, 100, fontSize_.x);
         //HACK pas de hover
-		render.draw_text(1, size_.y - fontSize_.y, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_.x);
+		//render.draw_text(1, size_.y - fontSize_.y, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_.x);
     }
 	else
 	{
-		render.draw_text(1, size_.y - fontSize_.y, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_.x);
+		render.draw_text(0, size_.y/2 - fontSize_.y, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_.x);
 	}
 
 	return render;

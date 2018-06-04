@@ -46,10 +46,7 @@ ListWidget::img ListWidget::actualRender() const
     {
 		for (size_t i = 0; i < buttons_.size(); i++)
 		{
-			render.draw_image(0, fontSize_.y * i, 1, 3, buttons_[i].render());
-			cimg_library::CImgDisplay disp(buttons_[i].render()); //HACK TODO
-			cimg_library::CImgDisplay disp2(render.draw_image(1, fontSize_.y * i, 1, 3, buttons_[i].render()));
-			disp.wait(100000);
+			render.draw_image(0, fontSize_.y * i, 0, 0, buttons_[i].render());
 		}
     }
 	else

@@ -52,16 +52,6 @@ int main()
     
     WindowWidget window(buttonTest, { 800, 800 });
 
-	const img imageTest = listTest.render();
-
-
-	CImgDisplay main_disp(imageTest.width(),imageTest.height(),"prout");
-    while(!main_disp.is_closed())
-    {
-		main_disp.display(imageTest);
-    }
-
-	return 0;
     
     while(window.is_open())
     {
