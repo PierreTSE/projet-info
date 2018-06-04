@@ -9,7 +9,7 @@
 class ListWidget : public Widget
 {
     public:
-		ListWidget(const std::vector<std::string>& texts, bool column = false, const dim_t& fontSize = { 13,13 }, const dim_t& size = { 0,0 });
+		ListWidget(const std::vector<std::string>& texts, bool column = false, const dim_t& fontSize = { 23,0 }, const dim_t& size = { 0,0 });
 
     protected:
 	    img actualRender() const override;
@@ -21,6 +21,6 @@ class ListWidget : public Widget
 		dim_t size_;
 		std::vector<ButtonWidget> buttons_;
 		bool column_ = false;
-		dim_t fontSize_ = { 13,13 };
+		const dim_t fontSize_;
 };
 #endif // LISTWIDGET_HPP

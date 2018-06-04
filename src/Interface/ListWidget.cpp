@@ -11,15 +11,16 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, bool column, const
     {
 		const std::string widestText = *std::max_element(texts.begin(), texts.end(), [](std::string str1, std::string str2) {return str1.size() < str2.size(); });
 		if (size.x < fontSize.x * widestText.length())
-			size_.x = fontSize_.x * widestText.length() + 1;
+			size_.x = fontSize_.x * widestText.length();
 
 		if (size.y < fontSize.y * texts.size())
-			size_.y = fontSize.y * texts.size() + 1;
+			size_.y = fontSize.y * texts.size();
 		std::cerr << "ListWidget column construction : adapted width to text lenght:" << widestText << std::endl;
 
 		for (const auto& str : texts)
 		{
-			buttons_.emplace_back(str, fontSize_);
+			buttons_.emplace_back(str, fontSize_.x);
+			buttons_.back().setParent(this);
 		}
     }
 	else
@@ -30,8 +31,9 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, bool column, const
 		size_t lineSize = 0;
 		for (const auto& str : texts)
 		{
-			buttons_.emplace_back(str, fontSize_);
+			buttons_.emplace_back(str, fontSize_.x);
 			lineSize += str.length() * fontSize_.x + 1;
+			buttons_.back().setParent(this);
 		}
 		if (size_.x < lineSize)
 			size_.x = lineSize;
@@ -62,16 +64,37 @@ ListWidget::img ListWidget::actualRender() const
 	return render;
 }
 
-void ListWidget::actualResize(const dim_t & size)
+void ListWidget::actualResize(const dim_t& size)
 {}
 
-bool ListWidget::actualPropagateEvent(const Event & event)
+bool ListWidget::actualPropagateEvent(const Event& event)
 {
-    if(isInside(event.pos))
+	if (std::holds_alternative<MoveEvent>(event.event))
+	{
+		std::cerr << event.pos.x << "  " << event.pos.y << std::endl;
+		if (column_)
+		{
+			for (auto& button : buttons_)
+			{
+				const int buttonNumber = event.pos.y / fontSize_.y;
+				const Event event_offset = { { event.pos.x , event.pos.y }, event.event };
+				if (button.propagateEvent(event_offset)) return true;
+			}
+			return false;
+		}
+		else throw std::runtime_error("todo"); //TODO line
+	}
+
+    if(isInside(event.pos) && std::holds_alternative<ClickEvent>(event.event))
     {
-		int buttonNumber;
-		std::remquo(event.pos.y, fontSize_.y, &buttonNumber);
-    	return buttons_[buttonNumber].propagateEvent(event);
+		if (column_)
+		{
+			const int buttonNumber = event.pos.y / fontSize_.y;
+			const Event event_offset = { {event.pos.x,event.pos.y - fontSize_.y*buttonNumber},event.event };
+			return buttons_[buttonNumber].propagateEvent(event_offset);
+		}
+		else throw std::runtime_error("todo"); //TODO line
     }
+
 	return false;
 }

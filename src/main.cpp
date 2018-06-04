@@ -47,11 +47,11 @@ int main()
     GridWidget gridTest(collection, 1000, 500);
     ScrollWidget scrollTest(gridTest, { 1000, 500 });
     ButtonWidget buttonTest("clique pour savoir comment est thomas");
-	const vector<string> texts = { "bouton 1","bouton 2", "bouton higfyo"," vfvz \\\"evb  azreb" };
+	const vector<string> texts = { "bouton 1", "bouton higfyo"," vfvz \\\"evb  azreb" };
 	ListWidget listTest(texts,true);
     
-    WindowWidget window(listTest, { 800, 800 });
-
+    //WindowWidget window(listTest, { listTest.size().x, listTest.size().y });
+	WindowWidget window(buttonTest, { buttonTest.size().x,buttonTest.size().y });
     
     while(window.is_open())
     {

@@ -1,16 +1,23 @@
 #include "ButtonWidget.hpp"
 #include <iostream>
 
-ButtonWidget::ButtonWidget(const std::string& text, const dim_t& fontSize, const dim_t& size) :
+ButtonWidget::ButtonWidget(const std::string& text, const int& fontSize, const dim_t& size) :
     size_{ size },
     text_{text},
     fontSize_{fontSize}
 {
-	if (size.y < fontSize_.y)
-		size_.y = fontSize_.y;
-	if (size.x < text.length() * fontSize_.x)
+	img imgtext;
+	const unsigned char color = 1;
+	imgtext.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), &color, 0, 1, fontSize_);
+
+	if (size.y < imgtext.height())
 	{
-		size_.x = text.length() * fontSize_.x + 1;
+		size_.y = imgtext.height();
+		std::cerr << "ButtonWidget construction : adapted height to font size :"<< fontSize_ << std::endl;
+	}
+	if (size.x < imgtext.width())
+	{
+		size_.x = imgtext.width();
 		std::cerr << "ButtonWidget construction : adapted width to text lenght :" << text << std::endl;
 	}
 }
@@ -18,21 +25,20 @@ ButtonWidget::ButtonWidget(const std::string& text, const dim_t& fontSize, const
 ButtonWidget::img ButtonWidget::actualRender() const
 {
 	const unsigned char white[] = { 255, 255, 255 }, grey[] = { 128,128,128 }, backblue[] = { 102, 153, 255 }, black[] = { 0, 0, 0 };
-    img render(size_.x, size_.y, 1, 3, 0);
+	img render(size_.x, size_.y, 1, 3);
     
-	const unsigned char testColor[] = { 138, 0, 230 };
-
-    if(is_hovered && !is_clicked)
+    if(is_hovered || is_clicked)
     {
-        //TODO couleur de police		
-        render.draw_text(0, size_.y - fontSize_.y, static_cast<const char* const>(text_.c_str()), white, backblue, 100, fontSize_.x);
-        //HACK pas de hover
-		//render.draw_text(1, size_.y - fontSize_.y, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_.x);
+        render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backblue, 100, fontSize_);
+		//render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backblue, 100, size_.y);
     }
 	else
 	{
-		render.draw_text(0, size_.y - fontSize_.y, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_.x);
+		render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_);
+		//render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), black, white, 100, size_.y);
 	}
+
+	render.resize(size_.x, size_.y, -100, -100, 3);
 
 	return render;
 }
@@ -45,10 +51,6 @@ void ButtonWidget::actualResize(const dim_t & size)
 
 bool ButtonWidget::actualPropagateEvent(const Event& event)
 {
-	//if (content_->isInside(event.pos))
-	//	if (content_->propagateEvent(event))
-	//		return true;
-
 	if (std::holds_alternative<ClickEvent>(event.event))
 	{
 		if (isInside(event.pos))
@@ -57,23 +59,27 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 			if (std::get<ClickEvent>(event.event).type == ClickEvent::LEFT)
 			{
 				std::cerr << "thomas est left méchant" << std::endl;
-				is_clicked = true;
+				is_clicked = !is_clicked;
 				callRedraw();
 				if (!execute(ClickEvent::LEFT)) throw std::runtime_error("Button could not left click.");
 			}
 			else if (std::get<ClickEvent>(event.event).type == ClickEvent::MIDDLE)
 			{
 				std::cerr << "thomas est middle méchant" << std::endl;
-				is_clicked = true;
+				is_clicked = !is_clicked;
 				callRedraw();
 				if (!execute(ClickEvent::MIDDLE)) throw std::runtime_error("Button could not middle click.");
 			}
-			else
+			else if (std::get<ClickEvent>(event.event).type == ClickEvent::RIGHT)
 			{
 				std::cerr << "thomas est right méchant" << std::endl;
-				is_clicked = true;
+				is_clicked = !is_clicked;
 				callRedraw();
 				if (!execute(ClickEvent::RIGHT)) throw std::runtime_error("Button could not right click.");
+			}
+			else
+			{
+				is_clicked = false;
 			}
 			return true;
 		}
@@ -90,8 +96,13 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 			is_hovered = true;
 			callRedraw();
 		}
-		else
+		else if(is_hovered == true)
+        {
 			is_hovered = false;
+			callRedraw();
+        }
+
+		return false;
 	}
 
 	return false;
