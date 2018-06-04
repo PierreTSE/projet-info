@@ -51,6 +51,12 @@ int main()
 	ListWidget listTest(texts,true);
     
     WindowWidget window(buttonTest, { 800, 800 });
+    while(window.is_open())
+    {
+        window.manageEvents();
+        window.display();
+        std::this_thread::sleep_for(10ms);
+    }
 
 	const img imageTest = listTest.render();
 
@@ -63,12 +69,6 @@ int main()
 
 	return 0;
     
-    while(window.is_open())
-    {
-        window.manageEvents();
-        window.display();
-        std::this_thread::sleep_for(10ms);
-    }
     
     return 0;  
 

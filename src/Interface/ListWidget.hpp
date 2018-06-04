@@ -9,7 +9,7 @@
 class ListWidget : public Widget
 {
     public:
-		ListWidget(const std::vector<std::string>& texts, bool column = false, const dim_t& fontSize = { 13,13 }, const dim_t& size = { 0,0 });
+		explicit ListWidget(const std::vector<std::string>& texts, bool column = false, const dim_t& fontSize = { 13,13 }, const dim_t& size = { 0,0 });
 
     protected:
 	    img actualRender() const override;
