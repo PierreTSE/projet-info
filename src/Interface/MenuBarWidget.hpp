@@ -20,7 +20,7 @@ class MenuBarWidget :public Widget
     private:
 		dim_t size_;
 		Widget* content_ = nullptr;
-		size_t delta;
+		size_t delta_;
 		std::vector<ButtonWidget> buttons_;
 };
 

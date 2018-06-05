@@ -27,7 +27,7 @@ ButtonWidget::img ButtonWidget::actualRender() const
 	const unsigned char white[] = { 255, 255, 255 }, grey[] = { 128,128,128 }, backblue[] = { 102, 153, 255 }, black[] = { 0, 0, 0 };
 	img render(size_.x, size_.y, 1, 3);
     
-    if(is_hovered || is_clicked)
+    if(is_hovered_ || is_clicked_)
     {
         render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backblue, 100, fontSize_);
 		//render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backblue, 100, size_.y);
@@ -58,34 +58,34 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 
 			if (std::get<ClickEvent>(event.event).type == ClickEvent::LEFT)
 			{
-				std::cerr << "thomas est left méchant" << std::endl;
-				is_clicked = !is_clicked;
+				std::cerr << "thomas est left méchant" << std::endl; //HACK test
+				is_clicked_ = !is_clicked_;
 				callRedraw();
 				if (!execute(ClickEvent::LEFT)) throw std::runtime_error("Button could not left click.");
 			}
 			else if (std::get<ClickEvent>(event.event).type == ClickEvent::MIDDLE)
 			{
-				std::cerr << "thomas est middle méchant" << std::endl;
-				is_clicked = !is_clicked;
+				std::cerr << "thomas est middle méchant" << std::endl; //HACK test
+				is_clicked_ = !is_clicked_;
 				callRedraw();
 				if (!execute(ClickEvent::MIDDLE)) throw std::runtime_error("Button could not middle click.");
 			}
 			else if (std::get<ClickEvent>(event.event).type == ClickEvent::RIGHT)
 			{
-				std::cerr << "thomas est right méchant" << std::endl;
-				is_clicked = !is_clicked;
+				std::cerr << "thomas est right méchant" << std::endl; //HACK test
+				is_clicked_ = !is_clicked_;
 				callRedraw();
 				if (!execute(ClickEvent::RIGHT)) throw std::runtime_error("Button could not right click.");
 			}
 			else
 			{
-				is_clicked = false;
+				is_clicked_ = false;
 			}
 			return true;
 		}
 		else
 		{
-			is_clicked = false;
+			is_clicked_ = false;
 			return false;
 		}
 	}
@@ -93,12 +93,12 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 	{
 		if (isInside(event.pos))
 		{
-			is_hovered = true;
+			is_hovered_ = true;
 			callRedraw();
 		}
-		else if(is_hovered == true)
+		else if(is_hovered_ == true)
         {
-			is_hovered = false;
+			is_hovered_ = false;
 			callRedraw();
         }
 
@@ -110,6 +110,6 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 
 bool ButtonWidget::execute(ClickEvent::mouseButton_t)
 {
-    std::cerr << "Button with no function executed." << std::endl;
+	std::cerr << "Button with no function executed." << std::endl;
 	return true;
 }
