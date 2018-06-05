@@ -47,7 +47,7 @@ int main()
     importFromDirectory(fs::path("/home/thomas/Images/images-ppm/"), collection);
 #endif
 
-    GridWidget gridTest(collection, 1000, 500);
+    GridWidget gridTest(collection, 1000, 500, {200, 200});
     ScrollWidget scrollTest(gridTest, { 1000, 500 });
     ButtonWidget buttonTest("clique pour savoir comment est thomas");
 	const vector<string> texts = { "bouton 1", "bouton higfyo"," vfvz \\\"evb  azreb" };
@@ -55,7 +55,7 @@ int main()
 	ListWidget listColumn(texts,true);
 	ListWidget listLine(texts);
     
-    WindowWidget window1(listLine, { listLine.size().x, listLine.size().y });
+    WindowWidget window1(scrollTest, { listLine.size().x, listLine.size().y });
 	WindowWidget window2(listColumn, { listColumn.size().x, listColumn.size().y });
 	//WindowWidget window(buttonTest, { buttonTest.size().x,buttonTest.size().y });
     

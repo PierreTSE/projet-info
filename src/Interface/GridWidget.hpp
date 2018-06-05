@@ -2,15 +2,23 @@
 #define GRIDWIDGET_HPP
 
 #include "Widget.hpp"
+#include "ImageWidget.hpp"
 #include "../Collection/Collection.hpp"
-#include "../Image/Image.hpp"
+#include <map>
 
 
 class GridWidget : public Widget
 {
     public:
         GridWidget(const Collection<Image>& collec, long long width, long long minHeight, const dim_t& elemSize = {100, 100}) :
-            collec_{collec}, targetWidth_{width}, minHeight_{minHeight}, elemSize_{elemSize} {}
+            collec_{collec}, targetWidth_{width}, minHeight_{minHeight}, elemSize_{elemSize} {
+            for(auto& image : collec_)
+            {
+                ImageWidget temp(image, elemSize_);
+                temp.setParent(this);
+                associatedWidgets_.insert({image.getPath(), std::move(temp)});
+            }
+        }
     
     protected:
         img actualRender() const override;
@@ -20,6 +28,7 @@ class GridWidget : public Widget
     
     private:
         const Collection<Image>& collec_;
+        mutable std::map<std::experimental::filesystem::path, ImageWidget> associatedWidgets_;
         long long targetWidth_;
         long long minHeight_;
         dim_t elemSize_;
