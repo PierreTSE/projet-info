@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <iostream>
 
+
 ListWidget::ListWidget(const std::vector<std::string>& texts, bool column, const dim_t& fontSize, const dim_t& size ) :
     size_{size},
     column_{column},
