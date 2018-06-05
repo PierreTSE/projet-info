@@ -1,0 +1,14 @@
+digraph "WindowWidget::actualSize"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node25 [label="WindowWidget::actualSize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node25 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="WindowWidget::actualPropagate\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_window_widget.html#a78dedcff8ae2df9a9f86fc0ba17a1998"];
+  Node26 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="Widget::propagateEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0"];
+  Node27 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="Widget::actualPropagateEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#a92906f698fd94c2f777e46c1480967fc"];
+}

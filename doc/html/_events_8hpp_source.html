@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Image Tagger:  Fichier source de src/Interface/Events.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Image Tagger
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_events_8hpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Events.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_events_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef EVENTS_HPP</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define EVENTS_HPP</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;variant&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="structdim__t.html">    6</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structdim__t.html">dim_t</a></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">    8</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">x</a> = 0;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">    9</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">y</a> = 0;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="_events_8hpp.html#aa31349e1e2f7fde578b2f7df95872085">   12</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structdim__t.html">dim_t</a> <a class="code" href="_events_8hpp.html#aa31349e1e2f7fde578b2f7df95872085">operator+</a>(<span class="keyword">const</span> <a class="code" href="structdim__t.html">dim_t</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structdim__t.html">dim_t</a>&amp; b)</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structdim__t.html">dim_t</a>{ a.<a class="code" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">x</a> + b.<a class="code" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">x</a>, a.<a class="code" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">y</a> + b.<a class="code" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">y</a> };</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_events_8hpp.html#a4be87c860b85ab0ea877a347de0e0459">   17</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structdim__t.html">dim_t</a> <a class="code" href="_events_8hpp.html#a4be87c860b85ab0ea877a347de0e0459">operator-</a>(<span class="keyword">const</span> <a class="code" href="structdim__t.html">dim_t</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structdim__t.html">dim_t</a>&amp; b)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structdim__t.html">dim_t</a>{ a.<a class="code" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">x</a> - b.<a class="code" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">x</a>, a.<a class="code" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">y</a> - b.<a class="code" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">y</a> };</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_events_8hpp.html#a0fa96501af45b568854720974cc4f5f3">   22</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="_events_8hpp.html#a0fa96501af45b568854720974cc4f5f3">operator==</a>(<span class="keyword">const</span> <a class="code" href="structdim__t.html">dim_t</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structdim__t.html">dim_t</a>&amp; b)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> (a.<a class="code" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">x</a> == b.<a class="code" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">x</a> &amp;&amp; a.<a class="code" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">y</a> == b.<a class="code" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">y</a>);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_events_8hpp.html#ac3f9d48502a7218ccac64e04ce574764">   27</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="_events_8hpp.html#ac3f9d48502a7218ccac64e04ce574764">operator!=</a>(<span class="keyword">const</span> <a class="code" href="structdim__t.html">dim_t</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structdim__t.html">dim_t</a>&amp; b)</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> !(a == b);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_scroll_event.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_scroll_event.html">ScrollEvent</a></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_scroll_event.html#a68165c193c13924b531fd3e9fd0738b7">   34</a></span>&#160;    <span class="keywordtype">int</span> amount = 0;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_click_event.html">   37</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_click_event.html">ClickEvent</a></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a930c56fd88f3faeb21b7aa0e1671f110">   39</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2">mouseButton_t</a> { LEFT, MIDDLE, RIGHT };</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_click_event.html#ad4b3e110510759224e813d3ad45736fd">   40</a></span>&#160;    <a class="code" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2">mouseButton_t</a> <a class="code" href="struct_click_event.html#ad4b3e110510759224e813d3ad45736fd">type</a>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_zoom_event.html">   43</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_zoom_event.html">ZoomEvent</a></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_zoom_event.html#a4f73dbfa13344cf5c4efa2ff591ce9cf">   45</a></span>&#160;    <span class="keywordtype">int</span> amount = 0;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_move_event.html">   48</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_move_event.html">MoveEvent</a></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_move_event.html#ae5191df8cc511d06d66dda68095ac26a">   50</a></span>&#160;    <a class="code" href="structdim__t.html">dim_t</a> <a class="code" href="struct_move_event.html#ae5191df8cc511d06d66dda68095ac26a">lastPos</a>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_event.html">   57</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_event.html">Event</a></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">   59</a></span>&#160;    <a class="code" href="structdim__t.html">dim_t</a> <a class="code" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">pos</a>;</div><div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_event.html#a2194b28059a1c378b6588cab81dd034f">   60</a></span>&#160;    std::variant&lt;ScrollEvent, ClickEvent, ZoomEvent, MoveEvent&gt; <a class="code" href="struct_event.html#a2194b28059a1c378b6588cab81dd034f">event</a>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif //EVENTS_HPP</span></div><div class="ttc" id="_events_8hpp_html_ac3f9d48502a7218ccac64e04ce574764"><div class="ttname"><a href="_events_8hpp.html#ac3f9d48502a7218ccac64e04ce574764">operator!=</a></div><div class="ttdeci">bool operator!=(const dim_t &amp;a, const dim_t &amp;b)</div><div class="ttdef"><b>Definition:</b> Events.hpp:27</div></div>
+<div class="ttc" id="struct_event_html_a405730c60365283ce01c2399e6f664a8"><div class="ttname"><a href="struct_event.html#a405730c60365283ce01c2399e6f664a8">Event::pos</a></div><div class="ttdeci">dim_t pos</div><div class="ttdef"><b>Definition:</b> Events.hpp:59</div></div>
+<div class="ttc" id="struct_move_event_html"><div class="ttname"><a href="struct_move_event.html">MoveEvent</a></div><div class="ttdef"><b>Definition:</b> Events.hpp:48</div></div>
+<div class="ttc" id="struct_click_event_html"><div class="ttname"><a href="struct_click_event.html">ClickEvent</a></div><div class="ttdef"><b>Definition:</b> Events.hpp:37</div></div>
+<div class="ttc" id="structdim__t_html_a4dbf33524feebe162d132357af785bbf"><div class="ttname"><a href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a></div><div class="ttdeci">long long x</div><div class="ttdef"><b>Definition:</b> Events.hpp:8</div></div>
+<div class="ttc" id="struct_click_event_html_ad4b3e110510759224e813d3ad45736fd"><div class="ttname"><a href="struct_click_event.html#ad4b3e110510759224e813d3ad45736fd">ClickEvent::type</a></div><div class="ttdeci">mouseButton_t type</div><div class="ttdef"><b>Definition:</b> Events.hpp:40</div></div>
+<div class="ttc" id="struct_click_event_html_a4006f96db41a3253ee212925df5374d2"><div class="ttname"><a href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2">ClickEvent::mouseButton_t</a></div><div class="ttdeci">mouseButton_t</div><div class="ttdef"><b>Definition:</b> Events.hpp:39</div></div>
+<div class="ttc" id="_events_8hpp_html_a4be87c860b85ab0ea877a347de0e0459"><div class="ttname"><a href="_events_8hpp.html#a4be87c860b85ab0ea877a347de0e0459">operator-</a></div><div class="ttdeci">dim_t operator-(const dim_t &amp;a, const dim_t &amp;b)</div><div class="ttdef"><b>Definition:</b> Events.hpp:17</div></div>
+<div class="ttc" id="_events_8hpp_html_aa31349e1e2f7fde578b2f7df95872085"><div class="ttname"><a href="_events_8hpp.html#aa31349e1e2f7fde578b2f7df95872085">operator+</a></div><div class="ttdeci">dim_t operator+(const dim_t &amp;a, const dim_t &amp;b)</div><div class="ttdef"><b>Definition:</b> Events.hpp:12</div></div>
+<div class="ttc" id="struct_zoom_event_html"><div class="ttname"><a href="struct_zoom_event.html">ZoomEvent</a></div><div class="ttdef"><b>Definition:</b> Events.hpp:43</div></div>
+<div class="ttc" id="struct_scroll_event_html"><div class="ttname"><a href="struct_scroll_event.html">ScrollEvent</a></div><div class="ttdef"><b>Definition:</b> Events.hpp:32</div></div>
+<div class="ttc" id="structdim__t_html"><div class="ttname"><a href="structdim__t.html">dim_t</a></div><div class="ttdef"><b>Definition:</b> Events.hpp:6</div></div>
+<div class="ttc" id="struct_event_html_a2194b28059a1c378b6588cab81dd034f"><div class="ttname"><a href="struct_event.html#a2194b28059a1c378b6588cab81dd034f">Event::event</a></div><div class="ttdeci">std::variant&lt; ScrollEvent, ClickEvent, ZoomEvent, MoveEvent &gt; event</div><div class="ttdef"><b>Definition:</b> Events.hpp:60</div></div>
+<div class="ttc" id="structdim__t_html_a9d2b1acc3eecde57cb8e51acf52c4c0b"><div class="ttname"><a href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a></div><div class="ttdeci">long long y</div><div class="ttdef"><b>Definition:</b> Events.hpp:9</div></div>
+<div class="ttc" id="struct_move_event_html_ae5191df8cc511d06d66dda68095ac26a"><div class="ttname"><a href="struct_move_event.html#ae5191df8cc511d06d66dda68095ac26a">MoveEvent::lastPos</a></div><div class="ttdeci">dim_t lastPos</div><div class="ttdef"><b>Definition:</b> Events.hpp:50</div></div>
+<div class="ttc" id="struct_event_html"><div class="ttname"><a href="struct_event.html">Event</a></div><div class="ttdoc">Contient une union d&amp;#39;�v�nements et la position de la souris quand l&amp;#39;un d&amp;#39;eux se produit. </div><div class="ttdef"><b>Definition:</b> Events.hpp:57</div></div>
+<div class="ttc" id="_events_8hpp_html_a0fa96501af45b568854720974cc4f5f3"><div class="ttname"><a href="_events_8hpp.html#a0fa96501af45b568854720974cc4f5f3">operator==</a></div><div class="ttdeci">bool operator==(const dim_t &amp;a, const dim_t &amp;b)</div><div class="ttdef"><b>Definition:</b> Events.hpp:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bba04cfeda2ebb06ea600493f2bb1319.html">Interface</a></li><li class="navelem"><a class="el" href="_events_8hpp.html">Events.hpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+digraph "Graphe hiÃ©rarchique des classes"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Event",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_event.html",tooltip="Contient une union d&#39;événements et la position de la souris quand l&#39;un d&#39;eux se produit. "];
+}

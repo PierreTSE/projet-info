@@ -136,8 +136,8 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:a538532a008fd442918b5f2f73e9bd2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a03298e6ea06b1e6344cf4be9e1439e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collection_iterator.html">CollectionIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection_iterator.html#a2a03298e6ea06b1e6344cf4be9e1439e">operator=</a> (const <a class="el" href="class_collection_iterator.html">CollectionIterator</a> &amp;rhs)</td></tr>
 <tr class="separator:a2a03298e6ea06b1e6344cf4be9e1439e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0833a1abf480292154ba6e9f838b431b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collection_iterator.html">CollectionIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection_iterator.html#a0833a1abf480292154ba6e9f838b431b">operator=</a> (<a class="el" href="class_collection_iterator.html">CollectionIterator</a> &amp;&amp;rhs)</td></tr>
-<tr class="separator:a0833a1abf480292154ba6e9f838b431b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec5573cbb91d39d4db3d04d6c070b8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collection_iterator.html">CollectionIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection_iterator.html#a3ec5573cbb91d39d4db3d04d6c070b8f">operator=</a> (<a class="el" href="class_collection_iterator.html">CollectionIterator</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="separator:a3ec5573cbb91d39d4db3d04d6c070b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0bd97b5ce32b24ea6559370805cf8ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection_iterator.html#ab0bd97b5ce32b24ea6559370805cf8ee">operator==</a> (const <a class="el" href="class_collection_iterator.html">CollectionIterator</a> &amp;rhs) const</td></tr>
 <tr class="separator:ab0bd97b5ce32b24ea6559370805cf8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97f25f4b7c4f5ad3364c79224d31c666"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection_iterator.html#a97f25f4b7c4f5ad3364c79224d31c666">operator!=</a> (const <a class="el" href="class_collection_iterator.html">CollectionIterator</a> &amp;rhs) const</td></tr>
@@ -169,6 +169,7 @@ Amis</h2></td></tr>
 class CollectionIterator&lt; T &gt;</h3>
 
 <p>Wrapper autour d'un <code><a class="el" href="class_iterator_base.html" title="Classe abstraite qui gère un itérateur personnalisé ">IteratorBase</a></code> permettant le polymorphisme. </p>
+<p>d'utiliser un itérateur abstrait, en utilisant la sémantique des itérateurs standards.</p>
 <dl class="tparams"><dt>Paramètres du template</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>Type de l'objet référencé par l'itérateur</td></tr>
@@ -692,8 +693,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a0833a1abf480292154ba6e9f838b431b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0833a1abf480292154ba6e9f838b431b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a3ec5573cbb91d39d4db3d04d6c070b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec5573cbb91d39d4db3d04d6c070b8f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -713,7 +714,7 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

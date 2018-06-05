@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z',['Z',['../structcimg__library__suffixed_1_1_c_img_list.html#a5fbab9a9b8a745a7bbccc6887f7b98bf',1,'cimg_library_suffixed::CImgList']]]
+  ['x',['x',['../structdim__t.html#a4dbf33524feebe162d132357af785bbf',1,'dim_t::x()'],['../struct_coordinates_map.html#a8f6bea9e92a85feabd9241cc95b7d6ea',1,'CoordinatesMap::x()']]]
 ];

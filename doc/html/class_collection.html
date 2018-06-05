@@ -98,12 +98,14 @@ $(document).ready(function(){initNavTree('class_collection.html','');});
 <div class="dynheader">
 Graphe d'héritage de Collection&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_collection__inherit__graph.svg" width="328" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 0 -->
+</div>
 </div>
 <div class="dynheader">
 Graphe de collaboration de Collection&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_collection__coll__graph.svg" width="123" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 1 -->
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -122,8 +124,8 @@ Types publics</h2></td></tr>
 <tr class="separator:a79ea96d1fa145e340e907547d0053b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a317dca4fdf1eb2e47643bb60c620f802"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#a317dca4fdf1eb2e47643bb60c620f802">iterator</a> = <a class="el" href="class_collection_iterator.html">CollectionIterator</a>&lt; T &gt;</td></tr>
 <tr class="separator:a317dca4fdf1eb2e47643bb60c620f802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3805407b2dc537e71db7af070b8d8a6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#ac3805407b2dc537e71db7af070b8d8a6">reverse_iterator</a> = std::reverse_iterator&lt; <a class="el" href="class_collection.html#a317dca4fdf1eb2e47643bb60c620f802">iterator</a> &gt;</td></tr>
-<tr class="separator:ac3805407b2dc537e71db7af070b8d8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c07f819437d4ba62ba45ad3acb53a1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a> = <a class="el" href="class_const_collection_iterator.html">ConstCollectionIterator</a>&lt; T &gt;</td></tr>
+<tr class="separator:af8c07f819437d4ba62ba45ad3acb53a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60b36ef7aba0a88dff0e98fc2adb98a8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#a60b36ef7aba0a88dff0e98fc2adb98a8">difference_type</a> = std::ptrdiff_t</td></tr>
 <tr class="separator:a60b36ef7aba0a88dff0e98fc2adb98a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f8b024f587aa20be530866da30948c4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#a3f8b024f587aa20be530866da30948c4">size_type</a> = size_t</td></tr>
@@ -137,10 +139,23 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:ae9e3ec131717723e10152cb7ec3b0379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4abc73f8e31a499a22b25d42b7a4fe8c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_collection.html#a317dca4fdf1eb2e47643bb60c620f802">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#a4abc73f8e31a499a22b25d42b7a4fe8c">begin</a> ()=0</td></tr>
 <tr class="separator:a4abc73f8e31a499a22b25d42b7a4fe8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b12f5b4751bf2af453f3e92d71638fa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#a1b12f5b4751bf2af453f3e92d71638fa">begin</a> () const =0</td></tr>
+<tr class="separator:a1b12f5b4751bf2af453f3e92d71638fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152271e27ce255d1e0433ae35415e502"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#a152271e27ce255d1e0433ae35415e502">cbegin</a> () const =0</td></tr>
+<tr class="separator:a152271e27ce255d1e0433ae35415e502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5b98f651d0f49cde1be067c69c52e89"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_collection.html#a317dca4fdf1eb2e47643bb60c620f802">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#ab5b98f651d0f49cde1be067c69c52e89">end</a> ()=0</td></tr>
 <tr class="separator:ab5b98f651d0f49cde1be067c69c52e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a050f9d8e47bc07658c3240b81484ee75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#a050f9d8e47bc07658c3240b81484ee75">end</a> () const =0</td></tr>
+<tr class="separator:a050f9d8e47bc07658c3240b81484ee75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a10728e7e160deaec82b1d5507e0861"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collection.html#a1a10728e7e160deaec82b1d5507e0861">cend</a> () const =0</td></tr>
+<tr class="separator:a1a10728e7e160deaec82b1d5507e0861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des définitions de type membres</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class Collection&lt; T &gt;</h3>
+
+<p>TODO doc </p>
+</div><h2 class="groupheader">Documentation des définitions de type membres</h2>
 <a id="ac7974b0b552f0a94065aadc48ae53397"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7974b0b552f0a94065aadc48ae53397">&#9670;&nbsp;</a></span>allocator_type</h2>
 
@@ -151,6 +166,22 @@ template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="class_collection.html">Collection</a>&lt; T &gt;::<a class="el" href="class_collection.html#ac7974b0b552f0a94065aadc48ae53397">allocator_type</a> =  std::allocator&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8c07f819437d4ba62ba45ad3acb53a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c07f819437d4ba62ba45ad3acb53a1">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_collection.html">Collection</a>&lt; T &gt;::<a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a> =  <a class="el" href="class_const_collection_iterator.html">ConstCollectionIterator</a>&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -253,22 +284,6 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ac3805407b2dc537e71db7af070b8d8a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3805407b2dc537e71db7af070b8d8a6">&#9670;&nbsp;</a></span>reverse_iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_collection.html">Collection</a>&lt; T &gt;::<a class="el" href="class_collection.html#ac3805407b2dc537e71db7af070b8d8a6">reverse_iterator</a> =  std::reverse_iterator&lt;<a class="el" href="class_collection.html#a317dca4fdf1eb2e47643bb60c620f802">iterator</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3f8b024f587aa20be530866da30948c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f8b024f587aa20be530866da30948c4">&#9670;&nbsp;</a></span>size_type</h2>
 
@@ -358,7 +373,7 @@ template&lt;typename T&gt; </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="a4abc73f8e31a499a22b25d42b7a4fe8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4abc73f8e31a499a22b25d42b7a4fe8c">&#9670;&nbsp;</a></span>begin()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4abc73f8e31a499a22b25d42b7a4fe8c">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,12 +397,107 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implémenté dans <a class="el" href="class_collection_pool.html#ae13d478a26554da9211db064285c7b0b">CollectionPool&lt; T &gt;</a>, et <a class="el" href="class_filtered_collection.html#a114f2b1557201e523a264d549926ab0a">FilteredCollection&lt; T &gt;</a>.</p>
+<p>Implémenté dans <a class="el" href="class_collection_pool.html#ae13d478a26554da9211db064285c7b0b">CollectionPool&lt; T &gt;</a>, et <a class="el" href="class_filtered_collection.html#ac38c3dc2cd51b2dbfb476c19732a6198">FilteredCollection&lt; T &gt;</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_grid_widget.html#a9c57f1ca2311d3caa936a481fa7fbef0">GridWidget::actualPropagateEvent()</a>, <a class="el" href="class_grid_widget.html#ad2b2565b4ef8046f6886d09698567a18">GridWidget::actualRender()</a>, et <a class="el" href="class_grid_widget.html#a99ea6778447aae0b74170d613201b920">GridWidget::actualSize()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 2 -->
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1b12f5b4751bf2af453f3e92d71638fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b12f5b4751bf2af453f3e92d71638fa">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a> <a class="el" href="class_collection.html">Collection</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implémenté dans <a class="el" href="class_collection_pool.html#a8ed9705d9a766cc42da682a66eab2447">CollectionPool&lt; T &gt;</a>, et <a class="el" href="class_filtered_collection.html#a7ff366d577365b84c947da90a605d66a">FilteredCollection&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a152271e27ce255d1e0433ae35415e502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152271e27ce255d1e0433ae35415e502">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a> <a class="el" href="class_collection.html">Collection</a>&lt; T &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implémenté dans <a class="el" href="class_collection_pool.html#aed49ed0be41fe1ed21c7301f54b3272b">CollectionPool&lt; T &gt;</a>, et <a class="el" href="class_filtered_collection.html#a3a7d68dc743ab18b109842441312583b">FilteredCollection&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a1a10728e7e160deaec82b1d5507e0861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a10728e7e160deaec82b1d5507e0861">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a> <a class="el" href="class_collection.html">Collection</a>&lt; T &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implémenté dans <a class="el" href="class_collection_pool.html#adde6daea198e2ead3f8626b6f3760d54">CollectionPool&lt; T &gt;</a>, et <a class="el" href="class_filtered_collection.html#afc82c5ef4b813623accea3c65a645efb">FilteredCollection&lt; T &gt;</a>.</p>
 
 </div>
 </div>
 <a id="ab5b98f651d0f49cde1be067c69c52e89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5b98f651d0f49cde1be067c69c52e89">&#9670;&nbsp;</a></span>end()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b98f651d0f49cde1be067c69c52e89">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,7 +521,44 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implémenté dans <a class="el" href="class_collection_pool.html#a870a85422595d6533688704ebe43b520">CollectionPool&lt; T &gt;</a>, et <a class="el" href="class_filtered_collection.html#ae310c937df5035ef07f7d4de65fca18b">FilteredCollection&lt; T &gt;</a>.</p>
+<p>Implémenté dans <a class="el" href="class_collection_pool.html#a870a85422595d6533688704ebe43b520">CollectionPool&lt; T &gt;</a>, et <a class="el" href="class_filtered_collection.html#aae9f1064023bc98970dc6f8c2359d12b">FilteredCollection&lt; T &gt;</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_grid_widget.html#a9c57f1ca2311d3caa936a481fa7fbef0">GridWidget::actualPropagateEvent()</a>, <a class="el" href="class_grid_widget.html#ad2b2565b4ef8046f6886d09698567a18">GridWidget::actualRender()</a>, <a class="el" href="class_grid_widget.html#a99ea6778447aae0b74170d613201b920">GridWidget::actualSize()</a>, et <a class="el" href="menu_8hpp.html#a0cebd2716215ca7253af746486a7e1c0">choix_image()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 3 -->
+</div>
+</div>
+
+</div>
+</div>
+<a id="a050f9d8e47bc07658c3240b81484ee75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050f9d8e47bc07658c3240b81484ee75">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_collection.html#af8c07f819437d4ba62ba45ad3acb53a1">const_iterator</a> <a class="el" href="class_collection.html">Collection</a>&lt; T &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implémenté dans <a class="el" href="class_collection_pool.html#ae9575e8e37e0a9c5558c1b4daa9e9715">CollectionPool&lt; T &gt;</a>, et <a class="el" href="class_filtered_collection.html#aaba22305becf612705ab1232f2eef550">FilteredCollection&lt; T &gt;</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parser_2ecpp',['Parser.cpp',['../_parser_8cpp.html',1,'']]],
-  ['parser_2ehpp',['Parser.hpp',['../_parser_8hpp.html',1,'']]]
+  ['gridwidget_2ecpp',['GridWidget.cpp',['../_grid_widget_8cpp.html',1,'']]],
+  ['gridwidget_2ehpp',['GridWidget.hpp',['../_grid_widget_8hpp.html',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['operator_3c_3c',['operator&lt;&lt;',['../class_image.html#a2d6d264c420ab6eecf731ead84a8eb99',1,'Image']]],
-  ['operator_3e_3e',['operator&gt;&gt;',['../class_image.html#ab5811a3704784bbb57375abbbacfe4fd',1,'Image']]]
+  ['iteratorbase_3c_20t_20_3e',['IteratorBase&lt; T &gt;',['../class_collection_iterator.html#a6076dfcb85a3a7cb903b827fa821fe54',1,'CollectionIterator']]]
 ];

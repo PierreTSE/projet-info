@@ -22,7 +22,7 @@ var class_collection_iterator =
     [ "operator->", "class_collection_iterator.html#a633510976e0de7df1a1f2d55ec289237", null ],
     [ "operator->", "class_collection_iterator.html#a1892f0cf674eaad4c9d02bfcda128eb3", null ],
     [ "operator=", "class_collection_iterator.html#a2a03298e6ea06b1e6344cf4be9e1439e", null ],
-    [ "operator=", "class_collection_iterator.html#a0833a1abf480292154ba6e9f838b431b", null ],
+    [ "operator=", "class_collection_iterator.html#a3ec5573cbb91d39d4db3d04d6c070b8f", null ],
     [ "operator==", "class_collection_iterator.html#ab0bd97b5ce32b24ea6559370805cf8ee", null ],
     [ "IteratorBase< T >", "class_collection_iterator.html#a6076dfcb85a3a7cb903b827fa821fe54", null ]
 ];

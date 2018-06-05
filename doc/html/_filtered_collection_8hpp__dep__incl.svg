@@ -18,7 +18,7 @@
 <!-- Node9 -->
 <g id="node2" class="node">
 <title>Node9</title>
-<g id="a_node2"><a xlink:href="save_8cpp.html" target="_top" xlink:title="src/ConsolePrototype\l/save.cpp">
+<g id="a_node2"><a xlink:href="save_8cpp.html" target="_top" target="_top" xlink:title="src/ConsolePrototype\l/save.cpp">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-30.5 111,-30.5 111,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/ConsolePrototype</text>
 <text text-anchor="middle" x="55.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/save.cpp</text>
@@ -34,7 +34,7 @@
 <!-- Node10 -->
 <g id="node3" class="node">
 <title>Node10</title>
-<g id="a_node3"><a xlink:href="main_8cpp.html" target="_top" xlink:title="src/main.cpp">
+<g id="a_node3"><a xlink:href="main_8cpp.html" target="_top" target="_top" xlink:title="src/main.cpp">
 <polygon fill="#ffffff" stroke="#000000" points="129,-6 129,-25 202,-25 202,-6 129,-6"/>
 <text text-anchor="middle" x="165.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/main.cpp</text>
 </a>

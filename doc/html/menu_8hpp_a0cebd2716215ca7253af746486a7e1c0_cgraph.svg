@@ -18,7 +18,7 @@
 <!-- Node11 -->
 <g id="node2" class="node">
 <title>Node11</title>
-<g id="a_node2"><a xlink:href="menu_8cpp.html#ab8e0d5fe33cf41a4201057a6954e5368" target="_top" xlink:title="choix">
+<g id="a_node2"><a xlink:href="menu_8cpp.html#ab8e0d5fe33cf41a4201057a6954e5368" target="_top" target="_top" xlink:title="choix">
 <polygon fill="#ffffff" stroke="#000000" points="107,-6 107,-25 147,-25 147,-6 107,-6"/>
 <text text-anchor="middle" x="127" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">choix</text>
 </a>
@@ -33,7 +33,7 @@
 <!-- Node12 -->
 <g id="node3" class="node">
 <title>Node12</title>
-<g id="a_node3"><a xlink:href="namespacecimg__library__suffixed_1_1cimg.html#aae5df5731fe5a367cec402071108c11c" target="_top" xlink:title="Return the maximum between three values. ">
+<g id="a_node3"><a xlink:href="namespacecimg__library__suffixed_1_1cimg.html#aae5df5731fe5a367cec402071108c11c" target="_top" target="_top" xlink:title="Return the maximum between three values. ">
 <polygon fill="#ffffff" stroke="#000000" points="183,-.5 183,-30.5 292,-30.5 292,-.5 183,-.5"/>
 <text text-anchor="start" x="191" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cimg_library_suffixed</text>
 <text text-anchor="middle" x="237.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::cimg::max</text>
@@ -49,7 +49,7 @@
 <!-- Node13 -->
 <g id="node4" class="node">
 <title>Node13</title>
-<g id="a_node4"><a xlink:href="namespacecimg__library__suffixed_1_1cimg.html#a4b4cabc621d732787bca13016ea8026a" target="_top" xlink:title="Return the maximum between four values. ">
+<g id="a_node4"><a xlink:href="namespacecimg__library__suffixed_1_1cimg.html#a4b4cabc621d732787bca13016ea8026a" target="_top" target="_top" xlink:title="Return the maximum between four values. ">
 <polygon fill="#ffffff" stroke="#000000" points="328,-.5 328,-30.5 437,-30.5 437,-.5 328,-.5"/>
 <text text-anchor="start" x="336" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cimg_library_suffixed</text>
 <text text-anchor="middle" x="382.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::cimg::max</text>

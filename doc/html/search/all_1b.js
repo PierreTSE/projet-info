@@ -11,5 +11,7 @@ var searchData=
   ['_7ecimgexception',['~CImgException',['../structcimg__library__suffixed_1_1_c_img_exception.html#af2c1c1826a82f38d74dacf72c9db6c82',1,'cimg_library_suffixed::CImgException']]],
   ['_7ecimglist',['~CImgList',['../structcimg__library__suffixed_1_1_c_img_list.html#a8f847fd81ab71a71dadf11db36f49dd3',1,'cimg_library_suffixed::CImgList']]],
   ['_7ecollection',['~Collection',['../class_collection.html#ae9e3ec131717723e10152cb7ec3b0379',1,'Collection']]],
-  ['_7eiteratorbase',['~IteratorBase',['../class_iterator_base.html#a9b0e1d44c1fb3e68171746b045676526',1,'IteratorBase']]]
+  ['_7econstiteratorbase',['~ConstIteratorBase',['../class_const_iterator_base.html#aea863c4a738930eb06c66fd9ab306394',1,'ConstIteratorBase']]],
+  ['_7eiteratorbase',['~IteratorBase',['../class_iterator_base.html#a9b0e1d44c1fb3e68171746b045676526',1,'IteratorBase']]],
+  ['_7ewidget',['~Widget',['../class_widget.html#abe38c3c1fbcde4c705d76d58208ceb52',1,'Widget']]]
 ];

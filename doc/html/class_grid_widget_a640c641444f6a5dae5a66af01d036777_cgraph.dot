@@ -1,0 +1,25 @@
+digraph "GridWidget::actualResize"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node51 [label="GridWidget::actualResize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node51 -> Node52 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="Widget::callRedraw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3"];
+  Node52 -> Node52 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 -> Node53 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node53 [label="Widget::actualRender",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#a5ff4883144670b8c93b41e440e3d4446"];
+  Node52 -> Node54 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node54 [label="Widget::actualResize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#a1a3ac9ff4f7c19c19a9886219b6dda2e"];
+  Node52 -> Node55 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node55 [label="Widget::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea"];
+  Node55 -> Node56 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node56 [label="Widget::actualSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#aa6225b5a14e5861cc2cd98c737841854"];
+  Node52 -> Node56 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 -> Node57 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node57 [label="Widget::actualPropagateEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#a92906f698fd94c2f777e46c1480967fc"];
+  Node52 -> Node58 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node58 [label="Widget::actualIsInside",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#af5851078b2f0c2f14a9bf377e535340f"];
+  Node58 -> Node55 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

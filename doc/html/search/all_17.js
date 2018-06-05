@@ -9,6 +9,7 @@ var searchData=
   ['what',['what',['../structcimg__library__suffixed_1_1_c_img_exception.html#a7ce3499518ace836d2b11ebafb078714',1,'cimg_library_suffixed::CImgException::what()'],['../structcimg__library__suffixed_1_1_c_img_abort_exception.html#af7cb17b05e7948bfdfb391f114a581f8',1,'cimg_library_suffixed::CImgAbortException::what()']]],
   ['wheel',['wheel',['../structcimg__library__suffixed_1_1_c_img_display.html#a652c48e6e55a89bc96c9ae24c99a828e',1,'cimg_library_suffixed::CImgDisplay']]],
   ['widget',['Widget',['../class_widget.html',1,'']]],
+  ['widget_2ecpp',['Widget.cpp',['../_widget_8cpp.html',1,'']]],
   ['widget_2ehpp',['Widget.hpp',['../_widget_8hpp.html',1,'']]],
   ['width',['width',['../structcimg__library__suffixed_1_1_c_img_display.html#a7b08f09ace9b615eee0ff19846c4b6f8',1,'cimg_library_suffixed::CImgDisplay::width()'],['../structcimg__library__suffixed_1_1_c_img.html#a2d7b769d447c0451a2f43c77e997beff',1,'cimg_library_suffixed::CImg::width()'],['../structcimg__library__suffixed_1_1_c_img_list.html#a60d81967a11f946a46ab28f2f14109f7',1,'cimg_library_suffixed::CImgList::width()']]],
   ['win_5ffopen',['win_fopen',['../namespacecimg__library__suffixed_1_1cimg.html#a9d486931d7eb759c7268b09a62cd3d28',1,'cimg_library_suffixed::cimg']]],
@@ -18,5 +19,8 @@ var searchData=
   ['window_5fwidth',['window_width',['../structcimg__library__suffixed_1_1_c_img_display.html#a7adf8a88e9cf55f7f394801df0a0e555',1,'cimg_library_suffixed::CImgDisplay']]],
   ['window_5fx',['window_x',['../structcimg__library__suffixed_1_1_c_img_display.html#a1c32a0da1d7892afd9e614a5ae79692a',1,'cimg_library_suffixed::CImgDisplay']]],
   ['window_5fy',['window_y',['../structcimg__library__suffixed_1_1_c_img_display.html#ada7f40024566383be680697e9731fde8',1,'cimg_library_suffixed::CImgDisplay']]],
+  ['windowwidget',['WindowWidget',['../class_window_widget.html',1,'WindowWidget'],['../class_window_widget.html#ab29ddd83d18098299db66b0e3249cb60',1,'WindowWidget::WindowWidget()']]],
+  ['windowwidget_2ecpp',['WindowWidget.cpp',['../_window_widget_8cpp.html',1,'']]],
+  ['windowwidget_2ehpp',['WindowWidget.hpp',['../_window_widget_8hpp.html',1,'']]],
   ['winformat_5fstring',['winformat_string',['../namespacecimg__library__suffixed_1_1cimg.html#a1b401761f9f3c1d01de8ec6ef6bec731',1,'cimg_library_suffixed::cimg']]]
 ];

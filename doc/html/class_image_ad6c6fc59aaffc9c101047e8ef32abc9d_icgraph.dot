@@ -1,0 +1,16 @@
+digraph "Image::loadImage"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node23 [label="Image::loadImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node23 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="createPoolFromSave",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_utilities_8cpp.html#a6d03d2391c95cb176a80f11be628e6a9"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="createPoolFromDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_utilities_8cpp.html#a46270f4fab8fe8d4f01b9c7cb8fdb75c"];
+  Node24 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+  Node23 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="Image::setImgPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_image.html#a1d3c73cbf4af1f1973fdf6c3c00e2301"];
+}

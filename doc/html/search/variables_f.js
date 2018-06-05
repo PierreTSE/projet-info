@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['user_5fmacro',['user_macro',['../structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#adb28d6dfa1569c5c1b991efb2ab113bb',1,'cimg_library_suffixed::CImg::_cimg_math_parser']]]
+  ['title',['title',['../structfile__filter.html#a5bb33083d08fd4d3f991598d02b8af4d',1,'file_filter']]],
+  ['type',['type',['../struct_click_event.html#ad4b3e110510759224e813d3ad45736fd',1,'ClickEvent']]]
 ];

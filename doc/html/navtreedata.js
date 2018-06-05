@@ -16,8 +16,10 @@ var NAVTREE =
       [ "Membres de classe", "functions.html", [
         [ "Tout", "functions.html", "functions_dup" ],
         [ "Fonctions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Définitions de type", "functions_type.html", null ],
+        [ "Énumérations", "functions_enum.html", null ],
+        [ "Valeurs énumérées", "functions_eval.html", null ],
         [ "Fonctions associées", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -37,19 +39,20 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_c_img_8h.html",
-"_c_img_8h.html#a515311d46223bb011e435f44f34c6b93",
-"_c_img_8h.html#a9ff82e3c9d1ae6bda50f692e2c5576d4",
-"_c_img_8h.html#af1864f3c9389e27966891b286b442980",
-"functions_d.html",
-"structcimg__library__suffixed_1_1_c_img.html#a1c315c22e2c514fdc3c56ff16a87e1c2",
-"structcimg__library__suffixed_1_1_c_img.html#a5694150152c0c2dbe112cbce4abab012",
-"structcimg__library__suffixed_1_1_c_img.html#a9257fe7448937247f8d55d586f017370",
-"structcimg__library__suffixed_1_1_c_img.html#ad4b9a6a8d8252c0e4a626860d6ee6858",
-"structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#aad42f4efe4a29c92c651b44879c639f5",
-"structcimg__library__suffixed_1_1_c_img_display.html#a8a9921f8df64d4c22d49612749d5148e",
-"structcimg__library__suffixed_1_1_c_img_list.html#a817d04c7b90f0cd39e33e740bf5f60f2",
-"structcimg__library__suffixed_1_1cimg_1_1superset_3_01signed_01char_00_01unsigned_01char_01_4.html"
+"_button_widget_8cpp.html",
+"_c_img_8h.html#a4fe690ffcb6e95ed90ef4761566cd3cf",
+"_c_img_8h.html#a9f2d45d4518cf844a541d397dc333842",
+"_c_img_8h.html#af09505c65a939c7d58a11e1bd04429f4",
+"class_const_pool_iterator.html#a5a817fd42b94c7c2c7b63ab8e071867f",
+"globals_t.html",
+"structcimg__library__suffixed_1_1_c_img.html#a2bf01e7ec99652c09d66bc635cc5e37b",
+"structcimg__library__suffixed_1_1_c_img.html#a654d56f3a45b0052fcd2a493ada1310e",
+"structcimg__library__suffixed_1_1_c_img.html#aa274f3d507b92a8a8166e8c86743cd79",
+"structcimg__library__suffixed_1_1_c_img.html#ae10b93d40b1d2a6d617daab4230c51b6",
+"structcimg__library__suffixed_1_1_c_img_1_1__functor4d__streamline2d__directed.html#a76002cc085d76e1d4e1f24e151849790",
+"structcimg__library__suffixed_1_1_c_img_display.html#ac222c0a7b742eeaa5cecb7ff786e0379",
+"structcimg__library__suffixed_1_1_c_img_list.html#ab8413990f4da9c946b2506c768d3e90b",
+"structcimg__library__suffixed_1_1cimg_1_1superset_3_01unsigned_01short_00_01unsigned_01int_01_4.html#a4feee8ad6d9531c094accdba33262511"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

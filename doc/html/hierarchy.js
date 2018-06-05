@@ -27,11 +27,22 @@ var hierarchy =
     [ "cimg_library_suffixed::CImgList< charT >", "structcimg__library__suffixed_1_1_c_img_list.html", null ],
     [ "cimg_library_suffixed::CImgList< doubleT >", "structcimg__library__suffixed_1_1_c_img_list.html", null ],
     [ "cimg_library_suffixed::CImgList< ulongT >", "structcimg__library__suffixed_1_1_c_img_list.html", null ],
+    [ "ClickEvent", "struct_click_event.html", null ],
     [ "Collection< T >", "class_collection.html", [
       [ "CollectionPool< T >", "class_collection_pool.html", null ],
       [ "FilteredCollection< T >", "class_filtered_collection.html", null ]
     ] ],
+    [ "Collection< Image >", "class_collection.html", null ],
     [ "CollectionIterator< T >", "class_collection_iterator.html", null ],
+    [ "ConstCollectionIterator< T >", "class_const_collection_iterator.html", null ],
+    [ "ConstIteratorBase< T >", "class_const_iterator_base.html", [
+      [ "ConstFilteredIterator< T >", "class_const_filtered_iterator.html", null ],
+      [ "ConstPoolIterator< T >", "class_const_pool_iterator.html", null ]
+    ] ],
+    [ "CoordinatesMap< T, U >", "struct_coordinates_map.html", null ],
+    [ "CoordinatesMap< int, int >", "struct_coordinates_map.html", null ],
+    [ "dim_t", "structdim__t.html", null ],
+    [ "Event", "struct_event.html", null ],
     [ "exception", null, [
       [ "cimg_library_suffixed::CImgAbortException", "structcimg__library__suffixed_1_1_c_img_abort_exception.html", null ],
       [ "cimg_library_suffixed::CImgException", "structcimg__library__suffixed_1_1_c_img_exception.html", [
@@ -49,7 +60,9 @@ var hierarchy =
       [ "PoolIterator< T >", "class_pool_iterator.html", null ]
     ] ],
     [ "cimg_library_suffixed::cimg::last< t1, t2 >", "structcimg__library__suffixed_1_1cimg_1_1last.html", null ],
+    [ "MoveEvent", "struct_move_event.html", null ],
     [ "cimg_library_suffixed::cimg::Mutex_info", "structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html", null ],
+    [ "ScrollEvent", "struct_scroll_event.html", null ],
     [ "cimg_library_suffixed::cimg::superset< T, t >", "structcimg__library__suffixed_1_1cimg_1_1superset.html", null ],
     [ "cimg_library_suffixed::cimg::superset2< t1, t2, t3 >", "structcimg__library__suffixed_1_1cimg_1_1superset2.html", null ],
     [ "cimg_library_suffixed::cimg::superset3< t1, t2, t3, t4 >", "structcimg__library__suffixed_1_1cimg_1_1superset3.html", null ],
@@ -147,6 +160,15 @@ var hierarchy =
     [ "cimg_library_suffixed::cimg::type< unsigned char >", "structcimg__library__suffixed_1_1cimg_1_1type_3_01unsigned_01char_01_4.html", null ],
     [ "cimg_library_suffixed::cimg::type< unsigned int >", "structcimg__library__suffixed_1_1cimg_1_1type_3_01unsigned_01int_01_4.html", null ],
     [ "cimg_library_suffixed::cimg::type< unsigned short >", "structcimg__library__suffixed_1_1cimg_1_1type_3_01unsigned_01short_01_4.html", null ],
-    [ "Widget", "class_widget.html", null ],
-    [ "Window", "class_window.html", null ]
+    [ "Widget", "class_widget.html", [
+      [ "ButtonWidget", "class_button_widget.html", null ],
+      [ "GridWidget", "class_grid_widget.html", null ],
+      [ "ImageWidget", "class_image_widget.html", null ],
+      [ "ListWidget", "class_list_widget.html", null ],
+      [ "MenuBarWidget", "class_menu_bar_widget.html", null ],
+      [ "ScrollWidget", "class_scroll_widget.html", null ],
+      [ "WindowWidget", "class_window_widget.html", null ]
+    ] ],
+    [ "Window", "class_window.html", null ],
+    [ "ZoomEvent", "struct_zoom_event.html", null ]
 ];
