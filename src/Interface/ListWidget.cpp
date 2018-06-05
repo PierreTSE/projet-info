@@ -33,7 +33,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		}
 		else
 		{
-		    //TODO cas où la ligne est demandée plus large que par défaut
+		    //TODO cas oï¿½ la ligne est demandï¿½e plus large que par dï¿½faut
 		}
 
 		if (size.y <= fontSize_)
@@ -44,7 +44,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		}
 		else
 		{
-		    //TODO cas où la ligne est demandée plus haute que par défaut
+		    //TODO cas oï¿½ la ligne est demandï¿½e plus haute que par dï¿½faut
 		}
 	}
 	else //if(column_)
@@ -58,7 +58,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		}
 		else
 		{
-		    //TODO cas où la colonne est demandée plus large que par défaut
+		    //TODO cas oï¿½ la colonne est demandï¿½e plus large que par dï¿½faut
 		}
 
 		auto default_size_y = 0;
@@ -75,7 +75,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		}
 		else
 		{
-		    //TODO cas où la colonne est demandée plus haute que par défaut
+		    //TODO cas oï¿½ la colonne est demandï¿½e plus haute que par dï¿½faut
 		}
     }
 

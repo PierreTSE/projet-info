@@ -1,5 +1,6 @@
 #include "MenuBarWidget.hpp"
 
+
 MenuBarWidget::img MenuBarWidget::actualRender() const
 {
 	return img();

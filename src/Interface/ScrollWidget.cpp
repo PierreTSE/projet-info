@@ -42,9 +42,13 @@ Widget::img ScrollWidget::actualRender() const
 bool ScrollWidget::actualPropagateEvent(const Event& event)
 {
     if(content_->isInside(event.pos - dim_t{0, -delta}))
-        if(content_->propagateEvent(event))
+    {
+        auto event_temp = event;
+        event_temp.pos = event_temp.pos - dim_t{0, -delta};
+        if(content_->propagateEvent(event_temp))
             return true;
-    if(std::holds_alternative<ScrollEvent>(event.event)) {
+    }
+        if(std::holds_alternative<ScrollEvent>(event.event)) {
         delta -= std::get<ScrollEvent>(event.event).amount * 15;
         delta = std::clamp<int>(delta, 0, content_->size().y-size_.y);
         callRedraw();

@@ -2,7 +2,7 @@
 #define MENUBARWIDGET_HPP
 
 #include "Widget.hpp"
-#include "ButtonWidget.hpp"
+#include "ListWidget.hpp"
 #include <vector>
 
 
@@ -20,7 +20,6 @@ class MenuBarWidget :public Widget
     private:
 		dim_t size_;
 		Widget* content_ = nullptr;
-		size_t delta_;
 		std::vector<ButtonWidget> buttons_;
 };
 
