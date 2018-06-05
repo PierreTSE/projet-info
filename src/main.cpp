@@ -51,16 +51,26 @@ int main()
     ScrollWidget scrollTest(gridTest, { 1000, 500 });
     ButtonWidget buttonTest("clique pour savoir comment est thomas");
 	const vector<string> texts = { "bouton 1", "bouton higfyo"," vfvz \\\"evb  azreb" };
-	ListWidget listTest(texts,true);
 	ImageWidget imageTest(*collection.begin(), dim_t{100, 100});
+	ListWidget listColumn(texts,true);
+	ListWidget listLine(texts);
     
-    //WindowWidget window(listTest, { listTest.size().x, listTest.size().y });
-	WindowWidget window(imageTest, { 100, 100 });
+    WindowWidget window1(listLine, { listLine.size().x, listLine.size().y });
+	WindowWidget window2(listColumn, { listColumn.size().x, listColumn.size().y });
+	//WindowWidget window(buttonTest, { buttonTest.size().x,buttonTest.size().y });
     
-    while(window.is_open())
+    while(window1.is_open() || window2.is_open())
     {
-        window.manageEvents();
-        window.display();
+        if(window1.is_open())
+        {
+			window1.manageEvents();
+			window1.display();            
+        }
+		if (window2.is_open())
+		{
+			window2.manageEvents();
+			window2.display();
+		}
         std::this_thread::sleep_for(10ms);
     }
     

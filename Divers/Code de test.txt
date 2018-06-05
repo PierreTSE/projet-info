@@ -118,3 +118,15 @@
 	*/
 
 	
+	//code intéressant sur les recherches d'intervalle (kd tree)
+				//const auto y_it = --std::upper_bound(buttonCoordinates_.y.begin(), buttonCoordinates_.y.end(), event.pos.y);
+				//const auto buttonNumber = std::distance(buttonCoordinates_.y.begin(), y_it);
+
+				//const Event event_offset = { {event.pos.x,event.pos.y - *y_it},event.event };
+				//if (buttons_[buttonNumber].propagateEvent(event_offset)) return true;
+
+				//const Event fake_event = { { -1 , -1 }, event.event };
+				//for (size_t i = 0; i < buttons_.size() && i != buttonNumber; ++i)
+				//{
+				//	if (buttons_[i].propagateEvent(fake_event)) return true;
+				//}
