@@ -8,7 +8,7 @@
 class ButtonWidget : public Widget
 {
     public:
-		ButtonWidget(const std::string& text, const dim_t& fontSize = { 13,13 }, const dim_t& size = { 0,0 });
+		ButtonWidget(const std::string& text, const int& fontSize = 23, const dim_t& size = { 0,0 });
     
     protected:
 		img actualRender() const override;
@@ -23,6 +23,6 @@ class ButtonWidget : public Widget
 		bool is_hovered = false;
 		bool is_clicked = false;
 		std::string text_;
-		const dim_t fontSize_ = { 13,13 };
+		const int fontSize_;
 };
 #endif // BUTTONWIDGET_HPP

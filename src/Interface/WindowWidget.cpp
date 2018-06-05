@@ -35,7 +35,7 @@ bool WindowWidget::actualPropagateEvent(const Event& event)
 
 void WindowWidget::manageEvents()
 {
-    dim_t mouse{window_.mouse_x(), window_.mouse_y()};
+    const dim_t mouse{window_.mouse_x(), window_.mouse_y()};
     if(mouse != lastMouse_)
         propagateEvent(Event{mouse, MoveEvent{lastMouse_}});
     if((window_.button()&1) != (lastButton_&1) && (window_.button()&1))
