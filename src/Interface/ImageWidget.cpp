@@ -1,4 +1,3 @@
-#include <iostream>
 #include "ImageWidget.hpp"
 
 
@@ -17,8 +16,8 @@ Widget::img ImageWidget::actualRender() const
         render.assign(size_.x, size_.y, 1, 3, 255);
     }
 
-    double x_ratio = (double)(size_.x-10) / image_.getImgPtr()->width();
-    double y_ratio = (double)(size_.y-10) / image_.getImgPtr()->height();
+    const double x_ratio = static_cast<double>(size_.x - 10) / image_.getImgPtr()->width();
+    const double y_ratio = static_cast<double>(size_.y - 10) / image_.getImgPtr()->height();
     
     if(x_ratio < y_ratio)
     {

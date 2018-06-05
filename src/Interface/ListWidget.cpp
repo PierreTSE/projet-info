@@ -139,7 +139,18 @@ ListWidget::img ListWidget::actualRender() const
 }
 
 void ListWidget::actualResize(const dim_t& size)
-{}
+{
+	//const float rapport_y = size.y / size_.y,
+ //               rapport_x = size.x / size_.x;
+ //   for(auto& x : buttonCoordinates_.x)
+ //   {
+	//	x *= rapport_x;
+ //   }
+ //   for(auto& y : buttonCoordinates_.y)
+ //   {
+	//	y *= rapport_y;
+ //   }
+}
 
 bool ListWidget::actualPropagateEvent(const Event& event)
 {
@@ -154,15 +165,15 @@ bool ListWidget::actualPropagateEvent(const Event& event)
 				{
 					if (buttons_[i].propagateEvent(Event{ { event.pos.x, event.pos.y - buttonCoordinates_.y.at(i) }, event.event })) return true;
 			    }
-				is_hovered = true;
+				is_hovered_ = true;
             }
-			else if (is_hovered == true)
+			else if (is_hovered_ == true)
 			{
 			    for(auto& button: buttons_)
 			    {
 					button.propagateEvent(Event{ {-1,-1}, event.event });
 			    }
-				is_hovered = false;
+				is_hovered_ = false;
 			}
 			return false;
 		}
@@ -174,15 +185,15 @@ bool ListWidget::actualPropagateEvent(const Event& event)
 				{
 					if (buttons_[i].propagateEvent(Event{ { event.pos.x - buttonCoordinates_.x.at(i), event.pos.y }, event.event })) return true;
 				}
-				is_hovered = true;
+				is_hovered_ = true;
 			}
-			else if(is_hovered==true)
+			else if(is_hovered_==true)
 			{
 				for (auto& button : buttons_)
 				{
 					button.propagateEvent(Event{ { -1,-1 }, MoveEvent{} });
 				}
-				is_hovered = false;
+				is_hovered_ = false;
 			}
 			return false;
 		}

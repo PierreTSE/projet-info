@@ -9,7 +9,7 @@
 class ImageWidget : public Widget
 {
     public:
-        ImageWidget(const Image& image, dim_t size) : image_{image}, size_{size} {}
+        ImageWidget(const Image& image, const dim_t size) : image_{image}, size_{size} {}
     
     protected:
         img actualRender() const override;
