@@ -13,12 +13,12 @@ ButtonWidget::ButtonWidget(const std::string& text, const int& fontSize, const d
 	if (size.y < imgtext.height())
 	{
 		size_.y = imgtext.height();
-		std::cerr << "ButtonWidget construction : adapted height to font size :"<< fontSize_ << std::endl;
+		std::cerr << "ButtonWidget construction : adapted height to font size : "<< fontSize_ << std::endl;
 	}
 	if (size.x < imgtext.width())
 	{
 		size_.x = imgtext.width();
-		std::cerr << "ButtonWidget construction : adapted width to text lenght :" << text << std::endl;
+		std::cerr << "ButtonWidget construction : adapted width to text length : " << text << std::endl;
 	}
 }
 

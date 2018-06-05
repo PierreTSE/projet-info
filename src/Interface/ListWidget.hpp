@@ -6,10 +6,17 @@
 #include <string>
 #include <vector>
 
+template <typename T, typename U>
+struct CoordinatesMap
+{
+	std::vector<T> x;
+	std::vector<U> y;
+};
+
 class ListWidget : public Widget
 {
     public:
-		ListWidget(const std::vector<std::string>& texts, bool column = false, const dim_t& fontSize = { 23,0 }, const dim_t& size = { 0,0 });
+		ListWidget(const std::vector<std::string>& texts, bool column = false, int fontSize = 23, const dim_t& size = { 0,0 });
 
     protected:
 	    img actualRender() const override;
@@ -21,6 +28,8 @@ class ListWidget : public Widget
 		dim_t size_;
 		std::vector<ButtonWidget> buttons_;
 		bool column_ = false;
-		const dim_t fontSize_;
+		const int fontSize_;
+		bool is_hovered = false;
+		CoordinatesMap<int, int> buttonCoordinates_ = { {0},{0} };
 };
 #endif // LISTWIDGET_HPP
