@@ -4,13 +4,13 @@ namespace fs = std::experimental::filesystem;
 using img = cimg_library::CImg<unsigned char>;
 
 /** @fn createPoolFromSave
-/*  @brief Charge une collection d'images à partir du chemin d'un fichier de sauvegarde
-/*  @param savePath Chemin du fichier de sauvegarde décrivant la collection à charger
-/*  @return @c CollectionPool d'images chargée par les données contenues dans le fichier en paramètre
+/*  @brief Charge une collection d'images Ã  partir du chemin d'un fichier de sauvegarde
+/*  @param savePath Chemin du fichier de sauvegarde dÃ©crivant la collection Ã  charger
+/*  @return @c CollectionPool d'images chargÃ©e par les donnÃ©es contenues dans le fichier en paramÃ¨tre
 /*
 /*  Cette fonction charge dans chaque image de la @c CollectionPool de retour les attributs
-/*  path_ et tagList_ à partir du fichier de sauvegarde d'extension .txt .
-/*  Le fichier de sauvegarde doit se trouver dans le répertoire où se trouvent les images à charger.
+/*  path_ et tagList_ Ã  partir du fichier de sauvegarde d'extension .txt .
+/*  Le fichier de sauvegarde doit se trouver dans le rÃ©pertoire oÃ¹ se trouvent les images Ã  charger.
 **/
 CollectionPool<Image> createPoolFromSave(const fs::path& savePath)
 {
@@ -24,7 +24,7 @@ CollectionPool<Image> createPoolFromSave(const fs::path& savePath)
 				throw std::runtime_error("Impossible de lire le fichier.");
 
 			Image image;
-			while (in >> image) //charge le path_ et la tagList_ par l'automate de l'opérateur surchargé >>
+			while (in >> image) //charge le path_ et la tagList_ par l'automate de l'opÃ©rateur surchargÃ© >>
 			{
 				image.loadImage(); //charge la CImg
 				collectionPool.push_back(std::move(image));
@@ -39,11 +39,11 @@ CollectionPool<Image> createPoolFromSave(const fs::path& savePath)
 }
 
 /** @fn createPoolFromDirectory
-/*  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
-/*  @param directoryPath Chemin du fichier de sauvegarde décrivant la collection à charger
-/*  @return @c CollectionPool d'images chargée par les données contenues dans le répertoire en paramètre
+/*  @brief Charge une collection d'images Ã  partir du chemin d'un rÃ©pertoire de sauvegarde
+/*  @param directoryPath Chemin du fichier de sauvegarde dÃ©crivant la collection Ã  charger
+/*  @return @c CollectionPool d'images chargÃ©e par les donnÃ©es contenues dans le rÃ©pertoire en paramÃ¨tre
 /*
-/*  Appelle la fonction @fn createPoolFromSave sur le fichier texte unique du répertoire en paramètre.
+/*  Appelle la fonction @fn createPoolFromSave sur le fichier texte unique du rÃ©pertoire en paramÃ¨tre.
 **/
 CollectionPool<Image> createPoolFromDirectory(const fs::path& directoryPath)
 {
@@ -54,7 +54,7 @@ CollectionPool<Image> createPoolFromDirectory(const fs::path& directoryPath)
 
 	fs::path savePath;
 	/* Recherche d'un fichier texte contenant la sauvegarde (chemins et tags de chaque image du dossier).
-	Ce fichier doit être unique. */
+	Ce fichier doit Ãªtre unique. */
 	for (auto& file : fs::directory_iterator(directoryPath))
 	{
 		if (file.path().extension() == ".txt")
@@ -73,12 +73,12 @@ CollectionPool<Image> createPoolFromDirectory(const fs::path& directoryPath)
 }
 
 /** @fn importFromDirectory
-*  @brief Ajoute une collection externe à une collection en paramètre
-*  @param directoryPath Chemin du répertoire de sauvegarde où se trouve la collection à charger et ajouter
-*  @param collectionPool Collection d'images à laquelle est ajoutée les images chargées du directoryPath
+*  @brief Ajoute une collection externe Ã  une collection en paramÃ¨tre
+*  @param directoryPath Chemin du rÃ©pertoire de sauvegarde oÃ¹ se trouve la collection Ã  charger et ajouter
+*  @param collectionPool Collection d'images Ã  laquelle est ajoutÃ©e les images chargÃ©es du directoryPath
 *
 *  Cette fonction ajoute dans @param collectionPool les images au format 'ppm' contenues dans
-*  le répertoire @param directoryPath .
+*  le rÃ©pertoire @param directoryPath .
 **/
 void importFromDirectory(const fs::path& directoryPath, CollectionPool<Image>& collectionPool)
 {

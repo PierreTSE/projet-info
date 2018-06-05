@@ -11,6 +11,7 @@
 #include "Interface/ListWidget.hpp"
 #include "Interface/ScrollWidget.hpp"
 #include "Interface/WindowWidget.hpp"
+#include "Interface/ImageWidget.hpp"
 #include "Utilities/Utilities.hpp"
 #include "system_target.hpp"
 #include <chrono>
@@ -40,8 +41,10 @@ int main()
 #ifndef WINDOWS
 	if (fs::exists(tagsPath))
 		possibleTags = loadTagList(tagsPath);
-	auto collection = std::move(createPoolFromSave(getOpenFileName()));
-	//importFromDirectory(browseFolder(), collection);
+    //auto collection = std::move(createPoolFromSave(getOpenFileName()));
+    auto collection = std::move(createPoolFromSave(fs::path("/home/thomas/Images/images-ppm/save.txt")));
+    //importFromDirectory(browseFolder(), collection);
+    importFromDirectory(fs::path("/home/thomas/Images/images-ppm/"), collection);
 #endif
 
     GridWidget gridTest(collection, 1000, 500);
@@ -49,9 +52,10 @@ int main()
     ButtonWidget buttonTest("clique pour savoir comment est thomas");
 	const vector<string> texts = { "bouton 1", "bouton higfyo"," vfvz \\\"evb  azreb" };
 	ListWidget listTest(texts,true);
+	ImageWidget imageTest(*collection.begin(), dim_t{100, 100});
     
     //WindowWidget window(listTest, { listTest.size().x, listTest.size().y });
-	WindowWidget window(buttonTest, { buttonTest.size().x,buttonTest.size().y });
+	WindowWidget window(imageTest, { 100, 100 });
     
     while(window.is_open())
     {
