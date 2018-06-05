@@ -50,25 +50,15 @@ int main()
 	const vector<string> texts = { "bouton 1","bouton 2", "bouton higfyo"," vfvz \\\"evb  azreb" };
 	ListWidget listTest(texts,true);
     
-    WindowWidget window(buttonTest, { 800, 800 });
+    WindowWidget window(listTest, { 800, 800 });
+
+    
     while(window.is_open())
     {
         window.manageEvents();
         window.display();
         std::this_thread::sleep_for(10ms);
     }
-
-	const img imageTest = listTest.render();
-
-
-	CImgDisplay main_disp(imageTest.width(),imageTest.height(),"prout");
-    while(!main_disp.is_closed())
-    {
-		main_disp.display(imageTest);
-    }
-
-	return 0;
-    
     
     return 0;  
 
