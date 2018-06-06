@@ -1,0 +1,14 @@
+digraph "FilteredCollection::end"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node19 [label="FilteredCollection::end",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="FilteredCollection\l::begin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_filtered_collection.html#ac38c3dc2cd51b2dbfb476c19732a6198"];
+  Node19 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="FilteredCollection\l::cbegin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_filtered_collection.html#a3a7d68dc743ab18b109842441312583b"];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="FilteredCollection\l::begin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_filtered_collection.html#a7ff366d577365b84c947da90a605d66a"];
+}

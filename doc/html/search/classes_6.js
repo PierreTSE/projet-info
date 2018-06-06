@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pooliterator',['PoolIterator',['../class_pool_iterator.html',1,'']]]
+  ['gridwidget',['GridWidget',['../class_grid_widget.html',1,'']]]
 ];

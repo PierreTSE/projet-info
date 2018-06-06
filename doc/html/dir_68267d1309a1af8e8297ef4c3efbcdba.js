@@ -5,9 +5,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "FileDialog", "dir_25e810d1da5a019d81dbe188ae7f04cc.html", "dir_25e810d1da5a019d81dbe188ae7f04cc" ],
     [ "Image", "dir_fdbdd9841f9a730f284bb666ff3d8cfe.html", "dir_fdbdd9841f9a730f284bb666ff3d8cfe" ],
     [ "Interface", "dir_bba04cfeda2ebb06ea600493f2bb1319.html", "dir_bba04cfeda2ebb06ea600493f2bb1319" ],
+    [ "Utilities", "dir_ff383ddf1aa4eab0c4ce7910366d05a5.html", "dir_ff383ddf1aa4eab0c4ce7910366d05a5" ],
     [ "CImg.h", "_c_img_8h.html", "_c_img_8h" ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
-    [ "Parser.cpp", "_parser_8cpp.html", "_parser_8cpp" ],
-    [ "Parser.hpp", "_parser_8hpp.html", "_parser_8hpp" ],
     [ "system_target.hpp", "system__target_8hpp.html", null ]
 ];

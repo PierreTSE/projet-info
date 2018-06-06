@@ -1,0 +1,56 @@
+digraph "Widget::actualPropagateEvent"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node29 [label="Widget::actualPropagateEvent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node29 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="Widget::callRedraw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3"];
+  Node30 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="ButtonWidget::actualResize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_button_widget.html#a66e8bfd9bc9a56b3a7cb2a8efc38347e"];
+  Node30 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="ButtonWidget::actualPropagate\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_button_widget.html#aae069846bf4c475a475a47daf4178f3d"];
+  Node32 -> Node33 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="ButtonWidget::actualSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_button_widget.html#a050618b949448e783b589ddd4ccfedf0"];
+  Node30 -> Node34 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="GridWidget::actualResize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_grid_widget.html#a640c641444f6a5dae5a66af01d036777"];
+  Node34 -> Node35 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="GridWidget::GridWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_grid_widget.html#ae03af738f5dddd2e8ea1b08b2de4ee8b"];
+  Node30 -> Node36 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="GridWidget::actualPropagate\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_grid_widget.html#a9c57f1ca2311d3caa936a481fa7fbef0"];
+  Node36 -> Node35 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="ImageWidget::actualResize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_image_widget.html#a3b5f1a6cf3f2fcde08f50f0b91eaff70"];
+  Node37 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="ImageWidget::ImageWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_image_widget.html#a0691c9bec182528fb06d42d21bc859fe"];
+  Node30 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="ImageWidget::actualPropagate\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_image_widget.html#a08c72c6888bf10e0941443ea67c72498"];
+  Node39 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="ScrollWidget::actualResize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scroll_widget.html#a4ede9d7a9f850f367b39173bb2519bd6"];
+  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="ScrollWidget::ScrollWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scroll_widget.html#a8cd1d59b24aff85a353e86e24425e94d"];
+  Node30 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="ScrollWidget::actualPropagate\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scroll_widget.html#a19b22edd7d9f565af142e801a5960530"];
+  Node42 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="WindowWidget::actualResize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_window_widget.html#a89a68a5d4dc9fd5da10ac75c1121a453"];
+  Node43 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="WindowWidget::display",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e"];
+  Node29 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="Widget::propagateEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0"];
+  Node45 -> Node36 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="ListWidget::actualPropagate\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_list_widget.html#a91b56e252a550deda1d97a2992e3a9f7"];
+  Node45 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="WindowWidget::actualPropagate\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_window_widget.html#a78dedcff8ae2df9a9f86fc0ba17a1998"];
+  Node47 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="WindowWidget::actualSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_window_widget.html#ab7ed87b677d814d58e7f5aebefa7df70"];
+  Node45 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node49 [label="WindowWidget::manageEvents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_window_widget.html#a541a8f556d865da798786e2601cf031e"];
+  Node49 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+}

@@ -208,12 +208,14 @@ var searchData=
   ['getimgptr',['getImgPtr',['../class_image.html#a657a199518956ca160b1100c2147b41d',1,'Image::getImgPtr()'],['../class_image.html#ae9c33ef7fcb6c7fc358ed05c64472ecd',1,'Image::getImgPtr() const']]],
   ['getopenfilename',['getOpenFileName',['../_file_dialog_8hpp.html#ab8faee849788ba51e2d0d4691a2462e1',1,'FileDialog.hpp']]],
   ['getpath',['getPath',['../class_image.html#a2b77063d4c4f0ac499ecd8442f490d1e',1,'Image::getPath()'],['../class_image.html#af497432c080fe6bbbcf54c34f17ecb7a',1,'Image::getPath() const']]],
-  ['getpoolfromdirectory',['getPoolFromDirectory',['../main_8cpp.html#afd1494ba2ddabdc117d066157e838462',1,'main.cpp']]],
-  ['getpoolfromsave',['getPoolFromSave',['../main_8cpp.html#addb7c669fb11a52b3d2dd9e221fdea2f',1,'main.cpp']]],
   ['getsavefilename',['getSaveFileName',['../_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13',1,'FileDialog.hpp']]],
   ['gettaglist',['getTagList',['../class_image.html#ab9615cd8d9ea8a1bcc844c3d1d8c0e47',1,'Image::getTagList()'],['../class_image.html#a0defad17dd6f06994319e842e0f910fe',1,'Image::getTagList() const']]],
+  ['getwindow',['getWindow',['../class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd',1,'Widget::getWindow()'],['../class_widget.html#a1d36bcdc5a64ead5403be88654a5559f',1,'Widget::getWindow() const'],['../class_window_widget.html#acb335c0d4fcbe9a46fa60a1b245ff765',1,'WindowWidget::getWindow() override'],['../class_window_widget.html#a0272c67c6352252523ec0f760834e4f0',1,'WindowWidget::getWindow() const override']]],
   ['grand',['grand',['../namespacecimg__library__suffixed_1_1cimg.html#aa12c572ad67f655e27f7b8e3e76dafa5',1,'cimg_library_suffixed::cimg']]],
   ['graphicsmagick_5fpath',['graphicsmagick_path',['../namespacecimg__library__suffixed_1_1cimg.html#ab4063d8fb2c2564596f33f4a75436f76',1,'cimg_library_suffixed::cimg']]],
+  ['gridwidget',['GridWidget',['../class_grid_widget.html',1,'GridWidget'],['../class_grid_widget.html#ae03af738f5dddd2e8ea1b08b2de4ee8b',1,'GridWidget::GridWidget()']]],
+  ['gridwidget_2ecpp',['GridWidget.cpp',['../_grid_widget_8cpp.html',1,'']]],
+  ['gridwidget_2ehpp',['GridWidget.hpp',['../_grid_widget_8hpp.html',1,'']]],
   ['gunzip_5fpath',['gunzip_path',['../namespacecimg__library__suffixed_1_1cimg.html#a7b4390d7bec2ffbf27d108f1c3a699e0',1,'cimg_library_suffixed::cimg']]],
   ['gzip_5fpath',['gzip_path',['../namespacecimg__library__suffixed_1_1cimg.html#aac00308d827ccbd69bd26c9ba6e1356b',1,'cimg_library_suffixed::cimg']]]
 ];

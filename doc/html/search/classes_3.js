@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['image',['Image',['../class_image.html',1,'']]],
-  ['iteratorbase',['IteratorBase',['../class_iterator_base.html',1,'']]]
+  ['dim_5ft',['dim_t',['../structdim__t.html',1,'']]]
 ];

@@ -92,8 +92,7 @@ $(document).ready(function(){initNavTree('main_8cpp.html','');});
 <div class="title">Référence du fichier main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_collection_8hpp_source.html">Collection/Collection.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_collection_iterator_8hpp_source.html">Collection/CollectionIterator.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_collection_iterator_8hpp_source.html">Collection/CollectionIterator.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_collection_pool_8hpp_source.html">Collection/CollectionPool.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_filtered_collection_8hpp_source.html">Collection/FilteredCollection.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="config_8hpp_source.html">ConsolePrototype/config.hpp</a>&quot;</code><br />
@@ -101,18 +100,22 @@ $(document).ready(function(){initNavTree('main_8cpp.html','');});
 <code>#include &quot;<a class="el" href="save_8hpp_source.html">ConsolePrototype/save.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_file_dialog_8hpp_source.html">FileDialog/FileDialog.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_image_8hpp_source.html">Image/Image.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_parser_8hpp_source.html">Parser.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_button_widget_8hpp_source.html">Interface/ButtonWidget.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_grid_widget_8hpp_source.html">Interface/GridWidget.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_list_widget_8hpp_source.html">Interface/ListWidget.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_scroll_widget_8hpp_source.html">Interface/ScrollWidget.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_window_widget_8hpp_source.html">Interface/WindowWidget.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_image_widget_8hpp_source.html">Interface/ImageWidget.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utilities_8hpp_source.html">Utilities/Utilities.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="system__target_8hpp_source.html">system_target.hpp</a>&quot;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
-<code>#include &lt;exception&gt;</code><br />
 <code>#include &lt;experimental/filesystem&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de main.cpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 0 -->
 </div>
 </div>
 </div><table class="memberdecls">
@@ -123,10 +126,6 @@ Définitions de type</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:addb7c669fb11a52b3d2dd9e221fdea2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_collection_pool.html">CollectionPool</a>&lt; <a class="el" href="class_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#addb7c669fb11a52b3d2dd9e221fdea2f">getPoolFromSave</a> (const fs::path &amp;savePath)</td></tr>
-<tr class="separator:addb7c669fb11a52b3d2dd9e221fdea2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd1494ba2ddabdc117d066157e838462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afd1494ba2ddabdc117d066157e838462">getPoolFromDirectory</a> (const fs::path &amp;directoryPath, <a class="el" href="class_collection_pool.html">CollectionPool</a>&lt; <a class="el" href="class_image.html">Image</a> &gt; &amp;collectionPool)</td></tr>
-<tr class="separator:afd1494ba2ddabdc117d066157e838462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -146,84 +145,6 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="afd1494ba2ddabdc117d066157e838462"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd1494ba2ddabdc117d066157e838462">&#9670;&nbsp;</a></span>getPoolFromDirectory()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void getPoolFromDirectory </td>
-          <td>(</td>
-          <td class="paramtype">const fs::path &amp;&#160;</td>
-          <td class="paramname"><em>directoryPath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_collection_pool.html">CollectionPool</a>&lt; <a class="el" href="class_image.html">Image</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>collectionPool</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Références <a class="el" href="namespacecimg__library__suffixed_1_1cimg.html#aca0e45a04eb1607f2e25101aae4b8572">cimg_library_suffixed::cimg::is_directory()</a>, et <a class="el" href="class_collection_pool.html#a67fc04c58d9da40ef52e4e58aa386557">CollectionPool&lt; T &gt;::push_back()</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="main_8cpp_afd1494ba2ddabdc117d066157e838462_cgraph.svg" width="386" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="main_8cpp_afd1494ba2ddabdc117d066157e838462_icgraph.svg" width="259" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="addb7c669fb11a52b3d2dd9e221fdea2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addb7c669fb11a52b3d2dd9e221fdea2f">&#9670;&nbsp;</a></span>getPoolFromSave()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_collection_pool.html">CollectionPool</a>&lt;<a class="el" href="class_image.html">Image</a>&gt; getPoolFromSave </td>
-          <td>(</td>
-          <td class="paramtype">const fs::path &amp;&#160;</td>
-          <td class="paramname"><em>savePath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Références <a class="el" href="class_image.html#ad6c6fc59aaffc9c101047e8ef32abc9d">Image::loadImage()</a>, et <a class="el" href="class_collection_pool.html#a67fc04c58d9da40ef52e4e58aa386557">CollectionPool&lt; T &gt;::push_back()</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="main_8cpp_addb7c669fb11a52b3d2dd9e221fdea2f_cgraph.svg" width="363" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="main_8cpp_addb7c669fb11a52b3d2dd9e221fdea2f_icgraph.svg" width="236" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -239,11 +160,11 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Références <a class="el" href="menu_8cpp.html#a6127d81352b5656c477805dc7bfcc9c5">affTags()</a>, <a class="el" href="_file_dialog_8hpp.html#ad37a6364c30c0ac2187911992d6c239e">browseFolder()</a>, <a class="el" href="menu_8cpp.html#a0cebd2716215ca7253af746486a7e1c0">choix_image()</a>, <a class="el" href="menu_8cpp.html#a3cb5d03d7c8003abc6637a91f7a1cceb">choix_tag()</a>, <a class="el" href="namespacecimg__library__suffixed_1_1cimg.html#a89ad6cacc2ade7f8077d34fc6f455dc3">cimg_library_suffixed::cimg::dialog()</a>, <a class="el" href="_file_dialog_8hpp.html#ab8faee849788ba51e2d0d4691a2462e1">getOpenFileName()</a>, <a class="el" href="main_8cpp.html#afd1494ba2ddabdc117d066157e838462">getPoolFromDirectory()</a>, <a class="el" href="main_8cpp.html#addb7c669fb11a52b3d2dd9e221fdea2f">getPoolFromSave()</a>, <a class="el" href="_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13">getSaveFileName()</a>, <a class="el" href="menu_8cpp.html#a8e5619d636621af1c4735ab4bd54c626">listImg()</a>, <a class="el" href="config_8cpp.html#ac4088916e2b96189b38f3d1b73db20ab">loadTagList()</a>, <a class="el" href="save_8cpp.html#a5b4162e2a65c758c17d482f849e36b30">saveCollec()</a>, et <a class="el" href="config_8cpp.html#ae4020cd17b8b070a8e414fbacbd7456b">saveTagList()</a>.</p>
+<p class="reference">Références <a class="el" href="menu_8cpp.html#a6127d81352b5656c477805dc7bfcc9c5">affTags()</a>, <a class="el" href="menu_8cpp.html#a0cebd2716215ca7253af746486a7e1c0">choix_image()</a>, <a class="el" href="menu_8cpp.html#a3cb5d03d7c8003abc6637a91f7a1cceb">choix_tag()</a>, <a class="el" href="_utilities_8cpp.html#a6d03d2391c95cb176a80f11be628e6a9">createPoolFromSave()</a>, <a class="el" href="namespacecimg__library__suffixed_1_1cimg.html#a89ad6cacc2ade7f8077d34fc6f455dc3">cimg_library_suffixed::cimg::dialog()</a>, <a class="el" href="_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13">getSaveFileName()</a>, <a class="el" href="_utilities_8cpp.html#a5ce6411f7ab365cdf958f8f16e773d05">importFromDirectory()</a>, <a class="el" href="menu_8cpp.html#a8e5619d636621af1c4735ab4bd54c626">listImg()</a>, <a class="el" href="config_8cpp.html#ac4088916e2b96189b38f3d1b73db20ab">loadTagList()</a>, <a class="el" href="class_window_widget.html#a541a8f556d865da798786e2601cf031e">WindowWidget::manageEvents()</a>, <a class="el" href="save_8cpp.html#a6fea4ae23323ab456f814925c48486a1">saveCollec()</a>, <a class="el" href="config_8cpp.html#ae4020cd17b8b070a8e414fbacbd7456b">saveTagList()</a>, <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 1 -->
 </div>
 </div>
 

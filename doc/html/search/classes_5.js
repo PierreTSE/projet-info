@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['mutex_5finfo',['Mutex_info',['../structcimg__library__suffixed_1_1cimg_1_1_mutex__info.html',1,'cimg_library_suffixed::cimg']]]
+  ['file_5ffilter',['file_filter',['../structfile__filter.html',1,'']]],
+  ['filteredcollection',['FilteredCollection',['../class_filtered_collection.html',1,'']]],
+  ['filterediterator',['FilteredIterator',['../class_filtered_iterator.html',1,'']]]
 ];

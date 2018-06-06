@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['x',['x',['../structdim__t.html#a4dbf33524feebe162d132357af785bbf',1,'dim_t::x()'],['../struct_coordinates_map.html#a8f6bea9e92a85feabd9241cc95b7d6ea',1,'CoordinatesMap::x()']]],
   ['xln',['xln',['../namespacecimg__library__suffixed_1_1cimg.html#a33280187782b500494b92832fc13e339',1,'cimg_library_suffixed::cimg']]],
   ['xyytorgb',['xyYtoRGB',['../structcimg__library__suffixed_1_1_c_img.html#a4120b423486997772fc643dc6597381e',1,'cimg_library_suffixed::CImg']]],
   ['xyytoxyz',['xyYtoXYZ',['../structcimg__library__suffixed_1_1_c_img.html#a051b8b41d46276207243d171a44acb52',1,'cimg_library_suffixed::CImg']]],
