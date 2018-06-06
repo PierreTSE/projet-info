@@ -5,6 +5,8 @@
 
 void ScrollWidget::actualResize(const dim_t& size)
 {
+	coeff_delta_ *= static_cast<double>(size.y) / size_.y;
+	delta_ *= coeff_delta_;
     size_ = size;
     content_->resize(size);
     if(content_->size().y > size.y)
@@ -28,12 +30,12 @@ Widget::img ScrollWidget::actualRender() const
     else
     {
         // Avec une scrollbar
-        auto temp = content_->render().get_crop(0, delta, 0, 0, size_.x-scrollBarWidth-1, delta+size_.y, 0, 2);
+        auto temp = content_->render().get_crop(0, delta_, 0, 0, size_.x-scrollBarWidth-1, delta_+size_.y, 0, 2);
         render.draw_image(0, 0, 0, 0, temp);
-        long long barHeight = static_cast<double>(size_.y) / content_->size().y * size_.y;
-        long long pos = static_cast<double>(size_.y) / content_->size().y * delta;
-        render.draw_image(size_.x-scrollBarWidth, pos, 0, 0, img(scrollBarWidth, barHeight, 1, 3, 200));
-        std::cerr << delta << std::endl;
+        barHeight_ = static_cast<double>(size_.y) / content_->size().y * size_.y;
+        long long pos = static_cast<double>(size_.y) / content_->size().y * delta_;
+        render.draw_image(size_.x-scrollBarWidth, pos, 0, 0, img(scrollBarWidth, barHeight_, 1, 3, 200));
+        std::cerr << delta_ << std::endl;
     }
     
     return render;
@@ -41,18 +43,30 @@ Widget::img ScrollWidget::actualRender() const
 
 bool ScrollWidget::actualPropagateEvent(const Event& event)
 {
-    if(content_->isInside(event.pos - dim_t{0, -delta}))
-    {
-        auto event_temp = event;
-        event_temp.pos = event_temp.pos - dim_t{0, -delta};
-        if(content_->propagateEvent(event_temp))
-            return true;
-    }
-        if(std::holds_alternative<ScrollEvent>(event.event)) {
-        delta -= std::get<ScrollEvent>(event.event).amount * 15;
-        delta = std::clamp<int>(delta, 0, content_->size().y-size_.y);
-        callRedraw();
-        return true;
-    }
+	if (std::holds_alternative<ScrollEvent>(event.event))
+	{
+		delta_ -= std::get<ScrollEvent>(event.event).amount * coeff_delta_;
+		delta_ = std::clamp<int>(delta_, 0, content_->size().y - size_.y);
+		callRedraw();
+	}
+
+	//dim_t pos = event.pos;
+	//std::clamp(pos.y, delta_, delta_ + barHeight_);
+	//std::clamp(pos.y, 0, size_.y);
+	if (isInside(event.pos - dim_t { (size_.x - scrollBarWidth), -delta_ }) && std::holds_alternative<ClickEvent>(event.event) && std::get<ClickEvent>(event.event).type == ClickEvent::LEFT)
+	{
+	    std::cout << "yes" << std::endl;
+	}
+
+
+
+    //vieux code
+	if (content_->isInside(event.pos - dim_t {0, -delta_}))
+	{
+		if (content_->propagateEvent(Event{ event.pos - dim_t { 0, -delta_ }, event.event }))
+			return true;
+	}
+
+
     return false;
 }

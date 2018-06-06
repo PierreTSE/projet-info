@@ -50,12 +50,21 @@ int main()
     GridWidget gridTest(collection, 1000, 500, {200, 200});
     ScrollWidget scrollTest(gridTest, { 1000, 500 });
     ButtonWidget buttonTest("clique pour savoir comment est thomas");
+	buttonTest.setCallBack([](ClickEvent ce, ButtonWidget* be) {return true; });
 	const vector<string> texts = { "bouton 1", "bouton higfyo"," vfvz \\\"evb  azreb" };
 	ImageWidget imageTest(*collection.begin(), dim_t{100, 100});
 	ListWidget listColumn(texts,true);
+    for(size_t i = 0 ; i < listColumn.getLength() ; ++i)
+    {
+		listColumn.setCallBack(i);
+    }
 	ListWidget listLine(texts);
+	for (size_t i = 0; i < listLine.getLength(); ++i)
+	{
+		listLine.setCallBack(i);
+	}
     
-    WindowWidget window1(scrollTest, { listLine.size().x, listLine.size().y });
+    WindowWidget window1(listLine, { listLine.size().x, listLine.size().y });
 	WindowWidget window2(listColumn, { listColumn.size().x, listColumn.size().y });
 	//WindowWidget window(buttonTest, { buttonTest.size().x,buttonTest.size().y });
     

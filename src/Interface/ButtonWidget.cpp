@@ -61,21 +61,21 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 				std::cerr << "thomas est left méchant" << std::endl; //HACK test
 				is_clicked_ = !is_clicked_;
 				callRedraw();
-				if (!execute(ClickEvent::LEFT)) throw std::runtime_error("Button could not left click.");
+				if (!callBack(std::get<ClickEvent>(event.event),this)) throw std::runtime_error("Button could not left click.");
 			}
 			else if (std::get<ClickEvent>(event.event).type == ClickEvent::MIDDLE)
 			{
 				std::cerr << "thomas est middle méchant" << std::endl; //HACK test
 				is_clicked_ = !is_clicked_;
 				callRedraw();
-				if (!execute(ClickEvent::MIDDLE)) throw std::runtime_error("Button could not middle click.");
+				if (!callBack(std::get<ClickEvent>(event.event), this)) throw std::runtime_error("Button could not middle click.");
 			}
 			else if (std::get<ClickEvent>(event.event).type == ClickEvent::RIGHT)
 			{
 				std::cerr << "thomas est right méchant" << std::endl; //HACK test
 				is_clicked_ = !is_clicked_;
 				callRedraw();
-				if (!execute(ClickEvent::RIGHT)) throw std::runtime_error("Button could not right click.");
+				if (!callBack(std::get<ClickEvent>(event.event), this)) throw std::runtime_error("Button could not right click.");
 			}
 			else
 			{
@@ -106,10 +106,4 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 	}
 
 	return false;
-}
-
-bool ButtonWidget::execute(ClickEvent::mouseButton_t)
-{
-	std::cerr << "Button with no function executed." << std::endl;
-	return true;
 }

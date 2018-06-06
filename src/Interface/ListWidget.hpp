@@ -17,7 +17,11 @@ class ListWidget : public Widget
 {
     public:
         explicit ListWidget(const std::vector<std::string>& texts, bool column = false, int fontSize = 23, const dim_t& size = { 0,0 });
+        explicit ListWidget(const std::vector<ButtonWidget>& buttons, bool column = false, int fontSize = 23, const dim_t& size = { 0,0 });
 
+		void setCallBack(size_t i, const std::function<bool(ClickEvent, ButtonWidget*)> f = [](ClickEvent ce, ButtonWidget* be) {return true; }) { buttons_.at(i).setCallBack(f); }
+		size_t getLength() const { return buttons_.size(); }
+        
     protected:
 	    img actualRender() const override;
 	    void actualResize(const dim_t& size) override;

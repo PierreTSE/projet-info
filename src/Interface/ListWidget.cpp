@@ -1,4 +1,4 @@
-#include "ListWidget.hpp"
+﻿#include "ListWidget.hpp"
 #include <algorithm>
 #include <functional>
 #include <iostream>
@@ -33,7 +33,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		}
 		else
 		{
-		    //TODO cas o� la ligne est demand�e plus large que par d�faut
+		    //TODO cas où la ligne est demandée plus large que par défaut
 		}
 
 		if (size.y <= fontSize_)
@@ -44,7 +44,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		}
 		else
 		{
-		    //TODO cas o� la ligne est demand�e plus haute que par d�faut
+		    //TODO cas où la ligne est demandée plus haute que par défaut
 		}
 	}
 	else //if(column_)
@@ -58,7 +58,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		}
 		else
 		{
-		    //TODO cas o� la colonne est demand�e plus large que par d�faut
+		    //TODO cas où la colonne est demandée plus large que par défaut
 		}
 
 		auto default_size_y = 0;
@@ -75,7 +75,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		}
 		else
 		{
-		    //TODO cas o� la colonne est demand�e plus haute que par d�faut
+		    //TODO cas où la colonne est demandée plus haute que par défaut
 		}
     }
 
