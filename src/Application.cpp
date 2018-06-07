@@ -41,38 +41,74 @@ int Application::execute()
     return 0;
 }
 
+void Application::actualSave() const
+{
+	std::ofstream os(savePath_.c_str(), std::ios::out | std::ios::trunc);
+	if (collection_)
+	{
+		for (const auto& img : *collection_)
+		{
+			os << img << std::endl;
+		}
+	}
+}
+
+bool Application::saveAs()
+{
+	savePath_ = getSaveFileName("Enregistrer sous...", { "Texte",".txt" });
+	if (fs::exists(savePath_) && fs::is_regular_file(savePath_))
+	{
+		actualSave();
+		return true;
+	}
+	else return false;
+}
+
+bool Application::save()
+{
+	if(fs::exists(savePath_) && fs::is_regular_file(savePath_))
+	{
+		actualSave();
+		return true;
+	}
+	else
+	{
+		return saveAs();
+	}
+}
+
 void Application::initialWindow()
 {
     std::unique_ptr<ListWidget> list(new ListWidget({u8" Charger ", u8" Créer "}));
     list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
-    { // Charger function
-        updateFunction_ = [this]()
-        {
-            fs::path savePath = getOpenFileName();
-            if(!fs::exists(savePath) || !fs::is_regular_file(savePath))
-                return;
-            savePath_ = savePath;
-            auto temp = createPoolFromSave(savePath_);
-            collection_.reset(new CollectionPool<Image>(std::move(temp)));
-            collectionWindow();
-        };
-        return true;
-    });
+        { // Charger function
+            updateFunction_ = [this]()
+            {
+                fs::path savePath = getOpenFileName();
+                if(!fs::exists(savePath) || !fs::is_regular_file(savePath))
+                    return;
+                savePath_ = savePath;
+                auto temp = createPoolFromSave(savePath_);
+                collection_.reset(new CollectionPool<Image>(std::move(temp)));
+                collectionWindow();
+            };
+            return true;
+        });
     list->setCallBack(1, [this](ClickEvent ce, ButtonWidget* but)
-    { 
-        updateFunction_ = [this]()
-        {// Créer une collection
-            fs::path directoryPath = browseFolder();
-            if(!fs::exists(directoryPath) || !fs::is_directory(directoryPath))
-                return;
-            collection_.reset(new CollectionPool<Image>);
-
-            importFromDirectory(directoryPath, *collection_);
-
-            collectionWindow();
-        };
-        return true;
-    });
+        { 
+            updateFunction_ = [this]()
+            {// Créer une collection
+                fs::path directoryPath = browseFolder();
+                if(!fs::exists(directoryPath) || !fs::is_directory(directoryPath))
+                    return;
+                collection_.reset(new CollectionPool<Image>);
+    
+                importFromDirectory(directoryPath, *collection_);
+    
+                collectionWindow();
+            };
+            return true;
+        });
     
     auto menubar = new MenuBarWidget(nullptr, list.release(), window_.size());
     window_.setContent(menubar);

@@ -7,14 +7,17 @@
 #include <map>
 #include <string>
 #include <any>
-
+#include <optional>
 
 class Application
 {
     public:
         Application();
         int execute();
-        
+
+		bool saveAs();
+		bool save() ;
+
     private:
         void update();
     
@@ -30,6 +33,8 @@ class Application
         std::experimental::filesystem::path savePath_;
         
         std::map<std::string, std::any> variables_;
+
+		void actualSave() const;
 };
 
 

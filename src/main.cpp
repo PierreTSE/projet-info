@@ -57,7 +57,7 @@ int main()
 	string s = R"(ÉÀ}æö,¦£ éèàùç)";
 
     GridWidget gridTest(collection, 1000, 500, {200, 200});
-    ScrollWidget scrollTest(gridTest, { 1000, 500 });
+  //  ScrollWidget scrollTest(gridTest, { 1000, 500 });
     ButtonWidget buttonTest("clique pour savoir comment est thomas");
 	buttonTest.setCallBack([](ClickEvent ce, ButtonWidget* be) {return true; });
 	const vector<string> texts = { "bouton 1", R"(ÉÀ}æö,¦£ éèàùç)"," vfvz \\\"evb  azreb" };
@@ -73,8 +73,8 @@ int main()
 		listLine.setCallBack(i);
 	}
     
-    WindowWidget window1(listLine, { listLine.size().x, listLine.size().y });
-	WindowWidget window2(listColumn, { listColumn.size().x, listColumn.size().y });
+    WindowWidget window1(&listLine, { listLine.size().x, listLine.size().y });
+	WindowWidget window2(&listColumn, { listColumn.size().x, listColumn.size().y });
 	//WindowWidget window(buttonTest, { buttonTest.size().x,buttonTest.size().y });
 	//WindowWidget window1(scrollTest, { scrollTest.size().x, scrollTest.size().y });
     
@@ -95,6 +95,7 @@ int main()
     
     return 0;  
 
+    /*
     //---------------------------------------------------------------------------------------------------------------
     //menu console prototype
 
