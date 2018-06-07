@@ -35,26 +35,29 @@ void WindowWidget::actualResize(const dim_t& size)
 
 bool WindowWidget::actualPropagateEvent(const Event& event)
 {
+    bool b = false;
     if(rightClickMenu_)
     {
         if(std::holds_alternative<MoveEvent>(event.event))
         {
             if(rightClickMenu_->propagateEvent(Event{event.pos - rightClickMenuPos_, event.event}))
-                return true;
+                b = true;
         }
         else
         {
             if(rightClickMenu_->isInside(event.pos - rightClickMenuPos_))
                 if(rightClickMenu_->propagateEvent(Event{event.pos-rightClickMenuPos_, event.event}))
-                    return true;
+                    b = true;
         }
     }
-        
-    bool b = content_->propagateEvent(event);
+    
+    if(!b)
+        b = content_->propagateEvent(event);
     if(isRightMenuActive_ && rightClickMenu_ && std::holds_alternative<ClickEvent>(event.event))
     {
         rightClickMenu_.reset(nullptr);
         isRightMenuActive_ = false;
+        callRedraw();
     }
     if(rightClickMenu_)
         isRightMenuActive_ = true;
