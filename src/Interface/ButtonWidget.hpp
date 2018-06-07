@@ -9,9 +9,10 @@
 class ButtonWidget : public Widget
 {
     public:
-        explicit ButtonWidget(const std::string& text, const int& fontSize = 23, const dim_t& size = { 0,0 });
+        explicit ButtonWidget(const std::string& text, bool clickable = false, const int& fontSize = 23, const dim_t& size = { 0,0 });
 
 		void setCallBack(const std::function<bool(ClickEvent, ButtonWidget*)> f) { callBack_ = f; }
+		void setClickable(bool clickable) { holds_click_ = clickable; }
     
     protected:
 		img actualRender() const override;
@@ -23,6 +24,7 @@ class ButtonWidget : public Widget
 		dim_t size_;
 		bool is_hovered_ = false;
 		bool is_clicked_ = false;
+		bool holds_click_ = false;
 		std::string text_;
 		const int fontSize_;
 		std::function<bool(ClickEvent,ButtonWidget*)> callBack_ ;

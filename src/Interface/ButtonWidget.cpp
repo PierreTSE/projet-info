@@ -1,8 +1,9 @@
 #include "ButtonWidget.hpp"
 #include <iostream>
 
-ButtonWidget::ButtonWidget(const std::string& text, const int& fontSize, const dim_t& size) :
+ButtonWidget::ButtonWidget(const std::string& text, bool clickable, const int& fontSize, const dim_t& size) :
     size_{ size },
+    holds_click_{clickable},
     text_{text},
     fontSize_{fontSize}
 {
@@ -53,42 +54,26 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 {
 	if (std::holds_alternative<ClickEvent>(event.event))
 	{
-		if (isInside(event.pos))
-		{
-
-			if (std::get<ClickEvent>(event.event).type == ClickEvent::LEFT)
+        if(holds_click_)
+        {
+			if (isInside(event.pos))
 			{
-				std::cerr << "thomas est left méchant" << std::endl; //HACK test
 				is_clicked_ = !is_clicked_;
 				callRedraw();
-				if (!callBack(std::get<ClickEvent>(event.event),this)) throw std::runtime_error("Button could not left click.");
-			}
-			else if (std::get<ClickEvent>(event.event).type == ClickEvent::MIDDLE)
-			{
-				std::cerr << "thomas est middle méchant" << std::endl; //HACK test
-				is_clicked_ = !is_clicked_;
-				callRedraw();
-				if (!callBack(std::get<ClickEvent>(event.event), this)) throw std::runtime_error("Button could not middle click.");
-			}
-			else if (std::get<ClickEvent>(event.event).type == ClickEvent::RIGHT)
-			{
-				std::cerr << "thomas est right méchant" << std::endl; //HACK test
-				is_clicked_ = !is_clicked_;
-				callRedraw();
-				if (!callBack(std::get<ClickEvent>(event.event), this)) throw std::runtime_error("Button could not right click.");
+				return callBack(std::get<ClickEvent>(event.event), this);
 			}
 			else
 			{
 				is_clicked_ = false;
+				return false;
 			}
-			return true;
-		}
-		else
+        }
+		else if (isInside(event.pos))
 		{
-			is_clicked_ = false;
-			return false;
+			return callBack(std::get<ClickEvent>(event.event), this);
 		}
 	}
+
 	if (std::holds_alternative<MoveEvent>(event.event))
 	{
 		if (isInside(event.pos))
