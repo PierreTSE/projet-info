@@ -13,11 +13,12 @@
 #include "Interface/WindowWidget.hpp"
 #include "Interface/ImageWidget.hpp"
 #include "Utilities/Utilities.hpp"
+#include "Application.hpp"
 #include "system_target.hpp"
 #include <chrono>
+#include <thread>
 #include <experimental/filesystem>
 #include <iostream>
-#include <thread>
 
 
 namespace fs = std::experimental::filesystem;
@@ -27,6 +28,10 @@ using img = cimg_library::CImg<unsigned char>;
 
 int main()
 {
+    Application app;
+    return app.execute();
+    
+    /*
 	auto wd = fs::current_path(); //working directory
 
 	TagList possibleTags;
@@ -189,5 +194,5 @@ int main()
 	fs::current_path(wd);
     saveTagList(tagsPath, possibleTags);
     
-    return 0;
+    return 0;*/
 }

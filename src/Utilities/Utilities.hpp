@@ -5,32 +5,32 @@
 #include "../Image/Image.hpp"
 
 /** @fn createPoolFromSave
- *  @brief Charge une collection d'images à partir du chemin d'un fichier de sauvegarde
- *  @param savePath Chemin du fichier de sauvegarde décrivant la collection à charger
- *  @return @c CollectionPool d'images chargée par les données contenues dans le fichier en paramètre
+ *  @brief Charge une collection d'images Ã  partir du chemin d'un fichier de sauvegarde
+ *  @param savePath Chemin du fichier de sauvegarde dÃ©crivant la collection Ã  charger
+ *  @return @c CollectionPool d'images chargÃ©e par les donnÃ©es contenues dans le fichier en paramÃ¨tre
  *
  *  Cette fonction charge dans chaque image de la @c CollectionPool de retour les attributs
- *  path_ et tagList_ à partir du fichier de sauvegarde d'extension .txt .
- *  Le fichier de sauvegarde doit se trouver dans le répertoire où se trouvent les images à charger.
+ *  path_ et tagList_ Ã  partir du fichier de sauvegarde d'extension .txt .
+ *  Le fichier de sauvegarde doit se trouver dans le rÃ©pertoire oÃ¹ se trouvent les images Ã  charger.
  */
 CollectionPool<Image> createPoolFromSave(const std::experimental::filesystem::path& savePath);
 
 /** @fn createPoolFromDirectory
- *  @brief Charge une collection d'images à partir du chemin d'un répertoire de sauvegarde
- *  @param directoryPath Chemin du fichier de sauvegarde décrivant la collection à charger
- *  @return @c CollectionPool d'images chargée par les données contenues dans le répertoire en paramètre
+ *  @brief Charge une collection d'images Ã  partir du chemin d'un rÃ©pertoire de sauvegarde
+ *  @param directoryPath Chemin du fichier de sauvegarde dÃ©crivant la collection Ã  charger
+ *  @return @c CollectionPool d'images chargÃ©e par les donnÃ©es contenues dans le rÃ©pertoire en paramÃ¨tre
  *
- *  Appelle la fonction @fn createPoolFromSave sur le fichier texte unique du répertoire en paramètre.
+ *  Appelle la fonction @fn createPoolFromSave sur le fichier texte unique du rÃ©pertoire en paramÃ¨tre.
  */
 CollectionPool<Image> createPoolFromDirectory(const std::experimental::filesystem::path& directoryPath);
 
 /** @fn importFromDirectory
- *  @brief Ajoute une collection externe à une collection en paramètre
- *  @param directoryPath Chemin du répertoire de sauvegarde où se trouve la collection à charger et ajouter
- *  @param collectionPool Collection d'images à laquelle est ajoutée les images chargées du directoryPath
+ *  @brief Ajoute une collection externe Ã  une collection en paramÃ¨tre
+ *  @param directoryPath Chemin du rÃ©pertoire de sauvegarde oÃ¹ se trouve la collection Ã  charger et ajouter
+ *  @param collectionPool Collection d'images Ã  laquelle est ajoutÃ©e les images chargÃ©es du directoryPath
  *
  *  Cette fonction ajoute dans @param collectionPool les images au format 'ppm' contenues dans
- *  le répertoire @param directoryPath .
+ *  le rÃ©pertoire @param directoryPath .
  */
 void importFromDirectory(const std::experimental::filesystem::path& directoryPath, CollectionPool<Image>& collectionPool);
 

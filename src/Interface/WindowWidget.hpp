@@ -1,17 +1,19 @@
 #ifndef WINDOWWIDGET_HPP
 #define WINDOWWIDGET_HPP
 
+#include <memory>
 #include "Widget.hpp"
 
 
 class WindowWidget : public Widget
 {
     public:
-        WindowWidget(Widget& content, dim_t size);
+        WindowWidget(Widget* content, dim_t size);
     
         void manageEvents();
         bool is_open() const { return !window_.is_closed(); }
         void display() { window_.display(render()); }
+        void setContent(Widget* content);
     
     protected:
         img actualRender() const override;
@@ -23,7 +25,7 @@ class WindowWidget : public Widget
         const WindowWidget* getWindow() const override { return this; }
     
     private:
-        Widget* content_ = nullptr;
+        std::unique_ptr<Widget> content_ = nullptr;
         dim_t size_;
         cimg_library::CImgDisplay window_;
         dim_t textPos_ = {0, 0};

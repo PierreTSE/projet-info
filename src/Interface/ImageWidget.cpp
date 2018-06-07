@@ -4,7 +4,7 @@
 Widget::img ImageWidget::actualRender() const
 {
     img render;
-    if(selected_)
+    if(image_.isSelected())
     {
         // This code very nice : couleur hardcodée
         render.assign(size_.x, size_.y, 1, 3, 38);
@@ -50,7 +50,7 @@ bool ImageWidget::actualPropagateEvent(const Event& event)
 {    
     if (std::holds_alternative<ClickEvent>(event.event))
     {
-        selected_ = !selected_;
+        image_.select(!image_.isSelected());
         callRedraw();
     }
     // TODO Gérer les events

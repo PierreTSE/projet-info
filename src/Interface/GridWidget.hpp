@@ -4,13 +4,14 @@
 #include "Widget.hpp"
 #include "ImageWidget.hpp"
 #include "../Collection/Collection.hpp"
+#include "../Collection/FilteredCollection.hpp"
 #include <map>
 
 
 class GridWidget : public Widget
 {
     public:
-        GridWidget(const Collection<Image>& collec, long long width, long long minHeight, const dim_t& elemSize = {100, 100}) :
+        GridWidget(Collection<Image>& collec, long long width, long long minHeight, const dim_t& elemSize = {100, 100}) :
             collec_{collec}, targetWidth_{width}, minHeight_{minHeight}, elemSize_{elemSize} {
             for(auto& image : collec_)
             {
@@ -27,7 +28,7 @@ class GridWidget : public Widget
         bool actualPropagateEvent(const Event& event) override;
     
     private:
-        const Collection<Image>& collec_;
+        Collection<Image>& collec_;
         mutable std::map<std::experimental::filesystem::path, ImageWidget> associatedWidgets_;
         long long targetWidth_;
         long long minHeight_;

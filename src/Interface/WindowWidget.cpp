@@ -1,13 +1,16 @@
 #include "WindowWidget.hpp"
 
 
-WindowWidget::WindowWidget(Widget& content, dim_t size) :
-    content_{&content},
+WindowWidget::WindowWidget(Widget* content, dim_t size) :
+    content_{content},
     size_{size},
     window_{size.x, size.y}
 {
-    content.setParent(this);
-    content.resize(size);
+    if(content) 
+    {
+        content_->setParent(this);
+        content_->resize(size_); 
+    }
     lastWheel_ = window_.wheel();
     lastButton_ = window_.button();
     lastMouse_ = dim_t{window_.mouse_x(), window_.mouse_y()};
@@ -62,4 +65,12 @@ void WindowWidget::manageEvents()
         window_.resize();
         resize({window_.window_width(), window_.window_height()});
     }
+}
+
+void WindowWidget::setContent(Widget* content)
+{
+    content_.reset(content);
+    content_->setParent(this);
+    content_->resize(size_);
+    callRedraw();
 }

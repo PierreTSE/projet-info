@@ -2,12 +2,13 @@
 #define SCROLLWIDGET_HPP
 
 #include "Widget.hpp"
+#include <memory>
 
 
 class ScrollWidget : public Widget
 {
     public:
-        explicit ScrollWidget(Widget& content, const dim_t size) : size_{size}, content_{&content} { content_->resize(size_); content_->setParent(this); }
+        ScrollWidget(Widget* content, dim_t size) : content_{content}, size_{size} { content_->resize(size_); content_->setParent(this); }
     
     protected:
         void actualResize(const dim_t& size) override;
@@ -17,9 +18,9 @@ class ScrollWidget : public Widget
 
     private:
         dim_t size_;
-        Widget* content_ = nullptr;
+        std::unique_ptr<Widget> content_ = nullptr;
         long long delta_ = 0;
-		float coeff_delta_ = 20;
+        float coeff_delta_ = 20;
         mutable long barHeight_ = 0;
         
         static constexpr int scrollBarWidth = 20;
