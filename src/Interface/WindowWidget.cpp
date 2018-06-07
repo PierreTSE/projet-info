@@ -54,7 +54,10 @@ bool WindowWidget::actualPropagateEvent(const Event& event)
     if(isRightMenuActive_ && rightClickMenu_ && std::holds_alternative<ClickEvent>(event.event))
     {
         rightClickMenu_.reset(nullptr);
+        isRightMenuActive_ = false;
     }
+    if(rightClickMenu_)
+        isRightMenuActive_ = true;
     return b;
 }
 

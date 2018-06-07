@@ -113,7 +113,7 @@ void Application::collectionWindow()
         return true;
     });
     
-    auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {100, 100});
+    auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150});
     auto scroll = new ScrollWidget(grid, window_.size());
     auto menubar = new MenuBarWidget(scroll, list.release(), window_.size());
     window_.setContent(menubar);
