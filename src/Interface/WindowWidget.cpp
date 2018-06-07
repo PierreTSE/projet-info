@@ -19,6 +19,8 @@ WindowWidget::WindowWidget(Widget* content, dim_t size) :
 Widget::img WindowWidget::actualRender() const
 {
     img render = content_->render();
+    if(rightClickMenu_)
+        render.draw_image(rightClickMenuPos_.x, rightClickMenuPos_.y, 0, 0, rightClickMenu_->render());
     return render;
 }
 
@@ -33,7 +35,30 @@ void WindowWidget::actualResize(const dim_t& size)
 
 bool WindowWidget::actualPropagateEvent(const Event& event)
 {
-    return content_->propagateEvent(event);
+    if(rightClickMenu_)
+    {
+        if(std::holds_alternative<MoveEvent>(event.event))
+        {
+            if(rightClickMenu_->propagateEvent(Event{event.pos - rightClickMenuPos_, event.event}))
+                return true;
+        }
+        else
+        {
+            if(rightClickMenu_->isInside(event.pos - rightClickMenuPos_))
+                if(rightClickMenu_->propagateEvent(Event{event.pos-rightClickMenuPos_, event.event}))
+                    return true;
+        }
+    }
+        
+    bool b = content_->propagateEvent(event);
+    if(isRightMenuActive_ && rightClickMenu_ && std::holds_alternative<ClickEvent>(event.event))
+    {
+        rightClickMenu_.reset(nullptr);
+        isRightMenuActive_ = false;
+    }
+    if(rightClickMenu_)
+        isRightMenuActive_ = true;
+    return b;
 }
 
 void WindowWidget::manageEvents()
@@ -65,6 +90,12 @@ void WindowWidget::manageEvents()
         window_.resize();
         resize({window_.window_width(), window_.window_height()});
     }
+    
+    if(needRightClickMenu_)
+    {
+        rightClickMenuPos_ = mouse;
+        needRightClickMenu_ = false;
+    }
 }
 
 void WindowWidget::setContent(Widget* content)
@@ -73,4 +104,14 @@ void WindowWidget::setContent(Widget* content)
     content_->setParent(this);
     content_->resize(size_);
     callRedraw();
+}
+
+void WindowWidget::spawnRightClickMenu(ListWidget* rightClickMenu, dim_t pos)
+{
+    rightClickMenu_.reset(rightClickMenu);
+    rightClickMenu->setParent(this);
+    if(pos == dim_t{-1, -1})
+        needRightClickMenu_ = true;
+    else
+        rightClickMenuPos_ = pos;
 }

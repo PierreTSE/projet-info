@@ -61,11 +61,33 @@ bool TagSetterWidget::actualPropagateEvent(const Event& event)
 {
     if(std::holds_alternative<ClickEvent>(event.event)) 
     {
-        //ClickEvent& ce = std::get<ClickEvent>(event.event);
-        //if(ce.type == ClickEvent::LEFT)
-        //{
-        //    
-        //}
+        const auto& ce = std::get<ClickEvent>(event.event);
+        if(ce.type == ClickEvent::LEFT)
+        {
+            int pos = event.pos.y / lineHeight;
+            auto it = possibleTags_.begin();
+            bool valid = true;
+            
+            for(int i = 0; i < pos && it != possibleTags_.end(); ++i)
+            {
+                if(++it == possibleTags_.end())
+                    valid = false;
+            }
+                
+            if(valid)
+            {
+                const Tag& tag = *it;
+                bool state = std::all_of(collection_.begin(), collection_.end(), [&](const Image& i) { return i.hasTag(tag); });
+                
+                if(state)
+                    for(auto& image : collection_)
+                        image.getTagList().erase(tag);
+                else
+                    for(auto& image : collection_)
+                        image.getTagList().insert(tag);
+            }
+        }
+        callRedraw();
         
         return true;
     }

@@ -26,7 +26,13 @@ class Widget
 		void setParent(Widget* wid) { parent_ = wid; }
 		virtual ~Widget() = default;
 
-		void callRedraw() const { needRedraw_ = true; if(parent_) parent_->callRedraw(); };
+		void callRedraw() const { needRedraw_ = true; 
+		if(parent_) 
+		    parent_->callRedraw(); 
+		};
+	
+		virtual WindowWidget* getWindow() { return parent_ ? parent_->getWindow() : nullptr; }
+		virtual const WindowWidget* getWindow() const { return parent_ ? parent_->getWindow() : nullptr; }
 
 	protected:
 		virtual img actualRender() const = 0;
@@ -34,9 +40,6 @@ class Widget
 		virtual dim_t actualSize() const = 0;
 		virtual bool actualPropagateEvent(const Event& event) = 0;
 		virtual bool actualIsInside(const dim_t& pos) const;
-
-        virtual WindowWidget* getWindow() { return parent_ ? parent_->getWindow() : nullptr; }
-        virtual const WindowWidget* getWindow() const { return parent_ ? parent_->getWindow() : nullptr; }
     
 		Widget* parent_ = nullptr;
 

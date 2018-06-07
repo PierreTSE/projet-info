@@ -113,21 +113,21 @@ class CollectionIterator
 template <typename T>
 class ConstIteratorBase
 {
-public:
-	ConstIteratorBase() = default; //default constructor
-	virtual ~ConstIteratorBase() = default; //destructor
-
-	bool operator==(const ConstIteratorBase& rhs) const { return typeid(*this) == typeid(rhs) && equal(rhs); } //== comparator
-
-	virtual const T& operator*() const = 0; //const dereference operator
-	virtual const T* operator->() const = 0; //const arrow operator
-
-	virtual void operator++() = 0; //pre-increment operator
-	virtual void operator--() = 0; //pre-decrement operator
-
-	virtual ConstIteratorBase* clone() const = 0;
-protected:
-	virtual bool equal(const ConstIteratorBase& rhs) const = 0;
+	public:
+		ConstIteratorBase() = default; //default constructor
+		virtual ~ConstIteratorBase() = default; //destructor
+	
+		bool operator==(const ConstIteratorBase& rhs) const { return typeid(*this) == typeid(rhs) && equal(rhs); } //== comparator
+	
+		virtual const T& operator*() const = 0; //const dereference operator
+		virtual const T* operator->() const = 0; //const arrow operator
+	
+		virtual void operator++() = 0; //pre-increment operator
+		virtual void operator--() = 0; //pre-decrement operator
+	
+		virtual ConstIteratorBase* clone() const = 0;
+	protected:
+		virtual bool equal(const ConstIteratorBase& rhs) const = 0;
 };
 
 /**

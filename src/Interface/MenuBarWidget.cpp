@@ -1,20 +1,43 @@
 #include "MenuBarWidget.hpp"
 
 
+MenuBarWidget::MenuBarWidget(Widget* content, ListWidget* buttons, const dim_t& size) :
+	content_{content},
+	buttons_{buttons},
+	size_{size}
+{
+    if(content_)
+        content_->setParent(this);
+    buttons_->setParent(this);
+}
+
 MenuBarWidget::img MenuBarWidget::actualRender() const
 {
-	return img();
+	img render(size_.x, size_.y, 1, 3, 255);
+	render.draw_image(0, 0, 0, 0, buttons_->render());
+	if(content_)
+		render.draw_image(0, buttons_->size().y, 0, 0, content_->render());
+	
+	return render;
 }
 
 void MenuBarWidget::actualResize(const dim_t& size)
 {
-    
+    size_ = size;
+    callRedraw();
+	if(content_)
+    	content_->resize(size - dim_t{0, buttons_->size().y});
 }
 
 bool MenuBarWidget::actualPropagateEvent(const Event& event)
 {
-	//if (content_->isInside(event.pos - dim_t {-delta, 0}))
-	//	if (content_->propagateEvent(event))
-	//		return true;
-	return true;
+    if(std::holds_alternative<MoveEvent>(event.event))
+        return buttons_->propagateEvent(event);
+    
+	if(buttons_->isInside(event.pos))
+		return buttons_->propagateEvent(event);
+	else if(content_ && content_->isInside(event.pos - dim_t{0, buttons_->size().y}))
+		return content_->propagateEvent(Event{event.pos - dim_t{0, buttons_->size().y}, event.event});
+	
+	return false;
 }

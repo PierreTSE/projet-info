@@ -194,3 +194,15 @@ bool ListWidget::actualPropagateEvent(const Event& event)
     }
 
 }
+
+ListWidget::ListWidget(const ListWidget& other) :
+	size_{other.size_},
+	buttons_{other.buttons_},
+	column_{other.column_},
+	fontSize_{other.fontSize_},
+	is_hovered_{other.is_hovered_},
+	buttonCoordinates_{other.buttonCoordinates_}
+{
+	for(auto& button : buttons_)
+		button.setParent(this);
+}
