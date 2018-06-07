@@ -78,39 +78,6 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		    //TODO cas où la colonne est demandée plus haute que par défaut
 		}
     }
-
-    /*if(column_)
-    {
-		const std::string widestText = *std::max_element(texts.begin(), texts.end(), [](std::string str1, std::string str2) {return str1.size() < str2.size(); });
-		if (size.x < fontSize.x * widestText.length())
-			size_.x = fontSize_.x * widestText.length();
-
-		if (size.y < fontSize.y * texts.size())
-			size_.y = fontSize.y * texts.size();
-		std::cerr << "ListWidget column construction : adapted width to text lenght:" << widestText << std::endl;
-
-		for (const auto& str : texts)
-		{
-			buttons_.emplace_back(str, fontSize_.x);
-			buttons_.back().setParent(this);
-		}
-    }
-	else
-	{
-		if (size_.y < fontSize_.y)
-			size_.y = fontSize_.y;
-
-		size_t lineSize = 0;
-		for (const auto& str : texts)
-		{
-			buttons_.emplace_back(str, fontSize_.x);
-			lineSize += str.length() * fontSize_.x + 1;
-			buttons_.back().setParent(this);
-		}
-		if (size_.x < lineSize)
-			size_.x = lineSize;
-	}*/
-
 }
 
 ListWidget::img ListWidget::actualRender() const
@@ -121,6 +88,8 @@ ListWidget::img ListWidget::actualRender() const
 		int posY = 0;
 		for (size_t i = 0; i < buttons_.size(); i++)
 		{
+            if(buttons_[i].isColored())
+				render.draw_rectangle(0, posY, 0, size_.x, posY + buttons_[i].size().y - 1, 0, buttons_[i].getBackgroundColor());
 			render.draw_image(0, posY, 0, 0, buttons_[i].render());
 			posY += buttons_[i].size().y;
 		}
@@ -130,7 +99,6 @@ ListWidget::img ListWidget::actualRender() const
 		int posX = 0;
 		for (size_t i = 0; i < buttons_.size(); i++)
 		{
-
 			render.draw_image(posX, 0, 0, 0, buttons_[i].render());
 			posX += buttons_[i].size().x;
 		}

@@ -25,12 +25,12 @@ ButtonWidget::ButtonWidget(const std::string& text, bool clickable, const int& f
 
 ButtonWidget::img ButtonWidget::actualRender() const
 {
-	const unsigned char white[] = { 255, 255, 255 }, grey[] = { 128,128,128 }, backblue[] = { 102, 153, 255 }, black[] = { 0, 0, 0 };
+	const unsigned char white[] = { 255, 255, 255 }, grey[] = { 128,128,128 }, black[] = { 0, 0, 0 };
 	img render(size_.x, size_.y, 1, 3);
     
     if(is_hovered_ || is_clicked_)
     {
-        render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backblue, 100, fontSize_);
+        render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backgroundColor_, 100, fontSize_);
 		//render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backblue, 100, size_.y);
     }
 	else
