@@ -28,10 +28,10 @@ using img = cimg_library::CImg<unsigned char>;
 
 int main()
 {
-    //Application app;
-    //return app.execute();
+    Application app;
+    return app.execute();
     
-
+    /*
 	auto wd = fs::current_path(); //working directory
 
 	TagList possibleTags;
