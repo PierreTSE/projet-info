@@ -2,7 +2,7 @@
 #include "Interface/MenuBarWidget.hpp"
 #include "Interface/TagSetterWidget.hpp"
 #include "Utilities/Utilities.hpp"
-#include "FileDialog/FileDialog.hpp"
+#include "Specific/FileDialog.hpp"
 #include "Interface/ScrollWidget.hpp"
 #include "ConsolePrototype/config.hpp"
 #include <chrono>
@@ -17,14 +17,10 @@ using namespace std::chrono_literals;
 Application::Application() :
     window_{nullptr, {1000, 500}}
 {
-    fs::path tagsPath = "tags.txt";
+    const fs::path tagsPath = "tags.txt";
     if (fs::exists(tagsPath))
-        possibleTags_ = loadTagList(tagsPath);
-    
-    //auto grid = new GridWidget(*collection_, 1000, 500, {150, 150});
-    //auto tagger = new TagSetterWidget(possibleTags_, *collection_, 1000, 500);
-    //auto scroll = new ScrollWidget(tagger, {1000, 500});
-    //window_.setContent(scroll);
+        if(!loadPossibleTags())
+			std::clog << "No tag list saved." << std::endl;
     initialWindow();
 }
 
@@ -56,6 +52,7 @@ void Application::actualSave() const
 bool Application::saveAs()
 {
 	savePath_ = getSaveFileName("Enregistrer sous...", { "Texte",".txt" });
+	std::clog << savePath_ << std::endl;
 	if (fs::exists(savePath_) && fs::is_regular_file(savePath_))
 	{
 		actualSave();
@@ -77,9 +74,33 @@ bool Application::save()
 	}
 }
 
+bool Application::loadPossibleTags()
+{
+	const fs::path tagListPath = fs::current_path()/"TagList.txt";
+	std::ifstream in(tagListPath);
+	if (!in.is_open())
+	{
+		return false;
+	}
+	else
+	{
+		Tag t;
+		while (std::getline(in, t))
+			possibleTags_.insert(t);
+		return true;
+	}
+}
+
+void Application::savePossibleTags() const
+{
+	std::ofstream out(fs::current_path()/"TagList.txt", std::ios::out | std::ios::trunc);
+	for (auto& tag : possibleTags_)
+		out << tag << std::endl;
+}
+
 void Application::initialWindow()
 {
-    std::unique_ptr<ListWidget> list(new ListWidget({u8" Charger ", u8" Créer "}));
+    std::unique_ptr<ListWidget> list(new ListWidget({u8" Charger ", u8" Cr\u00E9er "}));
     list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
         { // Charger function
             fs::path savePath = getOpenFileName();

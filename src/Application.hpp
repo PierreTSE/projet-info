@@ -16,7 +16,10 @@ class Application
         int execute();
 
 		bool saveAs();
-		bool save() ;
+		bool save();
+
+		bool loadPossibleTags();
+		void savePossibleTags() const;
 
     private:
         void update();

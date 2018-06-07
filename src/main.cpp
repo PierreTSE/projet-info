@@ -4,7 +4,7 @@
 #include "ConsolePrototype/config.hpp"
 #include "ConsolePrototype/menu.hpp"
 #include "ConsolePrototype/save.hpp"
-#include "FileDialog/FileDialog.hpp"
+#include "Specific/FileDialog.hpp"
 #include "Image/Image.hpp"
 #include "Interface/ButtonWidget.hpp"
 #include "Interface/GridWidget.hpp"
