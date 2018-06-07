@@ -1,4 +1,5 @@
 #include "ButtonWidget.hpp"
+#include "../Utilities/Utilities.hpp"
 #include <iostream>
 
 ButtonWidget::ButtonWidget(const std::string& text, bool clickable, const int& fontSize, const dim_t& size) :
@@ -9,7 +10,7 @@ ButtonWidget::ButtonWidget(const std::string& text, bool clickable, const int& f
 {
 	img imgtext;
 	const unsigned char color = 1;
-	imgtext.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), &color, 0, 1, fontSize_);
+	imgtext.draw_text(0, 0, static_cast<const char* const>(UTF8toISO8859_1(text).c_str()), &color, 0, 1, fontSize_);
 
 	if (size.y < imgtext.height())
 	{
@@ -31,12 +32,12 @@ ButtonWidget::img ButtonWidget::actualRender() const
     if(is_hovered_ || is_clicked_)
     {
 		render.draw_rectangle(0, 0, size_.x, size_.y, backgroundColor_);
-        render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backgroundColor_, 100, fontSize_);
+        render.draw_text(0, 0, static_cast<const char* const>(UTF8toISO8859_1(text_).c_str()), white, backgroundColor_, 100, fontSize_);
 		//render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), white, backblue, 100, size_.y);
     }
 	else
 	{
-		render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), black, white, 100, fontSize_);
+		render.draw_text(0, 0, static_cast<const char* const>(UTF8toISO8859_1(text_).c_str()), black, white, 100, fontSize_);
 		//render.draw_text(0, 0, static_cast<const char* const>(text_.c_str()), black, white, 100, size_.y);
 	}
 

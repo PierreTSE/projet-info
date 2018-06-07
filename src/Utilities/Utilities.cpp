@@ -1,4 +1,5 @@
 #include "Utilities.hpp"
+#include <iostream>
 
 namespace fs = std::experimental::filesystem;
 using img = cimg_library::CImg<unsigned char>;
@@ -99,4 +100,52 @@ void importFromDirectory(const fs::path& directoryPath, CollectionPool<Image>& c
 	{
 		throw std::runtime_error("Parameter is not a directory.");
 	}
+}
+
+std::string UTF8toISO9859_1(const std::string& str)
+{
+	std::string str_out;
+	for (size_t i = 0; i < str.length(); i++)
+	{
+		if ((static_cast<unsigned char>(str[i]) & 0x80) == 0)
+			str_out.push_back(str[i]);
+		else if ((static_cast<unsigned char>(str[i]) & 0xE0) == 0xC0) //caractère sur 2 octets
+		{
+		    unsigned int codepoint = (str[i] & 0x1F) << 6;
+			if (i + 1 >= str.size())
+			{
+				std::cerr << "Unexpected end of string." << std::endl;
+			}
+			else if ((str[i + 1] & 0xC0) != 0x80)
+			{
+				std::cerr << "Invalid character at position " << i << " : " << std::hex << str[i] << std::endl;
+			}
+			else {
+				codepoint += str[i + 1] & 0x3F;
+				if (codepoint > 255)
+					str_out.push_back('?');
+				else
+				{
+					str_out.push_back(codepoint);
+				}
+			}
+			i += 1;
+		}
+		else if ((static_cast<unsigned char>(str[i]) & 0xF0) == 0xE0)
+		{
+			str_out.push_back('?');
+			i += 2;
+		}
+		else if ((static_cast<unsigned char>(str[i]) & 0xF8) == 0xF0)
+		{
+			str_out.push_back('?');
+			i += 3;
+		}
+		else
+		{
+			std::cerr << "Invalid character at position " << i << " : " << std::hex << str[i] << std::endl;
+		}
+	}
+
+	return str_out;
 }
