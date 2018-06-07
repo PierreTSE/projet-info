@@ -13,7 +13,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 
     for(const auto& str : texts)
     {
-		buttons_.emplace_back(str, fontSize_);
+		buttons_.emplace_back(str, false, fontSize_);
 		buttons_.back().setParent(this);
     }
 
@@ -29,7 +29,7 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		if (size.x <= default_size_x)
 		{
 			size_.x = default_size_x;
-			std::cerr << "ListWidget column construction : adapted width to length : " << size_.x << std::endl;
+			std::clog << "ListWidget column construction : adapted width to length : " << size_.x << std::endl;
 		}
 		else
 		{
@@ -40,21 +40,25 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		{
 			size_.y = fontSize_;
 			buttonCoordinates_.y.push_back(size_.y);
-			std::cerr << "ListWidget column construction : adapted height to length : " << size_.y << std::endl;
+			std::clog << "ListWidget column construction : adapted height to length : " << size_.y << std::endl;
 		}
 		else
 		{
 		    //TODO cas où la ligne est demandée plus haute que par défaut
+			std::clog << "La ligne est demandée plus haute que par defaut" << std::endl;
 		}
 	}
 	else //if(column_)
     {
+		bool is_default_size = false;
+
         const long default_size_x = std::max_element(buttons_.begin(), buttons_.end(), [](ButtonWidget b1, ButtonWidget b2) {return b1.size().x < b2.size().x; })->size().x;
 		if (size.x <= default_size_x)
 		{
 			size_.x = default_size_x;
 			buttonCoordinates_.x.push_back(size_.x);
-			std::cerr << "ListWidget column construction : adapted width to length : " << size_.x << std::endl;
+			is_default_size = true;
+			std::clog << "ListWidget column construction : adapted width to length : " << size_.x << std::endl;
 		}
 		else
 		{
@@ -71,11 +75,17 @@ ListWidget::ListWidget(const std::vector<std::string>& texts, const bool column,
 		if (size.y <= default_size_y)
 		{
 			size_.y = default_size_y;
-		    std::cerr << "ListWidget column construction : adapted height to length : " << size_.y << std::endl;
+			is_default_size = true;
+		    std::clog << "ListWidget column construction : adapted height to length : " << size_.y << std::endl;
 		}
 		else
 		{
 		    //TODO cas où la colonne est demandée plus haute que par défaut
+		}
+
+		for (auto& button : buttons_)
+		{
+			button.resize({ size_.x, fontSize_ });
 		}
     }
 }
@@ -182,4 +192,5 @@ bool ListWidget::actualPropagateEvent(const Event& event)
 			return buttons_[buttonNumber].propagateEvent({ { event.pos.x - *x_offset_it, event.pos.y }, event.event });
 		}
     }
+
 }
