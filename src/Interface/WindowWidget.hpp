@@ -3,6 +3,7 @@
 
 #include <memory>
 #include "Widget.hpp"
+#include "ListWidget.hpp"
 
 
 class WindowWidget : public Widget
@@ -14,6 +15,8 @@ class WindowWidget : public Widget
         bool is_open() const { return !window_.is_closed(); }
         void display() { window_.display(render()); }
         void setContent(Widget* content);
+        
+        void spawnRightClickMenu(ListWidget* rightClickMenu, dim_t pos = {-1, -1});
     
     protected:
         img actualRender() const override;
@@ -32,6 +35,11 @@ class WindowWidget : public Widget
         dim_t lastMouse_;
         int lastWheel_;
         unsigned int lastButton_;
+        
+        bool needRightClickMenu_;
+        bool isRightMenuActive_ = false;
+        dim_t rightClickMenuPos_ = {0, 0};
+        std::unique_ptr<ListWidget> rightClickMenu_;
         
 };
 

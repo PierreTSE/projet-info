@@ -96,7 +96,7 @@ bool ButtonWidget::actualPropagateEvent(const Event& event)
 			is_hovered_ = true;
 			callRedraw();
 		}
-		else if(is_hovered_ == true)
+		else if(is_hovered_)
         {
 			is_hovered_ = false;
 			callRedraw();
