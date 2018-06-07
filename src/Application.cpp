@@ -41,3 +41,13 @@ int Application::execute()
     
     return 0;
 }
+
+bool Application::saveAs(std::experimental::filesystem::path path)
+{
+	return false;
+}
+
+bool Application::save(std::experimental::filesystem::path path)
+{
+	return false;
+}

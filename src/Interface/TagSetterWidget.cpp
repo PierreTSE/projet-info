@@ -61,11 +61,11 @@ bool TagSetterWidget::actualPropagateEvent(const Event& event)
 {
     if(std::holds_alternative<ClickEvent>(event.event)) 
     {
-        ClickEvent& ce = std::get<ClickEvent>(event.event);
-        if(ce.type == ClickEvent::LEFT)
-        {
-            
-        }
+        //ClickEvent& ce = std::get<ClickEvent>(event.event);
+        //if(ce.type == ClickEvent::LEFT)
+        //{
+        //    
+        //}
         
         return true;
     }

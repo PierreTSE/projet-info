@@ -5,13 +5,15 @@
 #include "Collection/CollectionPool.hpp"
 #include "Interface/GridWidget.hpp"
 
-
 class Application
 {
     public:
         Application();
         int execute();
-        
+
+		bool saveAs(std::experimental::filesystem::path path);
+		bool save(std::experimental::filesystem::path path);
+
     private:
         std::unique_ptr<CollectionPool<Image>> collection_ = nullptr;
         TagList possibleTags_;
