@@ -51,6 +51,8 @@ struct MoveEvent
 };
 
 
+
+
 /**
  * \brief Contient une union d'événements et la position de la souris quand l'un d'eux se produit
  */

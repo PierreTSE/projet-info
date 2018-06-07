@@ -47,11 +47,15 @@ int main()
     importFromDirectory(fs::path("/home/thomas/Images/images-ppm/"), collection);
 #endif
 
+	cout << __cplusplus;
+
+	string s = R"(ÉÀ}æö,¦£ éèàùç)";
+
     GridWidget gridTest(collection, 1000, 500, {200, 200});
     ScrollWidget scrollTest(gridTest, { 1000, 500 });
     ButtonWidget buttonTest("clique pour savoir comment est thomas");
 	buttonTest.setCallBack([](ClickEvent ce, ButtonWidget* be) {return true; });
-	const vector<string> texts = { "bouton 1", "bouton higfyo"," vfvz \\\"evb  azreb" };
+	const vector<string> texts = { "bouton 1", R"(ÉÀ}æö,¦£ éèàùç)"," vfvz \\\"evb  azreb" };
 	ImageWidget imageTest(*collection.begin(), dim_t{100, 100});
 	ListWidget listColumn(texts,true);
     for(size_t i = 0 ; i < listColumn.getLength() ; ++i)
@@ -67,6 +71,7 @@ int main()
     WindowWidget window1(listLine, { listLine.size().x, listLine.size().y });
 	WindowWidget window2(listColumn, { listColumn.size().x, listColumn.size().y });
 	//WindowWidget window(buttonTest, { buttonTest.size().x,buttonTest.size().y });
+	//WindowWidget window1(scrollTest, { scrollTest.size().x, scrollTest.size().y });
     
     while(window1.is_open() || window2.is_open())
     {
