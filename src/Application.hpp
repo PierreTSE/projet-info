@@ -21,6 +21,9 @@ class Application
         bool saveAs();
         bool save();
 
+		bool loadPossibleTags();
+		void savePossibleTags() const;
+
     private:
         void update();
         

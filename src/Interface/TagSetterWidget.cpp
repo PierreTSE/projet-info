@@ -1,6 +1,6 @@
 #include "TagSetterWidget.hpp"
 #include <algorithm>
-
+#include "../Utilities/Utilities.hpp"
 
 
 TagSetterWidget::TagSetterWidget(const TagList& possibleTags, Collection<Image>& collection, long long width, long long minHeight) :
@@ -14,8 +14,8 @@ TagSetterWidget::TagSetterWidget(const TagList& possibleTags, Collection<Image>&
 
 Widget::img TagSetterWidget::actualRender() const
 {
-    auto nb_line = possibleTags_.size();
-    auto height = std::max<long long>(nb_line*lineHeight, minHeight_);
+    const auto nb_line = possibleTags_.size();
+    const auto height = std::max<long long>(nb_line*lineHeight, minHeight_);
     
     img render(width_, height, 1, 3, 255);
     
@@ -36,7 +36,7 @@ Widget::img TagSetterWidget::actualRender() const
             line.draw_rectangle(6, 6, lineHeight-6, lineHeight-6, white);
         if(state == 1)
             line.draw_rectangle(8, 8, lineHeight-8, lineHeight-8, black);
-        line.draw_text(30, (lineHeight-13)/2, tag.c_str(), black, white);
+        line.draw_text(30, (lineHeight-13)/2, UTF8toISO8859_1(tag).c_str(), black, white);
         
         render.draw_image(0, lineHeight*i, 0, 0, line);
         i++;

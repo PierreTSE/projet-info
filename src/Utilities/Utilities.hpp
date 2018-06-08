@@ -34,4 +34,13 @@ CollectionPool<Image> createPoolFromDirectory(const std::experimental::filesyste
  */
 void importFromDirectory(const std::experimental::filesystem::path& directoryPath, CollectionPool<Image>& collectionPool);
 
+/**
+ * \brief Convertit de l'UTF-8 vers l'ISO-8859-1
+ * \param str String encodée en UTF-8
+ * \return String encodée en ISO-8859-1
+ * 
+ * Remplace les caractères non représentables en ISO-8859-1 par '?'.
+ */
+std::string UTF8toISO8859_1(const std::string& str);
+
 #endif // UTILITIES_HPP

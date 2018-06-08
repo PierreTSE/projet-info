@@ -130,3 +130,105 @@
 				//{
 				//	if (buttons_[i].propagateEvent(fake_event)) return true;
 				//}
+
+
+    //---------------------------------------------------------------------------------------------------------------
+    //menu console prototype
+
+    bool quit = false;
+    
+    while(!quit) {
+        //menu();
+        //int c = choix(6);
+		int c = cimg::dialog("Menu principal", "Choisissez l'action à effectuer."
+											 , "Voir tag d'une image"
+											 , "Tagger une image"
+											 , "Détagger une image"
+											 , "Rechercher par tag"
+											 , "Ajouter à la liste"
+											 , nullptr
+											 , CImg<>());
+        switch(c)
+        {
+            case 0 :
+                {
+                    std::cout << "Quelle image ?" << std::endl;
+                    auto img = choix_image(collection);
+                    if(img != collection.end())
+                    {
+                        affTags(img->getTagList());
+                    }
+                }
+                break;
+
+            case 1 :
+                {
+                    std::cout << "Quelle image ?" << std::endl;
+                    auto img = choix_image(collection);
+                    if(img != collection.end())
+                    {
+                        std::cout << "Quel Tag ?" << std::endl;
+                        auto tag = choix_tag(possibleTags);
+                        if(!tag.empty())
+                        {
+                            img->getTagList().insert(tag);
+                        }
+                    }
+                }
+                break;
+
+            case 2 :
+                {
+                    std::cout << "Quelle image ?" << std::endl;
+                    auto img = choix_image(collection);
+                    if(img != collection.end())
+                    {
+                        std::cout << "Quel Tag ?" << std::endl;
+                        auto tag = choix_tag(img->getTagList());
+                        if(!tag.empty())
+                        {
+                            img->getTagList().erase(tag);
+                        }
+                    }
+                }
+                break;
+
+            case 3 :
+                {
+                    std::cout << "Quel Tag ?" << std::endl;
+                    auto tag = choix_tag(possibleTags);
+                    auto filtre = FilteredCollection<Image>(collection, [&tag](const Image& img)
+                    {
+                        return img.getTagList().find(tag) != img
+                                                             .getTagList().
+                                                             end();
+                    });
+                    listImg(filtre);
+                }
+                break;
+
+            case 4 :
+                {
+                    Tag tag;
+                    std::cout << "Saississez un tag" << std::endl;
+                    std::cin >> tag;
+                    possibleTags.insert(tag);
+                }
+                break;
+
+            case -1 :
+				{
+					quit = true;
+					auto savePath = getSaveFileName();
+					saveCollec(savePath, collection);
+				}
+                break;
+            default :
+                break;
+        }
+    }
+    
+	fs::current_path(wd);
+    saveTagList(tagsPath, possibleTags);
+    
+    return 0;*/
