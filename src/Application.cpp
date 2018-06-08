@@ -1,6 +1,7 @@
 #include "Application.hpp"
 #include "Interface/MenuBarWidget.hpp"
 #include "Interface/TagSetterWidget.hpp"
+#include "Interface/TagViewerWidget.hpp"
 #include "Interface/GridWidget.hpp"
 #include "Interface/LayoutWidget.hpp"
 #include "Utilities/Utilities.hpp"
@@ -149,6 +150,72 @@ void Application::update()
     }
 }
 
+ListWidget Application::FichierList()
+{
+	ListWidget fichierList({ u8" Nouveau ", u8" Ouvrir... ", u8" Importer ", u8" Enregistrer ", u8" Enregistrer Sous... ", u8" Fermer " }, true);
+	fichierList.setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
+	{ // Nouveau
+		save();
+		updateFunction_ = [this]()
+		{
+			collection_.reset(new CollectionPool<Image>);
+			savePath_ = "";
+			collectionWindow();
+		};
+		return true;
+	});
+	fichierList.setCallBack(1, [this](ClickEvent ce, ButtonWidget* but)
+	{ // Ouvrir
+		save();
+		updateFunction_ = [this]()
+		{
+			fs::path savePath = getOpenFileName();
+			if (!fs::exists(savePath) || !fs::is_regular_file(savePath))
+				return;
+			savePath_ = savePath;
+			auto temp = createPoolFromSave(savePath_);
+			collection_.reset(new CollectionPool<Image>(std::move(temp)));
+			collectionWindow();
+		};
+		return true;
+	});
+	fichierList.setCallBack(2, [this](ClickEvent ce, ButtonWidget* but)
+	{ // Importer
+		updateFunction_ = [this]()
+		{
+			fs::path directoryPath = browseFolder();
+			if (!fs::exists(directoryPath) || !fs::is_directory(directoryPath))
+				return;
+			importFromDirectory(directoryPath, *collection_);
+			collectionWindow();
+		};
+		return true;
+	});
+	fichierList.setCallBack(3, [this](ClickEvent ce, ButtonWidget* but)
+	{ // Enregistrer
+		save();
+		return true;
+	});
+	fichierList.setCallBack(4, [this](ClickEvent ce, ButtonWidget* but)
+	{ // Enregistrer Sous
+		saveAs();
+		return true;
+	});
+	fichierList.setCallBack(5, [this](ClickEvent ce, ButtonWidget* but)
+	{ // Fermer
+		updateFunction_ = [this]()
+		{
+			save();
+			collection_.reset(nullptr);
+			savePath_ = "";
+			initialWindow();
+		};
+		return true;
+	});
+
+	return fichierList;
+}
+
 void Application::collectionWindow()
 {
     // Construction des différents menus
@@ -170,72 +237,6 @@ void Application::collectionWindow()
     auto scroll = new ScrollWidget(grid, window_.size());
     auto menubar = new MenuBarWidget(scroll, list.release(), window_.size());
     window_.setContent(menubar);
-}
-
-ListWidget Application::FichierList()
-{
-    ListWidget fichierList({u8" Nouveau ", u8" Ouvrir... ", u8" Importer ", u8" Enregistrer ", u8" Enregistrer Sous... ", u8" Fermer "}, true);
-    fichierList.setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
-    { // Nouveau
-        save();
-        updateFunction_ = [this]()
-        {
-            collection_.reset(new CollectionPool<Image>);
-            savePath_ = "";
-            collectionWindow();
-        };
-        return true;
-    });
-    fichierList.setCallBack(1, [this](ClickEvent ce, ButtonWidget* but)
-    { // Ouvrir
-        save();
-        updateFunction_ = [this]()
-        {
-            fs::path savePath = getOpenFileName();
-            if(!fs::exists(savePath) || !fs::is_regular_file(savePath))
-                return;
-            savePath_ = savePath;
-            auto temp = createPoolFromSave(savePath_);
-            collection_.reset(new CollectionPool<Image>(std::move(temp)));
-            collectionWindow();
-        };
-        return true;
-    });
-    fichierList.setCallBack(2, [this](ClickEvent ce, ButtonWidget* but)
-    { // Importer
-        updateFunction_ = [this]()
-        {
-            fs::path directoryPath = browseFolder();
-            if(!fs::exists(directoryPath) || !fs::is_directory(directoryPath))
-                return;
-            importFromDirectory(directoryPath, *collection_);
-            collectionWindow();
-        };
-        return true;
-    });
-    fichierList.setCallBack(3, [this](ClickEvent ce, ButtonWidget* but)
-    { // Enregistrer
-        save();
-        return true;
-    });
-    fichierList.setCallBack(4, [this](ClickEvent ce, ButtonWidget* but)
-    { // Enregistrer Sous
-        saveAs();
-        return true;
-    });
-    fichierList.setCallBack(5, [this](ClickEvent ce, ButtonWidget* but)
-    { // Fermer
-        updateFunction_ = [this]()
-        {
-            save();
-            collection_.reset(nullptr);
-            savePath_ = "";
-            initialWindow();
-        };
-        return true;
-    });
-    
-    return fichierList;
 }
 
 void Application::tagSetterWindow()
@@ -264,4 +265,31 @@ void Application::tagSetterWindow()
     
     auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
     window_.setContent(menubar);
+}
+
+void Application::ImageViewerWindow()
+{
+	// Construction des différents menus
+	ListWidget fichierList = std::move(FichierList());
+	variables_["Fichier"] = fichierList;
+	selected_ = FilteredCollection<Image>(*collection_, [](const Image& image) { return image.isSelected(); });
+
+	// Contruction fenêtre
+	std::unique_ptr<ListWidget> list(new ListWidget({ u8" Fichier " }));
+	list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
+	{
+		ListWidget* listFichier = new ListWidget(std::any_cast<ListWidget>(variables_["Fichier"]));
+		but->getWindow()->spawnRightClickMenu(listFichier, dim_t{ 0, but->size().y });
+
+		return true;
+	});
+
+	auto imagePtr = std::any_cast<Image*>(variables_["ImageViewed"]);
+
+	auto image = new ImageWidget(*imagePtr,window_.size());
+	auto tagViewer = new TagViewerWidget(imagePtr, window_.size().x, window_.size().y);
+	auto scroller = new ScrollWidget(tagViewer, window_.size());
+	auto layout = new LayoutWidget(image, scroller, 0.7, window_.size());
+	auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
+	window_.setContent(menubar);
 }

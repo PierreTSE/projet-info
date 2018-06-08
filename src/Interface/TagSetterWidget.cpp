@@ -54,7 +54,7 @@ void TagSetterWidget::actualResize(const dim_t& size)
 
 dim_t TagSetterWidget::actualSize() const
 {
-    return dim_t{width_, minHeight_}; // TODO À changer
+    return dim_t{width_, std::max<long long>(possibleTags_.size()*lineHeight, minHeight_) };
 }
 
 bool TagSetterWidget::actualPropagateEvent(const Event& event)
