@@ -40,6 +40,12 @@ struct ClickEvent
 	mouseButton_t type;
 };
 
+struct UnClickEvent
+{
+	enum mouseButton_t { LEFT, MIDDLE, RIGHT };
+	mouseButton_t type;
+};
+
 struct ZoomEvent
 {
     int amount = 0;
@@ -59,7 +65,7 @@ struct MoveEvent
 struct Event
 {
 	dim_t pos;
-	std::variant<ScrollEvent, ClickEvent, ZoomEvent, MoveEvent> event;
+	std::variant<ScrollEvent, ClickEvent, ZoomEvent, MoveEvent, UnClickEvent> event;
 };
 
 #endif //EVENTS_HPP
