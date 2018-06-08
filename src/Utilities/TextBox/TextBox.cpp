@@ -5,6 +5,7 @@
 #include <iostream>
 std::string getTextFromBox(std::string str)
 {
+	std::cout << str << std::endl;
 	std::string str_out;
 	std::cin >> str_out;
 	return str_out;

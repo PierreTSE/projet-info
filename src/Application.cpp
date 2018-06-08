@@ -2,7 +2,7 @@
 #include "Interface/MenuBarWidget.hpp"
 #include "Interface/TagSetterWidget.hpp"
 #include "Utilities/Utilities.hpp"
-#include "Specific/FileDialog.hpp"
+#include "Specifique/FileDialog.hpp"
 #include "Interface/ScrollWidget.hpp"
 #include "ConsolePrototype/config.hpp"
 #include <chrono>

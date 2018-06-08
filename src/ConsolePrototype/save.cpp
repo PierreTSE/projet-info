@@ -1,6 +1,6 @@
 #include "../Collection/FilteredCollection.hpp"
 #include "save.hpp"
-#include "../Specific/FileDialog.hpp"
+#include "../Specifique/FileDialog.hpp"
 #include <fstream>
 #include <sstream>
 

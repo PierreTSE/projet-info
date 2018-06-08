@@ -5,7 +5,14 @@
 #include <functional>
 #include <string>
 
-
+/**
+ * \class ButtonWidget
+ * \brief Bouton qui lance une action configurable au clic
+ * 
+ * Le bouton est crée automatiquement aux bonnes dimensions depuis un texte donné à la construction.
+ * Il gère différentes options comme le fait de se surligner au survol.
+ * On peut lui affecter une std::function qui est exécutée au clic.
+ */
 class ButtonWidget : public Widget
 {
     public:
@@ -34,6 +41,5 @@ class ButtonWidget : public Widget
 		const unsigned char backgroundColor_[3] = { 102, 153, 255 };
 
 		bool callBack(ClickEvent ce, ButtonWidget* bw) { return callBack_(ce, bw); }
-
 };
 #endif // BUTTONWIDGET_HPP
