@@ -371,6 +371,7 @@ void Application::tagSetterWindow()
     ListWidget rightClickOnTag({u8" Ajouter Tag ", u8" Supprimer Tag "}, true);
     rightClickOnTag.setCallBack(0, [this](ClickEvent, ButtonWidget*)
         { // Ajouter tag
+		    fs::current_path(wd_);
             Tag newtag = getTextFromBox("Nouveau Tag");
             if(!newtag.empty())
                 possibleTags_.insert(newtag);

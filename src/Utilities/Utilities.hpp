@@ -44,6 +44,6 @@ void importFromDirectory(const std::experimental::filesystem::path& directoryPat
 std::string UTF8toISO8859_1(const std::string& str);
 
 
-std::string IOStoUTF8(const std::string& str);
+std::string ISOtoUTF8(const std::string& str);
 
 #endif // UTILITIES_HPP

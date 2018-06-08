@@ -154,7 +154,7 @@ std::string UTF8toISO8859_1(const std::string& str)
 }
 
 
-std::string IOStoUTF8(const std::string& str)
+std::string ISOtoUTF8(const std::string& str)
 {
 	std::string out;
 	for(auto& c : str)

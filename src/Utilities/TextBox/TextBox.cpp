@@ -1,5 +1,6 @@
 #include "TextBox.hpp"
 #include "../../system_target.hpp"
+#include "../Utilities.hpp"
 
 
 #ifdef WINDOWS
@@ -27,9 +28,9 @@ std::string getTextFromBox(std::string)
 		out += buffer;
 	}
 	_pclose(process);
-
 	out.pop_back();
-	return out;
+
+	return ISOtoUTF8(out);
 }
 #endif
 
