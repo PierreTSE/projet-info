@@ -5,6 +5,10 @@
 #include <memory>
 
 
+/**
+ * \class ScrollWidget
+ * \brief Ascenseur permettant de déplacer le contenu du Widget associé
+ */
 class ScrollWidget : public Widget
 {
     public:
@@ -21,7 +25,7 @@ class ScrollWidget : public Widget
         std::unique_ptr<Widget> content_ = nullptr;
         long long delta_ = 0;
         float coeff_delta_ = 20;
-        mutable long barHeight_ = 0;
+		bool followMouse_ = false;
         
         static constexpr int scrollBarWidth = 20;
 };

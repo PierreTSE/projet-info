@@ -31,8 +31,14 @@ void MenuBarWidget::actualResize(const dim_t& size)
 
 bool MenuBarWidget::actualPropagateEvent(const Event& event)
 {
-    if(std::holds_alternative<MoveEvent>(event.event))
-        return buttons_->propagateEvent(event);
+	if (std::holds_alternative<MoveEvent>(event.event))
+	{
+		if (buttons_->propagateEvent(event))
+			return true;
+		else
+			if (content_ && content_->isInside(event.pos - dim_t {0, buttons_->size().y}))
+				return content_->propagateEvent(Event{ event.pos - dim_t {0, buttons_->size().y}, MoveEvent{std::get<MoveEvent>(event.event).lastPos - dim_t {0, buttons_->size().y}} });
+	}
     
 	if(buttons_->isInside(event.pos))
 		return buttons_->propagateEvent(event);
