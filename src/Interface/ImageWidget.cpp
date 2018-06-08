@@ -50,8 +50,10 @@ bool ImageWidget::actualPropagateEvent(const Event& event)
 {    
     if (std::holds_alternative<ClickEvent>(event.event))
     {
-        image_.select(!image_.isSelected());
+        if(std::get<ClickEvent>(event.event).type == ClickEvent::LEFT)
+            image_.select(!image_.isSelected());
         callRedraw();
+        return callback_(std::get<ClickEvent>(event.event), this);
     }
     // TODO Gérer les events
     return false;

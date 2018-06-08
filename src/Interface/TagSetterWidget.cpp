@@ -27,6 +27,8 @@ Widget::img TagSetterWidget::actualRender() const
             state = 2;
         else if(std::any_of(collection_.begin(), collection_.end(), [&](const Image& i) { return i.hasTag(tag); }))
             state = 1;
+        if(std::distance(collection_.begin(), collection_.end()) == 0)
+            state = 0;
         img line(width_, lineHeight, 1, 3, 255);
         unsigned char white[] = {255, 255, 255};
         unsigned char black[] = {0, 0, 0}; 
@@ -35,8 +37,8 @@ Widget::img TagSetterWidget::actualRender() const
         if(state != 2)
             line.draw_rectangle(6, 6, lineHeight-6, lineHeight-6, white);
         if(state == 1)
-            line.draw_rectangle(8, 8, lineHeight-8, lineHeight-8, black);
-        line.draw_text(30, (lineHeight-13)/2, UTF8toISO8859_1(tag).c_str(), black, white);
+            line.draw_rectangle(9, 9, lineHeight-9, lineHeight-9, black);
+        line.draw_text(33, (lineHeight-23)/2+1, UTF8toISO8859_1(tag).c_str(), black, white, 1, 23);
         
         render.draw_image(0, lineHeight*i, 0, 0, line);
         i++;

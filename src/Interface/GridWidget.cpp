@@ -27,7 +27,7 @@ Widget::img GridWidget::actualRender() const
         {
             if(associatedWidgets_.find(it->getPath()) == associatedWidgets_.end())
             {
-                ImageWidget temp(*it, elemSize_);
+                ImageWidget temp(*it, elemSize_, callback_);
                 temp.setParent(const_cast<Widget*>(static_cast<const Widget*>(this))); // HACK
                 associatedWidgets_.insert({it->getPath(), std::move(temp)});
             }
@@ -62,7 +62,7 @@ bool GridWidget::actualPropagateEvent(const Event& event)
         {
             if(associatedWidgets_.find(it->getPath()) == associatedWidgets_.end())
             {
-                ImageWidget temp(*it, elemSize_);
+                ImageWidget temp(*it, elemSize_, callback_);
                 temp.setParent(this);
                 associatedWidgets_.insert({it->getPath(), std::move(temp)});
             }

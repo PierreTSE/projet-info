@@ -23,7 +23,7 @@ class TagSetterWidget : public Widget
         long long width_;
         long long minHeight_;
         
-        static constexpr int lineHeight = 20;
+        static constexpr int lineHeight = 30;
 };
 
 

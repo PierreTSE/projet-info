@@ -19,10 +19,8 @@ using namespace std::chrono_literals;
 Application::Application() :
     window_{nullptr, {1000, 500}}
 {
-    const fs::path tagsPath = "tags.txt";
-    if (fs::exists(tagsPath))
-        if(!loadPossibleTags())
-			std::clog << "No tag list saved." << std::endl;
+    if(!loadPossibleTags())
+        std::clog << "No tag list saved." << std::endl;
     initialWindow();
 }
 
@@ -78,7 +76,7 @@ bool Application::save()
 
 bool Application::loadPossibleTags()
 {
-	const fs::path tagListPath = fs::current_path()/"TagList.txt";
+	const fs::path tagListPath = fs::current_path()/"tags.txt";
 	std::ifstream in(tagListPath);
 	if (!in.is_open())
 	{
@@ -95,7 +93,7 @@ bool Application::loadPossibleTags()
 
 void Application::savePossibleTags() const
 {
-	std::ofstream out(fs::current_path()/"TagList.txt", std::ios::out | std::ios::trunc);
+	std::ofstream out(fs::current_path()/"tags.txt", std::ios::out | std::ios::trunc);
 	for (auto& tag : possibleTags_)
 		out << tag << std::endl;
 }
@@ -165,8 +163,34 @@ void Application::collectionWindow()
         return true;
     });
     
-    // TODO Mettre un callback à grid
-    auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150});
+    ListWidget rightClickOnImage({u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ", u8" Enlever les images s\u00E9lectionn\u00E9es "}, true);
+    rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
+        { // Afficher l'image
+            // TODO Appeller code de Pierre pour afficher une image
+            std::cout << std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage().getPath() << std::endl;
+            
+            return true;
+        });
+    rightClickOnImage.setCallBack(1, [this](ClickEvent, ButtonWidget*)
+        { // Modifier les tags
+            updateFunction_ = [this]()
+            {// Ouvrir la fenêtre tagger
+                tagSetterWindow();
+            };
+            return true;
+        });
+    variables_["rightClickOnImage"] = rightClickOnImage;
+    
+    auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150}, [this](ClickEvent ce, ImageWidget* iw)
+        {
+            if(ce.type == ClickEvent::RIGHT)
+            {
+                iw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickOnImage"])));
+                variables_["imageWidget"] = iw;
+                return true;
+            }
+            return false;
+        });
     auto scroll = new ScrollWidget(grid, window_.size());
     auto menubar = new MenuBarWidget(scroll, list.release(), window_.size());
     window_.setContent(menubar);
@@ -245,6 +269,26 @@ void Application::tagSetterWindow()
     variables_["Fichier"] = fichierList;
     selected_ = FilteredCollection<Image>(*collection_, [](const Image& image) { return image.isSelected(); });
 
+    ListWidget rightClickOnImage({u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ", u8" Enlever les images s\u00E9lectionn\u00E9es "}, true);
+    rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
+    { // Afficher l'image
+        // TODO Appeller code de Pierre pour afficher une image
+        std::cout << std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage().getPath() << std::endl;
+
+        return true;
+    });
+    rightClickOnImage.setCallBack(1, [this](ClickEvent, ButtonWidget*)
+    { // Modifier les tags
+        updateFunction_ = [this]()
+        {// Ouvrir la fenêtre tagger
+            tagSetterWindow();
+        };
+        return true;
+    });
+    variables_["rightClickOnImage"] = rightClickOnImage;
+    
+    ListWidget rightClickOnTag({u8" Ajouter Tag ", u8" Supprimer Tag "}, true);
+
     // Contruction fenêtre
     std::unique_ptr<ListWidget> list(new ListWidget({u8" Fichier "}));
     list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
@@ -255,13 +299,26 @@ void Application::tagSetterWindow()
         return true;
     });
 
-    // TODO Mettre un callback à grid
-    auto grid = new GridWidget(*selected_, window_.size().x, window_.size().y, {150, 150});
+    auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150}, [this](ClickEvent ce, ImageWidget* iw)
+        {
+            if(ce.type == ClickEvent::RIGHT)
+            {
+                iw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickOnImage"])));
+                variables_["imageWidget"] = iw;
+                return true;
+            }
+            else if(ce.type == ClickEvent::LEFT)
+            {
+                std::any_cast<TagSetterWidget*>(variables_["tagger"])->callRedraw();
+            }
+            return false;
+        });
     std::unique_ptr<ScrollWidget> scroll(new ScrollWidget(grid, window_.size()));
     auto tagsetter = new TagSetterWidget(possibleTags_, *selected_, window_.size().x, window_.size().y);
     auto scroll2 = new ScrollWidget(tagsetter, window_.size());
     auto layout = new LayoutWidget(scroll.release(), scroll2, 2.0/3.0, window_.size());
-    
     auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
     window_.setContent(menubar);
+    
+    variables_["tagger"] = tagsetter;
 }
