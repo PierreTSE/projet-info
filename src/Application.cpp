@@ -8,7 +8,6 @@
 #include "Specifique/FileDialog.hpp"
 #include "Interface/ScrollWidget.hpp"
 #include "Utilities/TextBox/TextBox.hpp"
-#include "ConsolePrototype/config.hpp"
 #include <chrono>
 #include <thread>
 #include <experimental/filesystem>
