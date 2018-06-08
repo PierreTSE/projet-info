@@ -17,8 +17,8 @@ struct file_filter
  * @param initialDir Chemin du dossier dans lequel se trouvera la boîte de dialogue à l'ouverture
  * @return chemin vers le fichier sélectionné
  */
-std::experimental::filesystem::path getOpenFileName(const std::string& title = "Open a file",
-                                                    const file_filter& filter = { "All files", "*" },
+std::experimental::filesystem::path getOpenFileName(const std::string& title = "Ouvrir une collection",
+                                                    const file_filter& filter = { "Texte", "*.txt" },
                                                     const std::experimental::filesystem::path& initialDir = "");
 
 /**
@@ -28,8 +28,8 @@ std::experimental::filesystem::path getOpenFileName(const std::string& title = "
 * @param initialDir Chemin du dossier dans lequel se trouvera la boîte de dialogue à l'ouverture
 * @return chemin vers le fichier sélectionné
 */
-std::experimental::filesystem::path getSaveFileName(const std::string& title = "Save file as",
-													const file_filter& filter = { "All files", "*" },
+std::experimental::filesystem::path getSaveFileName(const std::string& title = "Enregistrer sous",
+													const file_filter& filter = { "Texte", "*.txt" },
 													const std::experimental::filesystem::path& initialDir = "");
 
 /**
@@ -38,7 +38,7 @@ std::experimental::filesystem::path getSaveFileName(const std::string& title = "
 * @param initialDir Chemin du dossier dans lequel se trouvera la boîte de dialogue à l'ouverture
 * @return chemin vers le répertoire sélectionné
 */
-std::experimental::filesystem::path browseFolder(const std::string &title = "Choisissez un répertoire",
+std::experimental::filesystem::path browseFolder(const std::string &title = "Importer depuis un répertoire",
 												 const std::experimental::filesystem::path& initialDir = "");
 
 

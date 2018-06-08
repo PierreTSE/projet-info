@@ -209,7 +209,7 @@ ListWidget Application::FichierList()
 void Application::initialWindow()
 {
 	isSearching_ = false;
-	std::unique_ptr<ListWidget> list(new ListWidget({ u8" Charger ", u8" Cr\u00E9er " }));
+	std::unique_ptr<ListWidget> list(new ListWidget({ u8" Ouvrir ", u8" Nouveau depuis r\u00E9pertoire " }));
 	list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
 	{ // Charger function
 		updateFunction_ = [this]()
