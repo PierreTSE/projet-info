@@ -7,6 +7,9 @@
 #include <functional>
 
 
+/**
+ * \brief Gère une liste de Tags sélectionnables pour la recherche
+ */
 class TagSelector : public Widget
 {
     public:

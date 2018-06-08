@@ -13,6 +13,13 @@ struct CoordinatesMap
 	std::vector<U> y;
 };
 
+/**
+ * \class ListWidget
+ * \brief Gère un menu de @c ButtonWidget
+ * Le menu peut être affiché en ligne où en colonne.
+ * La taille est gérée selon la hauteur des boutons en ligne ;
+ * selon la largeur du plus grand bouton en colonne.
+ */
 class ListWidget : public Widget
 {
     public:

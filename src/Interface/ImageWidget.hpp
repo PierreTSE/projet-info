@@ -8,6 +8,9 @@
 #include <functional>
 
 
+/**
+ * \brief Gère une Image sélectionnable
+ */
 class ImageWidget : public Widget
 {
     public:

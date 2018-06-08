@@ -7,7 +7,7 @@
 
 /**
  * \class ScrollWidget
- * \brief Ascenseur permettant de déplacer le contenu du Widget associé
+ * \brief Ascenseur permettant de déplacer le contenu d'un @c Widget juxtaposé
  */
 class ScrollWidget : public Widget
 {

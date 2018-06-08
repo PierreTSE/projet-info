@@ -11,7 +11,7 @@
  * 
  * Le bouton est crée automatiquement aux bonnes dimensions depuis un texte donné à la construction.
  * Il gère différentes options comme le fait de se surligner au survol.
- * On peut lui affecter une std::function qui est exécutée au clic.
+ * On peut lui affecter une std::function qui est exécutée au clic gauche.
  */
 class ButtonWidget : public Widget
 {

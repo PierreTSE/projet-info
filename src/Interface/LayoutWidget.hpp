@@ -5,6 +5,9 @@
 #include <memory>
 
 
+/**
+ * \brief Gère deux @c Widget disposés côte à côte
+ */
 class LayoutWidget : public Widget
 {
     public:

@@ -3,10 +3,12 @@
 
 #include "Widget.hpp"
 #include "ListWidget.hpp"
-#include <vector>
 #include <memory>
 
 
+/**
+ * \brief Gère une @c ListWidget et un @c Widget quelconque l'un dessus l'autre
+ */
 class MenuBarWidget :public Widget
 {
 	public:

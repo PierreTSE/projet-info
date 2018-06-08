@@ -10,6 +10,7 @@
  */
 
 #include "Application.hpp" // Inclut le header Application.hpp
+#include <iostream> // Inclut la bibliothèque de gestion de flux d'entrée-sortie standards
 
 /**
  * \fn main
@@ -36,8 +37,15 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
     //Début du programme 
 
+    // Cette partie est triviale, et sa compréhension est laissée en exercice au lecteur
+	std::ofstream os("Log.txt", std::ios::out | std::ios::app);
+	std::unique_ptr<std::streambuf, std::function<void(std::streambuf*)>> buff(std::clog.rdbuf(), [](std::streambuf* buf) { std::clog.rdbuf(buf); });
+	std::clog.rdbuf(os.rdbuf());
+
     Application app; // Création de l'application
     return app.execute(); // Exécution de l'application
+
+
 
     // Fin de la fonction main
 }

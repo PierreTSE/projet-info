@@ -3,6 +3,9 @@
 #include "../Image/Image.hpp"
 #include "Widget.hpp"
 
+/**
+ * \brief Gère une liste de Tags sans interactions
+ */
 class TagViewerWidget : public Widget
 {
     public:

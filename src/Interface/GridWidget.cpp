@@ -79,9 +79,9 @@ bool GridWidget::actualPropagateEvent(const Event& event)
         
     if(std::holds_alternative<ZoomEvent>(event.event)) {
         // TODO Faire des tests
-        const int amount = std::get<ZoomEvent>(event.event).amount * 30;
+        const int amount = std::get<ZoomEvent>(event.event).amount * 50;
         const dim_t elemSize = elemSize_ + dim_t{ amount, amount };
-		if (elemSize.x > 10 && elemSize.y > 10 && elemSize.x < 500 && elemSize.y < 500)
+		if (elemSize.x > 50 && elemSize.y > 50 && elemSize.x < 500 && elemSize.y < 500)
 		{
 			elemSize_ = elemSize;
 			callRedraw();

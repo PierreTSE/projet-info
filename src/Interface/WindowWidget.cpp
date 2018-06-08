@@ -96,7 +96,7 @@ void WindowWidget::manageEvents()
     
     if(window_.is_resized())
     {
-        window_.resize();
+		window_.resize(false);
         resize({window_.window_width(), window_.window_height()});
     }
     
