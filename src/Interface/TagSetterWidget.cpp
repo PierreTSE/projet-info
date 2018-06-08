@@ -61,6 +61,12 @@ dim_t TagSetterWidget::actualSize() const
 
 bool TagSetterWidget::actualPropagateEvent(const Event& event)
 {
+    if(std::holds_alternative<SelectEvent>(event.event))
+	{
+		callRedraw();
+		return false;
+	}
+
     if(std::holds_alternative<ClickEvent>(event.event)) 
     {
         int pos = event.pos.y / lineHeight;

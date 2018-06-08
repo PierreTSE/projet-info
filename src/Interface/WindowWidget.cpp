@@ -88,6 +88,11 @@ void WindowWidget::manageEvents()
         else
             propagateEvent(Event{mouse, ScrollEvent{window_.wheel() - lastWheel_}});
     }
+    if(window_.is_keyA() && (window_.is_keyCTRLLEFT() || window_.is_keyCTRLRIGHT()))
+    {
+		propagateEvent(Event{ {size_.x / 2,size_.y / 2}, SelectEvent() });
+		callBack_(!(window_.is_keySHIFTLEFT() || window_.is_keySHIFTRIGHT()));
+    }
 
     
     lastMouse_ = mouse;

@@ -46,6 +46,12 @@ Widget::img ScrollWidget::actualRender() const
 
 bool ScrollWidget::actualPropagateEvent(const Event& event)
 {
+
+	if (std::holds_alternative<SelectEvent>(event.event))
+	{
+		content_->propagateEvent(event);
+	}
+
 	if (std::holds_alternative<ScrollEvent>(event.event))
 	{
 		delta_ -= std::get<ScrollEvent>(event.event).amount * coeff_delta_;   

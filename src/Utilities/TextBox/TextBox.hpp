@@ -9,4 +9,6 @@
 */
 std::string getTextFromBox(std::string str);
 
+std::string pOpen(std::string);
+
 #endif // TEXTBOX_HPP

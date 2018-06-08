@@ -90,5 +90,15 @@ bool GridWidget::actualPropagateEvent(const Event& event)
 		}
         return true;
     }
+
+    if(std::holds_alternative<SelectEvent>(event.event))
+    {
+		callRedraw();
+		for (auto& p : associatedWidgets_)
+			p.second.callRedraw();
+		return false;
+    }
+
+
     return false;
 }

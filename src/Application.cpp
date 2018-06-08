@@ -22,9 +22,32 @@ using namespace std::chrono_literals;
 Application::Application() :
     window_{nullptr, {1000, 500}}
 {
+	wd_ = fs::current_path();
+	window_.setCallBack([this](bool b)
+	{
+	    if(collection_)
+	    {
+			if (isSearching_)
+				for (auto& image : searchedColl_.back())
+					image.select(b);
+			else
+	            for(auto& image : *collection_)
+				    image.select(b);
+	    }
+		return true;
+	});
+
     if(!loadPossibleTags())
         std::clog << "No tag list saved." << std::endl;
     initialWindow();
+}
+
+Application::~Application()
+{
+	fs::current_path(wd_);
+    if(collection_)
+	    save();
+	savePossibleTags();
 }
 
 int Application::execute()
@@ -112,7 +135,7 @@ void Application::update()
 
 ListWidget Application::FichierList()
 {
-	ListWidget fichierList({ u8" Nouveau ", u8" Ouvrir... ", u8" Importer ", u8" Enregistrer ", u8" Enregistrer Sous... ", u8" Fermer " }, true);
+	ListWidget fichierList({ u8" Nouveau ", u8" Ouvrir... ", u8" Importer... ", u8" Enregistrer ", u8" Enregistrer sous... ", u8" Fermer ", u8" Quitter " }, true);
 	fichierList.setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
 	{ // Nouveau
 		save();
@@ -172,12 +195,21 @@ ListWidget Application::FichierList()
 		};
 		return true;
 	});
+	fichierList.setCallBack(6, [this](ClickEvent ce, ButtonWidget* but)
+	{ // Quitter
+		updateFunction_ = [this]()
+		{
+			window_.close();
+		};
+		return true;
+	});
 
 	return fichierList;
 }
 
 void Application::initialWindow()
 {
+	isSearching_ = false;
 	std::unique_ptr<ListWidget> list(new ListWidget({ u8" Charger ", u8" Cr\u00E9er " }));
 	list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
 	{ // Charger function
@@ -218,6 +250,7 @@ void Application::initialWindow()
 
 void Application::collectionWindow()
 {
+	isSearching_ = false;
     // Construction des différents menus
     ListWidget fichierList = std::move(FichierList());
     variables_["Fichier"] = fichierList;
@@ -295,6 +328,7 @@ void Application::collectionWindow()
 
 void Application::tagSetterWindow()
 {
+	isSearching_ = false;
     // Construction des différents menus
     ListWidget fichierList = std::move(FichierList());
     variables_["Fichier"] = fichierList;
@@ -400,6 +434,7 @@ void Application::tagSetterWindow()
 
 void Application::imageViewerWindow()
 {
+	isSearching_ = false;
 	// Construction des différents menus
 	ListWidget fichierList = std::move(FichierList());
 	variables_["Fichier"] = fichierList;
@@ -444,6 +479,8 @@ void Application::imageViewerWindow()
 
 void Application::imageSearchWindow()
 {
+	isSearching_ = true;
+
 	// Construction des différents menus
 	ListWidget fichierList = std::move(FichierList());
 	variables_["Fichier"] = fichierList;

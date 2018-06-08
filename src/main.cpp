@@ -11,7 +11,7 @@
 
 #include "Application.hpp" // Inclut le header Application.hpp
 #include <iostream> // Inclut la bibliothèque de gestion de flux d'entrée-sortie standards
-
+#include "Utilities/TextBox/TextBox.hpp"
 /**
  * \fn main
  * \brief Point d'entrée du programme C++
@@ -26,12 +26,12 @@
  */
 /*
  * Pour indiquer au compilateur que les paramètres argc et argv ne seront probablement pas utilisés,
- * nous pouvons utiliser un attribut qui fait parti des standards et sera donc multiplateforme
+ * nous pouvons utiliser un attribut qui fait partie des standards et sera donc multiplateforme
  * à condition d'utiliser un compilateur conforme :
  * http://en.cppreference.com/w/cpp/language/attributes
  * Cet attribut en particulier n'est disponible qu'à partir de la norme C++17 mais ce n'est pas
  * un problème ici étant donné que d'autres fonctionnalités dans le programme nécéssitent également 
- * l'usage de C++17
+ * l'usage de C++17.
  */
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
@@ -41,6 +41,8 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 	std::ofstream os("Log.txt", std::ios::out | std::ios::app);
 	std::unique_ptr<std::streambuf, std::function<void(std::streambuf*)>> buff(std::clog.rdbuf(), [](std::streambuf* buf) { std::clog.rdbuf(buf); });
 	std::clog.rdbuf(os.rdbuf());
+
+	std::string str = pOpen("");
 
     Application app; // Création de l'application
     return app.execute(); // Exécution de l'application

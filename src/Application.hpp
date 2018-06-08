@@ -17,6 +17,7 @@ class Application
 {
     public:
         Application();
+		~Application();
         int execute();
 
         bool saveAs();
@@ -49,8 +50,11 @@ class Application
         std::optional<std::function<void()>> updateFunction_;
         
         std::experimental::filesystem::path savePath_;
+		std::experimental::filesystem::path wd_;
         
         std::map<std::string, std::any> variables_;
+
+		bool isSearching_ = false;
 };
 
 

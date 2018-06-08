@@ -51,6 +51,9 @@ struct ZoomEvent
     int amount = 0;
 };
 
+struct SelectEvent
+{};
+
 struct MoveEvent
 {
     dim_t lastPos;
@@ -65,7 +68,7 @@ struct MoveEvent
 struct Event
 {
 	dim_t pos;
-	std::variant<ScrollEvent, ClickEvent, ZoomEvent, MoveEvent, UnClickEvent> event;
+	std::variant<ScrollEvent, ClickEvent, ZoomEvent, MoveEvent, UnClickEvent, SelectEvent> event;
 };
 
 #endif //EVENTS_HPP

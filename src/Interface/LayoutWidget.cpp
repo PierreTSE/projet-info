@@ -32,6 +32,12 @@ void LayoutWidget::actualResize(const dim_t& size)
 
 bool LayoutWidget::actualPropagateEvent(const Event& event)
 {
+    if(std::holds_alternative<SelectEvent>(event.event))
+    {
+		contentLeft_->propagateEvent(event);
+		contentRight_->propagateEvent(Event{ { event.pos.x - static_cast<long long>(size_.x*ratio_), event.pos.y } , event.event });
+    }
+
     if(contentLeft_->isInside(event.pos))
         if(contentLeft_->propagateEvent(event))
             return true;

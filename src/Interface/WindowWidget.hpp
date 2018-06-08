@@ -1,10 +1,10 @@
 #ifndef WINDOWWIDGET_HPP
 #define WINDOWWIDGET_HPP
 
-#include <memory>
 #include "Widget.hpp"
 #include "ListWidget.hpp"
-
+#include <memory>
+#include <functional>
 
 class WindowWidget : public Widget
 {
@@ -15,8 +15,10 @@ class WindowWidget : public Widget
         bool is_open() const { return !window_.is_closed(); }
         void display() { window_.display(render()); }
         void setContent(Widget* content);
+		void setCallBack(const std::function<bool(bool)>& f) { callBack_ = f; }
         
         void spawnRightClickMenu(ListWidget* rightClickMenu, dim_t pos = {-1, -1});
+		void close() { window_.close(); }
     
     protected:
         img actualRender() const override;
@@ -40,7 +42,7 @@ class WindowWidget : public Widget
         bool isRightMenuActive_ = false;
         dim_t rightClickMenuPos_ = {0, 0};
         std::unique_ptr<ListWidget> rightClickMenu_;
-        
+		std::function<bool(bool)> callBack_;
 };
 
 
