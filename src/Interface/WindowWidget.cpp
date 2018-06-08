@@ -75,6 +75,12 @@ void WindowWidget::manageEvents()
         propagateEvent(Event{mouse, ClickEvent{ClickEvent::RIGHT}});
     if((window_.button()&4) != (lastButton_&4) && (window_.button()&4))
         propagateEvent(Event{mouse, ClickEvent{ClickEvent::MIDDLE}});
+	if ((window_.button() & 1) != (lastButton_ & 1) && !(window_.button() & 1))
+		propagateEvent(Event{ mouse, UnClickEvent{ UnClickEvent::LEFT } });
+	if ((window_.button() & 2) != (lastButton_ & 2) && !(window_.button() & 2))
+		propagateEvent(Event{ mouse, UnClickEvent{ UnClickEvent::RIGHT } });
+	if ((window_.button() & 4) != (lastButton_ & 4) && !(window_.button() & 4))
+		propagateEvent(Event{ mouse, UnClickEvent{ UnClickEvent::MIDDLE } });
     if(window_.wheel() != lastWheel_)
     {
         if(window_.is_keyCTRLLEFT() || window_.is_keyCTRLRIGHT())

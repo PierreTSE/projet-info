@@ -32,6 +32,7 @@ class Application
         void initialWindow();
         void collectionWindow();
         void tagSetterWindow();
+		void ImageViewerWindow();
 
         void actualSave() const;
     
