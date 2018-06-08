@@ -269,6 +269,8 @@ void Application::collectionWindow()
     { // Recherche
         updateFunction_ = [this]()
         {// Suppr les images
+            for(auto& image : *collection_)
+                image.select(false); // Déselectionne toutes les images avant recherche
             imageSearchWindow();
         };
         return true;
@@ -445,6 +447,16 @@ void Application::imageSearchWindow()
 	// Construction des différents menus
 	ListWidget fichierList = std::move(FichierList());
 	variables_["Fichier"] = fichierList;
+	
+	ListWidget rightClickImageSearch({u8" Retour \u00E0 la collection "}, true);
+	rightClickImageSearch.setCallBack(0, [this](ClickEvent, ButtonWidget*) {
+	    updateFunction_ = [this]()
+        {
+            collectionWindow();
+        };
+	    return true;
+	});
+	variables_["rightClickImageSearch"] = rightClickImageSearch;
 
 	// Contruction fenêtre
 	std::unique_ptr<ListWidget> list(new ListWidget({ u8" Fichier " }));
@@ -462,7 +474,10 @@ void Application::imageSearchWindow()
         searchedColl_.emplace_back(searchedColl_.back(), [&tag](const Image& image) { return image.hasTag(tag); });
     }
 	
-	auto grid = new GridWidget(searchedColl_.back(), window_.size().x, window_.size().y, { 150, 150 }, [this](ClickEvent ce, ImageWidget* iw) {return false; });
+	auto grid = new GridWidget(searchedColl_.back(), window_.size().x, window_.size().y, { 150, 150 }, [this](ClickEvent ce, ImageWidget* iw) {
+	    iw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickImageSearch"])));
+	    return true; 
+	});
 	auto scroll = new ScrollWidget(grid, window_.size());
 	auto tagSelector = new TagSelector(possibleTags_, filter_, window_.size().x,window_.size().y);
 	tagSelector->setCallBack([this](ClickEvent, TagSelector*, TagList tl) {
