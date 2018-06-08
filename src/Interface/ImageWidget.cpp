@@ -4,7 +4,7 @@
 Widget::img ImageWidget::actualRender() const
 {
     img render;
-    if(image_.isSelected())
+    if(image_.isSelected() && is_selectable_)
     {
         // This code very nice : couleur hardcodée
         render.assign(size_.x, size_.y, 1, 3, 38);

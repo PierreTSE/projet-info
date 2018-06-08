@@ -14,6 +14,7 @@ class ImageWidget : public Widget
         ImageWidget(Image& image, const dim_t size, const std::function<bool(ClickEvent, ImageWidget*)>& callback = [](ClickEvent, ImageWidget*){ return false;}) : 
             image_{image}, size_{size}, callback_{callback} {}
         Image& getImage() { return image_; }
+		void setSelectable(bool selectable) { is_selectable_ = selectable; }
     
     protected:
         img actualRender() const override;
@@ -26,6 +27,7 @@ class ImageWidget : public Widget
         dim_t size_;
         std::chrono::system_clock::time_point last_clicked_;
         std::function<bool(ClickEvent, ImageWidget*)> callback_ = [](ClickEvent, ImageWidget*){ return false;};
+		bool is_selectable_ = true;
         
         static constexpr std::chrono::system_clock::duration double_click_interval = std::chrono::milliseconds(250);
 };

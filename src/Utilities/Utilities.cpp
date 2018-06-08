@@ -89,7 +89,7 @@ void importFromDirectory(const fs::path& directoryPath, CollectionPool<Image>& c
 		for (auto& file : fs::directory_iterator(directoryPath))
 		{
 			//Images d'extension .ppm
-			if (file.path().extension() == ".ppm")
+			if (file.path().extension() == ".ppm" && std::find_if(collectionPool.begin(), collectionPool.end(), [&file](Image image) {return image.getPath() == file.path(); }) != collectionPool.end())
 			{
 				Image image(file.path(), std::move(std::make_unique<img>(file.path().u8string().c_str())), {});
 				collectionPool.push_back(std::move(image));

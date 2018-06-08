@@ -12,6 +12,7 @@
 #include <thread>
 #include <experimental/filesystem>
 #include <iostream>
+#include "Interface/TagSelector.hpp"
 
 
 namespace fs = std::experimental::filesystem;
@@ -234,7 +235,7 @@ void Application::collectionWindow()
     rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
         { // Afficher l'image
 			variables_["ImageViewed"] = &std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage();
-			ImageViewerWindow();            
+			imageViewerWindow();            
             return true;
         });
     rightClickOnImage.setCallBack(1, [this](ClickEvent, ButtonWidget*)
@@ -273,7 +274,7 @@ void Application::tagSetterWindow()
     rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
     { // Afficher l'image
 		variables_["ImageViewed"] = &std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage();
-		ImageViewerWindow();
+		imageViewerWindow();
         return true;
     });
     rightClickOnImage.setCallBack(1, [this](ClickEvent, ButtonWidget*)
@@ -322,7 +323,7 @@ void Application::tagSetterWindow()
     variables_["tagger"] = tagsetter;
 }
 
-void Application::ImageViewerWindow()
+void Application::imageViewerWindow()
 {
 	// Construction des différents menus
 	ListWidget fichierList = std::move(FichierList());
@@ -341,10 +342,33 @@ void Application::ImageViewerWindow()
 
 	auto imagePtr = std::any_cast<Image*>(variables_["ImageViewed"]);
 
-	auto image = new ImageWidget(*imagePtr,window_.size());
+	auto image = new ImageWidget(*imagePtr, window_.size()); image->setSelectable(false);
 	auto tagViewer = new TagViewerWidget(imagePtr, window_.size().x, window_.size().y);
 	auto scroller = new ScrollWidget(tagViewer, window_.size());
 	auto layout = new LayoutWidget(image, scroller, 0.7, window_.size());
+	auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
+	window_.setContent(menubar);
+}
+
+void Application::imageSearchWindow()
+{
+	// Construction des différents menus
+	ListWidget fichierList = std::move(FichierList());
+	variables_["Fichier"] = fichierList;
+
+	// Contruction fenêtre
+	std::unique_ptr<ListWidget> list(new ListWidget({ u8" Fichier " }));
+	list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
+	{
+		ListWidget* listFichier = new ListWidget(std::any_cast<ListWidget>(variables_["Fichier"]));
+		but->getWindow()->spawnRightClickMenu(listFichier, dim_t{ 0, but->size().y });
+		return true;
+	});
+
+	auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, { 150, 150 }, [this](ClickEvent ce, ImageWidget* iw) {return false; });
+	auto tagSelector = new TagSelector(possibleTags_,window_.size().x,window_.size().y);
+	auto scroller = new ScrollWidget(tagSelector, window_.size());
+	auto layout = new LayoutWidget(grid, scroller, 0.7, window_.size());
 	auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
 	window_.setContent(menubar);
 }

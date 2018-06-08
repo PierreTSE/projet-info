@@ -54,7 +54,7 @@ void ButtonWidget::actualResize(const dim_t & size)
 
 bool ButtonWidget::actualPropagateEvent(const Event& event)
 {
-	if (std::holds_alternative<ClickEvent>(event.event))
+	if (std::holds_alternative<ClickEvent>(event.event) && std::get<ClickEvent>(event.event).type == ClickEvent::LEFT)
 	{
         if(holds_click_)
         {

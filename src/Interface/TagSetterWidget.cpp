@@ -30,8 +30,7 @@ Widget::img TagSetterWidget::actualRender() const
         if(std::distance(collection_.begin(), collection_.end()) == 0)
             state = 0;
         img line(width_, lineHeight, 1, 3, 255);
-        unsigned char white[] = {255, 255, 255};
-        unsigned char black[] = {0, 0, 0}; 
+        unsigned char white[] = {255, 255, 255}, black[] = {0, 0, 0}; 
         
         line.draw_rectangle(5, 5, lineHeight-5, lineHeight-5, black);
         if(state != 2)
@@ -88,8 +87,8 @@ bool TagSetterWidget::actualPropagateEvent(const Event& event)
                     for(auto& image : collection_)
                         image.getTagList().insert(tag);
             }
+			callRedraw();
         }
-        callRedraw();
         
         return true;
     }

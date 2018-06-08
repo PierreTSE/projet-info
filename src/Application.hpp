@@ -32,13 +32,17 @@ class Application
         void initialWindow();
         void collectionWindow();
         void tagSetterWindow();
-		void ImageViewerWindow();
+		void imageViewerWindow();
+		void imageSearchWindow();
 
         void actualSave() const;
     
         std::unique_ptr<CollectionPool<Image>> collection_ = nullptr;
         std::optional<FilteredCollection<Image>> selected_;
         TagList possibleTags_;
+
+		std::vector<FilteredCollection<Image>> searchedColl_;
+		TagList filter_;
         
         WindowWidget window_;
         std::optional<std::function<void()>> updateFunction_;
