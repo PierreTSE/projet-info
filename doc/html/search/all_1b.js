@@ -5,6 +5,7 @@ var searchData=
   ['_7e_5ffunctor4d_5fstreamline2d_5foriented',['~_functor4d_streamline2d_oriented',['../structcimg__library__suffixed_1_1_c_img_1_1__functor4d__streamline2d__oriented.html#aeddf9296566b38b1c7238dfee819a9e1',1,'cimg_library_suffixed::CImg::_functor4d_streamline2d_oriented']]],
   ['_7e_5ffunctor4d_5fstreamline3d_5foriented',['~_functor4d_streamline3d_oriented',['../structcimg__library__suffixed_1_1_c_img_1_1__functor4d__streamline3d__oriented.html#ac6d6807bfefa6e1a7b08f31d9d0fc3f1',1,'cimg_library_suffixed::CImg::_functor4d_streamline3d_oriented']]],
   ['_7e_5ffunctor4d_5fstreamline_5fexpr',['~_functor4d_streamline_expr',['../structcimg__library__suffixed_1_1_c_img_1_1__functor4d__streamline__expr.html#ab73048a58fd20fe9586f11445227a0b1',1,'cimg_library_suffixed::CImg::_functor4d_streamline_expr']]],
+  ['_7eapplication',['~Application',['../class_application.html#a748bca84fefb9c12661cfaa2f623748d',1,'Application']]],
   ['_7ecimg',['~CImg',['../structcimg__library__suffixed_1_1_c_img.html#afc51496cc84ebb214c009b2b7918e106',1,'cimg_library_suffixed::CImg']]],
   ['_7ecimgabortexception',['~CImgAbortException',['../structcimg__library__suffixed_1_1_c_img_abort_exception.html#ab84d17c4d6fb1ee8b255238b107c1f43',1,'cimg_library_suffixed::CImgAbortException']]],
   ['_7ecimgdisplay',['~CImgDisplay',['../structcimg__library__suffixed_1_1_c_img_display.html#a739e8a069870cb33a40d666a05e12b5a',1,'cimg_library_suffixed::CImgDisplay']]],

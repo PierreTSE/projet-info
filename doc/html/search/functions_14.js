@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['tagselector',['TagSelector',['../class_tag_selector.html#a99e20b94754ee69899582b389e1d430c',1,'TagSelector']]],
+  ['tagsetterwidget',['TagSetterWidget',['../class_tag_setter_widget.html#acf526b7c45295cc1215d72e3bfbede8b',1,'TagSetterWidget']]],
+  ['tagviewerwidget',['TagViewerWidget',['../class_tag_viewer_widget.html#a7f09824ed156f84b3041f6d11019ddcf',1,'TagViewerWidget']]],
   ['tan',['tan',['../structcimg__library__suffixed_1_1_c_img.html#a23e8f66484a0f24ed4987857ee6213c1',1,'cimg_library_suffixed::CImg::tan()'],['../namespacecimg__library__suffixed.html#adf6af236b90c91a9d3ac434babe57b03',1,'cimg_library_suffixed::tan()']]],
   ['tanh',['tanh',['../structcimg__library__suffixed_1_1_c_img.html#aa9393797d91304f15ac087deba9a41a1',1,'cimg_library_suffixed::CImg::tanh()'],['../namespacecimg__library__suffixed.html#a225d9830c3a7df2c78c3bce4f3258f8d',1,'cimg_library_suffixed::tanh()']]],
   ['temporary',['temporary',['../namespacecimg__library__suffixed_1_1cimg.html#af931f5a4ed9addcbb7a7d27abd7670e5',1,'cimg_library_suffixed::cimg']]],

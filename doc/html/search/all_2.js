@@ -16,7 +16,7 @@ var searchData=
   ['break_5ftype',['break_type',['../structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a89b38b787c6469bfe40900141ea5252b',1,'cimg_library_suffixed::CImg::_cimg_math_parser']]],
   ['browsefolder',['browseFolder',['../_file_dialog_8hpp.html#ad37a6364c30c0ac2187911992d6c239e',1,'FileDialog.hpp']]],
   ['button',['button',['../structcimg__library__suffixed_1_1_c_img_display.html#a78f937ad8000675d0293a8d7e20627fa',1,'cimg_library_suffixed::CImgDisplay']]],
-  ['buttonwidget',['ButtonWidget',['../class_button_widget.html',1,'ButtonWidget'],['../class_button_widget.html#a9026573430400298edd6137cb8854e92',1,'ButtonWidget::ButtonWidget()']]],
+  ['buttonwidget',['ButtonWidget',['../class_button_widget.html',1,'ButtonWidget'],['../class_button_widget.html#ac3002e3094a1b6c4e8e55da896f397c6',1,'ButtonWidget::ButtonWidget()']]],
   ['buttonwidget_2ecpp',['ButtonWidget.cpp',['../_button_widget_8cpp.html',1,'']]],
   ['buttonwidget_2ehpp',['ButtonWidget.hpp',['../_button_widget_8hpp.html',1,'']]]
 ];

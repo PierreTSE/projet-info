@@ -1,6 +1,7 @@
 var searchData=
 [
   ['haar',['haar',['../structcimg__library__suffixed_1_1_c_img.html#ae5d38bed2e12d78631a84feb13fd715b',1,'cimg_library_suffixed::CImg::haar(const char axis, const bool invert=false, const unsigned int nb_scales=1)'],['../structcimg__library__suffixed_1_1_c_img.html#a46ada201cf0450fa8f0a6f09e047efc2',1,'cimg_library_suffixed::CImg::haar(const bool invert=false, const unsigned int nb_scales=1)']]],
+  ['hastag',['hasTag',['../class_image.html#a78324749d4a1cf03c2e8aa5bc4b3437b',1,'Image']]],
   ['height',['height',['../structcimg__library__suffixed_1_1_c_img_display.html#a5604a6886d51d1070ed2ddc568a848f2',1,'cimg_library_suffixed::CImgDisplay::height()'],['../structcimg__library__suffixed_1_1_c_img.html#a49834fd555c4a8362100bc628f1b03bb',1,'cimg_library_suffixed::CImg::height()']]],
   ['hide_5fmouse',['hide_mouse',['../structcimg__library__suffixed_1_1_c_img_display.html#ad42869bba3895a98404a7deade4690f1',1,'cimg_library_suffixed::CImgDisplay']]],
   ['histogram',['histogram',['../structcimg__library__suffixed_1_1_c_img.html#a794236bd4f90ac9f858b25302f9eaf9e',1,'cimg_library_suffixed::CImg::histogram(const unsigned int nb_levels, const T &amp;min_value, const T &amp;max_value)'],['../structcimg__library__suffixed_1_1_c_img.html#ac3fca7e93313cf79a90a12e9435d44a9',1,'cimg_library_suffixed::CImg::histogram(const unsigned int nb_levels)']]],

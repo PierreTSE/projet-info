@@ -19,6 +19,7 @@ var searchData=
   ['pooliterator',['PoolIterator',['../class_pool_iterator.html',1,'PoolIterator&lt; T &gt;'],['../class_pool_iterator.html#a5c4bd22679d557a14326b018850874bb',1,'PoolIterator::PoolIterator()']]],
   ['pop_5fback',['pop_back',['../structcimg__library__suffixed_1_1_c_img_list.html#ac619bd8222ff38259b6f891ae3f646bb',1,'cimg_library_suffixed::CImgList']]],
   ['pop_5ffront',['pop_front',['../structcimg__library__suffixed_1_1_c_img_list.html#afb5883af31042787f25c35c9d044de6e',1,'cimg_library_suffixed::CImgList']]],
+  ['popen',['pOpen',['../_text_box_8hpp.html#ac0d65361b8c249f8d48453c5c0915d37',1,'TextBox.hpp']]],
   ['pos',['pos',['../struct_event.html#a405730c60365283ce01c2399e6f664a8',1,'Event']]],
   ['pow',['pow',['../structcimg__library__suffixed_1_1_c_img.html#a56a46a3c08972775c5c2451f178be1a6',1,'cimg_library_suffixed::CImg::pow(const double p)'],['../structcimg__library__suffixed_1_1_c_img.html#a949bdad0b186d9ab93f06a5b3da976c0',1,'cimg_library_suffixed::CImg::pow(const char *const expression)'],['../structcimg__library__suffixed_1_1_c_img.html#a47d139a477afd4815a56988dc0cd547e',1,'cimg_library_suffixed::CImg::pow(const CImg&lt; t &gt; &amp;img)']]],
   ['prand',['prand',['../namespacecimg__library__suffixed_1_1cimg.html#a2a18bbfb6a496d8d5a02943be8eaa936',1,'cimg_library_suffixed::cimg']]],

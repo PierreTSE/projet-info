@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buttonwidget',['ButtonWidget',['../class_button_widget.html',1,'']]]
+  ['application',['Application',['../class_application.html',1,'']]]
 ];
