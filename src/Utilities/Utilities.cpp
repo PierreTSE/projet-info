@@ -102,7 +102,7 @@ void importFromDirectory(const fs::path& directoryPath, CollectionPool<Image>& c
 	}
 }
 
-std::string UTF8toISO9859_1(const std::string& str)
+std::string UTF8toISO8859_1(const std::string& str)
 {
 	std::string str_out;
 	for (size_t i = 0; i < str.length(); i++)

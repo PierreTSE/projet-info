@@ -12,6 +12,7 @@
 #include "Application.hpp" // Inclut le header Application
 
 /**
+ * \fn main
  * \brief Point d'entrée du programme C++
  * \param argc Nombre d'arguments de la commande de lancement du programme
  * \param argv Tableau de chaînes de caractères
