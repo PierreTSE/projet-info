@@ -1,6 +1,7 @@
 #ifndef TAGSETTERWIDGET_HPP
 #define TAGSETTERWIDGET_HPP
 
+#include <functional>
 #include "Widget.hpp"
 #include "../Collection/Collection.hpp"
 #include "../Image/Image.hpp"
@@ -9,7 +10,7 @@
 class TagSetterWidget : public Widget
 {
     public:
-        TagSetterWidget(const TagList& possibleTags, Collection<Image>& collection, long long width, long long minHeight);
+        TagSetterWidget(const TagList& possibleTags, Collection<Image>& collection, long long width, long long minHeight, const std::function<bool(ClickEvent, TagSetterWidget*, Tag)>& callback = [](ClickEvent, TagSetterWidget*, Tag){ return false; });
     
     protected:
         img actualRender() const override;
@@ -22,6 +23,7 @@ class TagSetterWidget : public Widget
         Collection<Image>& collection_;
         long long width_;
         long long minHeight_;
+        std::function<bool(ClickEvent, TagSetterWidget*, Tag)> callback_;
         
         static constexpr int lineHeight = 30;
 };

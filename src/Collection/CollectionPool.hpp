@@ -39,6 +39,12 @@ class CollectionPool : public Collection<T>
     void reserve(size_type new_cap) { pool_.reserve(new_cap); }
     size_type capacity() const { return pool_.capacity(); }
     void shrink_to_fit() { pool_.shrink_to_fit(); }
+    
+    // Accessors
+    reference operator[](const size_type& i) { return pool_[i]; }
+    const_reference operator[](const size_type& i) const { return pool_[i]; }
+    reference at(const size_type& i) { return pool_.at(i); }
+    const_reference at(const size_type& i) const { return pool_.at(i); }
 
     /*
         //Modifiers
@@ -54,8 +60,6 @@ class CollectionPool : public Collection<T>
         iterator insert(const_iterator pos, std::initializer_list<T> ilist);
         template <class... Args>
         iterator emplace(const_iterator pos, Args&&... args);
-        iterator erase(iterator pos);
-        iterator erase(const_iterator pos);
         iterator erase(iterator first, iterator last);
         iterator erase(const_iterator first, const_iterator last);
         template <class... Args>
@@ -68,6 +72,13 @@ class CollectionPool : public Collection<T>
         void resize(size_type count, const value_type& value);
         */
 
+    iterator erase(iterator pos) { auto it = begin();
+                                std::advance(it, pool_.erase(pool_.begin() + std::distance(begin(), pos)) -pool_.begin());
+                                return it;}
+    iterator erase(const_iterator pos) { auto it = begin();
+                                        std::advance(it, pool_.erase(pool_.begin() + std::distance(begin(), pos)) -pool_.begin());
+                                        return it;}
+    
     //Modifiers
     void push_back(const T& value)
     {

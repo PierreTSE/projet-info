@@ -3,11 +3,12 @@
 #include "../Utilities/Utilities.hpp"
 
 
-TagSetterWidget::TagSetterWidget(const TagList& possibleTags, Collection<Image>& collection, long long width, long long minHeight) :
+TagSetterWidget::TagSetterWidget(const TagList& possibleTags, Collection<Image>& collection, long long width, long long minHeight, const std::function<bool(ClickEvent, TagSetterWidget*, Tag)>& callback) :
     possibleTags_{possibleTags}, 
     collection_{collection}, 
     width_{width}, 
-    minHeight_{minHeight}
+    minHeight_{minHeight},
+    callback_{callback}
 {
 
 }
@@ -62,19 +63,19 @@ bool TagSetterWidget::actualPropagateEvent(const Event& event)
 {
     if(std::holds_alternative<ClickEvent>(event.event)) 
     {
+        int pos = event.pos.y / lineHeight;
+        auto it = possibleTags_.begin();
+        bool valid = true;
+
+        for(int i = 0; i < pos && it != possibleTags_.end(); ++i)
+        {
+            if(++it == possibleTags_.end())
+                valid = false;
+        }
+            
         const auto& ce = std::get<ClickEvent>(event.event);
         if(ce.type == ClickEvent::LEFT)
-        {
-            int pos = event.pos.y / lineHeight;
-            auto it = possibleTags_.begin();
-            bool valid = true;
-            
-            for(int i = 0; i < pos && it != possibleTags_.end(); ++i)
-            {
-                if(++it == possibleTags_.end())
-                    valid = false;
-            }
-                
+        {                
             if(valid)
             {
                 const Tag& tag = *it;
@@ -87,8 +88,9 @@ bool TagSetterWidget::actualPropagateEvent(const Event& event)
                     for(auto& image : collection_)
                         image.getTagList().insert(tag);
             }
-			callRedraw();
         }
+        callRedraw();
+        callback_(ce, this, valid?(*it):"");
         
         return true;
     }
