@@ -152,3 +152,21 @@ std::string UTF8toISO8859_1(const std::string& str)
 
 	return str_out;
 }
+
+
+std::string IOStoUTF8(const std::string& str)
+{
+	std::string out;
+	for(auto& c : str)
+	{
+		if((static_cast<unsigned char>(c) & 0x80) == 0)
+			out.push_back(c);
+		else
+		{
+			out.push_back(0xC0 + (static_cast<unsigned char>(c) >> 6));
+			out.push_back(0x80 + (static_cast<unsigned  char>(c) & 0x3F));
+		}
+	}
+	
+	return out;
+}
