@@ -233,9 +233,8 @@ void Application::collectionWindow()
     ListWidget rightClickOnImage({u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ", u8" Enlever les images s\u00E9lectionn\u00E9es "}, true);
     rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
         { // Afficher l'image
-            // TODO Appeller code de Pierre pour afficher une image
-            std::cout << std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage().getPath() << std::endl;
-            
+			variables_["ImageViewed"] = &std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage();
+			ImageViewerWindow();            
             return true;
         });
     rightClickOnImage.setCallBack(1, [this](ClickEvent, ButtonWidget*)
@@ -273,9 +272,8 @@ void Application::tagSetterWindow()
     ListWidget rightClickOnImage({u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ", u8" Enlever les images s\u00E9lectionn\u00E9es "}, true);
     rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
     { // Afficher l'image
-        // TODO Appeller code de Pierre pour afficher une image
-        std::cout << std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage().getPath() << std::endl;
-
+		variables_["ImageViewed"] = &std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage();
+		ImageViewerWindow();
         return true;
     });
     rightClickOnImage.setCallBack(1, [this](ClickEvent, ButtonWidget*)
