@@ -9,6 +9,7 @@
 #include <map>
 #include <string>
 #include <any>
+#include <list>
 #include <optional>
 
 
@@ -41,7 +42,7 @@ class Application
         std::optional<FilteredCollection<Image>> selected_;
         TagList possibleTags_;
 
-		std::vector<FilteredCollection<Image>> searchedColl_;
+		std::list<FilteredCollection<Image>> searchedColl_;
 		TagList filter_;
         
         WindowWidget window_;

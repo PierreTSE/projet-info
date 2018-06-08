@@ -13,7 +13,7 @@
 class TagSelector : public Widget
 {
     public:
-		TagSelector(TagList possibleTags, long long width, long long minHeight);
+		TagSelector(TagList possibleTags, TagList selectedTags, long long width, long long minHeight);
 
 		img actualRender() const override;
 		void actualResize(const dim_t& size) override;

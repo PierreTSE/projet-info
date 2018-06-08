@@ -1,8 +1,9 @@
 #include "TagSelector.hpp"
 #include "../Utilities/Utilities.hpp"
 
-TagSelector::TagSelector(TagList possibleTags, long long width, long long minHeight) :
+TagSelector::TagSelector(TagList possibleTags, TagList selectedTags, long long width, long long minHeight) :
 	possibleTags_{ possibleTags },
+	selectedTags_{selectedTags},
     width_{width},
     minHeight_{minHeight}
 {
@@ -73,7 +74,7 @@ bool TagSelector::actualPropagateEvent(const Event& event)
 			if (valid)
 			{
 				const Tag& tag = *it;
-				if (selectedTags_.find(tag) != selectedTags_.end())
+				if (selectedTags_.find(tag) == selectedTags_.end())
 					selectedTags_.insert(tag);
 				else
 					selectedTags_.erase(tag);
