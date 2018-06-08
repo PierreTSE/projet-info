@@ -13,12 +13,6 @@ std::string getTextFromBox(std::string str)
 #endif
 
 #ifdef LINUX
-int main()
-{
-	olàlà sa bogue
-	return void;
-}
-
 std::string getTextFromBox(std::string str)
 {
 	return std::string("Thomas est string méchant");

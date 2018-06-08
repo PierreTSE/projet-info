@@ -4,12 +4,12 @@
  * \brief Contient la fonction main
  * 
  * Ce fichier contient la fonction :
- * int main(int argc, char** argv)
- * qui est le point d'entrée d'un programme C++.
+ * int main(int argc, char** argv) 
+ * qui est le point d'entrée d'un programme C++
  * (cf documentation de la fonction en question).
  */
 
-#include "Application.hpp" // Inclut le header Application
+#include "Application.hpp" // Inclut le header Application.hpp
 
 /**
  * \brief Point d'entrée du programme C++
