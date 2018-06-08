@@ -101,46 +101,6 @@ void Application::savePossibleTags() const
 		out << tag << std::endl;
 }
 
-void Application::initialWindow()
-{
-    std::unique_ptr<ListWidget> list(new ListWidget({u8" Charger ", u8" Cr\u00E9er "}));
-    list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
-        { // Charger function
-            updateFunction_ = [this]()
-            {
-                fs::path savePath = getOpenFileName();
-                if(!fs::exists(savePath) || !fs::is_regular_file(savePath))
-                    return;
-                savePath_ = savePath;
-                auto temp = createPoolFromSave(savePath_);
-                collection_.reset(new CollectionPool<Image>(std::move(temp)));
-                if(collection_)
-                    collectionWindow();
-                else
-                    initialWindow();
-            };
-            return true;
-        });
-    list->setCallBack(1, [this](ClickEvent ce, ButtonWidget* but)
-        { 
-            updateFunction_ = [this]()
-            {// Créer une collection
-                fs::path directoryPath = browseFolder();
-                if(!fs::exists(directoryPath) || !fs::is_directory(directoryPath))
-                    return;
-                collection_.reset(new CollectionPool<Image>);
-    
-                importFromDirectory(directoryPath, *collection_);
-    
-                collectionWindow();
-            };
-            return true;
-        });
-    
-    auto menubar = new MenuBarWidget(nullptr, list.release(), window_.size());
-    window_.setContent(menubar);
-}
-
 void Application::update()
 {
     if(updateFunction_)
@@ -214,6 +174,46 @@ ListWidget Application::FichierList()
 	});
 
 	return fichierList;
+}
+
+void Application::initialWindow()
+{
+	std::unique_ptr<ListWidget> list(new ListWidget({ u8" Charger ", u8" Cr\u00E9er " }));
+	list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
+	{ // Charger function
+		updateFunction_ = [this]()
+		{
+			fs::path savePath = getOpenFileName();
+			if (!fs::exists(savePath) || !fs::is_regular_file(savePath))
+				return;
+			savePath_ = savePath;
+			auto temp = createPoolFromSave(savePath_);
+			collection_.reset(new CollectionPool<Image>(std::move(temp)));
+			if (collection_)
+				collectionWindow();
+			else
+				initialWindow();
+		};
+		return true;
+	});
+	list->setCallBack(1, [this](ClickEvent ce, ButtonWidget* but)
+	{
+		updateFunction_ = [this]()
+		{// Créer une collection
+			fs::path directoryPath = browseFolder();
+			if (!fs::exists(directoryPath) || !fs::is_directory(directoryPath))
+				return;
+			collection_.reset(new CollectionPool<Image>);
+
+			importFromDirectory(directoryPath, *collection_);
+
+			collectionWindow();
+		};
+		return true;
+	});
+
+	auto menubar = new MenuBarWidget(nullptr, list.release(), window_.size());
+	window_.setContent(menubar);
 }
 
 void Application::collectionWindow()
