@@ -23,7 +23,16 @@
  *  Pour la valeur de retour, un 0 correspond à une terminaison sans erreur ; une autre valeur
  *  indique que le programme s'est arrêté anormalement.
  */
-int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
+/*
+ * Pour indiquer au compilateur que les paramètres argc et argv ne seront probablement pas utilisés,
+ * nous pouvons utiliser un attribut qui fait parti des standards et sera donc multiplateforme
+ * à condition d'utiliser un compilateur conforme :
+ * http://en.cppreference.com/w/cpp/language/attributes
+ * Cet attribut en particulier n'est disponible qu'à partir de la norme C++17 mais ce n'est pas
+ * un problème ici étant donné que d'autres fonctionnalités dans le programme nécéssitent également 
+ * l'usage de C++17
+ */
+int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
     //Début du programme 
 
