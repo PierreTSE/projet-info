@@ -232,7 +232,7 @@ void Application::collectionWindow()
         return true;
     });
     
-    ListWidget rightClickOnImage({u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ", u8" Enlever les images s\u00E9lectionn\u00E9es "}, true);
+    ListWidget rightClickOnImage({u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ", u8" Enlever les images s\u00E9lectionn\u00E9es ", u8" Rechercher par tag "}, true);
     rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
         { // Afficher l'image
 			variables_["ImageViewed"] = &std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage();
@@ -265,6 +265,15 @@ void Application::collectionWindow()
         };
         return true;
     });
+    rightClickOnImage.setCallBack(3, [this](ClickEvent, ButtonWidget*)
+    { // Recherche
+        updateFunction_ = [this]()
+        {// Suppr les images
+            imageSearchWindow();
+        };
+        return true;
+    });
+    
     variables_["rightClickOnImage"] = rightClickOnImage;
     
     auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150}, [this](ClickEvent ce, ImageWidget* iw)
@@ -417,11 +426,13 @@ void Application::imageViewerWindow()
 
 	auto imagePtr = std::any_cast<Image*>(variables_["ImageViewed"]);
 
-	auto image = new ImageWidget(*imagePtr,window_.size(), [this](ClickEvent, ImageWidget* iw)
+	auto image = new ImageWidget(*imagePtr,window_.size(), [this](ClickEvent ce, ImageWidget* iw)
     {
-        iw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickOnImageViewer"])));
+        if(ce.type == ClickEvent::RIGHT)
+            iw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickOnImageViewer"])));
         return true;
     });
+	image->setSelectable(false);
 	auto tagViewer = new TagViewerWidget(imagePtr, window_.size().x, window_.size().y);
 	auto scroller = new ScrollWidget(tagViewer, window_.size());
 	auto layout = new LayoutWidget(image, scroller, 0.7, window_.size());
@@ -444,10 +455,25 @@ void Application::imageSearchWindow()
 		return true;
 	});
 
-	auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, { 150, 150 }, [this](ClickEvent ce, ImageWidget* iw) {return false; });
-	auto tagSelector = new TagSelector(possibleTags_,window_.size().x,window_.size().y);
+	searchedColl_.clear();
+	searchedColl_.emplace_back(*collection_, [](const Image&){ return true; });
+	for(auto& tag : filter_)
+    {
+        searchedColl_.emplace_back(searchedColl_.back(), [&tag](const Image& image) { return image.hasTag(tag); });
+    }
+	
+	auto grid = new GridWidget(searchedColl_.back(), window_.size().x, window_.size().y, { 150, 150 }, [this](ClickEvent ce, ImageWidget* iw) {return false; });
+	auto scroll = new ScrollWidget(grid, window_.size());
+	auto tagSelector = new TagSelector(possibleTags_, filter_, window_.size().x,window_.size().y);
+	tagSelector->setCallBack([this](ClickEvent, TagSelector*, TagList tl) {
+	    filter_ = tl;
+	    updateFunction_ = [this](){
+	        imageSearchWindow();
+	    };
+	    return true;
+	});
 	auto scroller = new ScrollWidget(tagSelector, window_.size());
-	auto layout = new LayoutWidget(grid, scroller, 0.7, window_.size());
+	auto layout = new LayoutWidget(scroller, scroll, 0.3, window_.size());
 	auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
 	window_.setContent(menubar);
 }
