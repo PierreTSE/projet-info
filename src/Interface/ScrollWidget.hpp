@@ -24,7 +24,7 @@ class ScrollWidget : public Widget
         dim_t size_;
         std::unique_ptr<Widget> content_ = nullptr;
         long long delta_ = 0;
-        float coeff_delta_ = 20;
+        float coeff_delta_ = 40;
 		bool followMouse_ = false;
         
         static constexpr int scrollBarWidth = 20;
