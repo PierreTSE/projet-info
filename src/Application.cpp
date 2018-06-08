@@ -7,6 +7,7 @@
 #include "Utilities/Utilities.hpp"
 #include "Specifique/FileDialog.hpp"
 #include "Interface/ScrollWidget.hpp"
+#include "Utilities/TextBox/TextBox.hpp"
 #include "ConsolePrototype/config.hpp"
 #include <chrono>
 #include <thread>
@@ -245,6 +246,24 @@ void Application::collectionWindow()
             };
             return true;
         });
+    rightClickOnImage.setCallBack(2, [this](ClickEvent, ButtonWidget*)
+    { // Sppr les images
+        updateFunction_ = [this]()
+        {// Suppr les images
+            for(size_t i = 0; i < collection_->size(); i++)
+            {
+                if(collection_->at(i).isSelected())
+                {
+                    auto it = collection_->begin();
+                    std::advance(it, i);
+                    collection_->erase(it);
+                    i--;
+                }
+            }
+            collectionWindow();
+        };
+        return true;
+    });
     variables_["rightClickOnImage"] = rightClickOnImage;
     
     auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150}, [this](ClickEvent ce, ImageWidget* iw)
@@ -269,7 +288,7 @@ void Application::tagSetterWindow()
     variables_["Fichier"] = fichierList;
     selected_ = FilteredCollection<Image>(*collection_, [](const Image& image) { return image.isSelected(); });
 
-    ListWidget rightClickOnImage({u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ", u8" Enlever les images s\u00E9lectionn\u00E9es "}, true);
+    ListWidget rightClickOnImage({u8" Afficher Image ", u8" Retour \u00E0 la collection ", u8" Enlever les images s\u00E9lectionn\u00E9es "}, true);
     rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
     { // Afficher l'image
 		variables_["ImageViewed"] = &std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage();
@@ -277,16 +296,52 @@ void Application::tagSetterWindow()
         return true;
     });
     rightClickOnImage.setCallBack(1, [this](ClickEvent, ButtonWidget*)
-    { // Modifier les tags
+    { // Retour
         updateFunction_ = [this]()
         {// Ouvrir la fenêtre tagger
-            tagSetterWindow();
+            collectionWindow();
+        };
+        return true;
+    });
+    rightClickOnImage.setCallBack(2, [this](ClickEvent, ButtonWidget*)
+    {
+        updateFunction_ = [this]()
+        {// Suppr les images
+            for(size_t i = 0; i < collection_->size(); i++)
+            {
+                if(collection_->at(i).isSelected())
+                {
+                    auto it = collection_->begin();
+                    std::advance(it, i);
+                    collection_->erase(it);
+                    i--;
+                }
+            }
+            collectionWindow();
         };
         return true;
     });
     variables_["rightClickOnImage"] = rightClickOnImage;
     
     ListWidget rightClickOnTag({u8" Ajouter Tag ", u8" Supprimer Tag "}, true);
+    rightClickOnTag.setCallBack(0, [this](ClickEvent, ButtonWidget*)
+        { // Ajouter tag
+            Tag newtag = getTextFromBox("Nouveau Tag");
+            if(!newtag.empty())
+                possibleTags_.insert(newtag);
+			std::any_cast<TagSetterWidget*>(variables_["TagSetterPtr"])->callRedraw();
+            return true;
+        });
+    rightClickOnTag.setCallBack(1, [this](ClickEvent, ButtonWidget*)
+        { // Supprimer tag
+            Tag tag = std::any_cast<Tag>(variables_["TagToDelete"]);
+            possibleTags_.erase(tag);
+            for(auto& image : *collection_)
+                image.getTagList().erase(tag);
+			std::any_cast<TagSetterWidget*>(variables_["TagSetterPtr"])->callRedraw();
+            return true;
+        });
+    variables_["rightClickOnTagSetter"] = rightClickOnTag;
 
     // Contruction fenêtre
     std::unique_ptr<ListWidget> list(new ListWidget({u8" Fichier "}));
@@ -313,7 +368,16 @@ void Application::tagSetterWindow()
             return false;
         });
     std::unique_ptr<ScrollWidget> scroll(new ScrollWidget(grid, window_.size()));
-    auto tagsetter = new TagSetterWidget(possibleTags_, *selected_, window_.size().x, window_.size().y);
+    auto tagsetter = new TagSetterWidget(possibleTags_, *selected_, window_.size().x, window_.size().y, [this](ClickEvent ce, TagSetterWidget* tsw, Tag tag)
+        {
+            if(ce.type == ClickEvent::RIGHT)
+            {
+                variables_["TagToDelete"] = tag;
+                variables_["TagSetterPtr"] = tsw;
+                tsw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickOnTagSetter"])));
+            }
+            return true;
+        });
     auto scroll2 = new ScrollWidget(tagsetter, window_.size());
     auto layout = new LayoutWidget(scroll.release(), scroll2, 2.0/3.0, window_.size());
     auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
@@ -329,6 +393,17 @@ void Application::ImageViewerWindow()
 	variables_["Fichier"] = fichierList;
 	selected_ = FilteredCollection<Image>(*collection_, [](const Image& image) { return image.isSelected(); });
 
+    ListWidget rightClickOnImageViewer({u8" Retour \u00E0 la collection "}, true);
+    rightClickOnImageViewer.setCallBack(0, [this](ClickEvent, ButtonWidget*)
+    { // retour
+        updateFunction_ = [this]()
+        {// Ouvrir la fenêtre collection
+            collectionWindow();
+        };
+        return true;
+    });
+    variables_["rightClickOnImageViewer"] = rightClickOnImageViewer;
+
 	// Contruction fenêtre
 	std::unique_ptr<ListWidget> list(new ListWidget({ u8" Fichier " }));
 	list->setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
@@ -341,7 +416,11 @@ void Application::ImageViewerWindow()
 
 	auto imagePtr = std::any_cast<Image*>(variables_["ImageViewed"]);
 
-	auto image = new ImageWidget(*imagePtr,window_.size());
+	auto image = new ImageWidget(*imagePtr,window_.size(), [this](ClickEvent, ImageWidget* iw)
+    {
+        iw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickOnImageViewer"])));
+        return true;
+    });
 	auto tagViewer = new TagViewerWidget(imagePtr, window_.size().x, window_.size().y);
 	auto scroller = new ScrollWidget(tagViewer, window_.size());
 	auto layout = new LayoutWidget(image, scroller, 0.7, window_.size());
