@@ -1,4 +1,6 @@
 #include "TagViewerWidget.hpp"
+#include "../Utilities/Utilities.hpp"
+
 
 TagViewerWidget::TagViewerWidget(Image* targetImg, long long width, long long minHeight) :
     targetImg_{ targetImg },
@@ -23,7 +25,7 @@ Widget::img TagViewerWidget::actualRender() const
 		img line(width_, lineHeight, 1, 3, 255);
 		unsigned char white[] = { 255, 255, 255 }, black[] = { 0, 0, 0 };
 
-		line.draw_text(5, (lineHeight - 13) / 2, tag.c_str(), black, white);
+		line.draw_text(5, (lineHeight - 23) / 2, UTF8toISO8859_1(tag).c_str(), black, white, 1, 23);
 
 		render.draw_image(0, lineHeight*i, 0, 0, line);
 		i++;
