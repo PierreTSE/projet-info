@@ -9,11 +9,13 @@ LayoutWidget::LayoutWidget(Widget* contentLeft, Widget* contentRight, float rati
 {
     contentLeft_->resize({size_.x*ratio, size_.y});
     contentRight_->resize({size_.x*(1-ratio), size_.y});
+    contentLeft_->setParent(this);
+    contentRight_->setParent(this);
 }
 
 Widget::img LayoutWidget::actualRender() const
 {
-    img render(size_.x, size_.y, 0, 3, 255);
+    img render(size_.x, size_.y, 1, 3, 255);
     render.draw_image(0, 0, 0, 0, contentLeft_->render());
     render.draw_image(size_.x*ratio_, 0, 0, 0, contentRight_->render());
     

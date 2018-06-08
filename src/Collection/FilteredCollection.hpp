@@ -86,7 +86,7 @@ class FilteredCollection : public Collection<T>
 
         iterator end() override
         {
-			if (!is_const)
+			if (is_const)
 				throw std::runtime_error("Wrong method called on const FilteredCollection.");
 
             return iterator(new FilteredIterator<T>(*this, collection_->end()));
