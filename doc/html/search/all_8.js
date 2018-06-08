@@ -1,14 +1,21 @@
 var searchData=
 [
-  ['haar',['haar',['../structcimg__library__suffixed_1_1_c_img.html#ae5d38bed2e12d78631a84feb13fd715b',1,'cimg_library_suffixed::CImg::haar(const char axis, const bool invert=false, const unsigned int nb_scales=1)'],['../structcimg__library__suffixed_1_1_c_img.html#a46ada201cf0450fa8f0a6f09e047efc2',1,'cimg_library_suffixed::CImg::haar(const bool invert=false, const unsigned int nb_scales=1)']]],
-  ['hastag',['hasTag',['../class_image.html#a78324749d4a1cf03c2e8aa5bc4b3437b',1,'Image']]],
-  ['height',['height',['../structcimg__library__suffixed_1_1_c_img_display.html#a5604a6886d51d1070ed2ddc568a848f2',1,'cimg_library_suffixed::CImgDisplay::height()'],['../structcimg__library__suffixed_1_1_c_img.html#a49834fd555c4a8362100bc628f1b03bb',1,'cimg_library_suffixed::CImg::height()']]],
-  ['hide_5fmouse',['hide_mouse',['../structcimg__library__suffixed_1_1_c_img_display.html#ad42869bba3895a98404a7deade4690f1',1,'cimg_library_suffixed::CImgDisplay']]],
-  ['histogram',['histogram',['../structcimg__library__suffixed_1_1_c_img.html#a794236bd4f90ac9f858b25302f9eaf9e',1,'cimg_library_suffixed::CImg::histogram(const unsigned int nb_levels, const T &amp;min_value, const T &amp;max_value)'],['../structcimg__library__suffixed_1_1_c_img.html#ac3fca7e93313cf79a90a12e9435d44a9',1,'cimg_library_suffixed::CImg::histogram(const unsigned int nb_levels)']]],
-  ['hot_5flut256',['hot_LUT256',['../structcimg__library__suffixed_1_1_c_img.html#a2f69ebdf31dfb711698fe30753714c4b',1,'cimg_library_suffixed::CImg']]],
-  ['hsitorgb',['HSItoRGB',['../structcimg__library__suffixed_1_1_c_img.html#a82435e0972fa4663a8b026ba832cfa3a',1,'cimg_library_suffixed::CImg']]],
-  ['hsltorgb',['HSLtoRGB',['../structcimg__library__suffixed_1_1_c_img.html#ac0bd8f86babd67585b63f65320d17eaa',1,'cimg_library_suffixed::CImg']]],
-  ['hsv_5flut256',['HSV_LUT256',['../structcimg__library__suffixed_1_1_c_img.html#a51f90120a4070c5d47806c9fffc210ff',1,'cimg_library_suffixed::CImg']]],
-  ['hsvtorgb',['HSVtoRGB',['../structcimg__library__suffixed_1_1_c_img.html#a906025514304165302ad303c79e6a978',1,'cimg_library_suffixed::CImg']]],
-  ['hypot',['hypot',['../namespacecimg__library__suffixed_1_1cimg.html#af556f826a8b7acb2fbbaa5259e6d95e8',1,'cimg_library_suffixed::cimg::hypot(const T x, const T y)'],['../namespacecimg__library__suffixed_1_1cimg.html#abc2af0eccc1059711364e339d73c36cd',1,'cimg_library_suffixed::cimg::hypot(const T x, const T y, const T z)']]]
+  ['image',['Image',['../class_image.html',1,'Image'],['../class_image.html#a5502e928122744be1d3b89648298e162',1,'Image::Image()=default'],['../class_image.html#a28c9333c57d99129b5350f9df93f22ea',1,'Image::Image(const std::experimental::filesystem::path &amp;p, std::unique_ptr&lt; cimg_library::CImg&lt; unsigned char &gt;&gt; cimgPtr=nullptr, const TagList &amp;t={})']]],
+  ['image_2ecpp',['Image.cpp',['../_image_8cpp.html',1,'']]],
+  ['image_2ehpp',['Image.hpp',['../_image_8hpp.html',1,'']]],
+  ['imagewidget',['ImageWidget',['../class_image_widget.html',1,'ImageWidget'],['../class_image_widget.html#a966378e502da16bab8c1596ed365e8d6',1,'ImageWidget::ImageWidget()']]],
+  ['imagewidget_2ecpp',['ImageWidget.cpp',['../_image_widget_8cpp.html',1,'']]],
+  ['imagewidget_2ehpp',['ImageWidget.hpp',['../_image_widget_8hpp.html',1,'']]],
+  ['img',['img',['../class_widget.html#a0511db89e9c58382088ac88db8479a0c',1,'Widget::img()'],['../_utilities_8cpp.html#abc55cc5a3672e6077c97d2730653ae64',1,'img():&#160;Utilities.cpp']]],
+  ['importfromdirectory',['importFromDirectory',['../_utilities_8cpp.html#a5ce6411f7ab365cdf958f8f16e773d05',1,'importFromDirectory(const fs::path &amp;directoryPath, CollectionPool&lt; Image &gt; &amp;collectionPool):&#160;Utilities.cpp'],['../_utilities_8hpp.html#a41b172caaf9dd1e2d0ba53b75a217d7c',1,'importFromDirectory(const std::experimental::filesystem::path &amp;directoryPath, CollectionPool&lt; Image &gt; &amp;collectionPool):&#160;Utilities.hpp']]],
+  ['invalid',['INVALID',['../_image_8cpp.html#a5d74787dedbc4e11c1ab15bf487e61f8aef2863a469df3ea6871d640e3669a2f2',1,'Image.cpp']]],
+  ['is_5fopen',['is_open',['../class_window_widget.html#a556741682ef738cc417f707cc288d7ec',1,'WindowWidget']]],
+  ['iscolored',['isColored',['../class_button_widget.html#a5239cdc7bf6ea60722aa0620611be239',1,'ButtonWidget']]],
+  ['isinside',['isInside',['../class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8',1,'Widget']]],
+  ['isotoutf8',['ISOtoUTF8',['../_utilities_8cpp.html#ae1273245637bf009ca994f39dbcb0ae7',1,'ISOtoUTF8(const std::string &amp;str):&#160;Utilities.cpp'],['../_utilities_8hpp.html#ae1273245637bf009ca994f39dbcb0ae7',1,'ISOtoUTF8(const std::string &amp;str):&#160;Utilities.cpp']]],
+  ['isselected',['isSelected',['../class_image.html#aa0342748b3c981c6c06e0bf82a397895',1,'Image']]],
+  ['iterator',['iterator',['../class_collection.html#a317dca4fdf1eb2e47643bb60c620f802',1,'Collection::iterator()'],['../class_collection_pool.html#a7beafeb93ccc043bcde933faab05718f',1,'CollectionPool::iterator()'],['../class_filtered_collection.html#a65730aaf0a2a5307a924b44672718c74',1,'FilteredCollection::iterator()']]],
+  ['iterator_5fcategory',['iterator_category',['../class_collection_iterator.html#a0f4af23418960a0fe3889b5381d6a79c',1,'CollectionIterator::iterator_category()'],['../class_const_collection_iterator.html#ab0e392034449303d41341ed05ae970d2',1,'ConstCollectionIterator::iterator_category()']]],
+  ['iteratorbase',['IteratorBase',['../class_iterator_base.html',1,'IteratorBase&lt; T &gt;'],['../class_iterator_base.html#a6d1810e7a0a84574bb61d78bb99d96bb',1,'IteratorBase::IteratorBase()']]],
+  ['iteratorbase_3c_20t_20_3e',['IteratorBase&lt; T &gt;',['../class_collection_iterator.html#a6076dfcb85a3a7cb903b827fa821fe54',1,'CollectionIterator']]]
 ];

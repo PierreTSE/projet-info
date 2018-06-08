@@ -1,0 +1,10 @@
+<map id="Widget::actualPropagateEvent" name="Widget::actualPropagateEvent">
+<area shape="rect" id="node2" href="$class_widget.html#a1d36bcdc5a64ead5403be88654a5559f" title="Widget::getWindow" alt="" coords="265,27,401,54"/>
+<area shape="rect" id="node3" href="$class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0" title="Widget::propagateEvent" alt="" coords="252,78,415,105"/>
+<area shape="rect" id="node4" href="$class_grid_widget.html#a9c57f1ca2311d3caa936a481fa7fbef0" title="GridWidget::actualPropagate\lEvent" alt="" coords="471,5,660,47"/>
+<area shape="rect" id="node6" href="$class_list_widget.html#a91b56e252a550deda1d97a2992e3a9f7" title="ListWidget::actualPropagate\lEvent" alt="" coords="472,71,659,112"/>
+<area shape="rect" id="node7" href="$class_window_widget.html#a541a8f556d865da798786e2601cf031e" title="WindowWidget::manageEvents" alt="" coords="463,137,668,163"/>
+<area shape="rect" id="node5" href="$class_grid_widget.html#abfc54e477706b66bd09f6f3c459fcfa4" title="GridWidget::GridWidget" alt="" coords="716,13,876,39"/>
+<area shape="rect" id="node8" href="$class_application.html#a81d5b51e54511185c84ee300e752a85f" title="Application::execute" alt="" coords="726,137,866,163"/>
+<area shape="rect" id="node9" href="$main_8cpp.html#adc4096c0dfd003425c219daa30db4e1e" title="main" alt="" coords="924,137,975,163"/>
+</map>

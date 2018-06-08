@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['nan',['nan',['../structcimg__library__suffixed_1_1cimg_1_1type_3_01double_01_4.html#ae3c33f103b0328e4455c88a36bdccdcc',1,'cimg_library_suffixed::cimg::type&lt; double &gt;::nan()'],['../structcimg__library__suffixed_1_1cimg_1_1type_3_01float_01_4.html#ac5696859985362db837b405b9ad878db',1,'cimg_library_suffixed::cimg::type&lt; float &gt;::nan()'],['../structcimg__library__suffixed_1_1cimg_1_1type_3_01long_01double_01_4.html#a534ad4ae798d7dd30333fb9a045344b3',1,'cimg_library_suffixed::cimg::type&lt; long double &gt;::nan()']]],
-  ['nb_5fcpus',['nb_cpus',['../namespacecimg__library__suffixed_1_1cimg.html#ad359a27ccc2eea27d3a6f1073b2a2ad7',1,'cimg_library_suffixed::cimg']]],
-  ['nearest_5fpow2',['nearest_pow2',['../namespacecimg__library__suffixed_1_1cimg.html#a809b0aa9af68d48f9c6c3f61e3555674',1,'cimg_library_suffixed::cimg']]],
-  ['need_5finput_5fcopy',['need_input_copy',['../structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#ada8b588b576249397bc4b3e6f1260a0d',1,'cimg_library_suffixed::CImg::_cimg_math_parser']]],
-  ['noise',['noise',['../structcimg__library__suffixed_1_1_c_img.html#a6049c651eefc3a13b8f7d1fc3ff225d7',1,'cimg_library_suffixed::CImg']]],
-  ['norm',['norm',['../structcimg__library__suffixed_1_1_c_img.html#ab850013f0ed453ba91ac0004e76f5d78',1,'cimg_library_suffixed::CImg']]],
-  ['normalization',['normalization',['../structcimg__library__suffixed_1_1_c_img_display.html#a79b6f929fe4aaf411051fc85862191a7',1,'cimg_library_suffixed::CImgDisplay']]],
-  ['normalize',['normalize',['../structcimg__library__suffixed_1_1_c_img.html#af7afc7b40a99135c82e7222191f6744e',1,'cimg_library_suffixed::CImg::normalize(const T &amp;min_value, const T &amp;max_value)'],['../structcimg__library__suffixed_1_1_c_img.html#acf91acd5fba09e7ecc3bb708b0a0b8dd',1,'cimg_library_suffixed::CImg::normalize()']]],
-  ['number_5ffilename',['number_filename',['../namespacecimg__library__suffixed_1_1cimg.html#ab58f430d4a05a010742c012efd4a7000',1,'cimg_library_suffixed::cimg']]]
+  ['reference',['reference',['../class_collection.html#abbc291771b11c48cd2f297a0d9fe0449',1,'Collection::reference()'],['../class_collection_iterator.html#aac15417aa7a67fdfb86b8bad1b4d5ddf',1,'CollectionIterator::reference()'],['../class_const_collection_iterator.html#a216f7bd76fb369ad1fb46527824da9c8',1,'ConstCollectionIterator::reference()'],['../class_collection_pool.html#a12dd127db0342d4b694d857f6c77ad90',1,'CollectionPool::reference()'],['../class_filtered_collection.html#afc4e47695287b6bac73899ab5bcfdf6e',1,'FilteredCollection::reference()']]],
+  ['render',['render',['../class_widget.html#a2516fd56cac645cb3aacef37937c49d3',1,'Widget']]],
+  ['reserve',['reserve',['../class_collection_pool.html#a06334969f57ca768241af598f03e8de1',1,'CollectionPool']]],
+  ['resize',['resize',['../class_widget.html#a0809c3a396f9d1cedb1446d7b0750ef2',1,'Widget']]],
+  ['right',['RIGHT',['../struct_click_event.html#a4006f96db41a3253ee212925df5374d2a930c56fd88f3faeb21b7aa0e1671f110',1,'ClickEvent::RIGHT()'],['../struct_un_click_event.html#a1466653f94232a3ae0b2fd9e981b7396a61dd82e27fe432ee0a87cc2e5719c274',1,'UnClickEvent::RIGHT()']]]
 ];

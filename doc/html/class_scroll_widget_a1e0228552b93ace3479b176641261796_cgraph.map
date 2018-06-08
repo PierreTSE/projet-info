@@ -1,0 +1,8 @@
+<map id="ScrollWidget::ScrollWidget" name="ScrollWidget::ScrollWidget">
+<area shape="rect" id="node2" href="$class_scroll_widget.html#a19b22edd7d9f565af142e801a5960530" title="ScrollWidget::actualPropagate\lEvent" alt="" coords="232,5,431,47"/>
+<area shape="rect" id="node3" href="$class_scroll_widget.html#a7e5e4571d6ed8bc20eedeac1493120bd" title="ScrollWidget::actualRender" alt="" coords="241,71,422,98"/>
+<area shape="rect" id="node4" href="$class_scroll_widget.html#a4ede9d7a9f850f367b39173bb2519bd6" title="ScrollWidget::actualResize" alt="" coords="241,122,421,149"/>
+<area shape="rect" id="node5" href="$class_scroll_widget.html#ad5c035caab4a4618c7ee8fc53fd7899a" title="ScrollWidget::actualSize" alt="" coords="249,173,414,199"/>
+<area shape="rect" id="node6" href="$class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea" title="Widget::size" alt="" coords="284,223,379,250"/>
+<area shape="rect" id="node7" href="$class_widget.html#aa6225b5a14e5861cc2cd98c737841854" title="Widget::actualSize" alt="" coords="479,223,611,250"/>
+</map>

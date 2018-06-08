@@ -1,0 +1,29 @@
+<map id="src/Interface/Events.hpp" name="src/Interface/Events.hpp">
+<area shape="rect" id="node2" href="$_widget_8hpp.html" title="src/Interface/Widget.hpp" alt="" coords="1179,80,1345,107"/>
+<area shape="rect" id="node20" href="$_image_widget_8hpp.html" title="src/Interface/ImageWidget.hpp" alt="" coords="1300,155,1501,181"/>
+<area shape="rect" id="node3" href="$_window_widget_8hpp.html" title="src/Interface/WindowWidget.hpp" alt="" coords="32,304,244,331"/>
+<area shape="rect" id="node8" href="$_list_widget_8hpp.html" title="src/Interface/ListWidget.hpp" alt="" coords="187,229,374,256"/>
+<area shape="rect" id="node9" href="$_menu_bar_widget_8hpp.html" title="src/Interface/MenuBarWidget.hpp" alt="" coords="529,304,747,331"/>
+<area shape="rect" id="node12" href="$_button_widget_8hpp.html" title="src/Interface/ButtonWidget.hpp" alt="" coords="398,155,601,181"/>
+<area shape="rect" id="node14" href="$_tag_setter_widget_8hpp.html" title="src/Interface/TagSetterWidget.hpp" alt="" coords="725,155,948,181"/>
+<area shape="rect" id="node16" href="$_tag_viewer_widget_8hpp.html" title="src/Interface/TagViewerWidget.hpp" alt="" coords="998,155,1225,181"/>
+<area shape="rect" id="node18" href="$_grid_widget_8hpp.html" title="src/Interface/GridWidget.hpp" alt="" coords="1273,229,1462,256"/>
+<area shape="rect" id="node22" href="$_layout_widget_8hpp.html" title="src/Interface/LayoutWidget.hpp" alt="" coords="1624,155,1828,181"/>
+<area shape="rect" id="node24" href="$_scroll_widget_8hpp.html" title="src/Interface/ScrollWidget.hpp" alt="" coords="1907,155,2105,181"/>
+<area shape="rect" id="node26" href="$_tag_selector_8hpp.html" title="src/Interface/TagSelector.hpp" alt="" coords="2155,155,2350,181"/>
+<area shape="rect" id="node28" href="$_widget_8cpp.html" title="src/Interface/Widget.cpp" alt="" coords="2374,155,2539,181"/>
+<area shape="rect" id="node4" href="$_application_8hpp.html" title="src/Application.hpp" alt="" coords="242,379,375,405"/>
+<area shape="rect" id="node7" href="$_window_widget_8cpp.html" title="src/Interface/WindowWidget.cpp" alt="" coords="5,379,217,405"/>
+<area shape="rect" id="node5" href="$_application_8cpp.html" title="src/Application.cpp" alt="" coords="993,453,1126,480"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="Contient la fonction main. " alt="" coords="260,453,357,480"/>
+<area shape="rect" id="node11" href="$_list_widget_8cpp.html" title="src/Interface/ListWidget.cpp" alt="" coords="318,304,505,331"/>
+<area shape="rect" id="node10" href="$_menu_bar_widget_8cpp.html" title="src/Interface/MenuBarWidget.cpp" alt="" coords="529,379,747,405"/>
+<area shape="rect" id="node13" href="$_button_widget_8cpp.html" title="src/Interface/ButtonWidget.cpp" alt="" coords="398,229,601,256"/>
+<area shape="rect" id="node15" href="$_tag_setter_widget_8cpp.html" title="src/Interface/TagSetterWidget.cpp" alt="" coords="725,229,948,256"/>
+<area shape="rect" id="node17" href="$_tag_viewer_widget_8cpp.html" title="src/Interface/TagViewerWidget.cpp" alt="" coords="1022,229,1249,256"/>
+<area shape="rect" id="node19" href="$_grid_widget_8cpp.html" title="src/Interface/GridWidget.cpp" alt="" coords="1273,304,1462,331"/>
+<area shape="rect" id="node21" href="$_image_widget_8cpp.html" title="src/Interface/ImageWidget.cpp" alt="" coords="1487,229,1688,256"/>
+<area shape="rect" id="node23" href="$_layout_widget_8cpp.html" title="src/Interface/LayoutWidget.cpp" alt="" coords="1764,229,1968,256"/>
+<area shape="rect" id="node25" href="$_scroll_widget_8cpp.html" title="src/Interface/ScrollWidget.cpp" alt="" coords="2043,229,2241,256"/>
+<area shape="rect" id="node27" href="$_tag_selector_8cpp.html" title="src/Interface/TagSelector.cpp" alt="" coords="2315,229,2510,256"/>
+</map>

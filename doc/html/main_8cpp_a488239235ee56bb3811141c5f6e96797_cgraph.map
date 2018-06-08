@@ -1,7 +1,0 @@
-<map id="getPoolFromDirectory" name="getPoolFromDirectory">
-<area shape="rect" id="node2" href="$_file_dialog_8hpp.html#a79d86cc4131e945502a7bf000eca7537" title="Ouvre une boîte de dialogue qui demande un répertoire à ouvrir. " alt="" coords="241,5,341,32"/>
-<area shape="rect" id="node3" href="$class_collection_pool.html#a67fc04c58d9da40ef52e4e58aa386557" title="CollectionPool::push_back" alt="" coords="203,56,380,83"/>
-<area shape="rect" id="node4" href="$save_8cpp.html#a2f7a5989de5158a79ed463cd910745ab" title="updateCollec" alt="" coords="242,107,341,133"/>
-<area shape="rect" id="node5" href="$class_image.html#a47222478e8a915767150d24965e5e223" title="Image::getPath" alt="" coords="436,81,547,108"/>
-<area shape="rect" id="node6" href="$class_image.html#a74e8e906e9ebe86e0e4cb1e0590af3b3" title="Image::getTagList" alt="" coords="428,132,555,159"/>
-</map>

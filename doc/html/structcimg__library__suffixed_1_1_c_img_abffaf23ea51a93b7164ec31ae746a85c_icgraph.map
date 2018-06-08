@@ -1,5 +1,0 @@
-<map id="cimg_library_suffixed::CImg::_priority_queue_remove" name="cimg_library_suffixed::CImg::_priority_queue_remove">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#ab461b8b649f269f33f4eedba90d1a84e" title="Compute distance map to a specified value, according to a custom metric (use dijkstra algorithm) ..." alt="" coords="233,5,378,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a2b1addf2e74607a44640f82f88916d37" title="Compute distance map to one source point, according to a custom metric (use fast marching algorithm)..." alt="" coords="233,85,378,141"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#a6c93c9f308c168756831884f1aa829af" title="Compute watershed transform. " alt="" coords="212,166,399,207"/>
-</map>

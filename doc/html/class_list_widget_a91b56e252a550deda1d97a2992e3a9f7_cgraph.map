@@ -1,0 +1,8 @@
+<map id="ListWidget::actualPropagateEvent" name="ListWidget::actualPropagateEvent">
+<area shape="rect" id="node2" href="$class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8" title="Widget::isInside" alt="" coords="263,5,379,32"/>
+<area shape="rect" id="node6" href="$class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0" title="Widget::propagateEvent" alt="" coords="240,56,403,83"/>
+<area shape="rect" id="node3" href="$class_widget.html#af5851078b2f0c2f14a9bf377e535340f" title="Widget::actualIsInside" alt="" coords="474,5,626,32"/>
+<area shape="rect" id="node4" href="$class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea" title="Widget::size" alt="" coords="697,5,792,32"/>
+<area shape="rect" id="node5" href="$class_widget.html#aa6225b5a14e5861cc2cd98c737841854" title="Widget::actualSize" alt="" coords="840,5,972,32"/>
+<area shape="rect" id="node7" href="$class_widget.html#a92906f698fd94c2f777e46c1480967fc" title="Widget::actualPropagateEvent" alt="" coords="451,56,649,83"/>
+</map>

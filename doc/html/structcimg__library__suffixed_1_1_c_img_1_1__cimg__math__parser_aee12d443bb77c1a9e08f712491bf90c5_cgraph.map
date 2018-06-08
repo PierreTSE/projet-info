@@ -1,9 +1,0 @@
-<map id="cimg_library_suffixed::CImg::_cimg_math_parser::mp_stov" name="cimg_library_suffixed::CImg::_cimg_math_parser::mp_stov">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a17a3c105772f6401fd631d0d82a59d65" title="Return a reference to the last pixel value. " alt="" coords="237,5,383,47"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1cimg_1_1type.html#ac818c4773392cc85c58676270d752f90" title="cimg_library_suffixed\l::cimg::type::inf" alt="" coords="237,71,383,112"/>
-<area shape="rect" id="node6" href="$namespacecimg__library__suffixed_1_1cimg.html#a1c34609cc6fef6f5fe5ffb2f69ad7989" title="Compare two C&#45;strings, ignoring the case. " alt="" coords="237,136,383,177"/>
-<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#aae5df5731fe5a367cec402071108c11c" title="Return the maximum between three values. " alt="" coords="431,71,576,112"/>
-<area shape="rect" id="node5" href="$namespacecimg__library__suffixed_1_1cimg.html#a4b4cabc621d732787bca13016ea8026a" title="Return the maximum between four values. " alt="" coords="624,71,769,112"/>
-<area shape="rect" id="node7" href="$namespacecimg__library__suffixed_1_1cimg.html#a1304046a29511fe0a015173e46607229" title="Compare the first l characters of two C&#45;strings, ignoring the case. " alt="" coords="431,136,576,177"/>
-<area shape="rect" id="node8" href="$namespacecimg__library__suffixed_1_1cimg.html#ac9cf8d2a803d13d85e7fcc48fee55587" title="Convert ascii character to lower case. " alt="" coords="624,136,769,177"/>
-</map>

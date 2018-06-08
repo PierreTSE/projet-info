@@ -1,0 +1,6 @@
+<map id="ImageWidget::actualRender" name="ImageWidget::actualRender">
+<area shape="rect" id="node2" href="$class_image.html#a657a199518956ca160b1100c2147b41d" title="Image::getImgPtr" alt="" coords="239,5,362,32"/>
+<area shape="rect" id="node3" href="$class_image.html#aa0342748b3c981c6c06e0bf82a397895" title="Image::isSelected" alt="" coords="237,56,364,83"/>
+<area shape="rect" id="node4" href="$class_widget.html#a2516fd56cac645cb3aacef37937c49d3" title="Widget::render" alt="" coords="247,107,354,133"/>
+<area shape="rect" id="node5" href="$class_widget.html#a5ff4883144670b8c93b41e440e3d4446" title="Widget::actualRender" alt="" coords="412,107,560,133"/>
+</map>

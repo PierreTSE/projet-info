@@ -1,0 +1,6 @@
+<map id="WindowWidget::manageEvents" name="WindowWidget::manageEvents">
+<area shape="rect" id="node2" href="$class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0" title="Widget::propagateEvent" alt="" coords="259,5,421,32"/>
+<area shape="rect" id="node4" href="$class_widget.html#a0809c3a396f9d1cedb1446d7b0750ef2" title="Widget::resize" alt="" coords="287,56,393,83"/>
+<area shape="rect" id="node3" href="$class_widget.html#a92906f698fd94c2f777e46c1480967fc" title="Widget::actualPropagateEvent" alt="" coords="469,5,668,32"/>
+<area shape="rect" id="node5" href="$class_widget.html#a1a3ac9ff4f7c19c19a9886219b6dda2e" title="Widget::actualResize" alt="" coords="495,56,642,83"/>
+</map>

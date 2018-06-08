@@ -1,0 +1,39 @@
+<map id="Application::~Application" name="Application::~Application">
+<area shape="rect" id="node2" href="$class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7" title="Application::save" alt="" coords="501,5,624,32"/>
+<area shape="rect" id="node5" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="220,335,421,361"/>
+<area shape="rect" id="node3" href="$class_application.html#ae22fc39c79b4efa62e80f548805410e5" title="Application::saveAs" alt="" coords="735,16,874,43"/>
+<area shape="rect" id="node4" href="$_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13" title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. " alt="" coords="958,16,1085,43"/>
+<area shape="rect" id="node6" href="$class_list_widget.html#a99a15d95fb1c9c369fc73b5fe5165121" title="ListWidget::setCallBack" alt="" coords="481,107,644,133"/>
+<area shape="rect" id="node7" href="$_file_dialog_8hpp.html#ab8faee849788ba51e2d0d4691a2462e1" title="Ouvre une boîte de dialogue qui demande un fichier à ouvrir. " alt="" coords="499,157,626,184"/>
+<area shape="rect" id="node8" href="$_utilities_8cpp.html#a6d03d2391c95cb176a80f11be628e6a9" title="createPoolFromSave" alt="" coords="491,208,635,235"/>
+<area shape="rect" id="node11" href="$_file_dialog_8hpp.html#ad37a6364c30c0ac2187911992d6c239e" title="Ouvre une boîte de dialogue qui demande un répertoire à ouvrir. " alt="" coords="513,309,613,336"/>
+<area shape="rect" id="node12" href="$_utilities_8cpp.html#a5ce6411f7ab365cdf958f8f16e773d05" title="importFromDirectory" alt="" coords="492,259,633,285"/>
+<area shape="rect" id="node15" href="$class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d" title="WindowWidget::close" alt="" coords="488,360,637,387"/>
+<area shape="rect" id="node20" href="$class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea" title="Widget::size" alt="" coords="974,560,1069,587"/>
+<area shape="rect" id="node23" href="$class_window_widget.html#a4d1f999183262930b2472bcd212644aa" title="WindowWidget::setContent" alt="" coords="471,491,654,517"/>
+<area shape="rect" id="node24" href="$class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd" title="Widget::getWindow" alt="" coords="495,645,631,672"/>
+<area shape="rect" id="node25" href="$class_window_widget.html#a010f6706afa1a7221312e1b9d854731a" title="WindowWidget::spawnRight\lClickMenu" alt="" coords="469,697,656,738"/>
+<area shape="rect" id="node28" href="$class_filtered_collection.html#ac38c3dc2cd51b2dbfb476c19732a6198" title="FilteredCollection\l::begin" alt="" coords="501,762,624,803"/>
+<area shape="rect" id="node30" href="$_text_box_8hpp.html#aeff834ba7c5b4e30fd819bcafefb9127" title="Récupère une chaîne de caractères depuis une entrée. " alt="" coords="503,828,622,855"/>
+<area shape="rect" id="node31" href="$class_image_widget.html#a5973a50de2ac39437934a09313af6af9" title="ImageWidget::setSelectable" alt="" coords="469,411,656,437"/>
+<area shape="rect" id="node9" href="$class_image.html#ad6c6fc59aaffc9c101047e8ef32abc9d" title="Image::loadImage" alt="" coords="741,88,868,115"/>
+<area shape="rect" id="node10" href="$class_collection_pool.html#a67fc04c58d9da40ef52e4e58aa386557" title="CollectionPool::push_back" alt="" coords="716,139,893,165"/>
+<area shape="rect" id="node13" href="$class_collection_pool.html#ae13d478a26554da9211db064285c7b0b" title="CollectionPool::begin" alt="" coords="732,189,877,216"/>
+<area shape="rect" id="node14" href="$class_collection_pool.html#a870a85422595d6533688704ebe43b520" title="CollectionPool::end" alt="" coords="737,240,872,267"/>
+<area shape="rect" id="node16" href="$class_window_widget.html#aaec9f66e42abae3db2c28b4d153f4102" title="WindowWidget::actualRender" alt="" coords="707,291,902,317"/>
+<area shape="rect" id="node19" href="$class_window_widget.html#a89a68a5d4dc9fd5da10ac75c1121a453" title="WindowWidget::actualResize" alt="" coords="707,459,902,485"/>
+<area shape="rect" id="node17" href="$class_widget.html#a2516fd56cac645cb3aacef37937c49d3" title="Widget::render" alt="" coords="968,283,1075,309"/>
+<area shape="rect" id="node18" href="$class_widget.html#a5ff4883144670b8c93b41e440e3d4446" title="Widget::actualRender" alt="" coords="1137,283,1285,309"/>
+<area shape="rect" id="node22" href="$class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3" title="Widget::callRedraw" alt="" coords="953,509,1089,536"/>
+<area shape="rect" id="node21" href="$class_widget.html#aa6225b5a14e5861cc2cd98c737841854" title="Widget::actualSize" alt="" coords="1145,560,1277,587"/>
+<area shape="rect" id="node26" href="$class_widget.html#a0dd3c167cde2b8ef9ffbd95067fbb3f6" title="Widget::setParent" alt="" coords="741,712,868,739"/>
+<area shape="rect" id="node27" href="$class_widget.html#abe38c3c1fbcde4c705d76d58208ceb52" title="Widget::~Widget" alt="" coords="961,712,1081,739"/>
+<area shape="rect" id="node29" href="$class_filtered_collection.html#aae9f1064023bc98970dc6f8c2359d12b" title="FilteredCollection::end" alt="" coords="729,769,881,796"/>
+<area shape="rect" id="node32" href="$class_image_widget.html#ac80b8e013edc3cda5e1413cbd174b2cb" title="ImageWidget::actualRender" alt="" coords="713,341,897,368"/>
+<area shape="rect" id="node35" href="$class_image_widget.html#a3b5f1a6cf3f2fcde08f50f0b91eaff70" title="ImageWidget::actualResize" alt="" coords="713,560,896,587"/>
+<area shape="rect" id="node36" href="$class_image_widget.html#a4a81c81681e243cb32066257ca9d3e92" title="ImageWidget::actualSize" alt="" coords="721,611,889,637"/>
+<area shape="rect" id="node37" href="$class_image_widget.html#a08c72c6888bf10e0941443ea67c72498" title="ImageWidget::actualPropagate\lEvent" alt="" coords="704,393,905,434"/>
+<area shape="rect" id="node33" href="$class_image.html#aa0342748b3c981c6c06e0bf82a397895" title="Image::isSelected" alt="" coords="958,384,1085,411"/>
+<area shape="rect" id="node34" href="$class_image.html#a657a199518956ca160b1100c2147b41d" title="Image::getImgPtr" alt="" coords="960,333,1083,360"/>
+<area shape="rect" id="node38" href="$class_image.html#a84d28d3d8ada85fb50c0d40f09563b99" title="Image::select" alt="" coords="971,435,1072,461"/>
+</map>

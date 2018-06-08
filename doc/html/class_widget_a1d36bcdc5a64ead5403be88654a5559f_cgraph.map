@@ -1,0 +1,9 @@
+<map id="Widget::getWindow" name="Widget::getWindow">
+<area shape="rect" id="node2" href="$class_widget.html#af5851078b2f0c2f14a9bf377e535340f" title="Widget::actualIsInside" alt="" coords="213,5,365,32"/>
+<area shape="rect" id="node3" href="$class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea" title="Widget::size" alt="" coords="436,56,531,83"/>
+<area shape="rect" id="node4" href="$class_widget.html#aa6225b5a14e5861cc2cd98c737841854" title="Widget::actualSize" alt="" coords="579,81,711,108"/>
+<area shape="rect" id="node5" href="$class_widget.html#a92906f698fd94c2f777e46c1480967fc" title="Widget::actualPropagateEvent" alt="" coords="189,157,388,184"/>
+<area shape="rect" id="node6" href="$class_widget.html#a5ff4883144670b8c93b41e440e3d4446" title="Widget::actualRender" alt="" coords="215,208,363,235"/>
+<area shape="rect" id="node7" href="$class_widget.html#a1a3ac9ff4f7c19c19a9886219b6dda2e" title="Widget::actualResize" alt="" coords="215,259,362,285"/>
+<area shape="rect" id="node8" href="$class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd" title="Widget::getWindow" alt="" coords="221,333,357,360"/>
+</map>

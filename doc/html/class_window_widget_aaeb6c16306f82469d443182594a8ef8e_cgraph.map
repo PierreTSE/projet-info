@@ -1,0 +1,6 @@
+<map id="WindowWidget::display" name="WindowWidget::display">
+<area shape="rect" id="node2" href="$class_widget.html#a2516fd56cac645cb3aacef37937c49d3" title="Widget::render" alt="" coords="250,12,357,39"/>
+<area shape="rect" id="node4" href="$class_window_widget.html#a4d1f999183262930b2472bcd212644aa" title="WindowWidget::setContent" alt="" coords="212,68,395,95"/>
+<area shape="rect" id="node3" href="$class_widget.html#a5ff4883144670b8c93b41e440e3d4446" title="Widget::actualRender" alt="" coords="443,5,591,32"/>
+<area shape="rect" id="node5" href="$class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3" title="Widget::callRedraw" alt="" coords="449,80,585,107"/>
+</map>

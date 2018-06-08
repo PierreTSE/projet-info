@@ -1,3 +1,12 @@
 <map id="src/Collection/CollectionPool.hpp" name="src/Collection/CollectionPool.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="39,95,136,121"/>
+<area shape="rect" id="node2" href="$_application_8hpp.html" title="src/Application.hpp" alt="" coords="127,95,261,121"/>
+<area shape="rect" id="node5" href="$_utilities_8hpp.html" title="src/Utilities/Utilities.hpp" alt="" coords="644,95,805,121"/>
+<area shape="rect" id="node3" href="$_application_8cpp.html" title="src/Application.cpp" alt="" coords="127,177,261,203"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Contient la fonction main. " alt="" coords="5,177,103,203"/>
+<area shape="rect" id="node6" href="$_button_widget_8cpp.html" title="src/Interface/ButtonWidget.cpp" alt="" coords="285,177,487,203"/>
+<area shape="rect" id="node7" href="$_tag_selector_8cpp.html" title="src/Interface/TagSelector.cpp" alt="" coords="511,177,706,203"/>
+<area shape="rect" id="node8" href="$_tag_setter_widget_8cpp.html" title="src/Interface/TagSetterWidget.cpp" alt="" coords="731,177,953,203"/>
+<area shape="rect" id="node9" href="$_tag_viewer_widget_8cpp.html" title="src/Interface/TagViewerWidget.cpp" alt="" coords="978,177,1205,203"/>
+<area shape="rect" id="node10" href="$_text_box_8cpp.html" title="src/Utilities/TextBox\l/TextBox.cpp" alt="" coords="1229,169,1370,211"/>
+<area shape="rect" id="node11" href="$_utilities_8cpp.html" title="src/Utilities/Utilities.cpp" alt="" coords="1395,177,1556,203"/>
 </map>

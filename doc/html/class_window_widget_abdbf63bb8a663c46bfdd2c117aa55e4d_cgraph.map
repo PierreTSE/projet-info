@@ -1,0 +1,9 @@
+<map id="WindowWidget::close" name="WindowWidget::close">
+<area shape="rect" id="node2" href="$class_window_widget.html#aaec9f66e42abae3db2c28b4d153f4102" title="WindowWidget::actualRender" alt="" coords="203,17,397,44"/>
+<area shape="rect" id="node5" href="$class_window_widget.html#a89a68a5d4dc9fd5da10ac75c1121a453" title="WindowWidget::actualResize" alt="" coords="203,80,397,107"/>
+<area shape="rect" id="node3" href="$class_widget.html#a2516fd56cac645cb3aacef37937c49d3" title="Widget::render" alt="" coords="460,5,567,32"/>
+<area shape="rect" id="node4" href="$class_widget.html#a5ff4883144670b8c93b41e440e3d4446" title="Widget::actualRender" alt="" coords="629,5,777,32"/>
+<area shape="rect" id="node6" href="$class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3" title="Widget::callRedraw" alt="" coords="445,80,581,107"/>
+<area shape="rect" id="node7" href="$class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea" title="Widget::size" alt="" coords="466,131,561,157"/>
+<area shape="rect" id="node8" href="$class_widget.html#aa6225b5a14e5861cc2cd98c737841854" title="Widget::actualSize" alt="" coords="637,131,769,157"/>
+</map>

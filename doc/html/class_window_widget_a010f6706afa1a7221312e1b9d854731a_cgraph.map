@@ -1,0 +1,4 @@
+<map id="WindowWidget::spawnRightClickMenu" name="WindowWidget::spawnRightClickMenu">
+<area shape="rect" id="node2" href="$class_widget.html#a0dd3c167cde2b8ef9ffbd95067fbb3f6" title="Widget::setParent" alt="" coords="240,13,367,39"/>
+<area shape="rect" id="node3" href="$class_widget.html#abe38c3c1fbcde4c705d76d58208ceb52" title="Widget::~Widget" alt="" coords="415,13,535,39"/>
+</map>

@@ -1,6 +1,5 @@
 var annotated_dup =
 [
-    [ "cimg_library_suffixed", "namespacecimg__library__suffixed.html", "namespacecimg__library__suffixed" ],
     [ "Application", "class_application.html", "class_application" ],
     [ "ButtonWidget", "class_button_widget.html", "class_button_widget" ],
     [ "ClickEvent", "struct_click_event.html", "struct_click_event" ],

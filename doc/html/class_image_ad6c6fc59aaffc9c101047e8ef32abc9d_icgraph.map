@@ -1,5 +1,8 @@
 <map id="Image::loadImage" name="Image::loadImage">
-<area shape="rect" id="node2" href="$main_8cpp.html#addb7c669fb11a52b3d2dd9e221fdea2f" title="getPoolFromSave" alt="" coords="180,5,307,32"/>
-<area shape="rect" id="node4" href="$class_image.html#a1d3c73cbf4af1f1973fdf6c3c00e2301" title="Image::setImgPtr" alt="" coords="182,56,305,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="355,5,405,32"/>
+<area shape="rect" id="node2" href="$_utilities_8cpp.html#a6d03d2391c95cb176a80f11be628e6a9" title="createPoolFromSave" alt="" coords="180,5,324,32"/>
+<area shape="rect" id="node6" href="$_utilities_8cpp.html#a5ce6411f7ab365cdf958f8f16e773d05" title="importFromDirectory" alt="" coords="181,56,323,83"/>
+<area shape="rect" id="node7" href="$class_image.html#a1d3c73cbf4af1f1973fdf6c3c00e2301" title="Image::setImgPtr" alt="" coords="191,107,313,133"/>
+<area shape="rect" id="node3" href="$_utilities_8cpp.html#a46270f4fab8fe8d4f01b9c7cb8fdb75c" title="createPoolFromDirectory" alt="" coords="389,5,556,32"/>
+<area shape="rect" id="node4" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="372,56,573,83"/>
+<area shape="rect" id="node5" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="621,56,788,83"/>
 </map>

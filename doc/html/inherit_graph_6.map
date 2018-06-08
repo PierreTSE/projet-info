@@ -1,3 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$structcimg__library__suffixed_1_1cimg_1_1superset_3_01bool_00_01cimg__uint64_01_4.html" title="cimg_library_suffixed\l::cimg::superset\&lt; bool,\l cimg_uint64 \&gt;" alt="" coords="5,5,161,61"/>
+<area shape="rect" id="node1" href="$class_const_iterator_base.html" title="ConstIteratorBase\&lt; T \&gt;" alt="" coords="5,31,165,57"/>
+<area shape="rect" id="node2" href="$class_const_filtered_iterator.html" title="ConstFilteredIterator\&lt; T \&gt;" alt="" coords="213,5,387,32"/>
+<area shape="rect" id="node3" href="$class_const_pool_iterator.html" title="ConstPoolIterator\&lt; T \&gt;" alt="" coords="222,56,378,83"/>
 </map>

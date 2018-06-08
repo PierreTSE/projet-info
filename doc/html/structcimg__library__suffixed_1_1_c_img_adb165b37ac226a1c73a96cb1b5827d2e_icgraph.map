@@ -1,8 +1,0 @@
-<map id="cimg_library_suffixed::CImg::save" name="cimg_library_suffixed::CImg::save">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a8b40db5a9818c3f961a90840b271de6c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_display\l_object3d" alt="" coords="199,5,374,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#ad9b7141242d0b6e861a8014112ddb5b5" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_select" alt="" coords="202,86,371,127"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img_list.html#af8a6b01f20b2d459e5abe6b99836ea9a" title="cimg_library_suffixed\l::CImgList\&lt; charT \&gt;::\l_select" alt="" coords="213,152,361,208"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="214,232,359,288"/>
-<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img_list.html#a7186fe44f8d6ce58583e3177ff802445" title="Save list into a file. " alt="" coords="199,313,375,354"/>
-<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img_list.html#a759ef20b53f1e507973dc53fcc2c7bb2" title="Save image sequence as a GIF animated file. " alt="" coords="213,379,361,435"/>
-</map>

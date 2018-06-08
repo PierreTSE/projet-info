@@ -1,0 +1,10 @@
+<map id="ButtonWidget::isColored" name="ButtonWidget::isColored">
+<area shape="rect" id="node2" href="$class_button_widget.html#a982bd9ccd6e7b8cb632efafd76309125" title="ButtonWidget::actualRender" alt="" coords="217,56,404,83"/>
+<area shape="rect" id="node6" href="$class_button_widget.html#a66e8bfd9bc9a56b3a7cb2a8efc38347e" title="ButtonWidget::actualResize" alt="" coords="218,131,403,157"/>
+<area shape="rect" id="node8" href="$class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea" title="Widget::size" alt="" coords="473,181,567,208"/>
+<area shape="rect" id="node3" href="$class_widget.html#a2516fd56cac645cb3aacef37937c49d3" title="Widget::render" alt="" coords="467,5,573,32"/>
+<area shape="rect" id="node5" href="$_utilities_8cpp.html#a59a3b645b654e776f33e3f4dccbd5fb1" title="Convertit de l&#39;UTF&#45;8 vers l&#39;ISO&#45;8859&#45;1. " alt="" coords="455,56,585,83"/>
+<area shape="rect" id="node4" href="$class_widget.html#a5ff4883144670b8c93b41e440e3d4446" title="Widget::actualRender" alt="" coords="636,5,784,32"/>
+<area shape="rect" id="node7" href="$class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3" title="Widget::callRedraw" alt="" coords="452,131,588,157"/>
+<area shape="rect" id="node9" href="$class_widget.html#aa6225b5a14e5861cc2cd98c737841854" title="Widget::actualSize" alt="" coords="644,181,776,208"/>
+</map>

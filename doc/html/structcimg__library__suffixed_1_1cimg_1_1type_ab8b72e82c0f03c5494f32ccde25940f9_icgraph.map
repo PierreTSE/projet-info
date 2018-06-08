@@ -1,8 +1,0 @@
-<map id="cimg_library_suffixed::cimg::type::cut" name="cimg_library_suffixed::cimg::type::cut">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a99690e6e82972751d45b0af8ddffc235" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_cubic\l_cut_atX" alt="" coords="199,5,364,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a95f59be46a05ba6695a9dda99d3f5955" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_cubic\l_cut_atXY" alt="" coords="199,85,364,141"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#a410d8aba50a87b5a93e1ee0306ba77a0" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_cubic\l_cut_atXYZ" alt="" coords="199,165,364,221"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#a400409cc6ba9413fbd50673625e6335a" title="Return clamped pixel value, using cubic interpolation and Dirichlet boundary conditions for the X&#45;coo..." alt="" coords="202,245,361,301"/>
-<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#ad74951678b673f186bcf7adc4b976cc8" title="Return clamped pixel value, using cubic interpolation and Dirichlet boundary conditions for the X..." alt="" coords="202,325,361,381"/>
-<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img.html#a36375932eba1f1062034c42b934c7788" title="Return clamped pixel value, using cubic interpolation and Dirichlet boundary conditions for the XYZ&#45;c..." alt="" coords="202,405,361,461"/>
-</map>

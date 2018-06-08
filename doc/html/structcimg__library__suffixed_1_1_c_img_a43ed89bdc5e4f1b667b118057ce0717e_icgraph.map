@@ -1,7 +1,0 @@
-<map id="cimg_library_suffixed::CImg::atXYZ" name="cimg_library_suffixed::CImg::atXYZ">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img_list.html#a9d8943cf916f4869a4aba1b925a7b7b6" title="cimg_library_suffixed\l::CImgList\&lt; charT \&gt;::\l_atNXYZ" alt="" coords="217,5,365,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#aed98b23130078df5ad69b199d88bb261" title="Correlate image by a kernel . " alt="" coords="199,86,383,127"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img_list.html#a712c54070179c7fca098c7299552c29c" title="Access pixel value with Dirichlet boundary conditions for the 3 coordinates (pos, x..." alt="" coords="217,152,365,208"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#a66a723bf61125378577a3e99247ff8da" title="Dilate image by a structuring element . " alt="" coords="218,232,363,288"/>
-<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#aad353fc91b0c6ef3c0251f4f46a96150" title="Erode image by a structuring element . " alt="" coords="199,313,383,354"/>
-</map>

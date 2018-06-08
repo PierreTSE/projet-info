@@ -1,3 +1,6 @@
 <map id="getSaveFileName" name="getSaveFileName">
-<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="180,5,231,32"/>
+<area shape="rect" id="node2" href="$class_application.html#ae22fc39c79b4efa62e80f548805410e5" title="Application::saveAs" alt="" coords="180,31,319,57"/>
+<area shape="rect" id="node3" href="$class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7" title="Application::save" alt="" coords="367,5,489,32"/>
+<area shape="rect" id="node5" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="537,56,739,83"/>
+<area shape="rect" id="node4" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="787,31,953,57"/>
 </map>
