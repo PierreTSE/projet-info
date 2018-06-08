@@ -1,0 +1,21 @@
+<map id="Widget::render" name="Widget::render">
+<area shape="rect" id="node2" href="$class_tag_viewer_widget.html#a4604a3d47ac1b722fdfe0e1ad6823bc9" title="TagViewerWidget::actualRender" alt="" coords="160,5,371,32"/>
+<area shape="rect" id="node3" href="$class_layout_widget.html#a4c5e202310725b09ff40ea0a8e2a7572" title="LayoutWidget::actualRender" alt="" coords="172,56,359,83"/>
+<area shape="rect" id="node4" href="$class_menu_bar_widget.html#a889dfb7e60370bf27cf4e5522ef0b454" title="MenuBarWidget::actualRender" alt="" coords="165,107,365,133"/>
+<area shape="rect" id="node5" href="$class_tag_selector.html#add853733030378d7fb475343f40d2e33" title="TagSelector::actualRender" alt="" coords="177,157,354,184"/>
+<area shape="rect" id="node6" href="$class_tag_setter_widget.html#a8e33c61e9806b27241df2e3c69ed9584" title="TagSetterWidget::actualRender" alt="" coords="163,208,368,235"/>
+<area shape="rect" id="node7" href="$class_image_widget.html#ac80b8e013edc3cda5e1413cbd174b2cb" title="ImageWidget::actualRender" alt="" coords="173,259,357,285"/>
+<area shape="rect" id="node11" href="$class_window_widget.html#aaec9f66e42abae3db2c28b4d153f4102" title="WindowWidget::actualRender" alt="" coords="168,309,363,336"/>
+<area shape="rect" id="node13" href="$class_button_widget.html#a982bd9ccd6e7b8cb632efafd76309125" title="ButtonWidget::actualRender" alt="" coords="172,360,359,387"/>
+<area shape="rect" id="node15" href="$class_grid_widget.html#ad2b2565b4ef8046f6886d09698567a18" title="GridWidget::actualRender" alt="" coords="179,411,351,437"/>
+<area shape="rect" id="node17" href="$class_list_widget.html#a8fbbe5bd2879acc726ec4ecbb87a3da8" title="ListWidget::actualRender" alt="" coords="181,461,350,488"/>
+<area shape="rect" id="node18" href="$class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e" title="WindowWidget::display" alt="" coords="186,512,345,539"/>
+<area shape="rect" id="node8" href="$class_image_widget.html#a5973a50de2ac39437934a09313af6af9" title="ImageWidget::setSelectable" alt="" coords="419,259,605,285"/>
+<area shape="rect" id="node9" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="653,284,855,311"/>
+<area shape="rect" id="node10" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="903,284,1069,311"/>
+<area shape="rect" id="node12" href="$class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d" title="WindowWidget::close" alt="" coords="437,309,587,336"/>
+<area shape="rect" id="node14" href="$class_button_widget.html#a5239cdc7bf6ea60722aa0620611be239" title="ButtonWidget::isColored" alt="" coords="430,360,594,387"/>
+<area shape="rect" id="node16" href="$class_grid_widget.html#abfc54e477706b66bd09f6f3c459fcfa4" title="GridWidget::GridWidget" alt="" coords="432,411,592,437"/>
+<area shape="rect" id="node19" href="$class_application.html#a81d5b51e54511185c84ee300e752a85f" title="Application::execute" alt="" coords="442,512,582,539"/>
+<area shape="rect" id="node20" href="$main_8cpp.html#adc4096c0dfd003425c219daa30db4e1e" title="main" alt="" coords="729,512,779,539"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Widget::isInside" name="Widget::isInside">
+<area shape="rect" id="node2" href="$class_button_widget.html#aae069846bf4c475a475a47daf4178f3d" title="ButtonWidget::actualPropagate\lEvent" alt="" coords="169,5,372,47"/>
+<area shape="rect" id="node4" href="$class_grid_widget.html#a9c57f1ca2311d3caa936a481fa7fbef0" title="GridWidget::actualPropagate\lEvent" alt="" coords="176,71,365,112"/>
+<area shape="rect" id="node6" href="$class_list_widget.html#a91b56e252a550deda1d97a2992e3a9f7" title="ListWidget::actualPropagate\lEvent" alt="" coords="177,136,364,177"/>
+<area shape="rect" id="node3" href="$class_button_widget.html#a050618b949448e783b589ddd4ccfedf0" title="ButtonWidget::actualSize" alt="" coords="420,13,591,39"/>
+<area shape="rect" id="node5" href="$class_grid_widget.html#abfc54e477706b66bd09f6f3c459fcfa4" title="GridWidget::GridWidget" alt="" coords="425,78,585,105"/>
+</map>

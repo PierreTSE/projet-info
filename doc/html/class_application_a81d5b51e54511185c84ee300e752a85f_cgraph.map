@@ -1,0 +1,13 @@
+<map id="Application::execute" name="Application::execute">
+<area shape="rect" id="node2" href="$class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e" title="WindowWidget::display" alt="" coords="217,60,375,87"/>
+<area shape="rect" id="node7" href="$class_window_widget.html#a556741682ef738cc417f707cc288d7ec" title="WindowWidget::is_open" alt="" coords="215,111,377,137"/>
+<area shape="rect" id="node8" href="$class_window_widget.html#a541a8f556d865da798786e2601cf031e" title="WindowWidget::manageEvents" alt="" coords="193,161,399,188"/>
+<area shape="rect" id="node3" href="$class_widget.html#a2516fd56cac645cb3aacef37937c49d3" title="Widget::render" alt="" coords="485,15,591,41"/>
+<area shape="rect" id="node5" href="$class_window_widget.html#a4d1f999183262930b2472bcd212644aa" title="WindowWidget::setContent" alt="" coords="447,73,629,100"/>
+<area shape="rect" id="node4" href="$class_widget.html#a5ff4883144670b8c93b41e440e3d4446" title="Widget::actualRender" alt="" coords="703,5,851,32"/>
+<area shape="rect" id="node6" href="$class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3" title="Widget::callRedraw" alt="" coords="709,80,845,107"/>
+<area shape="rect" id="node9" href="$class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0" title="Widget::propagateEvent" alt="" coords="457,136,619,163"/>
+<area shape="rect" id="node11" href="$class_widget.html#a0809c3a396f9d1cedb1446d7b0750ef2" title="Widget::resize" alt="" coords="485,187,591,213"/>
+<area shape="rect" id="node10" href="$class_widget.html#a92906f698fd94c2f777e46c1480967fc" title="Widget::actualPropagateEvent" alt="" coords="677,136,876,163"/>
+<area shape="rect" id="node12" href="$class_widget.html#a1a3ac9ff4f7c19c19a9886219b6dda2e" title="Widget::actualResize" alt="" coords="703,187,850,213"/>
+</map>

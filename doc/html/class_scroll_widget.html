@@ -94,24 +94,27 @@ $(document).ready(function(){initNavTree('class_scroll_widget.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Ascenseur permettant de d�placer le contenu d'un <code><a class="el" href="class_widget.html" title="API permettant la création d&#39;une interface graphique. ">Widget</a></code> juxtapos�  
+ <a href="class_scroll_widget.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_scroll_widget_8hpp_source.html">ScrollWidget.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de ScrollWidget:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 0 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_scroll_widget__inherit__graph.svg" width="180" height="478"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Graphe de collaboration de ScrollWidget:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 1 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_scroll_widget__coll__graph.svg" width="259" height="479"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a8cd1d59b24aff85a353e86e24425e94d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scroll_widget.html#a8cd1d59b24aff85a353e86e24425e94d">ScrollWidget</a> (<a class="el" href="class_widget.html">Widget</a> &amp;content, <a class="el" href="structdim__t.html">dim_t</a> <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">size</a>)</td></tr>
-<tr class="separator:a8cd1d59b24aff85a353e86e24425e94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0228552b93ace3479b176641261796"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scroll_widget.html#a1e0228552b93ace3479b176641261796">ScrollWidget</a> (<a class="el" href="class_widget.html">Widget</a> *content, <a class="el" href="structdim__t.html">dim_t</a> <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">size</a>)</td></tr>
+<tr class="separator:a1e0228552b93ace3479b176641261796"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_widget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_widget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_widget.html">Widget</a></td></tr>
 <tr class="memitem:a2516fd56cac645cb3aacef37937c49d3 inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_widget.html#a0511db89e9c58382088ac88db8479a0c">img</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">render</a> () const</td></tr>
 <tr class="separator:a2516fd56cac645cb3aacef37937c49d3 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +132,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:abe38c3c1fbcde4c705d76d58208ceb52 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a210d4c8e3ea02cb777c6e3ad7fdc22b3 inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">callRedraw</a> () const</td></tr>
 <tr class="separator:a210d4c8e3ea02cb777c6e3ad7fdc22b3 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd">getWindow</a> ()</td></tr>
+<tr class="separator:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d36bcdc5a64ead5403be88654a5559f inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a1d36bcdc5a64ead5403be88654a5559f">getWindow</a> () const</td></tr>
+<tr class="separator:a1d36bcdc5a64ead5403be88654a5559f inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Fonctions membres protégées</h2></td></tr>
@@ -143,10 +150,6 @@ Fonctions membres protégées</h2></td></tr>
 <tr class="inherit_header pro_methods_class_widget"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_widget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="class_widget.html">Widget</a></td></tr>
 <tr class="memitem:af5851078b2f0c2f14a9bf377e535340f inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#af5851078b2f0c2f14a9bf377e535340f">actualIsInside</a> (const <a class="el" href="structdim__t.html">dim_t</a> &amp;pos) const</td></tr>
 <tr class="separator:af5851078b2f0c2f14a9bf377e535340f inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd">getWindow</a> ()</td></tr>
-<tr class="separator:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d36bcdc5a64ead5403be88654a5559f inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a1d36bcdc5a64ead5403be88654a5559f">getWindow</a> () const</td></tr>
-<tr class="separator:a1d36bcdc5a64ead5403be88654a5559f inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Membres hérités additionnels</h2></td></tr>
@@ -157,9 +160,11 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:ab25db90b5e17a3489d881c1ab2d079ab inherit pro_attribs_class_widget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#ab25db90b5e17a3489d881c1ab2d079ab">parent_</a> = nullptr</td></tr>
 <tr class="separator:ab25db90b5e17a3489d881c1ab2d079ab inherit pro_attribs_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="a8cd1d59b24aff85a353e86e24425e94d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cd1d59b24aff85a353e86e24425e94d">&#9670;&nbsp;</a></span>ScrollWidget()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ascenseur permettant de d�placer le contenu d'un <code><a class="el" href="class_widget.html" title="API permettant la création d&#39;une interface graphique. ">Widget</a></code> juxtapos� </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a1e0228552b93ace3479b176641261796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e0228552b93ace3479b176641261796">&#9670;&nbsp;</a></span>ScrollWidget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +175,7 @@ Membres hérités additionnels</h2></td></tr>
         <tr>
           <td class="memname">ScrollWidget::ScrollWidget </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_widget.html">Widget</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_widget.html">Widget</a> *&#160;</td>
           <td class="paramname"><em>content</em>, </td>
         </tr>
         <tr>
@@ -192,11 +197,11 @@ Membres hérités additionnels</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Références <a class="el" href="class_scroll_widget.html#a19b22edd7d9f565af142e801a5960530">actualPropagateEvent()</a>, <a class="el" href="class_scroll_widget.html#a7e5e4571d6ed8bc20eedeac1493120bd">actualRender()</a>, <a class="el" href="class_scroll_widget.html#a4ede9d7a9f850f367b39173bb2519bd6">actualResize()</a>, <a class="el" href="class_scroll_widget.html#ad5c035caab4a4618c7ee8fc53fd7899a">actualSize()</a>, <a class="el" href="class_widget.html#a0809c3a396f9d1cedb1446d7b0750ef2">Widget::resize()</a>, <a class="el" href="class_widget.html#a0dd3c167cde2b8ef9ffbd95067fbb3f6">Widget::setParent()</a>, et <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>.</p>
+<p class="reference">Références <a class="el" href="class_scroll_widget.html#a19b22edd7d9f565af142e801a5960530">actualPropagateEvent()</a>, <a class="el" href="class_scroll_widget.html#a7e5e4571d6ed8bc20eedeac1493120bd">actualRender()</a>, <a class="el" href="class_scroll_widget.html#a4ede9d7a9f850f367b39173bb2519bd6">actualResize()</a>, <a class="el" href="class_scroll_widget.html#ad5c035caab4a4618c7ee8fc53fd7899a">actualSize()</a>, et <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 2 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_scroll_widget_a1e0228552b93ace3479b176641261796_cgraph.svg" width="616" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -229,19 +234,13 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a92906f698fd94c2f777e46c1480967fc">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>, <a class="el" href="struct_event.html#a2194b28059a1c378b6588cab81dd034f">Event::event</a>, <a class="el" href="class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8">Widget::isInside()</a>, <a class="el" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">Event::pos</a>, <a class="el" href="class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0">Widget::propagateEvent()</a>, <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
+<p class="reference">Références <a class="el" href="struct_event.html#a2089dfced3ff2ece7102a439de13971c">Event::event</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2ad970edc0479562a9120a1ff843b75497">ClickEvent::LEFT</a>, <a class="el" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">Event::pos</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a8cd1d59b24aff85a353e86e24425e94d">ScrollWidget()</a>.</p>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><!-- SVG 3 -->
-</div>
-</div>
+<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a1e0228552b93ace3479b176641261796">ScrollWidget()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 4 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_scroll_widget_a19b22edd7d9f565af142e801a5960530_icgraph.svg" width="436" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -272,19 +271,11 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a5ff4883144670b8c93b41e440e3d4446">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">Widget::render()</a>, <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
-
-<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a8cd1d59b24aff85a353e86e24425e94d">ScrollWidget()</a>.</p>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><!-- SVG 5 -->
-</div>
-</div>
+<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a1e0228552b93ace3479b176641261796">ScrollWidget()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 6 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_scroll_widget_a7e5e4571d6ed8bc20eedeac1493120bd_icgraph.svg" width="419" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -316,19 +307,13 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a1a3ac9ff4f7c19c19a9886219b6dda2e">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>, <a class="el" href="class_widget.html#a0809c3a396f9d1cedb1446d7b0750ef2">Widget::resize()</a>, <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
+<p class="reference">Références <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a8cd1d59b24aff85a353e86e24425e94d">ScrollWidget()</a>.</p>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><!-- SVG 7 -->
-</div>
-</div>
+<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a1e0228552b93ace3479b176641261796">ScrollWidget()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 8 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_scroll_widget_a4ede9d7a9f850f367b39173bb2519bd6_icgraph.svg" width="418" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -359,11 +344,11 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#aa6225b5a14e5861cc2cd98c737841854">Widget</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a8cd1d59b24aff85a353e86e24425e94d">ScrollWidget()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a1e0228552b93ace3479b176641261796">ScrollWidget()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 9 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_scroll_widget_ad5c035caab4a4618c7ee8fc53fd7899a_icgraph.svg" width="403" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

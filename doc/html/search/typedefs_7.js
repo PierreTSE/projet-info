@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mp_5ffunc',['mp_func',['../structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a220deac105e68eef2ee2e612c96a0f75',1,'cimg_library_suffixed::CImg::_cimg_math_parser']]]
+  ['tag',['Tag',['../_tag_list_8hpp.html#af037c70dc8c0318e30d3a5138776337e',1,'TagList.hpp']]],
+  ['taglist',['TagList',['../_tag_list_8hpp.html#a5557655a3447cc18838790969d98d0cf',1,'TagList.hpp']]]
 ];

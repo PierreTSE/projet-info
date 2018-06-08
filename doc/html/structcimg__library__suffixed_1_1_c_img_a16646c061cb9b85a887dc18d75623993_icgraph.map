@@ -1,7 +1,0 @@
-<map id="cimg_library_suffixed::CImg::get_shared_row" name="cimg_library_suffixed::CImg::get_shared_row">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a8b40db5a9818c3f961a90840b271de6c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_display\l_object3d" alt="" coords="223,5,397,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a6dba86c8049ae141ffc9936b2eaf5c5c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_draw\l_object3d" alt="" coords="229,85,391,141"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#aba5835eafcb8746755d164f3f9d20b81" title="Draw a filled 2d polygon. " alt="" coords="233,165,387,221"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#a0b8b15895c6d7bf28afb1878ee6cb122" title="Generate a 3d ellipsoid. " alt="" coords="216,246,404,287"/>
-<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a9c878d2a6b1bb2d23b3875a64801c9c3" title="Rotate volumetric image with arbitrary angle and axis . " alt="" coords="237,312,383,368"/>
-</map>

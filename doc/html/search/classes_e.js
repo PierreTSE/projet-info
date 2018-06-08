@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zoomevent',['ZoomEvent',['../struct_zoom_event.html',1,'']]]
+  ['widget',['Widget',['../class_widget.html',1,'']]],
+  ['windowwidget',['WindowWidget',['../class_window_widget.html',1,'']]]
 ];

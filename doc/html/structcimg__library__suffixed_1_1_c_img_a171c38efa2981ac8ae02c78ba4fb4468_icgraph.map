@@ -1,6 +1,0 @@
-<map id="cimg_library_suffixed::CImg::get_sinh" name="cimg_library_suffixed::CImg::get_sinh">
-<area shape="rect" id="node2" href="$namespacecimg__library__suffixed.html#a127032338ec3d45d05003b969a4b9edc" title="cimg_library_suffixed\l::sinh" alt="" coords="199,93,344,134"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a318c44c5d1f4f0114355f37ace87a4ae" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::compile" alt="" coords="392,5,576,61"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#ad5e805e9ddd059937f30a63a3ca2858e" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_sinh" alt="" coords="392,85,576,141"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#a744048c4120866059c80ec8a3c566ce4" title="Compute the hyperbolic sine of each pixel value. " alt="" coords="409,166,559,207"/>
-</map>

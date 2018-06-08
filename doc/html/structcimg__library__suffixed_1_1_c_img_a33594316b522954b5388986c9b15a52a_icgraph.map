@@ -1,9 +1,0 @@
-<map id="cimg_library_suffixed::CImg::display" name="cimg_library_suffixed::CImg::display">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a8b40db5a9818c3f961a90840b271de6c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_display\l_object3d" alt="" coords="203,5,378,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img_list.html#af8a6b01f20b2d459e5abe6b99836ea9a" title="cimg_library_suffixed\l::CImgList\&lt; charT \&gt;::\l_select" alt="" coords="217,85,365,141"/>
-<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#a11aed0e6b30d75bf50946ee78d1aed94" title="Display a simple dialog box, and wait for the user&#39;s response. " alt="" coords="218,166,363,207"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="218,232,363,288"/>
-<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#ad1a26d5e0bb46bb8e44f62103543fe67" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_display" alt="" coords="199,312,383,368"/>
-<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a6d1b924d601f12aafc3733441e165124" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_display_memory" alt="" coords="199,392,383,448"/>
-<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#ad2d5f6551f0f1016374e3ece398f8624" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_image_display" alt="" coords="199,472,383,528"/>
-</map>

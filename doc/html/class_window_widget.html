@@ -98,26 +98,34 @@ $(document).ready(function(){initNavTree('class_window_widget.html','');});
 <div class="dynheader">
 Graphe d'héritage de WindowWidget:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 0 -->
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_window_widget__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Graphe de collaboration de WindowWidget:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 1 -->
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_window_widget__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ab29ddd83d18098299db66b0e3249cb60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#ab29ddd83d18098299db66b0e3249cb60">WindowWidget</a> (<a class="el" href="class_widget.html">Widget</a> &amp;content, <a class="el" href="structdim__t.html">dim_t</a> <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">size</a>)</td></tr>
-<tr class="separator:ab29ddd83d18098299db66b0e3249cb60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04db7bfbafe9a5fd603ddaa5b838ded5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#a04db7bfbafe9a5fd603ddaa5b838ded5">WindowWidget</a> (<a class="el" href="class_widget.html">Widget</a> *content, <a class="el" href="structdim__t.html">dim_t</a> <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">size</a>)</td></tr>
+<tr class="separator:a04db7bfbafe9a5fd603ddaa5b838ded5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a541a8f556d865da798786e2601cf031e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#a541a8f556d865da798786e2601cf031e">manageEvents</a> ()</td></tr>
 <tr class="separator:a541a8f556d865da798786e2601cf031e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a556741682ef738cc417f707cc288d7ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#a556741682ef738cc417f707cc288d7ec">is_open</a> () const</td></tr>
 <tr class="separator:a556741682ef738cc417f707cc288d7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeb6c16306f82469d443182594a8ef8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e">display</a> ()</td></tr>
 <tr class="separator:aaeb6c16306f82469d443182594a8ef8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d1f999183262930b2472bcd212644aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#a4d1f999183262930b2472bcd212644aa">setContent</a> (<a class="el" href="class_widget.html">Widget</a> *content)</td></tr>
+<tr class="separator:a4d1f999183262930b2472bcd212644aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bee581e186647a29667a09eaab61035"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#a7bee581e186647a29667a09eaab61035">setCallBack</a> (const std::function&lt; bool(bool)&gt; &amp;f)</td></tr>
+<tr class="separator:a7bee581e186647a29667a09eaab61035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a010f6706afa1a7221312e1b9d854731a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#a010f6706afa1a7221312e1b9d854731a">spawnRightClickMenu</a> (<a class="el" href="class_list_widget.html">ListWidget</a> *rightClickMenu, <a class="el" href="structdim__t.html">dim_t</a> pos={-1, -1})</td></tr>
+<tr class="separator:a010f6706afa1a7221312e1b9d854731a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdbf63bb8a663c46bfdd2c117aa55e4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d">close</a> ()</td></tr>
+<tr class="separator:abdbf63bb8a663c46bfdd2c117aa55e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_widget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_widget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_widget.html">Widget</a></td></tr>
 <tr class="memitem:a2516fd56cac645cb3aacef37937c49d3 inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_widget.html#a0511db89e9c58382088ac88db8479a0c">img</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">render</a> () const</td></tr>
 <tr class="separator:a2516fd56cac645cb3aacef37937c49d3 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,8 +172,8 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="separator:ab25db90b5e17a3489d881c1ab2d079ab inherit pro_attribs_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="ab29ddd83d18098299db66b0e3249cb60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab29ddd83d18098299db66b0e3249cb60">&#9670;&nbsp;</a></span>WindowWidget()</h2>
+<a id="a04db7bfbafe9a5fd603ddaa5b838ded5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04db7bfbafe9a5fd603ddaa5b838ded5">&#9670;&nbsp;</a></span>WindowWidget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +181,7 @@ Membres hérités additionnels</h2></td></tr>
         <tr>
           <td class="memname">WindowWidget::WindowWidget </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_widget.html">Widget</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_widget.html">Widget</a> *&#160;</td>
           <td class="paramname"><em>content</em>, </td>
         </tr>
         <tr>
@@ -194,7 +202,7 @@ Membres hérités additionnels</h2></td></tr>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 2 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a04db7bfbafe9a5fd603ddaa5b838ded5_cgraph.svg" width="540" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -227,19 +235,19 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a92906f698fd94c2f777e46c1480967fc">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0">Widget::propagateEvent()</a>.</p>
+<p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>, <a class="el" href="struct_event.html#a2089dfced3ff2ece7102a439de13971c">Event::event</a>, et <a class="el" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">Event::pos</a>.</p>
 
 <p class="reference">Référencé par <a class="el" href="class_window_widget.html#ab7ed87b677d814d58e7f5aebefa7df70">actualSize()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 3 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a78dedcff8ae2df9a9f86fc0ba17a1998_cgraph.svg" width="407" height="70"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 4 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a78dedcff8ae2df9a9f86fc0ba17a1998_icgraph.svg" width="450" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -270,19 +278,19 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a5ff4883144670b8c93b41e440e3d4446">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">Widget::render()</a>.</p>
+<p class="reference">Références <a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">Widget::render()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e">display()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d">close()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 5 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_aaec9f66e42abae3db2c28b4d153f4102_cgraph.svg" width="556" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 6 -->
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_window_widget_aaec9f66e42abae3db2c28b4d153f4102_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -314,19 +322,19 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a1a3ac9ff4f7c19c19a9886219b6dda2e">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>, <a class="el" href="class_widget.html#a0809c3a396f9d1cedb1446d7b0750ef2">Widget::resize()</a>, et <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>.</p>
+<p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>, et <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e">display()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d">close()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 7 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a89a68a5d4dc9fd5da10ac75c1121a453_cgraph.svg" width="570" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 8 -->
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_window_widget_a89a68a5d4dc9fd5da10ac75c1121a453_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -361,7 +369,48 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 9 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_ab7ed87b677d814d58e7f5aebefa7df70_cgraph.svg" width="634" height="70"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abdbf63bb8a663c46bfdd2c117aa55e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdbf63bb8a663c46bfdd2c117aa55e4d">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WindowWidget::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="class_window_widget.html#aaec9f66e42abae3db2c28b4d153f4102">actualRender()</a>, et <a class="el" href="class_window_widget.html#a89a68a5d4dc9fd5da10ac75c1121a453">actualResize()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f">Application::savePossibleTags()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_window_widget_abdbf63bb8a663c46bfdd2c117aa55e4d_cgraph.svg" width="100%" height="422"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_abdbf63bb8a663c46bfdd2c117aa55e4d_icgraph.svg" width="624" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -390,11 +439,19 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Références <a class="el" href="class_window_widget.html#aaec9f66e42abae3db2c28b4d153f4102">actualRender()</a>, <a class="el" href="class_window_widget.html#a89a68a5d4dc9fd5da10ac75c1121a453">actualResize()</a>, et <a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">Widget::render()</a>.</p>
+<p class="reference">Références <a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">Widget::render()</a>, et <a class="el" href="class_window_widget.html#a4d1f999183262930b2472bcd212644aa">setContent()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_application.html#a81d5b51e54511185c84ee300e752a85f">Application::execute()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 10 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_aaeb6c16306f82469d443182594a8ef8e_cgraph.svg" width="596" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_aaeb6c16306f82469d443182594a8ef8e_icgraph.svg" width="456" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -477,6 +534,14 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Référencé par <a class="el" href="class_application.html#a81d5b51e54511185c84ee300e752a85f">Application::execute()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a556741682ef738cc417f707cc288d7ec_icgraph.svg" width="460" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="a541a8f556d865da798786e2601cf031e"></a>
@@ -494,19 +559,139 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Références <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2ad970edc0479562a9120a1ff843b75497">ClickEvent::LEFT</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a7f0c0040f3a86c9ce4f82cf24b38b560">ClickEvent::MIDDLE</a>, <a class="el" href="class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0">Widget::propagateEvent()</a>, <a class="el" href="class_widget.html#a0809c3a396f9d1cedb1446d7b0750ef2">Widget::resize()</a>, et <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a930c56fd88f3faeb21b7aa0e1671f110">ClickEvent::RIGHT</a>.</p>
+<p class="reference">Références <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2ad970edc0479562a9120a1ff843b75497">ClickEvent::LEFT</a>, <a class="el" href="struct_un_click_event.html#a1466653f94232a3ae0b2fd9e981b7396ab099796116d046a517c2704122d60687">UnClickEvent::LEFT</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a7f0c0040f3a86c9ce4f82cf24b38b560">ClickEvent::MIDDLE</a>, <a class="el" href="struct_un_click_event.html#a1466653f94232a3ae0b2fd9e981b7396aab2152456bca75a0c657fecf0c9b8e85">UnClickEvent::MIDDLE</a>, <a class="el" href="class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0">Widget::propagateEvent()</a>, <a class="el" href="class_widget.html#a0809c3a396f9d1cedb1446d7b0750ef2">Widget::resize()</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a930c56fd88f3faeb21b7aa0e1671f110">ClickEvent::RIGHT</a>, <a class="el" href="struct_un_click_event.html#a1466653f94232a3ae0b2fd9e981b7396a61dd82e27fe432ee0a87cc2e5719c274">UnClickEvent::RIGHT</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="class_application.html#a81d5b51e54511185c84ee300e752a85f">Application::execute()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 11 -->
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_window_widget_a541a8f556d865da798786e2601cf031e_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 12 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a541a8f556d865da798786e2601cf031e_icgraph.svg" width="503" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7bee581e186647a29667a09eaab61035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bee581e186647a29667a09eaab61035">&#9670;&nbsp;</a></span>setCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WindowWidget::setCallBack </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; bool(bool)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="class_window_widget.html#a010f6706afa1a7221312e1b9d854731a">spawnRightClickMenu()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application::Application()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_window_widget_a7bee581e186647a29667a09eaab61035_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a7bee581e186647a29667a09eaab61035_icgraph.svg" width="407" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4d1f999183262930b2472bcd212644aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d1f999183262930b2472bcd212644aa">&#9670;&nbsp;</a></span>setContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WindowWidget::setContent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_widget.html">Widget</a> *&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e">display()</a>, et <a class="el" href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f">Application::savePossibleTags()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a4d1f999183262930b2472bcd212644aa_cgraph.svg" width="378" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_window_widget_a4d1f999183262930b2472bcd212644aa_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a010f6706afa1a7221312e1b9d854731a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010f6706afa1a7221312e1b9d854731a">&#9670;&nbsp;</a></span>spawnRightClickMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WindowWidget::spawnRightClickMenu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_list_widget.html">ListWidget</a> *&#160;</td>
+          <td class="paramname"><em>rightClickMenu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdim__t.html">dim_t</a>&#160;</td>
+          <td class="paramname"><em>pos</em> = <code>{-1,&#160;-1}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="class_widget.html#a0dd3c167cde2b8ef9ffbd95067fbb3f6">Widget::setParent()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f">Application::savePossibleTags()</a>, et <a class="el" href="class_window_widget.html#a7bee581e186647a29667a09eaab61035">setCallBack()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a010f6706afa1a7221312e1b9d854731a_cgraph.svg" width="540" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_window_widget_a010f6706afa1a7221312e1b9d854731a_icgraph.svg" width="662" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

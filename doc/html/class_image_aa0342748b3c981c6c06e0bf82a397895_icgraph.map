@@ -1,0 +1,7 @@
+<map id="Image::isSelected" name="Image::isSelected">
+<area shape="rect" id="node2" href="$class_image_widget.html#a08c72c6888bf10e0941443ea67c72498" title="ImageWidget::actualPropagate\lEvent" alt="" coords="180,5,381,47"/>
+<area shape="rect" id="node6" href="$class_image_widget.html#ac80b8e013edc3cda5e1413cbd174b2cb" title="ImageWidget::actualRender" alt="" coords="189,71,373,98"/>
+<area shape="rect" id="node3" href="$class_image_widget.html#a5973a50de2ac39437934a09313af6af9" title="ImageWidget::setSelectable" alt="" coords="429,42,616,69"/>
+<area shape="rect" id="node4" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="664,42,865,69"/>
+<area shape="rect" id="node5" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="913,42,1080,69"/>
+</map>

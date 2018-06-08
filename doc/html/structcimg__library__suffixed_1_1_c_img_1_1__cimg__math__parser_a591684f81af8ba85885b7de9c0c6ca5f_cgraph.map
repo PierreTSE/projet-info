@@ -1,9 +1,0 @@
-<map id="cimg_library_suffixed::CImg::_cimg_math_parser::_cimg_math_parser" name="cimg_library_suffixed::CImg::_cimg_math_parser::_cimg_math_parser">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a82cf529dfcb37cbd01ad7f9bd76795d7" title="Construct empty image . " alt="" coords="252,5,397,47"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a17a3c105772f6401fd631d0d82a59d65" title="Return a reference to the last pixel value. " alt="" coords="252,71,397,112"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img_list.html#a445d48f01ed07420b47cefa7e4db0730" title="Return iterator to one position after the last image of the list. " alt="" coords="252,136,397,177"/>
-<area shape="rect" id="node5" href="$namespacecimg__library__suffixed.html#adc3a62a5832fe41a2a16023ba04c8e64" title="cimg_library_suffixed::exp" alt="" coords="237,202,412,229"/>
-<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img.html#adf42a4d63a14a4199e4703743b217075" title="Resize image to new dimensions. " alt="" coords="252,253,397,295"/>
-<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1_c_img.html#a1a6afc9cde7f9cdfa0d2711dd39f83b8" title="Return an image containing the ascii codes of the specified string. " alt="" coords="252,319,397,360"/>
-<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a9025e6121a8da36b6213422347de4c12" title="Compute the exponential of each pixel value . " alt="" coords="460,195,605,236"/>
-</map>

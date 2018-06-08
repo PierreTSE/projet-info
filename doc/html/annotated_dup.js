@@ -1,6 +1,6 @@
 var annotated_dup =
 [
-    [ "cimg_library_suffixed", "namespacecimg__library__suffixed.html", "namespacecimg__library__suffixed" ],
+    [ "Application", "class_application.html", "class_application" ],
     [ "ButtonWidget", "class_button_widget.html", "class_button_widget" ],
     [ "ClickEvent", "struct_click_event.html", "struct_click_event" ],
     [ "Collection", "class_collection.html", "class_collection" ],
@@ -20,14 +20,20 @@ var annotated_dup =
     [ "Image", "class_image.html", "class_image" ],
     [ "ImageWidget", "class_image_widget.html", "class_image_widget" ],
     [ "IteratorBase", "class_iterator_base.html", "class_iterator_base" ],
+    [ "LayoutWidget", "class_layout_widget.html", "class_layout_widget" ],
     [ "ListWidget", "class_list_widget.html", "class_list_widget" ],
     [ "MenuBarWidget", "class_menu_bar_widget.html", "class_menu_bar_widget" ],
     [ "MoveEvent", "struct_move_event.html", "struct_move_event" ],
     [ "PoolIterator", "class_pool_iterator.html", "class_pool_iterator" ],
     [ "ScrollEvent", "struct_scroll_event.html", "struct_scroll_event" ],
     [ "ScrollWidget", "class_scroll_widget.html", "class_scroll_widget" ],
+    [ "SelectEvent", "struct_select_event.html", null ],
+    [ "TagCaseInsensitiveComparator", "struct_tag_case_insensitive_comparator.html", "struct_tag_case_insensitive_comparator" ],
+    [ "TagSelector", "class_tag_selector.html", "class_tag_selector" ],
+    [ "TagSetterWidget", "class_tag_setter_widget.html", "class_tag_setter_widget" ],
+    [ "TagViewerWidget", "class_tag_viewer_widget.html", "class_tag_viewer_widget" ],
+    [ "UnClickEvent", "struct_un_click_event.html", "struct_un_click_event" ],
     [ "Widget", "class_widget.html", "class_widget" ],
-    [ "Window", "class_window.html", null ],
     [ "WindowWidget", "class_window_widget.html", "class_window_widget" ],
     [ "ZoomEvent", "struct_zoom_event.html", "struct_zoom_event" ]
 ];

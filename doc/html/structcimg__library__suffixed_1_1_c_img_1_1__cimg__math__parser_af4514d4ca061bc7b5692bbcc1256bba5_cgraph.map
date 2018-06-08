@@ -1,6 +1,0 @@
-<map id="cimg_library_suffixed::CImg::_cimg_math_parser::mp_cats" name="cimg_library_suffixed::CImg::_cimg_math_parser::mp_cats">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a7be21c881dc4b1882fe90300d159ebb3" title="Return a shared&#45;memory image referencing a range of pixels of the image instance. ..." alt="" coords="237,5,413,47"/>
-<area shape="rect" id="node3" href="$namespacecimg__library__suffixed_1_1cimg.html#ad5459593e7f8a4066cb22ad63de8e92d" title="Return the minimum between four values. " alt="" coords="253,71,398,112"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#a679b1e1a7717fbb6be2352355e69f077" title="Transfer content of an image instance into another one. " alt="" coords="253,136,398,177"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img.html#a6abe1f19a229cc0ac8fc60d1a0167057" title="Unroll pixel values along axis y. " alt="" coords="253,201,398,243"/>
-</map>

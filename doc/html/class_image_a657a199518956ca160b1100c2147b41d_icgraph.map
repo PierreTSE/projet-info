@@ -1,0 +1,6 @@
+<map id="Image::getImgPtr" name="Image::getImgPtr">
+<area shape="rect" id="node2" href="$class_image_widget.html#ac80b8e013edc3cda5e1413cbd174b2cb" title="ImageWidget::actualRender" alt="" coords="176,5,360,32"/>
+<area shape="rect" id="node3" href="$class_image_widget.html#a5973a50de2ac39437934a09313af6af9" title="ImageWidget::setSelectable" alt="" coords="408,5,595,32"/>
+<area shape="rect" id="node4" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="643,5,844,32"/>
+<area shape="rect" id="node5" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="892,5,1059,32"/>
+</map>

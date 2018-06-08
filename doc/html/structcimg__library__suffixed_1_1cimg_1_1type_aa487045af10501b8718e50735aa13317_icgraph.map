@@ -1,9 +1,0 @@
-<map id="cimg_library_suffixed::cimg::type::min" name="cimg_library_suffixed::cimg::type::min">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#a6dba86c8049ae141ffc9936b2eaf5c5c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_draw\l_object3d" alt="" coords="205,5,368,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a586dad073b70d17969b5a26912e36ecc" title="Compute Euclidean distance function to a specified value. " alt="" coords="199,86,375,127"/>
-<area shape="rect" id="node4" href="$structcimg__library__suffixed_1_1_c_img.html#a66a723bf61125378577a3e99247ff8da" title="Dilate image by a structuring element . " alt="" coords="214,152,359,208"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img_display.html#a914ee0515249db301dc66275861a6b3e" title="Take a snapshot of the associated window content. " alt="" coords="203,233,370,274"/>
-<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a668fe887682e7cbb469409842bb98cd2" title="Construct image from a display window . " alt="" coords="431,167,597,209"/>
-<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img.html#a015159d8cee61c2f2316c3e128470a71" title="Construct image from a display window. " alt="" coords="435,233,593,274"/>
-<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1_c_img.html#a75e18966d8e02a9cee85642038e30a08" title="Copy the content of a display window to the current image instance. " alt="" coords="423,298,605,339"/>
-</map>

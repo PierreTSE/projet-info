@@ -1,7 +1,0 @@
-<map id="cimg_library_suffixed::cimg::type&lt; unsigned char &gt;::format" name="cimg_library_suffixed::cimg::type&lt; unsigned char &gt;::format">
-<area shape="rect" id="node2" href="$namespacecimg__library__suffixed_1_1cimg.html#a60c895ccdb84e7ccdd884ff61bab29f0" title="Cut (i.e. clamp) value in specified interval. " alt="" coords="208,5,353,47"/>
-<area shape="rect" id="node3" href="$namespacecimg__library__suffixed_1_1cimg.html#aae5df5731fe5a367cec402071108c11c" title="Return the maximum between three values. " alt="" coords="208,71,353,112"/>
-<area shape="rect" id="node5" href="$namespacecimg__library__suffixed_1_1cimg.html#a091c508a646a5459c00aa2b5ac9ea5e5" title="Return the minimum between three values. " alt="" coords="208,136,353,177"/>
-<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#a4b4cabc621d732787bca13016ea8026a" title="Return the maximum between four values. " alt="" coords="401,71,547,112"/>
-<area shape="rect" id="node6" href="$namespacecimg__library__suffixed_1_1cimg.html#ad5459593e7f8a4066cb22ad63de8e92d" title="Return the minimum between four values. " alt="" coords="401,136,547,177"/>
-</map>

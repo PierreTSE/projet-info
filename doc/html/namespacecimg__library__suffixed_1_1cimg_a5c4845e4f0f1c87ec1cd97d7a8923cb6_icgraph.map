@@ -1,9 +1,0 @@
-<map id="cimg_library_suffixed::cimg::factorial" name="cimg_library_suffixed::cimg::factorial">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#a318c44c5d1f4f0114355f37ace87a4ae" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::compile" alt="" coords="452,5,636,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#af1e86c58eb63ba1d959ed6d2b6117871" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_factorial" alt="" coords="199,75,383,131"/>
-<area shape="rect" id="node4" href="$namespacecimg__library__suffixed_1_1cimg.html#a4e6348dd82ed46fecc9f46981dc5bc0a" title="Return the number of permutations of k objects in a set of n objects. " alt="" coords="218,159,363,201"/>
-<area shape="rect" id="node5" href="$structcimg__library__suffixed_1_1_c_img_1_1__cimg__math__parser.html#ad1be0f03f678135d32f2994f58966ef4" title="cimg_library_suffixed\l::CImg::_cimg_math_parser\l::mp_permutations" alt="" coords="452,85,636,141"/>
-<area shape="rect" id="node6" href="$structcimg__library__suffixed_1_1_c_img.html#a53284105886c5eb684b26e7dba5ede66" title="Compute eigenvalues and eigenvectors of the instance image, viewed as a symmetric matrix..." alt="" coords="431,166,657,207"/>
-<area shape="rect" id="node7" href="$structcimg__library__suffixed_1_1_c_img.html#a33c8a817208b7aa571350457969e9dbe" title="Compute the SVD of the instance image, viewed as a general matrix. " alt="" coords="467,231,621,273"/>
-<area shape="rect" id="node8" href="$structcimg__library__suffixed_1_1_c_img.html#a6dba86c8049ae141ffc9936b2eaf5c5c" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::_draw\l_object3d" alt="" coords="463,297,625,353"/>
-</map>

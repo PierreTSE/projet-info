@@ -94,17 +94,20 @@ $(document).ready(function(){initNavTree('class_list_widget.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Gère un menu de <code><a class="el" href="class_button_widget.html" title="Bouton qui lance une action configurable au clic. ">ButtonWidget</a></code> Le menu peut être affiché en ligne où en colonne. La taille est gérée selon la hauteur des boutons en ligne ; selon la largeur du plus grand bouton en colonne.  
+ <a href="class_list_widget.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_list_widget_8hpp_source.html">ListWidget.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de ListWidget:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 0 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_list_widget__inherit__graph.svg" width="180" height="522"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Graphe de collaboration de ListWidget:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 1 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_list_widget__coll__graph.svg" width="259" height="523"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -112,6 +115,12 @@ Graphe de collaboration de ListWidget:</div>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ac785b259033fc933d977e7584f8541b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_list_widget.html#ac785b259033fc933d977e7584f8541b2">ListWidget</a> (const std::vector&lt; std::string &gt; &amp;texts, bool column=false, int fontSize=23, const <a class="el" href="structdim__t.html">dim_t</a> &amp;<a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">size</a>={ 0, 0 })</td></tr>
 <tr class="separator:ac785b259033fc933d977e7584f8541b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700e9c7fd4880f99c373870615fcc4e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_list_widget.html#a700e9c7fd4880f99c373870615fcc4e6">ListWidget</a> (const <a class="el" href="class_list_widget.html">ListWidget</a> &amp;other)</td></tr>
+<tr class="separator:a700e9c7fd4880f99c373870615fcc4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a15d95fb1c9c369fc73b5fe5165121"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_list_widget.html#a99a15d95fb1c9c369fc73b5fe5165121">setCallBack</a> (size_t i, const std::function&lt; bool(<a class="el" href="struct_click_event.html">ClickEvent</a>, <a class="el" href="class_button_widget.html">ButtonWidget</a> *)&gt; &amp;f=[](<a class="el" href="struct_click_event.html">ClickEvent</a> ce, <a class="el" href="class_button_widget.html">ButtonWidget</a> *be) {return true;})</td></tr>
+<tr class="separator:a99a15d95fb1c9c369fc73b5fe5165121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc145e63065556e4c2f9071a08a6c9b8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_list_widget.html#afc145e63065556e4c2f9071a08a6c9b8">getLength</a> () const</td></tr>
+<tr class="separator:afc145e63065556e4c2f9071a08a6c9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_widget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_widget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_widget.html">Widget</a></td></tr>
 <tr class="memitem:a2516fd56cac645cb3aacef37937c49d3 inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_widget.html#a0511db89e9c58382088ac88db8479a0c">img</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">render</a> () const</td></tr>
 <tr class="separator:a2516fd56cac645cb3aacef37937c49d3 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +138,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:abe38c3c1fbcde4c705d76d58208ceb52 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a210d4c8e3ea02cb777c6e3ad7fdc22b3 inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">callRedraw</a> () const</td></tr>
 <tr class="separator:a210d4c8e3ea02cb777c6e3ad7fdc22b3 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd">getWindow</a> ()</td></tr>
+<tr class="separator:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d36bcdc5a64ead5403be88654a5559f inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a1d36bcdc5a64ead5403be88654a5559f">getWindow</a> () const</td></tr>
+<tr class="separator:a1d36bcdc5a64ead5403be88654a5559f inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Fonctions membres protégées</h2></td></tr>
@@ -143,10 +156,6 @@ Fonctions membres protégées</h2></td></tr>
 <tr class="inherit_header pro_methods_class_widget"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_widget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="class_widget.html">Widget</a></td></tr>
 <tr class="memitem:af5851078b2f0c2f14a9bf377e535340f inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#af5851078b2f0c2f14a9bf377e535340f">actualIsInside</a> (const <a class="el" href="structdim__t.html">dim_t</a> &amp;pos) const</td></tr>
 <tr class="separator:af5851078b2f0c2f14a9bf377e535340f inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd">getWindow</a> ()</td></tr>
-<tr class="separator:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d36bcdc5a64ead5403be88654a5559f inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a1d36bcdc5a64ead5403be88654a5559f">getWindow</a> () const</td></tr>
-<tr class="separator:a1d36bcdc5a64ead5403be88654a5559f inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Membres hérités additionnels</h2></td></tr>
@@ -157,9 +166,11 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:ab25db90b5e17a3489d881c1ab2d079ab inherit pro_attribs_class_widget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#ab25db90b5e17a3489d881c1ab2d079ab">parent_</a> = nullptr</td></tr>
 <tr class="separator:ab25db90b5e17a3489d881c1ab2d079ab inherit pro_attribs_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Gère un menu de <code><a class="el" href="class_button_widget.html" title="Bouton qui lance une action configurable au clic. ">ButtonWidget</a></code> Le menu peut être affiché en ligne où en colonne. La taille est gérée selon la hauteur des boutons en ligne ; selon la largeur du plus grand bouton en colonne. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="ac785b259033fc933d977e7584f8541b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac785b259033fc933d977e7584f8541b2">&#9670;&nbsp;</a></span>ListWidget()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac785b259033fc933d977e7584f8541b2">&#9670;&nbsp;</a></span>ListWidget() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,9 +219,27 @@ Membres hérités additionnels</h2></td></tr>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 2 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_list_widget_ac785b259033fc933d977e7584f8541b2_cgraph.svg" width="488" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+
+</div>
+</div>
+<a id="a700e9c7fd4880f99c373870615fcc4e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700e9c7fd4880f99c373870615fcc4e6">&#9670;&nbsp;</a></span>ListWidget() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListWidget::ListWidget </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_list_widget.html">ListWidget</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -241,11 +270,11 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a92906f698fd94c2f777e46c1480967fc">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="struct_event.html#a2194b28059a1c378b6588cab81dd034f">Event::event</a>, <a class="el" href="class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8">Widget::isInside()</a>, <a class="el" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">Event::pos</a>, <a class="el" href="class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0">Widget::propagateEvent()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, <a class="el" href="struct_coordinates_map.html#a8f6bea9e92a85feabd9241cc95b7d6ea">CoordinatesMap&lt; T, U &gt;::x</a>, et <a class="el" href="struct_coordinates_map.html#ad1d18b98c9e717166995ee58976a39ee">CoordinatesMap&lt; T, U &gt;::y</a>.</p>
+<p class="reference">Références <a class="el" href="struct_event.html#a2089dfced3ff2ece7102a439de13971c">Event::event</a>, <a class="el" href="class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8">Widget::isInside()</a>, <a class="el" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">Event::pos</a>, <a class="el" href="class_widget.html#aa36c39c4ce428813dcbb13060b5d8ab0">Widget::propagateEvent()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, <a class="el" href="struct_coordinates_map.html#a8f6bea9e92a85feabd9241cc95b7d6ea">CoordinatesMap&lt; T, U &gt;::x</a>, et <a class="el" href="struct_coordinates_map.html#ad1d18b98c9e717166995ee58976a39ee">CoordinatesMap&lt; T, U &gt;::y</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 3 -->
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_list_widget_a91b56e252a550deda1d97a2992e3a9f7_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -280,7 +309,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 4 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_list_widget_a8fbbe5bd2879acc726ec4ecbb87a3da8_cgraph.svg" width="531" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -338,6 +367,75 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Implémente <a class="el" href="class_widget.html#aa6225b5a14e5861cc2cd98c737841854">Widget</a>.</p>
+
+</div>
+</div>
+<a id="afc145e63065556e4c2f9071a08a6c9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc145e63065556e4c2f9071a08a6c9b8">&#9670;&nbsp;</a></span>getLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ListWidget::getLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99a15d95fb1c9c369fc73b5fe5165121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a15d95fb1c9c369fc73b5fe5165121">&#9670;&nbsp;</a></span>setCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListWidget::setCallBack </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; bool(<a class="el" href="struct_click_event.html">ClickEvent</a>, <a class="el" href="class_button_widget.html">ButtonWidget</a> *)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>f</em> = <code>[](<a class="el" href="struct_click_event.html">ClickEvent</a>&#160;ce,&#160;<a class="el" href="class_button_widget.html">ButtonWidget</a>*&#160;be)&#160;{return&#160;true;&#160;}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Référencé par <a class="el" href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f">Application::savePossibleTags()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_list_widget_a99a15d95fb1c9c369fc73b5fe5165121_icgraph.svg" width="638" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

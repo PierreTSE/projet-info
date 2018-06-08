@@ -94,24 +94,35 @@ $(document).ready(function(){initNavTree('class_button_widget.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Bouton qui lance une action configurable au clic.  
+ <a href="class_button_widget.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_button_widget_8hpp_source.html">ButtonWidget.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de ButtonWidget:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 0 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_button_widget__inherit__graph.svg" width="180" height="536"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Graphe de collaboration de ButtonWidget:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 1 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_button_widget__coll__graph.svg" width="259" height="538"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a9026573430400298edd6137cb8854e92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_widget.html#a9026573430400298edd6137cb8854e92">ButtonWidget</a> (const std::string &amp;text, const int &amp;fontSize=23, const <a class="el" href="structdim__t.html">dim_t</a> &amp;<a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">size</a>={ 0, 0 })</td></tr>
-<tr class="separator:a9026573430400298edd6137cb8854e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3002e3094a1b6c4e8e55da896f397c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_widget.html#ac3002e3094a1b6c4e8e55da896f397c6">ButtonWidget</a> (const std::string &amp;text, bool clickable=false, const int &amp;fontSize=23, const <a class="el" href="structdim__t.html">dim_t</a> &amp;<a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">size</a>={ 0, 0 })</td></tr>
+<tr class="separator:ac3002e3094a1b6c4e8e55da896f397c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22fed5be7d7ceded8b63f034510ae6f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_widget.html#a22fed5be7d7ceded8b63f034510ae6f9">setCallBack</a> (const std::function&lt; bool(<a class="el" href="struct_click_event.html">ClickEvent</a>, <a class="el" href="class_button_widget.html">ButtonWidget</a> *)&gt; f)</td></tr>
+<tr class="separator:a22fed5be7d7ceded8b63f034510ae6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf397693875a4000c951b9c905a9181"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_widget.html#a5bf397693875a4000c951b9c905a9181">setClickable</a> (bool clickable)</td></tr>
+<tr class="separator:a5bf397693875a4000c951b9c905a9181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f6cc7186fca19b23c68ba71a0e1cf9"><td class="memItemLeft" align="right" valign="top">const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_widget.html#aa7f6cc7186fca19b23c68ba71a0e1cf9">getBackgroundColor</a> () const</td></tr>
+<tr class="separator:aa7f6cc7186fca19b23c68ba71a0e1cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5239cdc7bf6ea60722aa0620611be239"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_widget.html#a5239cdc7bf6ea60722aa0620611be239">isColored</a> () const</td></tr>
+<tr class="separator:a5239cdc7bf6ea60722aa0620611be239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_widget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_widget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_widget.html">Widget</a></td></tr>
 <tr class="memitem:a2516fd56cac645cb3aacef37937c49d3 inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_widget.html#a0511db89e9c58382088ac88db8479a0c">img</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">render</a> () const</td></tr>
 <tr class="separator:a2516fd56cac645cb3aacef37937c49d3 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +140,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:abe38c3c1fbcde4c705d76d58208ceb52 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a210d4c8e3ea02cb777c6e3ad7fdc22b3 inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">callRedraw</a> () const</td></tr>
 <tr class="separator:a210d4c8e3ea02cb777c6e3ad7fdc22b3 inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd">getWindow</a> ()</td></tr>
+<tr class="separator:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d36bcdc5a64ead5403be88654a5559f inherit pub_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a1d36bcdc5a64ead5403be88654a5559f">getWindow</a> () const</td></tr>
+<tr class="separator:a1d36bcdc5a64ead5403be88654a5559f inherit pub_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Fonctions membres protégées</h2></td></tr>
@@ -140,15 +155,9 @@ Fonctions membres protégées</h2></td></tr>
 <tr class="separator:a050618b949448e783b589ddd4ccfedf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae069846bf4c475a475a47daf4178f3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_widget.html#aae069846bf4c475a475a47daf4178f3d">actualPropagateEvent</a> (const <a class="el" href="struct_event.html">Event</a> &amp;event) override</td></tr>
 <tr class="separator:aae069846bf4c475a475a47daf4178f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a423ae0bc4be83ec04ddaa801d83050a4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_widget.html#a423ae0bc4be83ec04ddaa801d83050a4">execute</a> (<a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2">ClickEvent::mouseButton_t</a>)</td></tr>
-<tr class="separator:a423ae0bc4be83ec04ddaa801d83050a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_widget"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_widget')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="class_widget.html">Widget</a></td></tr>
 <tr class="memitem:af5851078b2f0c2f14a9bf377e535340f inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#af5851078b2f0c2f14a9bf377e535340f">actualIsInside</a> (const <a class="el" href="structdim__t.html">dim_t</a> &amp;pos) const</td></tr>
 <tr class="separator:af5851078b2f0c2f14a9bf377e535340f inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd">getWindow</a> ()</td></tr>
-<tr class="separator:aadb11a1dfa9f73aa5379914a37b8b5fd inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d36bcdc5a64ead5403be88654a5559f inherit pro_methods_class_widget"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_window_widget.html">WindowWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#a1d36bcdc5a64ead5403be88654a5559f">getWindow</a> () const</td></tr>
-<tr class="separator:a1d36bcdc5a64ead5403be88654a5559f inherit pro_methods_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Membres hérités additionnels</h2></td></tr>
@@ -159,18 +168,30 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:ab25db90b5e17a3489d881c1ab2d079ab inherit pro_attribs_class_widget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_widget.html">Widget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_widget.html#ab25db90b5e17a3489d881c1ab2d079ab">parent_</a> = nullptr</td></tr>
 <tr class="separator:ab25db90b5e17a3489d881c1ab2d079ab inherit pro_attribs_class_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="a9026573430400298edd6137cb8854e92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9026573430400298edd6137cb8854e92">&#9670;&nbsp;</a></span>ButtonWidget()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Bouton qui lance une action configurable au clic. </p>
+<p>Le bouton est cr�e automatiquement aux bonnes dimensions depuis un texte donn� � la construction. Il g�re diff�rentes options comme le fait de se surligner au survol. On peut lui affecter une std::function qui est ex�cut�e au clic gauche. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="ac3002e3094a1b6c4e8e55da896f397c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3002e3094a1b6c4e8e55da896f397c6">&#9670;&nbsp;</a></span>ButtonWidget()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ButtonWidget::ButtonWidget </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>clickable</em> = <code>false</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -190,13 +211,18 @@ Membres hérités additionnels</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="reference">Références <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
+<p class="reference">Références <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>, <a class="el" href="_utilities_8cpp.html#a59a3b645b654e776f33e3f4dccbd5fb1">UTF8toISO8859_1()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 2 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_button_widget_ac3002e3094a1b6c4e8e55da896f397c6_cgraph.svg" width="558" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -229,19 +255,19 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a92906f698fd94c2f777e46c1480967fc">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>, <a class="el" href="struct_event.html#a2194b28059a1c378b6588cab81dd034f">Event::event</a>, <a class="el" href="class_button_widget.html#a423ae0bc4be83ec04ddaa801d83050a4">execute()</a>, <a class="el" href="class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8">Widget::isInside()</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2ad970edc0479562a9120a1ff843b75497">ClickEvent::LEFT</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a7f0c0040f3a86c9ce4f82cf24b38b560">ClickEvent::MIDDLE</a>, <a class="el" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">Event::pos</a>, et <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a930c56fd88f3faeb21b7aa0e1671f110">ClickEvent::RIGHT</a>.</p>
+<p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>, <a class="el" href="struct_event.html#a2089dfced3ff2ece7102a439de13971c">Event::event</a>, <a class="el" href="class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8">Widget::isInside()</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2ad970edc0479562a9120a1ff843b75497">ClickEvent::LEFT</a>, et <a class="el" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">Event::pos</a>.</p>
 
 <p class="reference">Référencé par <a class="el" href="class_button_widget.html#a050618b949448e783b589ddd4ccfedf0">actualSize()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 3 -->
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_button_widget_aae069846bf4c475a475a47daf4178f3d_cgraph.svg" width="100%" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 4 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_button_widget_aae069846bf4c475a475a47daf4178f3d_icgraph.svg" width="432" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -272,11 +298,19 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#a5ff4883144670b8c93b41e440e3d4446">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">Widget::render()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
+<p class="reference">Références <a class="el" href="class_widget.html#a2516fd56cac645cb3aacef37937c49d3">Widget::render()</a>, <a class="el" href="_utilities_8cpp.html#a59a3b645b654e776f33e3f4dccbd5fb1">UTF8toISO8859_1()</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_button_widget.html#a5239cdc7bf6ea60722aa0620611be239">isColored()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 5 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_button_widget_a982bd9ccd6e7b8cb632efafd76309125_cgraph.svg" width="572" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_button_widget_a982bd9ccd6e7b8cb632efafd76309125_icgraph.svg" width="410" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -309,10 +343,18 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Implémente <a class="el" href="class_widget.html#a1a3ac9ff4f7c19c19a9886219b6dda2e">Widget</a>.</p>
 
 <p class="reference">Références <a class="el" href="class_widget.html#a210d4c8e3ea02cb777c6e3ad7fdc22b3">Widget::callRedraw()</a>, et <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="class_button_widget.html#a5239cdc7bf6ea60722aa0620611be239">isColored()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 6 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_button_widget_a66e8bfd9bc9a56b3a7cb2a8efc38347e_cgraph.svg" width="560" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_button_widget_a66e8bfd9bc9a56b3a7cb2a8efc38347e_icgraph.svg" width="408" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -343,18 +385,18 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Implémente <a class="el" href="class_widget.html#aa6225b5a14e5861cc2cd98c737841854">Widget</a>.</p>
 
-<p class="reference">Références <a class="el" href="class_button_widget.html#aae069846bf4c475a475a47daf4178f3d">actualPropagateEvent()</a>, et <a class="el" href="class_button_widget.html#a423ae0bc4be83ec04ddaa801d83050a4">execute()</a>.</p>
+<p class="reference">Références <a class="el" href="class_button_widget.html#aae069846bf4c475a475a47daf4178f3d">actualPropagateEvent()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 7 -->
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_button_widget_a050618b949448e783b589ddd4ccfedf0_cgraph.svg" width="100%" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a423ae0bc4be83ec04ddaa801d83050a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a423ae0bc4be83ec04ddaa801d83050a4">&#9670;&nbsp;</a></span>execute()</h2>
+<a id="aa7f6cc7186fca19b23c68ba71a0e1cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7f6cc7186fca19b23c68ba71a0e1cf9">&#9670;&nbsp;</a></span>getBackgroundColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,27 +405,103 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ButtonWidget::execute </td>
+          <td class="memname">const unsigned char* ButtonWidget::getBackgroundColor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2">ClickEvent::mouseButton_t</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5239cdc7bf6ea60722aa0620611be239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5239cdc7bf6ea60722aa0620611be239">&#9670;&nbsp;</a></span>isColored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ButtonWidget::isColored </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Références <a class="el" href="class_button_widget.html#a982bd9ccd6e7b8cb632efafd76309125">actualRender()</a>, <a class="el" href="class_button_widget.html#a66e8bfd9bc9a56b3a7cb2a8efc38347e">actualResize()</a>, et <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_button_widget_a5239cdc7bf6ea60722aa0620611be239_cgraph.svg" width="100%" height="460"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a22fed5be7d7ceded8b63f034510ae6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22fed5be7d7ceded8b63f034510ae6f9">&#9670;&nbsp;</a></span>setCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ButtonWidget::setCallBack </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; bool(<a class="el" href="struct_click_event.html">ClickEvent</a>, <a class="el" href="class_button_widget.html">ButtonWidget</a> *)&gt;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Référencé par <a class="el" href="class_button_widget.html#aae069846bf4c475a475a47daf4178f3d">actualPropagateEvent()</a>, et <a class="el" href="class_button_widget.html#a050618b949448e783b589ddd4ccfedf0">actualSize()</a>.</p>
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><!-- SVG 8 -->
 </div>
 </div>
+<a id="a5bf397693875a4000c951b9c905a9181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf397693875a4000c951b9c905a9181">&#9670;&nbsp;</a></span>setClickable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ButtonWidget::setClickable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>clickable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

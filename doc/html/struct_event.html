@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('struct_event.html','');});
 <div class="dynheader">
 Graphe de collaboration de Event:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 0 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_event__coll__graph.svg" width="286" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -108,25 +108,25 @@ Graphe de collaboration de Event:</div>
 Attributs publics</h2></td></tr>
 <tr class="memitem:a405730c60365283ce01c2399e6f664a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdim__t.html">dim_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_event.html#a405730c60365283ce01c2399e6f664a8">pos</a></td></tr>
 <tr class="separator:a405730c60365283ce01c2399e6f664a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2194b28059a1c378b6588cab81dd034f"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="struct_scroll_event.html">ScrollEvent</a>, <a class="el" href="struct_click_event.html">ClickEvent</a>, <a class="el" href="struct_zoom_event.html">ZoomEvent</a>, <a class="el" href="struct_move_event.html">MoveEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_event.html#a2194b28059a1c378b6588cab81dd034f">event</a></td></tr>
-<tr class="separator:a2194b28059a1c378b6588cab81dd034f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2089dfced3ff2ece7102a439de13971c"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="struct_scroll_event.html">ScrollEvent</a>, <a class="el" href="struct_click_event.html">ClickEvent</a>, <a class="el" href="struct_zoom_event.html">ZoomEvent</a>, <a class="el" href="struct_move_event.html">MoveEvent</a>, <a class="el" href="struct_un_click_event.html">UnClickEvent</a>, <a class="el" href="struct_select_event.html">SelectEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_event.html#a2089dfced3ff2ece7102a439de13971c">event</a></td></tr>
+<tr class="separator:a2089dfced3ff2ece7102a439de13971c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Contient une union d'�v�nements et la position de la souris quand l'un d'eux se produit. </p>
 </div><h2 class="groupheader">Documentation des données membres</h2>
-<a id="a2194b28059a1c378b6588cab81dd034f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2194b28059a1c378b6588cab81dd034f">&#9670;&nbsp;</a></span>event</h2>
+<a id="a2089dfced3ff2ece7102a439de13971c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2089dfced3ff2ece7102a439de13971c">&#9670;&nbsp;</a></span>event</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::variant&lt;<a class="el" href="struct_scroll_event.html">ScrollEvent</a>, <a class="el" href="struct_click_event.html">ClickEvent</a>, <a class="el" href="struct_zoom_event.html">ZoomEvent</a>, <a class="el" href="struct_move_event.html">MoveEvent</a>&gt; Event::event</td>
+          <td class="memname">std::variant&lt;<a class="el" href="struct_scroll_event.html">ScrollEvent</a>, <a class="el" href="struct_click_event.html">ClickEvent</a>, <a class="el" href="struct_zoom_event.html">ZoomEvent</a>, <a class="el" href="struct_move_event.html">MoveEvent</a>, <a class="el" href="struct_un_click_event.html">UnClickEvent</a>, <a class="el" href="struct_select_event.html">SelectEvent</a>&gt; Event::event</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a19b22edd7d9f565af142e801a5960530">ScrollWidget::actualPropagateEvent()</a>, <a class="el" href="class_button_widget.html#aae069846bf4c475a475a47daf4178f3d">ButtonWidget::actualPropagateEvent()</a>, <a class="el" href="class_image_widget.html#a08c72c6888bf10e0941443ea67c72498">ImageWidget::actualPropagateEvent()</a>, et <a class="el" href="class_list_widget.html#a91b56e252a550deda1d97a2992e3a9f7">ListWidget::actualPropagateEvent()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="class_layout_widget.html#a2774ec817bbec141aa7de78e486a9f42">LayoutWidget::actualPropagateEvent()</a>, <a class="el" href="class_menu_bar_widget.html#a151cc3f107c35e3d111b9ac46f8476cc">MenuBarWidget::actualPropagateEvent()</a>, <a class="el" href="class_scroll_widget.html#a19b22edd7d9f565af142e801a5960530">ScrollWidget::actualPropagateEvent()</a>, <a class="el" href="class_tag_selector.html#ae5dfc8890e99c275d8908155be6bcb70">TagSelector::actualPropagateEvent()</a>, <a class="el" href="class_tag_setter_widget.html#abe01670c331fe101bc3977e1de15ae5d">TagSetterWidget::actualPropagateEvent()</a>, <a class="el" href="class_image_widget.html#a08c72c6888bf10e0941443ea67c72498">ImageWidget::actualPropagateEvent()</a>, <a class="el" href="class_window_widget.html#a78dedcff8ae2df9a9f86fc0ba17a1998">WindowWidget::actualPropagateEvent()</a>, <a class="el" href="class_button_widget.html#aae069846bf4c475a475a47daf4178f3d">ButtonWidget::actualPropagateEvent()</a>, et <a class="el" href="class_list_widget.html#a91b56e252a550deda1d97a2992e3a9f7">ListWidget::actualPropagateEvent()</a>.</p>
 
 </div>
 </div>
@@ -142,7 +142,7 @@ Attributs publics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Référencé par <a class="el" href="class_scroll_widget.html#a19b22edd7d9f565af142e801a5960530">ScrollWidget::actualPropagateEvent()</a>, <a class="el" href="class_button_widget.html#aae069846bf4c475a475a47daf4178f3d">ButtonWidget::actualPropagateEvent()</a>, <a class="el" href="class_list_widget.html#a91b56e252a550deda1d97a2992e3a9f7">ListWidget::actualPropagateEvent()</a>, et <a class="el" href="class_grid_widget.html#a9c57f1ca2311d3caa936a481fa7fbef0">GridWidget::actualPropagateEvent()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="class_layout_widget.html#a2774ec817bbec141aa7de78e486a9f42">LayoutWidget::actualPropagateEvent()</a>, <a class="el" href="class_menu_bar_widget.html#a151cc3f107c35e3d111b9ac46f8476cc">MenuBarWidget::actualPropagateEvent()</a>, <a class="el" href="class_scroll_widget.html#a19b22edd7d9f565af142e801a5960530">ScrollWidget::actualPropagateEvent()</a>, <a class="el" href="class_window_widget.html#a78dedcff8ae2df9a9f86fc0ba17a1998">WindowWidget::actualPropagateEvent()</a>, <a class="el" href="class_button_widget.html#aae069846bf4c475a475a47daf4178f3d">ButtonWidget::actualPropagateEvent()</a>, <a class="el" href="class_grid_widget.html#a9c57f1ca2311d3caa936a481fa7fbef0">GridWidget::actualPropagateEvent()</a>, et <a class="el" href="class_list_widget.html#a91b56e252a550deda1d97a2992e3a9f7">ListWidget::actualPropagateEvent()</a>.</p>
 
 </div>
 </div>

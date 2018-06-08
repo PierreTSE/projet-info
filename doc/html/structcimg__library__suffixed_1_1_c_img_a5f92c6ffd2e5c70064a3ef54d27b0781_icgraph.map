@@ -1,4 +1,0 @@
-<map id="cimg_library_suffixed::CImg::matrix" name="cimg_library_suffixed::CImg::matrix">
-<area shape="rect" id="node2" href="$structcimg__library__suffixed_1_1_c_img.html#ab785a9eaeb7545d46e8c355567a325a4" title="Resize image to become a scalar square matrix . " alt="" coords="211,5,357,61"/>
-<area shape="rect" id="node3" href="$structcimg__library__suffixed_1_1_c_img.html#a18ba2075fe783f6b185de03695bd625f" title="Return a 3x3 rotation matrix from an { axis + angle } or a quaternion. " alt="" coords="199,85,369,141"/>
-</map>
