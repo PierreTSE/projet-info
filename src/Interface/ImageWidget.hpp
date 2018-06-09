@@ -26,7 +26,7 @@ class ImageWidget : public Widget
         bool actualPropagateEvent(const Event& event) override;
             
     private:
-        Image& image_; // TODO Vérifier que la référence de ne "pendouille" jamais
+        Image& image_;
         dim_t size_;
         std::chrono::system_clock::time_point last_clicked_;
         std::function<bool(ClickEvent, ImageWidget*)> callback_ = [](ClickEvent, ImageWidget*){ return false;};

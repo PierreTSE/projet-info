@@ -2,10 +2,12 @@
 #define COLLECTION_HPP
 
 #include "CollectionIterator.hpp"
-#include <iterator>
 
-/** TODO doc
- *
+/**
+ * \brief Collection abstraite d'éléments
+ * \tparam T Type des éléments de la collection
+ * 
+ * Patron de classe abstraite qui permet de gérer une collection d'éléments.
  */
 template <typename T>
 class Collection

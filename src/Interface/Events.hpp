@@ -59,9 +59,6 @@ struct MoveEvent
     dim_t lastPos;
 };
 
-
-
-
 /**
  * \brief Contient une union d'événements et la position de la souris quand l'un d'eux se produit
  */

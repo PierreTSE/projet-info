@@ -30,7 +30,7 @@ std::string getTextFromBox(std::string)
 	_pclose(process);
 	out.pop_back();
 
-	return ISOtoUTF8(out);
+	return ISO8859_1toUTF8(out);
 }
 #endif
 

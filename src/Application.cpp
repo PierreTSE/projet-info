@@ -134,7 +134,10 @@ void Application::update()
 
 ListWidget Application::FichierList()
 {
-	ListWidget fichierList({ u8" Nouveau ", u8" Ouvrir... ", u8" Importer... ", u8" Enregistrer ", u8" Enregistrer sous... ", u8" Fermer ", u8" Quitter " }, true);
+	ListWidget fichierList({
+	    u8" Nouveau ", u8" Ouvrir... ", u8" Importer... ", u8" Enregistrer ", u8" Enregistrer sous... ", u8" Fermer ",
+	    u8" Quitter "
+	}, true);
 	fichierList.setCallBack(0, [this](ClickEvent ce, ButtonWidget* but)
 	{ // Nouveau
 		save();
@@ -151,7 +154,7 @@ ListWidget Application::FichierList()
 		save();
 		updateFunction_ = [this]()
 		{
-			fs::path savePath = getOpenFileName();
+		    const fs::path savePath = getOpenFileName();
 			if (!fs::exists(savePath) || !fs::is_regular_file(savePath))
 				return;
 			savePath_ = savePath;
@@ -165,7 +168,7 @@ ListWidget Application::FichierList()
 	{ // Importer
 		updateFunction_ = [this]()
 		{
-			fs::path directoryPath = browseFolder();
+		    const fs::path directoryPath = browseFolder();
 			if (!fs::exists(directoryPath) || !fs::is_directory(directoryPath))
 				return;
 			importFromDirectory(directoryPath, *collection_);
@@ -214,7 +217,7 @@ void Application::initialWindow()
 	{ // Charger function
 		updateFunction_ = [this]()
 		{
-			fs::path savePath = getOpenFileName();
+		    const fs::path savePath = getOpenFileName();
 			if (!fs::exists(savePath) || !fs::is_regular_file(savePath))
 				return;
 			savePath_ = savePath;
@@ -231,7 +234,7 @@ void Application::initialWindow()
 	{
 		updateFunction_ = [this]()
 		{// Créer une collection
-			fs::path directoryPath = browseFolder();
+		    const fs::path directoryPath = browseFolder();
 			if (!fs::exists(directoryPath) || !fs::is_directory(directoryPath))
 				return;
 			collection_.reset(new CollectionPool<Image>);
@@ -243,7 +246,7 @@ void Application::initialWindow()
 		return true;
 	});
 
-	auto menubar = new MenuBarWidget(nullptr, list.release(), window_.size());
+    const auto menubar = new MenuBarWidget(nullptr, list.release(), window_.size());
 	window_.setContent(menubar);
 }
 
@@ -264,7 +267,10 @@ void Application::collectionWindow()
         return true;
     });
     
-    ListWidget rightClickOnImage({u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ", u8" Enlever les images s\u00E9lectionn\u00E9es ", u8" Rechercher par tag "}, true);
+    ListWidget rightClickOnImage({
+        u8" Afficher Image ", u8" Modifier les tags des images s\u00E9lectionn\u00E9es ",
+        u8" Enlever les images s\u00E9lectionn\u00E9es ", u8" Rechercher par tag "
+    }, true);
     rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
         { // Afficher l'image
 			variables_["ImageViewed"] = &std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage();
@@ -309,8 +315,9 @@ void Application::collectionWindow()
     });
     
     variables_["rightClickOnImage"] = rightClickOnImage;
-    
-    auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150}, [this](ClickEvent ce, ImageWidget* iw)
+
+    const auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150},
+                                     [this](ClickEvent ce, ImageWidget* iw)
         {
             if(ce.type == ClickEvent::RIGHT)
             {
@@ -320,8 +327,8 @@ void Application::collectionWindow()
             }
             return false;
         });
-    auto scroll = new ScrollWidget(grid, window_.size());
-    auto menubar = new MenuBarWidget(scroll, list.release(), window_.size());
+    const auto scroll = new ScrollWidget(grid, window_.size());
+    const auto menubar = new MenuBarWidget(scroll, list.release(), window_.size());
     window_.setContent(menubar);
 }
 
@@ -333,7 +340,9 @@ void Application::tagSetterWindow()
     variables_["Fichier"] = fichierList;
     selected_ = FilteredCollection<Image>(*collection_, [](const Image& image) { return image.isSelected(); });
 
-    ListWidget rightClickOnImage({u8" Afficher Image ", u8" Retour \u00E0 la collection ", u8" Enlever les images s\u00E9lectionn\u00E9es "}, true);
+    ListWidget rightClickOnImage({
+        u8" Afficher Image ", u8" Retour \u00E0 la collection ", u8" Enlever les images s\u00E9lectionn\u00E9es "
+    }, true);
     rightClickOnImage.setCallBack(0, [this](ClickEvent, ButtonWidget*)
     { // Afficher l'image
 		variables_["ImageViewed"] = &std::any_cast<ImageWidget*>(variables_["imageWidget"])->getImage();
@@ -380,7 +389,7 @@ void Application::tagSetterWindow()
         });
     rightClickOnTag.setCallBack(1, [this](ClickEvent, ButtonWidget*)
         { // Supprimer tag
-            Tag tag = std::any_cast<Tag>(variables_["TagToDelete"]);
+            const Tag tag = std::any_cast<Tag>(variables_["TagToDelete"]);
             possibleTags_.erase(tag);
             for(auto& image : *collection_)
                 image.getTagList().erase(tag);
@@ -399,7 +408,8 @@ void Application::tagSetterWindow()
         return true;
     });
 
-    auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150}, [this](ClickEvent ce, ImageWidget* iw)
+    const auto grid = new GridWidget(*collection_, window_.size().x, window_.size().y, {150, 150},
+                                     [this](ClickEvent ce, ImageWidget* iw)
         {
             if(ce.type == ClickEvent::RIGHT)
             {
@@ -414,19 +424,21 @@ void Application::tagSetterWindow()
             return false;
         });
     std::unique_ptr<ScrollWidget> scroll(new ScrollWidget(grid, window_.size()));
-    auto tagsetter = new TagSetterWidget(possibleTags_, *selected_, window_.size().x, window_.size().y, [this](ClickEvent ce, TagSetterWidget* tsw, Tag tag)
+    auto tagsetter = new TagSetterWidget(possibleTags_, *selected_, window_.size().x, window_.size().y,
+                                         [this](ClickEvent ce, TagSetterWidget* tsw, Tag tag)
         {
             if(ce.type == ClickEvent::RIGHT)
             {
                 variables_["TagToDelete"] = tag;
                 variables_["TagSetterPtr"] = tsw;
-                tsw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickOnTagSetter"])));
+                tsw->getWindow()->spawnRightClickMenu(
+                    new ListWidget(std::any_cast<ListWidget>(variables_["rightClickOnTagSetter"])));
             }
             return true;
         });
-    auto scroll2 = new ScrollWidget(tagsetter, window_.size());
-    auto layout = new LayoutWidget(scroll.release(), scroll2, 2.0/3.0, window_.size());
-    auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
+    const auto scroll2 = new ScrollWidget(tagsetter, window_.size());
+    const auto layout = new LayoutWidget(scroll.release(), scroll2, 2.0/3.0, window_.size());
+    const auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
     window_.setContent(menubar);
     
     variables_["tagger"] = tagsetter;
@@ -461,7 +473,7 @@ void Application::imageViewerWindow()
 		return true;
 	});
 
-	auto imagePtr = std::any_cast<Image*>(variables_["ImageViewed"]);
+    const auto imagePtr = std::any_cast<Image*>(variables_["ImageViewed"]);
 
 	auto image = new ImageWidget(*imagePtr,window_.size(), [this](ClickEvent ce, ImageWidget* iw)
     {
@@ -470,10 +482,10 @@ void Application::imageViewerWindow()
         return true;
     });
 	image->setSelectable(false);
-	auto tagViewer = new TagViewerWidget(imagePtr, window_.size().x, window_.size().y);
-	auto scroller = new ScrollWidget(tagViewer, window_.size());
-	auto layout = new LayoutWidget(image, scroller, 0.7, window_.size());
-	auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
+    const auto tagViewer = new TagViewerWidget(imagePtr, window_.size().x, window_.size().y);
+	const auto scroller = new ScrollWidget(tagViewer, window_.size());
+	const auto layout = new LayoutWidget(image, scroller, 0.7, window_.size());
+	const auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
 	window_.setContent(menubar);
 }
 
@@ -510,12 +522,14 @@ void Application::imageSearchWindow()
     {
         searchedColl_.emplace_back(searchedColl_.back(), [&tag](const Image& image) { return image.hasTag(tag); });
     }
-	
-	auto grid = new GridWidget(searchedColl_.back(), window_.size().x, window_.size().y, { 150, 150 }, [this](ClickEvent ce, ImageWidget* iw) {
+
+    const auto grid = new GridWidget(searchedColl_.back(), window_.size().x, window_.size().y, {150, 150},
+	                           [this](ClickEvent ce, ImageWidget* iw)
+	                           {
 	    iw->getWindow()->spawnRightClickMenu(new ListWidget(std::any_cast<ListWidget>(variables_["rightClickImageSearch"])));
 	    return true; 
 	});
-	auto scroll = new ScrollWidget(grid, window_.size());
+    const auto scroll = new ScrollWidget(grid, window_.size());
 	auto tagSelector = new TagSelector(possibleTags_, filter_, window_.size().x,window_.size().y);
 	tagSelector->setCallBack([this](ClickEvent, TagSelector*, TagList tl) {
 	    filter_ = tl;
@@ -524,8 +538,8 @@ void Application::imageSearchWindow()
 	    };
 	    return true;
 	});
-	auto scroller = new ScrollWidget(tagSelector, window_.size());
-	auto layout = new LayoutWidget(scroller, scroll, 0.3, window_.size());
-	auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
+	const auto scroller = new ScrollWidget(tagSelector, window_.size());
+	const auto layout = new LayoutWidget(scroller, scroll, 0.3, window_.size());
+	const auto menubar = new MenuBarWidget(layout, list.release(), window_.size());
 	window_.setContent(menubar);
 }

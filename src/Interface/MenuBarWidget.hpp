@@ -7,7 +7,7 @@
 
 
 /**
- * \brief Gère une @c ListWidget et un @c Widget quelconque l'un dessus l'autre
+ * \brief Gère une \c ListWidget et un \c Widget quelconque l'un dessus l'autre
  */
 class MenuBarWidget :public Widget
 {

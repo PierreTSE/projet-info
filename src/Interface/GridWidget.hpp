@@ -9,7 +9,7 @@
 
 
 /**
- * \brief Gère une grille d' @c ImageWidget
+ * \brief Gère une grille d' \c ImageWidget
  * Il gère le zoom.
  */
 class GridWidget : public Widget

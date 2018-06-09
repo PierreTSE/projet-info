@@ -1,7 +1,6 @@
 #ifndef TAGSELECTOR_HPP
 #define TAGSELECTOR_HPP
 
-#include "../Collection/Collection.hpp"
 #include "Widget.hpp"
 #include "../Image/TagList.hpp"
 #include <functional>

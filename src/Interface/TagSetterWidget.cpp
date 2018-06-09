@@ -24,9 +24,9 @@ Widget::img TagSetterWidget::actualRender() const
     for(auto& tag : possibleTags_)
     {
         int state = 0;
-        if(std::all_of(collection_.begin(), collection_.end(), [&](const Image& i) { return i.hasTag(tag); }))
+        if(std::all_of(collection_.begin(), collection_.end(), [&](const Image& image) { return image.hasTag(tag); }))
             state = 2;
-        else if(std::any_of(collection_.begin(), collection_.end(), [&](const Image& i) { return i.hasTag(tag); }))
+        else if(std::any_of(collection_.begin(), collection_.end(), [&](const Image& image) { return image.hasTag(tag); }))
             state = 1;
         if(std::distance(collection_.begin(), collection_.end()) == 0)
             state = 0;
@@ -69,7 +69,7 @@ bool TagSetterWidget::actualPropagateEvent(const Event& event)
 
     if(std::holds_alternative<ClickEvent>(event.event)) 
     {
-        int pos = event.pos.y / lineHeight;
+        const int pos = event.pos.y / lineHeight;
         auto it = possibleTags_.begin();
         bool valid = true;
 
@@ -85,7 +85,8 @@ bool TagSetterWidget::actualPropagateEvent(const Event& event)
             if(valid)
             {
                 const Tag& tag = *it;
-                bool state = std::all_of(collection_.begin(), collection_.end(), [&](const Image& i) { return i.hasTag(tag); });
+                const bool state = std::all_of(collection_.begin(), collection_.end(),
+                                               [&](const Image& i) { return i.hasTag(tag); });
                 
                 if(state)
                     for(auto& image : collection_)

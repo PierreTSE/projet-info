@@ -2,9 +2,9 @@
 
 
 MenuBarWidget::MenuBarWidget(Widget* content, ListWidget* buttons, const dim_t& size) :
+	size_{size},
 	content_{content},
-	buttons_{buttons},
-	size_{size}
+	buttons_{buttons}
 {
     if(content_)
         content_->setParent(this);

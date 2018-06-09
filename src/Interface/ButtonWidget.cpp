@@ -26,7 +26,7 @@ ButtonWidget::ButtonWidget(const std::string& text, bool clickable, const int& f
 
 ButtonWidget::img ButtonWidget::actualRender() const
 {
-	const unsigned char white[] = { 255, 255, 255 }, grey[] = { 128,128,128 }, black[] = { 0, 0, 0 };
+	const unsigned char white[] = { 255, 255, 255 }, black[] = { 0, 0, 0 };
 	img render(size_.x, size_.y, 1, 3, 255);
     
     if(is_hovered_ || is_clicked_)

@@ -193,8 +193,7 @@ std::istream& operator>>(std::istream& inStream, Image& image)
 	}
 	catch(std::exception& ex)
 	{
-		//TODO rendre les exceptions loggables
-		std::cerr << ex.what() << std::endl;
+		std::clog << ex.what() << std::endl;
 		inStream.clear(std::ios::failbit);
 	}
 

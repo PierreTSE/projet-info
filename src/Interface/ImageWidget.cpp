@@ -55,6 +55,5 @@ bool ImageWidget::actualPropagateEvent(const Event& event)
         callRedraw();
         return callback_(std::get<ClickEvent>(event.event), this);
     }
-    // TODO Gérer les events
     return false;
 }

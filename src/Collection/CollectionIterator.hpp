@@ -7,13 +7,13 @@
 
 
 /**
- * @class IteratorBase
- * @brief Classe abstraite qui gère un itérateur personnalisé
- * @tparam T Type de l'objet référencé par l'itérateur
+ * \class IteratorBase
+ * \brief Classe abstraite qui gère un itérateur personnalisé
+ * \tparam T Type de l'objet référencé par l'itérateur
  * 
  * Cette classe est la véritable classe mère dont les itérateurs personnalisés héritent.
  * Elle est implémentée comme une classe abstraite quelconque.
- * Avec la classe @class CollectionIterator, elle permet d'utiliser un itérateur abstrait,
+ * Avec la classe \class CollectionIterator, elle permet d'utiliser un itérateur abstrait,
  * en utilisant la sémantique des itérateurs standards.
  */
 template <typename T>
@@ -33,19 +33,17 @@ class IteratorBase
 		virtual void operator++() = 0; //pre-increment operator
 		virtual void operator--() = 0; //pre-decrement operator
 	
-		/** TODO doc
-		*/
 		virtual IteratorBase* clone() const = 0;
 	protected:
 		virtual bool equal(const IteratorBase& rhs) const = 0;
 };
 
 /**
- * @class CollectionIterator
- * @brief Wrapper autour d'un @c IteratorBase permettant le polymorphisme
- * @tparam T Type de l'objet référencé par l'itérateur
+ * \class CollectionIterator
+ * \brief Wrapper autour d'un \c IteratorBase permettant le polymorphisme
+ * \tparam T Type de l'objet référencé par l'itérateur
  *
- * Cette classe contient un pointeur vers un @c IteratorBase (qui sera hérité) afin de 
+ * Cette classe contient un pointeur vers un \c IteratorBase (qui sera hérité) afin de 
  * permettre un comportement polymorphique à cet itérateur. 
  * L'itérateur utilise la sémantique d'un itérateur standard 
  * (principalement l'utilisation fréquente de copie de l'itérateur, explicitement ou en passage par valeur,
@@ -107,8 +105,8 @@ class CollectionIterator
 		std::unique_ptr<IteratorBase<T>> itr_;
 };
 
-/** TODO doc
- *
+/**
+ * \brief Version const_iterator de \c IteratorBase
  */
 template <typename T>
 class ConstIteratorBase
@@ -131,7 +129,7 @@ class ConstIteratorBase
 };
 
 /**
- * TODO doc
+ * \brief Version const_iterator de \c CollectionIterator
  */
 template<typename T>
 class ConstCollectionIterator

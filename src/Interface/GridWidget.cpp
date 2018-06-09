@@ -13,11 +13,11 @@ void GridWidget::actualResize(const dim_t& size)
 }
 
 Widget::img GridWidget::actualRender() const
-{ 
-    auto collec_size = std::distance(collec_.begin(), collec_.end());
-    long long elem_per_row = targetWidth_ / elemSize_.x;
-    long long nb_row = static_cast<long long>(ceil(collec_size/static_cast<double>(elem_per_row)));
-    long long height = std::max(minHeight_, nb_row * elemSize_.y);
+{
+    const auto collec_size = std::distance(collec_.begin(), collec_.end());
+    const long long elem_per_row = targetWidth_ / elemSize_.x;
+    const long long nb_row = static_cast<long long>(ceil(collec_size/static_cast<double>(elem_per_row)));
+    const long long height = std::max(minHeight_, nb_row * elemSize_.y);
     img rendered(targetWidth_, height, 1, 3, 255);
     auto it = collec_.begin();
     
@@ -41,19 +41,19 @@ Widget::img GridWidget::actualRender() const
 
 dim_t GridWidget::actualSize() const
 {
-    auto collec_size = std::distance(collec_.begin(), collec_.end());
-    long long elem_per_row = targetWidth_ / elemSize_.x;
-    long long nb_row = static_cast<long long>(ceil(collec_size/static_cast<double>(elem_per_row)));
-    long long height = std::max(minHeight_, nb_row * elemSize_.y);
+    const auto collec_size = std::distance(collec_.begin(), collec_.end());
+    const long long elem_per_row = targetWidth_ / elemSize_.x;
+    const long long nb_row = static_cast<long long>(ceil(collec_size/static_cast<double>(elem_per_row)));
+    const long long height = std::max(minHeight_, nb_row * elemSize_.y);
     return dim_t{targetWidth_, height};
 }
 
 bool GridWidget::actualPropagateEvent(const Event& event)
 {
-    auto collec_size = std::distance(collec_.begin(), collec_.end());
-    long long elem_per_row = targetWidth_ / elemSize_.x;
-    long long nb_row = static_cast<long long>(ceil(collec_size/static_cast<double>(elem_per_row)));
-    long long height = std::max(minHeight_, nb_row * elemSize_.y);
+    const auto collec_size = std::distance(collec_.begin(), collec_.end());
+    const long long elem_per_row = targetWidth_ / elemSize_.x;
+    const long long nb_row = static_cast<long long>(ceil(collec_size/static_cast<double>(elem_per_row)));
+    //long long height = std::max(minHeight_, nb_row * elemSize_.y);
     auto it = collec_.begin();
 
     for(int i = 0; i < nb_row && it != collec_.end(); ++i)
@@ -78,7 +78,6 @@ bool GridWidget::actualPropagateEvent(const Event& event)
     }
         
     if(std::holds_alternative<ZoomEvent>(event.event)) {
-        // TODO Faire des tests
         const int amount = std::get<ZoomEvent>(event.event).amount * 50;
         const dim_t elemSize = elemSize_ + dim_t{ amount, amount };
 		if (elemSize.x > 50 && elemSize.y > 50 && elemSize.x < 500 && elemSize.y < 500)

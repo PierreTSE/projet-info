@@ -8,7 +8,7 @@
 
 
 /**
- * \brief Gère une liste de Tags pour modifier ceux des @c Images
+ * \brief Gère une liste de Tags pour modifier ceux des \c Images
  */
 class TagSetterWidget : public Widget
 {

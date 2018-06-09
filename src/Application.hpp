@@ -13,6 +13,10 @@
 #include <optional>
 
 
+/**
+ * \class Application
+ * \brief Gère l'application
+ */
 class Application
 {
     public:

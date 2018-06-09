@@ -6,7 +6,7 @@
 
 
 /**
- * \brief Gère deux @c Widget disposés côte à côte
+ * \brief Gère deux \c Widget disposés côte à côte
  */
 class LayoutWidget : public Widget
 {

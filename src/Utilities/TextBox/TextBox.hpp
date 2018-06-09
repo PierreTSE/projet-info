@@ -9,6 +9,9 @@
 */
 std::string getTextFromBox(std::string str);
 
+/**
+ * \brief implémentation Windows de popen
+ */
 std::string pOpen(std::string);
 
 #endif // TEXTBOX_HPP

@@ -8,6 +8,13 @@
 #include <memory>
 
 
+/**
+ * \class Image
+ * \brief Gère une image
+ * 
+ * Contient une cimg_image::CImg, le chemin absolu de cette image,
+ * la liste de Tag associés à cette image, et son état de sélection.
+ */
 class Image
 {
     public:

@@ -15,9 +15,9 @@ fs::path getOpenFileName(const string &title, const file_filter &filterIN, const
 	std::string filter = filterIN.pattern;
 
 	// Processing of the filter
-	size_t begin_pos = filter.find_first_of('(');
-	size_t end_pos = filter.find_last_of(')');
-	size_t nb = end_pos - begin_pos;
+	size_t const begin_pos = filter.find_first_of('(');
+	size_t const end_pos = filter.find_last_of(')');
+	size_t const nb = end_pos - begin_pos;
 	string ext;
 	if (begin_pos != string::npos && end_pos != string::npos && nb > 1) {
 		ext = filter.substr(begin_pos + 1, nb - 1);
@@ -46,9 +46,9 @@ fs::path getSaveFileName(const string &title, const file_filter & filterIN, cons
 	std::string filter = filterIN.pattern;
 
 	// Processing of the filter
-	size_t begin_pos = filter.find_first_of('(');
-	size_t end_pos = filter.find_last_of(')');
-	size_t nb = end_pos - begin_pos;
+	size_t const begin_pos = filter.find_first_of('(');
+	size_t const end_pos = filter.find_last_of(')');
+	size_t const nb = end_pos - begin_pos;
 	string ext;
 	if (begin_pos != string::npos && end_pos != string::npos && nb > 1) {
 		ext = filter.substr(begin_pos + 1, nb - 1);

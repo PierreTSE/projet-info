@@ -10,6 +10,13 @@ class FilteredIterator;
 template<typename T>
 class ConstFilteredIterator;
 
+/**
+ * \brief \c Collection filtrée
+ * \tparam T Type des éléments de la \c Collection
+ * 
+ * Collection qui filtre les éléments d'une autre \c Collection sur laquelle elle possède une référence.
+ * Elle utilise un prédicat défini en tant que std::function et passé à la construction.
+ */
 template<typename T>
 class FilteredCollection : public Collection<T>
 {
@@ -34,14 +41,14 @@ class FilteredCollection : public Collection<T>
         using filtre_t = std::function<bool(const_reference)>;
 
     public:
-        FilteredCollection(Collection<T>& c, const filtre_t& f) : collection_{&c},
-                                                                  const_collection_{&c},
-		                                                          is_const{ false },
+        FilteredCollection(Collection<T>& c, const filtre_t& f) : is_const{ false },
+                                                                  collection_{&c},
+		                                                          const_collection_{&c},
                                                                   filtre_{f} {};
 
-        FilteredCollection(const Collection<T>& c, const filtre_t& f) : collection_{nullptr},
+        FilteredCollection(const Collection<T>& c, const filtre_t& f) : is_const{true},
+                                                                        collection_{nullptr},
                                                                         const_collection_{&c},
-                                                                        is_const{true},
                                                                         filtre_{f} {};
 
         iterator begin() override

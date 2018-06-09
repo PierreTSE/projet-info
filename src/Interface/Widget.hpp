@@ -12,7 +12,6 @@ class WindowWidget;
  * \brief API permettant la création d'une interface graphique
  * 
  * Cette classe représente le concept de Widget, qui constitue la brique élémentaire d'une interface graphique.
- * TODO doc
  */
 class Widget
 {

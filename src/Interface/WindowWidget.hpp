@@ -6,6 +6,10 @@
 #include <memory>
 #include <functional>
 
+
+/**
+ * \brief Gère une fenêtre contenant un unique \c Widget
+ */
 class WindowWidget : public Widget
 {
     public:

@@ -7,12 +7,12 @@
 
 /**
  * \class ScrollWidget
- * \brief Ascenseur permettant de déplacer le contenu d'un @c Widget juxtaposé
+ * \brief Ascenseur permettant de déplacer le contenu d'un \c Widget juxtaposé
  */
 class ScrollWidget : public Widget
 {
     public:
-        ScrollWidget(Widget* content, dim_t size) : content_{content}, size_{size} { content_->resize(size_); content_->setParent(this); }
+        ScrollWidget(Widget* content, dim_t size) : size_{size}, content_{content} { content_->resize(size_); content_->setParent(this); }
     
     protected:
         void actualResize(const dim_t& size) override;

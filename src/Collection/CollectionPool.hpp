@@ -11,6 +11,13 @@ class PoolIterator;
 template<typename T>
 class ConstPoolIterator;
 
+
+/**
+ * \brief Collection qui stocke effectivement des éléments
+ * \tparam T Type des éléments de la collection ; dispose des mêmes contraintes que le type d'un std::vector
+ * 
+ * Wrapper autour d'un std::vector pour adapter l'interface de \c Collection
+ */
 template<typename T>
 class CollectionPool : public Collection<T>
 {
