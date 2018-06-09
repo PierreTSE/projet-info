@@ -322,7 +322,7 @@ var sectionId = 'dynsection-0';
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="class_window_widget.html" target="_top" xlink:title="{WindowWidget\n||+ WindowWidget()\l+ manageEvents()\l+ is_open()\l+ display()\l+ setContent()\l+ setCallBack()\l+ spawnRightClickMenu()\l+ close()\l# actualRender()\l# actualResize()\l# actualSize()\l# actualPropagateEvent()\l# getWindow()\l# getWindow()\l}">
+<g id="a_node12"><a xlink:href="class_window_widget.html" target="_top" xlink:title="Gère une fenêtre contenant un unique Widget. ">
 <polygon fill="#ffffff" stroke="#000000" points="1453.5,-.5 1453.5,-200.5 1583.5,-200.5 1583.5,-.5 1453.5,-.5"/>
 <text text-anchor="middle" x="1518.5" y="-188.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">WindowWidget</text>
 <polyline fill="none" stroke="#000000" points="1453.5,-181.5 1583.5,-181.5 "/>

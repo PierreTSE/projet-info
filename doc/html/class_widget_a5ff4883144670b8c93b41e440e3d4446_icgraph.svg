@@ -304,7 +304,7 @@ var sectionId = 'dynsection-6';
 <!-- Node42 -->
 <g id="node10" class="node">
 <title>Node42</title>
-<g id="a_node10"><a xlink:href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f" target="_top" xlink:title="Application::savePossibleTags">
+<g id="a_node10"><a xlink:href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f" target="_top" xlink:title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. ">
 <polygon fill="#ffffff" stroke="#000000" points="655,-228.5 655,-247.5 806,-247.5 806,-228.5 655,-228.5"/>
 <text text-anchor="middle" x="730.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::savePossibleTags</text>
 </a>
@@ -319,7 +319,7 @@ var sectionId = 'dynsection-6';
 <!-- Node43 -->
 <g id="node11" class="node">
 <title>Node43</title>
-<g id="a_node11"><a xlink:href="class_application.html#a748bca84fefb9c12661cfaa2f623748d" target="_top" xlink:title="Application::~Application">
+<g id="a_node11"><a xlink:href="class_application.html#a748bca84fefb9c12661cfaa2f623748d" target="_top" xlink:title="Effectue une sauvegarde de la collection et enregistre les tags. ">
 <polygon fill="#ffffff" stroke="#000000" points="842,-228.5 842,-247.5 967,-247.5 967,-228.5 842,-228.5"/>
 <text text-anchor="middle" x="904.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::~Application</text>
 </a>
@@ -355,7 +355,7 @@ var sectionId = 'dynsection-6';
 <!-- Node53 -->
 <g id="node21" class="node">
 <title>Node53</title>
-<g id="a_node21"><a xlink:href="class_application.html#a81d5b51e54511185c84ee300e752a85f" target="_top" xlink:title="Application::execute">
+<g id="a_node21"><a xlink:href="class_application.html#a81d5b51e54511185c84ee300e752a85f" target="_top" xlink:title="Lance l&#39;application. ">
 <polygon fill="#ffffff" stroke="#000000" points="496.5,-.5 496.5,-19.5 601.5,-19.5 601.5,-.5 496.5,-.5"/>
 <text text-anchor="middle" x="549" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::execute</text>
 </a>

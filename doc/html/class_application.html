@@ -93,32 +93,44 @@ $(document).ready(function(){initNavTree('class_application.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Gère l'application.  
+ <a href="class_application.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_application_8hpp_source.html">Application.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe de collaboration de Application:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_application__coll__graph.svg" width="160" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_application__coll__graph.svg" width="160" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:afa8cc05ce6b6092be5ecdfdae44e05f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application</a> ()</td></tr>
+<tr class="memdesc:afa8cc05ce6b6092be5ecdfdae44e05f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise les données du programme.  <a href="#afa8cc05ce6b6092be5ecdfdae44e05f8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:afa8cc05ce6b6092be5ecdfdae44e05f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a748bca84fefb9c12661cfaa2f623748d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a748bca84fefb9c12661cfaa2f623748d">~Application</a> ()</td></tr>
+<tr class="memdesc:a748bca84fefb9c12661cfaa2f623748d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue une sauvegarde de la collection et enregistre les tags.  <a href="#a748bca84fefb9c12661cfaa2f623748d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a748bca84fefb9c12661cfaa2f623748d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81d5b51e54511185c84ee300e752a85f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a81d5b51e54511185c84ee300e752a85f">execute</a> ()</td></tr>
+<tr class="memdesc:a81d5b51e54511185c84ee300e752a85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance l'application.  <a href="#a81d5b51e54511185c84ee300e752a85f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a81d5b51e54511185c84ee300e752a85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae22fc39c79b4efa62e80f548805410e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ae22fc39c79b4efa62e80f548805410e5">saveAs</a> ()</td></tr>
+<tr class="memdesc:ae22fc39c79b4efa62e80f548805410e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance la fenêtre modale qui demande un fichier d'enregistre ment puis appelle la fonction <code>actualSave</code>.  <a href="#ae22fc39c79b4efa62e80f548805410e5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae22fc39c79b4efa62e80f548805410e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45f71b866fbbae7dcf028a88b2af4cc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7">save</a> ()</td></tr>
+<tr class="memdesc:a45f71b866fbbae7dcf028a88b2af4cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance la fonction saveAs s'il n'existe pas de sauvegarde antérieure et actualSave s'il en existe une.  <a href="#a45f71b866fbbae7dcf028a88b2af4cc7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a45f71b866fbbae7dcf028a88b2af4cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad219c68e8f592d72df7150764cc71b91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#ad219c68e8f592d72df7150764cc71b91">loadPossibleTags</a> ()</td></tr>
+<tr class="memdesc:ad219c68e8f592d72df7150764cc71b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge la liste des tags accessibles à l'utilisateur.  <a href="#ad219c68e8f592d72df7150764cc71b91">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad219c68e8f592d72df7150764cc71b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f9f948d5439efe526f3219d85b29d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f">savePossibleTags</a> () const</td></tr>
+<tr class="memdesc:a8f9f948d5439efe526f3219d85b29d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistre la liste des tags accéssibles à l'utilisateur.  <a href="#a8f9f948d5439efe526f3219d85b29d7f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8f9f948d5439efe526f3219d85b29d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Gère l'application. </p>
+<p>Cette classe regroupe toutes les données et les actions principales de l'application Elle va s'occuper de charger les collections d'images et de les afficher dans une fenêtre </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="afa8cc05ce6b6092be5ecdfdae44e05f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa8cc05ce6b6092be5ecdfdae44e05f8">&#9670;&nbsp;</a></span>Application()</h2>
 
@@ -133,6 +145,8 @@ Fonctions membres publiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initialise les données du programme. </p>
 
 <p class="reference">Références <a class="el" href="class_application.html#ad219c68e8f592d72df7150764cc71b91">loadPossibleTags()</a>, et <a class="el" href="class_window_widget.html#a7bee581e186647a29667a09eaab61035">WindowWidget::setCallBack()</a>.</p>
 <div class="dynheader">
@@ -158,6 +172,8 @@ Voici le graphe d'appel pour cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Effectue une sauvegarde de la collection et enregistre les tags. </p>
 
 <p class="reference">Références <a class="el" href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7">save()</a>, et <a class="el" href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f">savePossibleTags()</a>.</p>
 <div class="dynheader">
@@ -185,20 +201,21 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
+<p>Lance l'application. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>un code d'état qui correspond au code d'état attendu en retour de la fonction main </dd></dl>
+
 <p class="reference">Références <a class="el" href="class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e">WindowWidget::display()</a>, <a class="el" href="class_window_widget.html#a556741682ef738cc417f707cc288d7ec">WindowWidget::is_open()</a>, et <a class="el" href="class_window_widget.html#a541a8f556d865da798786e2601cf031e">WindowWidget::manageEvents()</a>.</p>
 
 <p class="reference">Référencé par <a class="el" href="main_8cpp.html#adc4096c0dfd003425c219daa30db4e1e">main()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_application_a81d5b51e54511185c84ee300e752a85f_cgraph.svg" width="100%" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_application_a81d5b51e54511185c84ee300e752a85f_cgraph.svg" width="100%" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_application_a81d5b51e54511185c84ee300e752a85f_icgraph.svg" width="250" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_application_a81d5b51e54511185c84ee300e752a85f_icgraph.svg" width="250" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -217,6 +234,9 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Charge la liste des tags accessibles à l'utilisateur. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>un booléen vrai tout si s'est bien passé et faux </dd></dl>
 
 <p class="reference">Référencé par <a class="el" href="class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application()</a>.</p>
 <div class="dynheader">
@@ -242,6 +262,9 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Lance la fonction saveAs s'il n'existe pas de sauvegarde antérieure et actualSave s'il en existe une. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>un booléen vrai tout si s'est bien passé et faux </dd></dl>
 
 <p class="reference">Références <a class="el" href="class_application.html#ae22fc39c79b4efa62e80f548805410e5">saveAs()</a>.</p>
 
@@ -276,7 +299,10 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Références <a class="el" href="_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13">getSaveFileName()</a>.</p>
+<p>Lance la fenêtre modale qui demande un fichier d'enregistre ment puis appelle la fonction <code>actualSave</code>. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>un booléen vrai tout si s'est bien passé et faux </dd></dl>
+
+<p class="reference">Références <a class="el" href="_file_dialog_8hpp.html#a2781b8e73494c1ffed0cbf1060545c8f">getSaveFileName()</a>.</p>
 
 <p class="reference">Référencé par <a class="el" href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7">save()</a>, et <a class="el" href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f">savePossibleTags()</a>.</p>
 <div class="dynheader">
@@ -309,7 +335,9 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Références <a class="el" href="class_filtered_collection.html#ac38c3dc2cd51b2dbfb476c19732a6198">FilteredCollection&lt; T &gt;::begin()</a>, <a class="el" href="_file_dialog_8hpp.html#ad37a6364c30c0ac2187911992d6c239e">browseFolder()</a>, <a class="el" href="class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d">WindowWidget::close()</a>, <a class="el" href="_utilities_8cpp.html#a6d03d2391c95cb176a80f11be628e6a9">createPoolFromSave()</a>, <a class="el" href="_file_dialog_8hpp.html#ab8faee849788ba51e2d0d4691a2462e1">getOpenFileName()</a>, <a class="el" href="_text_box_8hpp.html#aeff834ba7c5b4e30fd819bcafefb9127">getTextFromBox()</a>, <a class="el" href="class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd">Widget::getWindow()</a>, <a class="el" href="_utilities_8cpp.html#a5ce6411f7ab365cdf958f8f16e773d05">importFromDirectory()</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2ad970edc0479562a9120a1ff843b75497">ClickEvent::LEFT</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a930c56fd88f3faeb21b7aa0e1671f110">ClickEvent::RIGHT</a>, <a class="el" href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7">save()</a>, <a class="el" href="class_application.html#ae22fc39c79b4efa62e80f548805410e5">saveAs()</a>, <a class="el" href="class_list_widget.html#a99a15d95fb1c9c369fc73b5fe5165121">ListWidget::setCallBack()</a>, <a class="el" href="class_window_widget.html#a4d1f999183262930b2472bcd212644aa">WindowWidget::setContent()</a>, <a class="el" href="class_image_widget.html#a5973a50de2ac39437934a09313af6af9">ImageWidget::setSelectable()</a>, <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>, <a class="el" href="class_window_widget.html#a010f6706afa1a7221312e1b9d854731a">WindowWidget::spawnRightClickMenu()</a>, <a class="el" href="struct_click_event.html#ad4b3e110510759224e813d3ad45736fd">ClickEvent::type</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
+<p>Enregistre la liste des tags accéssibles à l'utilisateur. </p>
+
+<p class="reference">Références <a class="el" href="class_filtered_collection.html#ac38c3dc2cd51b2dbfb476c19732a6198">FilteredCollection&lt; T &gt;::begin()</a>, <a class="el" href="_file_dialog_8hpp.html#a850c4c5cedb98b8a37f3555607910d38">browseFolder()</a>, <a class="el" href="class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d">WindowWidget::close()</a>, <a class="el" href="_utilities_8cpp.html#a6d03d2391c95cb176a80f11be628e6a9">createPoolFromSave()</a>, <a class="el" href="_file_dialog_8hpp.html#a2e66e4c74906951726d32246d1b77e9a">getOpenFileName()</a>, <a class="el" href="_text_box_8hpp.html#aeff834ba7c5b4e30fd819bcafefb9127">getTextFromBox()</a>, <a class="el" href="class_widget.html#aadb11a1dfa9f73aa5379914a37b8b5fd">Widget::getWindow()</a>, <a class="el" href="_utilities_8cpp.html#a5ce6411f7ab365cdf958f8f16e773d05">importFromDirectory()</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2ad970edc0479562a9120a1ff843b75497">ClickEvent::LEFT</a>, <a class="el" href="struct_click_event.html#a4006f96db41a3253ee212925df5374d2a930c56fd88f3faeb21b7aa0e1671f110">ClickEvent::RIGHT</a>, <a class="el" href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7">save()</a>, <a class="el" href="class_application.html#ae22fc39c79b4efa62e80f548805410e5">saveAs()</a>, <a class="el" href="class_list_widget.html#a99a15d95fb1c9c369fc73b5fe5165121">ListWidget::setCallBack()</a>, <a class="el" href="class_window_widget.html#a4d1f999183262930b2472bcd212644aa">WindowWidget::setContent()</a>, <a class="el" href="class_image_widget.html#a5973a50de2ac39437934a09313af6af9">ImageWidget::setSelectable()</a>, <a class="el" href="class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea">Widget::size()</a>, <a class="el" href="class_window_widget.html#a010f6706afa1a7221312e1b9d854731a">WindowWidget::spawnRightClickMenu()</a>, <a class="el" href="struct_click_event.html#ad4b3e110510759224e813d3ad45736fd">ClickEvent::type</a>, <a class="el" href="structdim__t.html#a4dbf33524feebe162d132357af785bbf">dim_t::x</a>, et <a class="el" href="structdim__t.html#a9d2b1acc3eecde57cb8e51acf52c4c0b">dim_t::y</a>.</p>
 
 <p class="reference">Référencé par <a class="el" href="class_application.html#a748bca84fefb9c12661cfaa2f623748d">~Application()</a>.</p>
 <div class="dynheader">

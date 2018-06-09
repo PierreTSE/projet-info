@@ -4,6 +4,6 @@ var _utilities_8cpp =
     [ "createPoolFromDirectory", "_utilities_8cpp.html#a46270f4fab8fe8d4f01b9c7cb8fdb75c", null ],
     [ "createPoolFromSave", "_utilities_8cpp.html#a6d03d2391c95cb176a80f11be628e6a9", null ],
     [ "importFromDirectory", "_utilities_8cpp.html#a5ce6411f7ab365cdf958f8f16e773d05", null ],
-    [ "ISOtoUTF8", "_utilities_8cpp.html#ae1273245637bf009ca994f39dbcb0ae7", null ],
+    [ "ISO8859_1toUTF8", "_utilities_8cpp.html#ad57af8b864a883b661328ca89df5b32b", null ],
     [ "UTF8toISO8859_1", "_utilities_8cpp.html#a59a3b645b654e776f33e3f4dccbd5fb1", null ]
 ];

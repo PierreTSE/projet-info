@@ -1,5 +1,5 @@
 <map id="Collection&lt; T &gt;" name="Collection&lt; T &gt;">
-<area shape="rect" id="node2" href="$class_collection_pool.html" title="{CollectionPool\&lt; T \&gt;\n||+ CollectionPool()\l+ CollectionPool()\l+ CollectionPool()\l+ empty()\l+ size()\l+ max_size()\l+ reserve()\l+ capacity()\l+ shrink_to_fit()\l+ operator[]()\let 13 de plus...\l}" alt="" coords="5,248,144,472"/>
-<area shape="rect" id="node3" href="$class_filtered_collection.html" title="{FilteredCollection\&lt; T \&gt;\n||+ FilteredCollection()\l+ FilteredCollection()\l+ begin()\l+ begin()\l+ cbegin()\l+ end()\l+ end()\l+ cend()\l}" alt="" coords="168,270,323,450"/>
+<area shape="rect" id="node2" href="$class_collection_pool.html" title="Collection qui stocke effectivement des éléments. " alt="" coords="5,248,144,472"/>
+<area shape="rect" id="node3" href="$class_filtered_collection.html" title="Collection filtrée " alt="" coords="168,270,323,450"/>
 <area shape="rect" id="node4" href="$class_collection.html" title="{Collection\&lt; Image \&gt;\n||+ Collection()\l+ ~Collection()\l+ begin()\l+ begin()\l+ cbegin()\l+ end()\l+ end()\l+ cend()\l}" alt="" coords="347,270,487,450"/>
 </map>

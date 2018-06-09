@@ -1,7 +1,5 @@
 <map id="src/Interface/TagSelector.hpp" name="src/Interface/TagSelector.hpp">
-<area shape="rect" id="node2" href="$_collection_8hpp.html" title="../Collection/Collection.hpp" alt="" coords="163,80,341,107"/>
-<area shape="rect" id="node7" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="377,80,465,107"/>
-<area shape="rect" id="node11" href="$_tag_list_8hpp.html" title="../Image/TagList.hpp" alt="" coords="490,80,633,107"/>
-<area shape="rect" id="node3" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="68,155,215,181"/>
-<area shape="rect" id="node9" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="391,155,479,181"/>
+<area shape="rect" id="node2" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="107,80,195,107"/>
+<area shape="rect" id="node6" href="$_tag_list_8hpp.html" title="../Image/TagList.hpp" alt="" coords="233,80,375,107"/>
+<area shape="rect" id="node4" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="107,155,195,181"/>
 </map>

@@ -9,24 +9,24 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 24)">
 <title>Widget::resize</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-24 230,-24 230,4 -4,4"/>
-<!-- Node172 -->
+<!-- Node171 -->
 <g id="node1" class="node">
-<title>Node172</title>
+<title>Node171</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-19.5 80,-19.5 80,-.5 0,-.5"/>
 <text text-anchor="middle" x="40" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Widget::resize</text>
 </g>
-<!-- Node173 -->
+<!-- Node172 -->
 <g id="node2" class="node">
-<title>Node173</title>
+<title>Node172</title>
 <g id="a_node2"><a xlink:href="class_widget.html#a1a3ac9ff4f7c19c19a9886219b6dda2e" target="_top" xlink:title="Widget::actualResize">
 <polygon fill="#ffffff" stroke="#000000" points="116,-.5 116,-19.5 226,-19.5 226,-.5 116,-.5"/>
 <text text-anchor="middle" x="171" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Widget::actualResize</text>
 </a>
 </g>
 </g>
-<!-- Node172&#45;&gt;Node173 -->
+<!-- Node171&#45;&gt;Node172 -->
 <g id="edge1" class="edge">
-<title>Node172&#45;&gt;Node173</title>
+<title>Node171&#45;&gt;Node172</title>
 <path fill="none" stroke="#191970" d="M80.0161,-10C88.1283,-10 96.8584,-10 105.5864,-10"/>
 <polygon fill="#191970" stroke="#191970" points="105.7943,-13.5001 115.7942,-10 105.7942,-6.5001 105.7943,-13.5001"/>
 </g>

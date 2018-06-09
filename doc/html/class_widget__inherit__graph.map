@@ -9,5 +9,5 @@
 <area shape="rect" id="node9" href="$class_tag_selector.html" title="Gère une liste de Tags sélectionnables pour la recherche. " alt="" coords="1359,395,1530,545"/>
 <area shape="rect" id="node10" href="$class_tag_setter_widget.html" title="Gère une liste de Tags pour modifier ceux des Images. " alt="" coords="1555,402,1724,538"/>
 <area shape="rect" id="node11" href="$class_tag_viewer_widget.html" title="Gère une liste de Tags sans interactions. " alt="" coords="1749,402,1919,538"/>
-<area shape="rect" id="node12" href="$class_window_widget.html" title="{WindowWidget\n||+ WindowWidget()\l+ manageEvents()\l+ is_open()\l+ display()\l+ setContent()\l+ setCallBack()\l+ spawnRightClickMenu()\l+ close()\l# actualRender()\l# actualResize()\l# actualSize()\l# actualPropagateEvent()\l# getWindow()\l# getWindow()\l}" alt="" coords="1943,336,2117,604"/>
+<area shape="rect" id="node12" href="$class_window_widget.html" title="Gère une fenêtre contenant un unique Widget. " alt="" coords="1943,336,2117,604"/>
 </map>

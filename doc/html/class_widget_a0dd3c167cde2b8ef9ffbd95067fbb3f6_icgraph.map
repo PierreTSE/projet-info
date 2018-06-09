@@ -3,8 +3,8 @@
 <area shape="rect" id="node3" href="$class_grid_widget.html#abfc54e477706b66bd09f6f3c459fcfa4" title="GridWidget::GridWidget" alt="" coords="438,71,598,98"/>
 <area shape="rect" id="node4" href="$class_grid_widget.html#ad2b2565b4ef8046f6886d09698567a18" title="GridWidget::actualRender" alt="" coords="189,122,361,149"/>
 <area shape="rect" id="node5" href="$class_window_widget.html#a010f6706afa1a7221312e1b9d854731a" title="WindowWidget::spawnRight\lClickMenu" alt="" coords="181,173,368,215"/>
-<area shape="rect" id="node6" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="417,155,619,182"/>
+<area shape="rect" id="node6" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. " alt="" coords="417,155,619,182"/>
 <area shape="rect" id="node8" href="$class_window_widget.html#a7bee581e186647a29667a09eaab61035" title="WindowWidget::setCallBack" alt="" coords="423,206,613,233"/>
-<area shape="rect" id="node7" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="667,155,833,182"/>
-<area shape="rect" id="node9" href="$class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8" title="Application::Application" alt="" coords="671,206,829,233"/>
+<area shape="rect" id="node7" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Effectue une sauvegarde de la collection et enregistre les tags. " alt="" coords="667,155,833,182"/>
+<area shape="rect" id="node9" href="$class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8" title="Initialise les données du programme. " alt="" coords="671,206,829,233"/>
 </map>

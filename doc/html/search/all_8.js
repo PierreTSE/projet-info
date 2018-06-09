@@ -12,7 +12,7 @@ var searchData=
   ['is_5fopen',['is_open',['../class_window_widget.html#a556741682ef738cc417f707cc288d7ec',1,'WindowWidget']]],
   ['iscolored',['isColored',['../class_button_widget.html#a5239cdc7bf6ea60722aa0620611be239',1,'ButtonWidget']]],
   ['isinside',['isInside',['../class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8',1,'Widget']]],
-  ['isotoutf8',['ISOtoUTF8',['../_utilities_8cpp.html#ae1273245637bf009ca994f39dbcb0ae7',1,'ISOtoUTF8(const std::string &amp;str):&#160;Utilities.cpp'],['../_utilities_8hpp.html#ae1273245637bf009ca994f39dbcb0ae7',1,'ISOtoUTF8(const std::string &amp;str):&#160;Utilities.cpp']]],
+  ['iso8859_5f1toutf8',['ISO8859_1toUTF8',['../_utilities_8cpp.html#ad57af8b864a883b661328ca89df5b32b',1,'ISO8859_1toUTF8(const std::string &amp;str):&#160;Utilities.cpp'],['../_utilities_8hpp.html#ad57af8b864a883b661328ca89df5b32b',1,'ISO8859_1toUTF8(const std::string &amp;str):&#160;Utilities.cpp']]],
   ['isselected',['isSelected',['../class_image.html#aa0342748b3c981c6c06e0bf82a397895',1,'Image']]],
   ['iterator',['iterator',['../class_collection.html#a317dca4fdf1eb2e47643bb60c620f802',1,'Collection::iterator()'],['../class_collection_pool.html#a7beafeb93ccc043bcde933faab05718f',1,'CollectionPool::iterator()'],['../class_filtered_collection.html#a65730aaf0a2a5307a924b44672718c74',1,'FilteredCollection::iterator()']]],
   ['iterator_5fcategory',['iterator_category',['../class_collection_iterator.html#a0f4af23418960a0fe3889b5381d6a79c',1,'CollectionIterator::iterator_category()'],['../class_const_collection_iterator.html#ab0e392034449303d41341ed05ae970d2',1,'ConstCollectionIterator::iterator_category()']]],

@@ -64,7 +64,7 @@ var sectionId = 'dynsection-2';
 <!-- Node8 -->
 <g id="node2" class="node">
 <title>Node8</title>
-<g id="a_node2"><a xlink:href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7" target="_top" xlink:title="Application::save">
+<g id="a_node2"><a xlink:href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7" target="_top" xlink:title="Lance la fonction saveAs s&#39;il n&#39;existe pas de sauvegarde antérieure et actualSave s&#39;il en existe une...">
 <polygon fill="#ffffff" stroke="#000000" points="372,-617.5 372,-636.5 464,-636.5 464,-617.5 372,-617.5"/>
 <text text-anchor="middle" x="418" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::save</text>
 </a>
@@ -79,7 +79,7 @@ var sectionId = 'dynsection-2';
 <!-- Node11 -->
 <g id="node5" class="node">
 <title>Node11</title>
-<g id="a_node5"><a xlink:href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f" target="_top" xlink:title="Application::savePossibleTags">
+<g id="a_node5"><a xlink:href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f" target="_top" xlink:title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. ">
 <polygon fill="#ffffff" stroke="#000000" points="161,-370.5 161,-389.5 312,-389.5 312,-370.5 161,-370.5"/>
 <text text-anchor="middle" x="236.5" y="-377.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::savePossibleTags</text>
 </a>
@@ -94,7 +94,7 @@ var sectionId = 'dynsection-2';
 <!-- Node9 -->
 <g id="node3" class="node">
 <title>Node9</title>
-<g id="a_node3"><a xlink:href="class_application.html#ae22fc39c79b4efa62e80f548805410e5" target="_top" xlink:title="Application::saveAs">
+<g id="a_node3"><a xlink:href="class_application.html#ae22fc39c79b4efa62e80f548805410e5" target="_top" xlink:title="Lance la fenêtre modale qui demande un fichier d&#39;enregistre ment puis appelle la fonction actualSave...">
 <polygon fill="#ffffff" stroke="#000000" points="547.5,-609.5 547.5,-628.5 651.5,-628.5 651.5,-609.5 547.5,-609.5"/>
 <text text-anchor="middle" x="599.5" y="-616.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::saveAs</text>
 </a>
@@ -109,7 +109,7 @@ var sectionId = 'dynsection-2';
 <!-- Node10 -->
 <g id="node4" class="node">
 <title>Node10</title>
-<g id="a_node4"><a xlink:href="_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. ">
+<g id="a_node4"><a xlink:href="_file_dialog_8hpp.html#a2781b8e73494c1ffed0cbf1060545c8f" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. ">
 <polygon fill="#ffffff" stroke="#000000" points="714.5,-609.5 714.5,-628.5 809.5,-628.5 809.5,-609.5 714.5,-609.5"/>
 <text text-anchor="middle" x="762" y="-616.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getSaveFileName</text>
 </a>
@@ -151,7 +151,7 @@ var sectionId = 'dynsection-2';
 <!-- Node13 -->
 <g id="node7" class="node">
 <title>Node13</title>
-<g id="a_node7"><a xlink:href="_file_dialog_8hpp.html#ab8faee849788ba51e2d0d4691a2462e1" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un fichier à ouvrir. ">
+<g id="a_node7"><a xlink:href="_file_dialog_8hpp.html#a2e66e4c74906951726d32246d1b77e9a" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un fichier à ouvrir. ">
 <polygon fill="#ffffff" stroke="#000000" points="370.5,-503.5 370.5,-522.5 465.5,-522.5 465.5,-503.5 370.5,-503.5"/>
 <text text-anchor="middle" x="418" y="-510.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getOpenFileName</text>
 </a>
@@ -181,7 +181,7 @@ var sectionId = 'dynsection-2';
 <!-- Node17 -->
 <g id="node11" class="node">
 <title>Node17</title>
-<g id="a_node11"><a xlink:href="_file_dialog_8hpp.html#ad37a6364c30c0ac2187911992d6c239e" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un répertoire à ouvrir. ">
+<g id="a_node11"><a xlink:href="_file_dialog_8hpp.html#a850c4c5cedb98b8a37f3555607910d38" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un répertoire à ouvrir. ">
 <polygon fill="#ffffff" stroke="#000000" points="380.5,-389.5 380.5,-408.5 455.5,-408.5 455.5,-389.5 380.5,-389.5"/>
 <text text-anchor="middle" x="418" y="-396.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">browseFolder</text>
 </a>

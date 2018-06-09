@@ -29,7 +29,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="class_collection_pool.html" target="_top" xlink:title="{CollectionPool\&lt; T \&gt;\n||+ CollectionPool()\l+ CollectionPool()\l+ CollectionPool()\l+ empty()\l+ size()\l+ max_size()\l+ reserve()\l+ capacity()\l+ shrink_to_fit()\l+ operator[]()\let 13 de plus...\l}">
+<g id="a_node2"><a xlink:href="class_collection_pool.html" target="_top" xlink:title="Collection qui stocke effectivement des éléments. ">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-167.5 104,-167.5 104,-.5 0,-.5"/>
 <text text-anchor="middle" x="52" y="-155.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">CollectionPool&lt; T &gt;</text>
 <polyline fill="none" stroke="#000000" points="0,-148.5 104,-148.5 "/>
@@ -58,7 +58,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="class_filtered_collection.html" target="_top" xlink:title="{FilteredCollection\&lt; T \&gt;\n||+ FilteredCollection()\l+ FilteredCollection()\l+ begin()\l+ begin()\l+ cbegin()\l+ end()\l+ end()\l+ cend()\l}">
+<g id="a_node3"><a xlink:href="class_filtered_collection.html" target="_top" xlink:title="Collection filtrée ">
 <polygon fill="#ffffff" stroke="#000000" points="122,-17 122,-151 238,-151 238,-17 122,-17"/>
 <text text-anchor="middle" x="180" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilteredCollection&lt; T &gt;</text>
 <polyline fill="none" stroke="#000000" points="122,-132 238,-132 "/>

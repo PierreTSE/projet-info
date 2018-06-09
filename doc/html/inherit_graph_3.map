@@ -1,5 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$class_collection.html" title="Collection\&lt; T \&gt;" alt="" coords="5,31,117,57"/>
-<area shape="rect" id="node2" href="$class_collection_pool.html" title="CollectionPool\&lt; T \&gt;" alt="" coords="173,5,312,32"/>
-<area shape="rect" id="node3" href="$class_filtered_collection.html" title="FilteredCollection\&lt; T \&gt;" alt="" coords="165,56,320,83"/>
+<area shape="rect" id="node1" href="$class_collection.html" title="Collection abstraite d&#39;éléments. " alt="" coords="5,31,117,57"/>
+<area shape="rect" id="node2" href="$class_collection_pool.html" title="Collection qui stocke effectivement des éléments. " alt="" coords="173,5,312,32"/>
+<area shape="rect" id="node3" href="$class_filtered_collection.html" title="Collection filtrée " alt="" coords="165,56,320,83"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$class_application.html#a81d5b51e54511185c84ee300e752a85f" title="Application::execute" alt="" coords="104,56,244,83"/>
+<area shape="rect" id="node2" href="$class_application.html#a81d5b51e54511185c84ee300e752a85f" title="Lance l&#39;application. " alt="" coords="104,56,244,83"/>
 <area shape="rect" id="node3" href="$class_window_widget.html#a556741682ef738cc417f707cc288d7ec" title="WindowWidget::is_open" alt="" coords="313,5,476,32"/>
 <area shape="rect" id="node4" href="$class_window_widget.html#a541a8f556d865da798786e2601cf031e" title="WindowWidget::manageEvents" alt="" coords="292,56,497,83"/>
 <area shape="rect" id="node9" href="$class_window_widget.html#aaeb6c16306f82469d443182594a8ef8e" title="WindowWidget::display" alt="" coords="315,107,474,133"/>

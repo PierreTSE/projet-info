@@ -12,7 +12,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="class_image.html" target="_top" xlink:title="Image">
+<g id="a_node1"><a xlink:href="class_image.html" target="_top" xlink:title="Gère une image. ">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-19.5 44,-19.5 44,-.5 0,-.5"/>
 <text text-anchor="middle" x="22" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Image</text>
 </a>

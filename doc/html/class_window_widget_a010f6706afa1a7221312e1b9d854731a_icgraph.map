@@ -1,6 +1,6 @@
 <map id="WindowWidget::spawnRightClickMenu" name="WindowWidget::spawnRightClickMenu">
-<area shape="rect" id="node2" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="240,5,441,32"/>
+<area shape="rect" id="node2" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. " alt="" coords="240,5,441,32"/>
 <area shape="rect" id="node4" href="$class_window_widget.html#a7bee581e186647a29667a09eaab61035" title="WindowWidget::setCallBack" alt="" coords="246,56,435,83"/>
-<area shape="rect" id="node3" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="489,5,656,32"/>
-<area shape="rect" id="node5" href="$class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8" title="Application::Application" alt="" coords="493,56,652,83"/>
+<area shape="rect" id="node3" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Effectue une sauvegarde de la collection et enregistre les tags. " alt="" coords="489,5,656,32"/>
+<area shape="rect" id="node5" href="$class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8" title="Initialise les données du programme. " alt="" coords="493,56,652,83"/>
 </map>
