@@ -28,7 +28,7 @@
 <!-- Node3 -->
 <g id="node2" class="node">
 <title>Node3</title>
-<g id="a_node2"><a xlink:href="class_const_iterator_base.html" target="_top" xlink:title="{ConstIteratorBase\&lt; T \&gt;\n||+ ConstIteratorBase()\l+ ~ConstIteratorBase()\l+ operator==()\l+ operator*()\l+ operator&#45;\&gt;()\l+ operator++()\l+ operator&#45;&#45;()\l+ clone()\l# equal()\l}">
+<g id="a_node2"><a xlink:href="class_const_iterator_base.html" target="_top" xlink:title="Version const_iterator de IteratorBase. ">
 <polygon fill="#ffffff" stroke="#000000" points="0,-160.5 0,-305.5 120,-305.5 120,-160.5 0,-160.5"/>
 <text text-anchor="middle" x="60" y="-293.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ConstIteratorBase&lt; T &gt;</text>
 <polyline fill="none" stroke="#000000" points="0,-286.5 120,-286.5 "/>

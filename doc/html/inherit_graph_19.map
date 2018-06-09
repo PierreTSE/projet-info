@@ -10,5 +10,5 @@
 <area shape="rect" id="node9" href="$class_tag_selector.html" title="Gère une liste de Tags sélectionnables pour la recherche. " alt="" coords="133,360,225,387"/>
 <area shape="rect" id="node10" href="$class_tag_setter_widget.html" title="Gère une liste de Tags pour modifier ceux des Images. " alt="" coords="119,411,239,437"/>
 <area shape="rect" id="node11" href="$class_tag_viewer_widget.html" title="Gère une liste de Tags sans interactions. " alt="" coords="116,461,241,488"/>
-<area shape="rect" id="node12" href="$class_window_widget.html" title="WindowWidget" alt="" coords="123,512,234,539"/>
+<area shape="rect" id="node12" href="$class_window_widget.html" title="Gère une fenêtre contenant un unique Widget. " alt="" coords="123,512,234,539"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="FilteredCollection::end" name="FilteredCollection::end">
 <area shape="rect" id="node2" href="$class_filtered_collection.html#ac38c3dc2cd51b2dbfb476c19732a6198" title="FilteredCollection\l::begin" alt="" coords="205,5,328,47"/>
 <area shape="rect" id="node5" href="$class_filtered_collection.html#a3a7d68dc743ab18b109842441312583b" title="FilteredCollection\l::cbegin" alt="" coords="205,71,328,112"/>
-<area shape="rect" id="node3" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="376,13,577,39"/>
-<area shape="rect" id="node4" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="625,13,792,39"/>
+<area shape="rect" id="node3" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. " alt="" coords="376,13,577,39"/>
+<area shape="rect" id="node4" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Effectue une sauvegarde de la collection et enregistre les tags. " alt="" coords="625,13,792,39"/>
 <area shape="rect" id="node6" href="$class_filtered_collection.html#a7ff366d577365b84c947da90a605d66a" title="FilteredCollection\l::begin" alt="" coords="415,71,538,112"/>
 </map>

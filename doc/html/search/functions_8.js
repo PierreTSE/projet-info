@@ -6,7 +6,7 @@ var searchData=
   ['is_5fopen',['is_open',['../class_window_widget.html#a556741682ef738cc417f707cc288d7ec',1,'WindowWidget']]],
   ['iscolored',['isColored',['../class_button_widget.html#a5239cdc7bf6ea60722aa0620611be239',1,'ButtonWidget']]],
   ['isinside',['isInside',['../class_widget.html#ae5b0e7b391d855a3f75f166bb20253a8',1,'Widget']]],
-  ['isotoutf8',['ISOtoUTF8',['../_utilities_8cpp.html#ae1273245637bf009ca994f39dbcb0ae7',1,'ISOtoUTF8(const std::string &amp;str):&#160;Utilities.cpp'],['../_utilities_8hpp.html#ae1273245637bf009ca994f39dbcb0ae7',1,'ISOtoUTF8(const std::string &amp;str):&#160;Utilities.cpp']]],
+  ['iso8859_5f1toutf8',['ISO8859_1toUTF8',['../_utilities_8cpp.html#ad57af8b864a883b661328ca89df5b32b',1,'ISO8859_1toUTF8(const std::string &amp;str):&#160;Utilities.cpp'],['../_utilities_8hpp.html#ad57af8b864a883b661328ca89df5b32b',1,'ISO8859_1toUTF8(const std::string &amp;str):&#160;Utilities.cpp']]],
   ['isselected',['isSelected',['../class_image.html#aa0342748b3c981c6c06e0bf82a397895',1,'Image']]],
   ['iteratorbase',['IteratorBase',['../class_iterator_base.html#a6d1810e7a0a84574bb61d78bb99d96bb',1,'IteratorBase']]]
 ];

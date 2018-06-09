@@ -15,9 +15,9 @@
 <area shape="rect" id="node5" href="$class_button_widget.html#a5239cdc7bf6ea60722aa0620611be239" title="ButtonWidget::isColored" alt="" coords="655,5,819,32"/>
 <area shape="rect" id="node7" href="$class_grid_widget.html#abfc54e477706b66bd09f6f3c459fcfa4" title="GridWidget::GridWidget" alt="" coords="657,56,817,83"/>
 <area shape="rect" id="node9" href="$class_image_widget.html#a5973a50de2ac39437934a09313af6af9" title="ImageWidget::setSelectable" alt="" coords="644,157,831,184"/>
-<area shape="rect" id="node10" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="879,208,1080,235"/>
-<area shape="rect" id="node11" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="1128,208,1295,235"/>
+<area shape="rect" id="node10" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. " alt="" coords="879,208,1080,235"/>
+<area shape="rect" id="node11" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Effectue une sauvegarde de la collection et enregistre les tags. " alt="" coords="1128,208,1295,235"/>
 <area shape="rect" id="node19" href="$class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d" title="WindowWidget::close" alt="" coords="663,309,812,336"/>
-<area shape="rect" id="node21" href="$class_application.html#a81d5b51e54511185c84ee300e752a85f" title="Application::execute" alt="" coords="667,512,807,539"/>
+<area shape="rect" id="node21" href="$class_application.html#a81d5b51e54511185c84ee300e752a85f" title="Lance l&#39;application. " alt="" coords="667,512,807,539"/>
 <area shape="rect" id="node22" href="$main_8cpp.html#adc4096c0dfd003425c219daa30db4e1e" title="main" alt="" coords="954,512,1005,539"/>
 </map>

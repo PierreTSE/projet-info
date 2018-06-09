@@ -18,7 +18,7 @@
 <!-- Node67 -->
 <g id="node2" class="node">
 <title>Node67</title>
-<g id="a_node2"><a xlink:href="class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8" target="_top" xlink:title="Application::Application">
+<g id="a_node2"><a xlink:href="class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8" target="_top" xlink:title="Initialise les données du programme. ">
 <polygon fill="#ffffff" stroke="#000000" points="178,-.5 178,-19.5 297,-19.5 297,-.5 178,-.5"/>
 <text text-anchor="middle" x="237.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::Application</text>
 </a>

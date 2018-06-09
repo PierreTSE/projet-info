@@ -80,7 +80,7 @@ var sectionId = 'dynsection-10';
 <!-- Node78 -->
 <g id="node4" class="node">
 <title>Node78</title>
-<g id="a_node4"><a xlink:href="_file_dialog_8hpp.html#ad37a6364c30c0ac2187911992d6c239e" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un répertoire à ouvrir. ">
+<g id="a_node4"><a xlink:href="_file_dialog_8hpp.html#a850c4c5cedb98b8a37f3555607910d38" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un répertoire à ouvrir. ">
 <polygon fill="#ffffff" stroke="#000000" points="219.5,-543 219.5,-562 294.5,-562 294.5,-543 219.5,-543"/>
 <text text-anchor="middle" x="257" y="-550" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">browseFolder</text>
 </a>
@@ -140,7 +140,7 @@ var sectionId = 'dynsection-10';
 <!-- Node90 -->
 <g id="node16" class="node">
 <title>Node90</title>
-<g id="a_node16"><a xlink:href="_file_dialog_8hpp.html#ab8faee849788ba51e2d0d4691a2462e1" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un fichier à ouvrir. ">
+<g id="a_node16"><a xlink:href="_file_dialog_8hpp.html#a2e66e4c74906951726d32246d1b77e9a" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un fichier à ouvrir. ">
 <polygon fill="#ffffff" stroke="#000000" points="209.5,-258 209.5,-277 304.5,-277 304.5,-258 209.5,-258"/>
 <text text-anchor="middle" x="257" y="-265" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getOpenFileName</text>
 </a>
@@ -200,7 +200,7 @@ var sectionId = 'dynsection-10';
 <!-- Node96 -->
 <g id="node22" class="node">
 <title>Node96</title>
-<g id="a_node22"><a xlink:href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7" target="_top" xlink:title="Application::save">
+<g id="a_node22"><a xlink:href="class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7" target="_top" xlink:title="Lance la fonction saveAs s&#39;il n&#39;existe pas de sauvegarde antérieure et actualSave s&#39;il en existe une...">
 <polygon fill="#ffffff" stroke="#000000" points="211,-88 211,-107 303,-107 303,-88 211,-88"/>
 <text text-anchor="middle" x="257" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::save</text>
 </a>
@@ -215,7 +215,7 @@ var sectionId = 'dynsection-10';
 <!-- Node97 -->
 <g id="node23" class="node">
 <title>Node97</title>
-<g id="a_node23"><a xlink:href="class_application.html#ae22fc39c79b4efa62e80f548805410e5" target="_top" xlink:title="Application::saveAs">
+<g id="a_node23"><a xlink:href="class_application.html#ae22fc39c79b4efa62e80f548805410e5" target="_top" xlink:title="Lance la fenêtre modale qui demande un fichier d&#39;enregistre ment puis appelle la fonction actualSave...">
 <polygon fill="#ffffff" stroke="#000000" points="386.5,-107 386.5,-126 490.5,-126 490.5,-107 386.5,-107"/>
 <text text-anchor="middle" x="438.5" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::saveAs</text>
 </a>
@@ -492,7 +492,7 @@ var sectionId = 'dynsection-10';
 <!-- Node98 -->
 <g id="node24" class="node">
 <title>Node98</title>
-<g id="a_node24"><a xlink:href="_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. ">
+<g id="a_node24"><a xlink:href="_file_dialog_8hpp.html#a2781b8e73494c1ffed0cbf1060545c8f" target="_top" xlink:title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. ">
 <polygon fill="#ffffff" stroke="#000000" points="553.5,-107 553.5,-126 648.5,-126 648.5,-107 553.5,-107"/>
 <text text-anchor="middle" x="601" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getSaveFileName</text>
 </a>

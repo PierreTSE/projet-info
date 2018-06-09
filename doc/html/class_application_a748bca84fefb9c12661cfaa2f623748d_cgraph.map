@@ -1,12 +1,12 @@
 <map id="Application::~Application" name="Application::~Application">
-<area shape="rect" id="node2" href="$class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7" title="Application::save" alt="" coords="501,5,624,32"/>
-<area shape="rect" id="node5" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="220,335,421,361"/>
-<area shape="rect" id="node3" href="$class_application.html#ae22fc39c79b4efa62e80f548805410e5" title="Application::saveAs" alt="" coords="735,16,874,43"/>
-<area shape="rect" id="node4" href="$_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13" title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. " alt="" coords="958,16,1085,43"/>
+<area shape="rect" id="node2" href="$class_application.html#a45f71b866fbbae7dcf028a88b2af4cc7" title="Lance la fonction saveAs s&#39;il n&#39;existe pas de sauvegarde antérieure et actualSave s&#39;il en existe une..." alt="" coords="501,5,624,32"/>
+<area shape="rect" id="node5" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. " alt="" coords="220,335,421,361"/>
+<area shape="rect" id="node3" href="$class_application.html#ae22fc39c79b4efa62e80f548805410e5" title="Lance la fenêtre modale qui demande un fichier d&#39;enregistre ment puis appelle la fonction actualSave..." alt="" coords="735,16,874,43"/>
+<area shape="rect" id="node4" href="$_file_dialog_8hpp.html#a2781b8e73494c1ffed0cbf1060545c8f" title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. " alt="" coords="958,16,1085,43"/>
 <area shape="rect" id="node6" href="$class_list_widget.html#a99a15d95fb1c9c369fc73b5fe5165121" title="ListWidget::setCallBack" alt="" coords="481,107,644,133"/>
-<area shape="rect" id="node7" href="$_file_dialog_8hpp.html#ab8faee849788ba51e2d0d4691a2462e1" title="Ouvre une boîte de dialogue qui demande un fichier à ouvrir. " alt="" coords="499,157,626,184"/>
+<area shape="rect" id="node7" href="$_file_dialog_8hpp.html#a2e66e4c74906951726d32246d1b77e9a" title="Ouvre une boîte de dialogue qui demande un fichier à ouvrir. " alt="" coords="499,157,626,184"/>
 <area shape="rect" id="node8" href="$_utilities_8cpp.html#a6d03d2391c95cb176a80f11be628e6a9" title="createPoolFromSave" alt="" coords="491,208,635,235"/>
-<area shape="rect" id="node11" href="$_file_dialog_8hpp.html#ad37a6364c30c0ac2187911992d6c239e" title="Ouvre une boîte de dialogue qui demande un répertoire à ouvrir. " alt="" coords="513,309,613,336"/>
+<area shape="rect" id="node11" href="$_file_dialog_8hpp.html#a850c4c5cedb98b8a37f3555607910d38" title="Ouvre une boîte de dialogue qui demande un répertoire à ouvrir. " alt="" coords="513,309,613,336"/>
 <area shape="rect" id="node12" href="$_utilities_8cpp.html#a5ce6411f7ab365cdf958f8f16e773d05" title="importFromDirectory" alt="" coords="492,259,633,285"/>
 <area shape="rect" id="node15" href="$class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d" title="WindowWidget::close" alt="" coords="488,360,637,387"/>
 <area shape="rect" id="node20" href="$class_widget.html#aea985c025ef9b1210d0e3ab7d9c075ea" title="Widget::size" alt="" coords="974,560,1069,587"/>

@@ -29,7 +29,7 @@
 <!-- Node3 -->
 <g id="node2" class="node">
 <title>Node3</title>
-<g id="a_node2"><a xlink:href="class_collection.html" target="_top" xlink:title="{Collection\&lt; T \&gt;\n||+ Collection()\l+ ~Collection()\l+ begin()\l+ begin()\l+ cbegin()\l+ end()\l+ end()\l+ cend()\l}">
+<g id="a_node2"><a xlink:href="class_collection.html" target="_top" xlink:title="Collection abstraite d&#39;éléments. ">
 <polygon fill="#ffffff" stroke="#000000" points="16,-171.5 16,-305.5 100,-305.5 100,-171.5 16,-171.5"/>
 <text text-anchor="middle" x="58" y="-293.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Collection&lt; T &gt;</text>
 <polyline fill="none" stroke="#000000" points="16,-286.5 100,-286.5 "/>

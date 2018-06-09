@@ -1,5 +1,5 @@
 <map id="WindowWidget::actualRender" name="WindowWidget::actualRender">
 <area shape="rect" id="node2" href="$class_window_widget.html#abdbf63bb8a663c46bfdd2c117aa55e4d" title="WindowWidget::close" alt="" coords="248,5,397,32"/>
-<area shape="rect" id="node3" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="445,5,647,32"/>
-<area shape="rect" id="node4" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="695,5,861,32"/>
+<area shape="rect" id="node3" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. " alt="" coords="445,5,647,32"/>
+<area shape="rect" id="node4" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Effectue une sauvegarde de la collection et enregistre les tags. " alt="" coords="695,5,861,32"/>
 </map>

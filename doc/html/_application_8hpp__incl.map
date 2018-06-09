@@ -1,13 +1,13 @@
 <map id="src/Application.hpp" name="src/Application.hpp">
-<area shape="rect" id="node2" href="$_window_widget_8hpp.html" title="Interface/WindowWidget.hpp" alt="" coords="210,80,401,107"/>
-<area shape="rect" id="node7" href="$_list_widget_8hpp.html" title="ListWidget.hpp" alt="" coords="128,155,237,181"/>
-<area shape="rect" id="node13" href="$_filtered_collection_8hpp.html" title="Collection/FilteredCollection.hpp" alt="" coords="476,80,687,107"/>
-<area shape="rect" id="node18" href="$_collection_pool_8hpp.html" title="Collection/CollectionPool.hpp" alt="" coords="711,80,905,107"/>
-<area shape="rect" id="node19" href="$_image_8hpp.html" title="Image/Image.hpp" alt="" coords="672,155,795,181"/>
+<area shape="rect" id="node2" href="$_window_widget_8hpp.html" title="Interface/WindowWidget.hpp" alt="" coords="93,80,283,107"/>
+<area shape="rect" id="node7" href="$_list_widget_8hpp.html" title="ListWidget.hpp" alt="" coords="133,155,243,181"/>
+<area shape="rect" id="node13" href="$_filtered_collection_8hpp.html" title="Collection/FilteredCollection.hpp" alt="" coords="419,80,629,107"/>
+<area shape="rect" id="node18" href="$_collection_pool_8hpp.html" title="Collection/CollectionPool.hpp" alt="" coords="705,80,898,107"/>
+<area shape="rect" id="node19" href="$_image_8hpp.html" title="Image/Image.hpp" alt="" coords="703,155,825,181"/>
 <area shape="rect" id="node3" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="5,304,93,331"/>
 <area shape="rect" id="node5" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="5,379,93,405"/>
-<area shape="rect" id="node8" href="$_button_widget_8hpp.html" title="ButtonWidget.hpp" alt="" coords="79,229,206,256"/>
-<area shape="rect" id="node14" href="$_collection_8hpp.html" title="Collection.hpp" alt="" coords="962,155,1067,181"/>
-<area shape="rect" id="node15" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="1057,229,1204,256"/>
-<area shape="rect" id="node20" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="740,229,831,256"/>
+<area shape="rect" id="node8" href="$_button_widget_8hpp.html" title="ButtonWidget.hpp" alt="" coords="115,229,242,256"/>
+<area shape="rect" id="node14" href="$_collection_8hpp.html" title="Collection.hpp" alt="" coords="1007,155,1113,181"/>
+<area shape="rect" id="node15" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="1043,229,1189,256"/>
+<area shape="rect" id="node20" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="501,229,592,256"/>
 </map>

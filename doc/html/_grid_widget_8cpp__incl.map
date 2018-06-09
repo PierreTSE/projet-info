@@ -1,11 +1,11 @@
 <map id="src/Interface/GridWidget.cpp" name="src/Interface/GridWidget.cpp">
-<area shape="rect" id="node3" href="$_grid_widget_8hpp.html" title="GridWidget.hpp" alt="" coords="514,80,626,107"/>
-<area shape="rect" id="node4" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="703,229,791,256"/>
-<area shape="rect" id="node8" href="$_image_widget_8hpp.html" title="ImageWidget.hpp" alt="" coords="508,155,632,181"/>
-<area shape="rect" id="node19" href="$_collection_8hpp.html" title="../Collection/Collection.hpp" alt="" coords="93,229,271,256"/>
-<area shape="rect" id="node23" href="$_filtered_collection_8hpp.html" title="../Collection/FilteredCollection.hpp" alt="" coords="233,155,456,181"/>
-<area shape="rect" id="node6" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="779,304,867,331"/>
-<area shape="rect" id="node9" href="$_image_8hpp.html" title="../Image/Image.hpp" alt="" coords="408,229,543,256"/>
-<area shape="rect" id="node10" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="563,304,654,331"/>
-<area shape="rect" id="node20" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="67,304,214,331"/>
+<area shape="rect" id="node3" href="$_grid_widget_8hpp.html" title="GridWidget.hpp" alt="" coords="504,80,616,107"/>
+<area shape="rect" id="node4" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="112,229,200,256"/>
+<area shape="rect" id="node8" href="$_image_widget_8hpp.html" title="ImageWidget.hpp" alt="" coords="290,155,414,181"/>
+<area shape="rect" id="node19" href="$_collection_8hpp.html" title="../Collection/Collection.hpp" alt="" coords="624,229,803,256"/>
+<area shape="rect" id="node23" href="$_filtered_collection_8hpp.html" title="../Collection/FilteredCollection.hpp" alt="" coords="449,155,671,181"/>
+<area shape="rect" id="node6" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="5,304,93,331"/>
+<area shape="rect" id="node9" href="$_image_8hpp.html" title="../Image/Image.hpp" alt="" coords="275,229,410,256"/>
+<area shape="rect" id="node10" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="493,304,584,331"/>
+<area shape="rect" id="node20" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="659,304,805,331"/>
 </map>

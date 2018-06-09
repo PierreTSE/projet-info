@@ -1,4 +1,4 @@
 <map id="Application::save" name="Application::save">
-<area shape="rect" id="node2" href="$class_application.html#ae22fc39c79b4efa62e80f548805410e5" title="Application::saveAs" alt="" coords="176,5,315,32"/>
-<area shape="rect" id="node3" href="$_file_dialog_8hpp.html#aacfc4cd968b61ef119f34806c6af4a13" title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. " alt="" coords="363,5,489,32"/>
+<area shape="rect" id="node2" href="$class_application.html#ae22fc39c79b4efa62e80f548805410e5" title="Lance la fenêtre modale qui demande un fichier d&#39;enregistre ment puis appelle la fonction actualSave..." alt="" coords="176,5,315,32"/>
+<area shape="rect" id="node3" href="$_file_dialog_8hpp.html#a2781b8e73494c1ffed0cbf1060545c8f" title="Ouvre une boîte de dialogue qui demande un nom de sauvegarde pour un fichier. " alt="" coords="363,5,489,32"/>
 </map>

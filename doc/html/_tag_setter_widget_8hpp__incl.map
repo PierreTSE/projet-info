@@ -1,8 +1,8 @@
 <map id="src/Interface/TagSetterWidget.hpp" name="src/Interface/TagSetterWidget.hpp">
-<area shape="rect" id="node3" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="523,80,611,107"/>
-<area shape="rect" id="node7" href="$_collection_8hpp.html" title="../Collection/Collection.hpp" alt="" coords="697,80,875,107"/>
-<area shape="rect" id="node12" href="$_image_8hpp.html" title="../Image/Image.hpp" alt="" coords="364,80,499,107"/>
-<area shape="rect" id="node5" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="601,155,689,181"/>
-<area shape="rect" id="node8" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="713,155,859,181"/>
-<area shape="rect" id="node13" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="59,155,150,181"/>
+<area shape="rect" id="node3" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="125,80,213,107"/>
+<area shape="rect" id="node7" href="$_collection_8hpp.html" title="../Collection/Collection.hpp" alt="" coords="540,80,719,107"/>
+<area shape="rect" id="node12" href="$_image_8hpp.html" title="../Image/Image.hpp" alt="" coords="265,80,399,107"/>
+<area shape="rect" id="node5" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="5,155,93,181"/>
+<area shape="rect" id="node8" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="659,155,805,181"/>
+<area shape="rect" id="node13" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="219,155,309,181"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="Application::save" name="Application::save">
-<area shape="rect" id="node2" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Application::savePossibleTags" alt="" coords="176,5,377,32"/>
-<area shape="rect" id="node3" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Application::~Application" alt="" coords="425,31,592,57"/>
+<area shape="rect" id="node2" href="$class_application.html#a8f9f948d5439efe526f3219d85b29d7f" title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. " alt="" coords="176,5,377,32"/>
+<area shape="rect" id="node3" href="$class_application.html#a748bca84fefb9c12661cfaa2f623748d" title="Effectue une sauvegarde de la collection et enregistre les tags. " alt="" coords="425,31,592,57"/>
 </map>

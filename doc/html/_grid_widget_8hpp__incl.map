@@ -1,10 +1,10 @@
 <map id="src/Interface/GridWidget.hpp" name="src/Interface/GridWidget.hpp">
-<area shape="rect" id="node2" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="703,155,791,181"/>
-<area shape="rect" id="node6" href="$_image_widget_8hpp.html" title="ImageWidget.hpp" alt="" coords="508,80,632,107"/>
-<area shape="rect" id="node17" href="$_collection_8hpp.html" title="../Collection/Collection.hpp" alt="" coords="93,155,271,181"/>
-<area shape="rect" id="node21" href="$_filtered_collection_8hpp.html" title="../Collection/FilteredCollection.hpp" alt="" coords="233,80,456,107"/>
-<area shape="rect" id="node4" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="779,229,867,256"/>
-<area shape="rect" id="node7" href="$_image_8hpp.html" title="../Image/Image.hpp" alt="" coords="408,155,543,181"/>
-<area shape="rect" id="node8" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="563,229,654,256"/>
-<area shape="rect" id="node18" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="67,229,214,256"/>
+<area shape="rect" id="node2" href="$_widget_8hpp.html" title="Widget.hpp" alt="" coords="112,155,200,181"/>
+<area shape="rect" id="node6" href="$_image_widget_8hpp.html" title="ImageWidget.hpp" alt="" coords="290,80,414,107"/>
+<area shape="rect" id="node17" href="$_collection_8hpp.html" title="../Collection/Collection.hpp" alt="" coords="624,155,803,181"/>
+<area shape="rect" id="node21" href="$_filtered_collection_8hpp.html" title="../Collection/FilteredCollection.hpp" alt="" coords="449,80,671,107"/>
+<area shape="rect" id="node4" href="$_events_8hpp.html" title="Events.hpp" alt="" coords="5,229,93,256"/>
+<area shape="rect" id="node7" href="$_image_8hpp.html" title="../Image/Image.hpp" alt="" coords="275,155,410,181"/>
+<area shape="rect" id="node8" href="$_tag_list_8hpp.html" title="TagList.hpp" alt="" coords="493,229,584,256"/>
+<area shape="rect" id="node18" href="$_collection_iterator_8hpp.html" title="CollectionIterator.hpp" alt="" coords="659,229,805,256"/>
 </map>

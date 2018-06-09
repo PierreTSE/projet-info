@@ -18,7 +18,7 @@
 <!-- Node67 -->
 <g id="node2" class="node">
 <title>Node67</title>
-<g id="a_node2"><a xlink:href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f" target="_top" xlink:title="Application::savePossibleTags">
+<g id="a_node2"><a xlink:href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f" target="_top" xlink:title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. ">
 <polygon fill="#ffffff" stroke="#000000" points="128,-19.5 128,-38.5 279,-38.5 279,-19.5 128,-19.5"/>
 <text text-anchor="middle" x="203.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::savePossibleTags</text>
 </a>
@@ -33,7 +33,7 @@
 <!-- Node68 -->
 <g id="node3" class="node">
 <title>Node68</title>
-<g id="a_node3"><a xlink:href="class_application.html#a748bca84fefb9c12661cfaa2f623748d" target="_top" xlink:title="Application::~Application">
+<g id="a_node3"><a xlink:href="class_application.html#a748bca84fefb9c12661cfaa2f623748d" target="_top" xlink:title="Effectue une sauvegarde de la collection et enregistre les tags. ">
 <polygon fill="#ffffff" stroke="#000000" points="315,-.5 315,-19.5 440,-19.5 440,-.5 315,-.5"/>
 <text text-anchor="middle" x="377.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::~Application</text>
 </a>

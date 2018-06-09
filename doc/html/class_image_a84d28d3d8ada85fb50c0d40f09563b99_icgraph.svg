@@ -95,7 +95,7 @@ var sectionId = 'dynsection-6';
 <!-- Node45 -->
 <g id="node4" class="node">
 <title>Node45</title>
-<g id="a_node4"><a xlink:href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f" target="_top" xlink:title="Application::savePossibleTags">
+<g id="a_node4"><a xlink:href="class_application.html#a8f9f948d5439efe526f3219d85b29d7f" target="_top" xlink:title="Enregistre la liste des tags accéssibles à l&#39;utilisateur. ">
 <polygon fill="#ffffff" stroke="#000000" points="475,-6 475,-25 626,-25 626,-6 475,-6"/>
 <text text-anchor="middle" x="550.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::savePossibleTags</text>
 </a>
@@ -110,7 +110,7 @@ var sectionId = 'dynsection-6';
 <!-- Node46 -->
 <g id="node5" class="node">
 <title>Node46</title>
-<g id="a_node5"><a xlink:href="class_application.html#a748bca84fefb9c12661cfaa2f623748d" target="_top" xlink:title="Application::~Application">
+<g id="a_node5"><a xlink:href="class_application.html#a748bca84fefb9c12661cfaa2f623748d" target="_top" xlink:title="Effectue une sauvegarde de la collection et enregistre les tags. ">
 <polygon fill="#ffffff" stroke="#000000" points="662,-6 662,-25 787,-25 787,-6 662,-6"/>
 <text text-anchor="middle" x="724.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Application::~Application</text>
 </a>
